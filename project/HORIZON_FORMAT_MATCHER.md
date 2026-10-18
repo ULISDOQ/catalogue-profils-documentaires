@@ -10,6 +10,8 @@ Permettre à un logiciel consommateur de retrouver automatiquement, parmi les pr
 
 Ce chantier est un **horizon déclaré**, non une capacité existante ou une obligation d'inventer un moteur. L'évaluation des mécanismes de reconnaissance des moteurs existants est préalable à toute nouvelle implémentation. Voir aussi [l'architecture des identités canoniques](HORIZON_IDENTITY_MAPPING.md).
 
+L'[éditeur local de TAG candidat](TAG_CANDIDATE_PROTOCOL.md) est un premier démonstrateur borné : il ne réalise pas encore la recherche de correspondances.
+
 ## Architecture conceptuelle
 
 ```text
