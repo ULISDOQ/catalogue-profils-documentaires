@@ -60,9 +60,21 @@ Un moteur externe peut imposer un champ technique `issuer` ou des mots-clés de 
 
 ## Qualification et échelle
 
-Le nombre **« 88 821 »** est une simple illustration interchangeable avec « des milliers de fournisseurs référencés » : il ne constitue ni cible, ni seuil, ni estimation d'ordre de grandeur, ni indication de valeur intrinsèque. Un catalogue extensible nécessite une politique de dédoublonnage, des identifiants pérennes, des sources légitimes, un suivi des changements de nom et des tests de performance d'indexation. Le nombre d'entités n'est pas le nombre de formats ni le nombre de profils.
+L'échelle d'ULISDOQ ne se mesure pas au nombre d'organisations ou d'entités référencées, mais à sa capacité à **mutualiser des modèles documentaires réellement réutilisables** et à les relier à des profils qualifiés.
 
-L'horizontalité doit être démontrée sur des documents de plusieurs familles et organisations, par des mesures de reconnaissance, extraction, faux positifs, ambiguïtés et coût de calcul, et non par une simple taille de référentiel.
+Une organisation peut produire plusieurs modèles documentaires ; inversement, un même modèle ou une même famille de profils peut être utile à de nombreuses organisations. Le nombre d'entités, le nombre de formats et le nombre de profils sont donc trois grandeurs distinctes.
+
+La question utile devient :
+
+```text
+combien de profils documentaires qualifiés
+faut-il pour couvrir une part donnée
+du volume documentaire réellement rencontré ?
+```
+
+Cette question est traitée plus directement dans l'[étude de faisabilité sur la couverture documentaire de 1 000 organisations](ETUDE_FAISABILITE_COUVERTURE_PROFILS_1000_ORGANISATIONS.md), qui pose une première hypothèse de dimensionnement et surtout propose comme indicateur principal le **taux de documents couverts par des profils qualifiés**, plutôt que la taille brute du catalogue.
+
+L'horizontalité doit être démontrée sur plusieurs familles documentaires et plusieurs organisations, avec des mesures de reconnaissance, d'ambiguïté, d'inconnus, d'extraction, de réutilisation inter-organisations et de coût de qualification. Une grande quantité d'entités ou de profils présents dans le dépôt ne constitue pas en elle-même une preuve de couverture ni de qualité.
 
 ## Expérience initiale
 
