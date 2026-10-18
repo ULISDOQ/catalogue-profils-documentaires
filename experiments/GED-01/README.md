@@ -31,3 +31,14 @@ Le PDF et les deux PNG sont des **dérivés d'une facture SFR réelle avec donn�
 Le premier exemple entièrement fictif en texte brut (`facture_fictive_001.txt`, `attendu_001.json`, `profil_facture_fictive_001.json` et `cas_ged01.json`) reste disponible comme matériau préparatoire ; **il ne fait pas partie du chemin de preuve SFR**.
 
 Pour contribuer : proposer une amélioration du profil, une exécution reproductible ou une critique précise ; ne pas déposer de facture personnelle brute.
+
+## Réutilisation opérationnelle cible (sans ChatGPT)
+
+Une fois un profil **qualifié**, un consommateur (CLAU, GED ou autre) récupère via l'API GitHub une **version immuable** du profil ULISDOQ, vérifie son identité et sa compatibilité, puis la conserve en cache local. Chaque facture SFR suivante est traitée localement avec ce profil, un moteur OCR et invoice2data ; les contrôles métier vérifient les résultats avant admission dans la GED.
+
+- **Réseau :** accès GitHub seulement pour obtenir ou mettre à jour les profils ; aucune facture transmise au catalogue.
+- **Autonomie :** pas d'appel à ChatGPT ni à un LLM requis pour le fonctionnement nominal ; le cache permet de poursuivre hors ligne.
+- **Sécurité :** ne pas charger automatiquement une nouvelle version non qualifiée ; figer le commit ou l'empreinte approuvée.
+- **Évolution :** si signature de facture inconnue, extraction ambiguë ou contrôles en échec, renvoyer un état explicite et ouvrir un travail de qualification ; ne pas inventer de valeurs.
+
+**État actuel : architecture cible documentée, pas encore réalisée de bout en bout.** Le client local présent dans `client/extract.py` ne télécharge pas encore les profils depuis l'API GitHub et le profil SFR n'est pas qualifié.
