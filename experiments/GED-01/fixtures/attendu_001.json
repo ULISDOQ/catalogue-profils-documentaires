@@ -1,0 +1,11 @@
+{
+  "fixture": "facture_fictive_001.txt",
+  "issuer": "Fournisseur Exemple",
+  "invoice_number": "DEMO-2026-001",
+  "invoice_date": "2026-10-18",
+  "currency": "EUR",
+  "total_ht": 100,
+  "tax_rate": 0.2,
+  "tax_amount": 20,
+  "total_ttc": 120
+}
