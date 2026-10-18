@@ -39,7 +39,7 @@ Pour rendre le catalogue immédiatement lisible, les premières expériences son
 
 Ces familles constituent un classement humain de haut niveau ; elles ne remplacent ni les TAGs de format, ni les profils techniques.
 
-[GED-01](experiments/factures/GED-01/README.md) est le premier cas borné de la famille Factures. [GED-02 — formulaire 2044](experiments/administration-droits/GED-02/README.md) éprouve surtout le lien entre un document administratif et la connaissance officielle publiée qui lui est associée.
+[GED-01](experiments/factures/GED-01/README.md) est le premier cas borné de la famille Factures. [GED-02 — formulaire 2044](experiments/impots-finances/GED-02/README.md) éprouve surtout le lien entre un document administratif et la connaissance officielle publiée qui lui est associée.
 
 ## Démonstration de classification locale
 
