@@ -1,0 +1,13 @@
+{
+  "id": "ULISDOQ-SFR-EXP01",
+  "source_type": "facture SFR authentique, transformee localement",
+  "status": "document experimental derive, non authentique",
+  "modifications": "identifiants client, coordonnees, numero de facture, code interne et donnees de consommation remplaces; donnees commerciales de fournisseur et montants conserves",
+  "privacy": "Aucune garantie absolue d anonymisation; controle visuel et revue avant publication publique requis",
+  "pages": 2,
+  "artifacts": {
+    "SFR_EXP01_page_1.png": "110d251334d2d09b3f493720ff4dfcfaabd8f9703a195e3125f782ea9c09dd73",
+    "SFR_EXP01_page_2.png": "4738d622c6536f407909af7fac8b65bac8589bdf82f46c5391c001293ca25ed4",
+    "SFR_EXP01_document_experimental.pdf": "3478a22f533a11034fbe29bc8509d587e5af934cb5cdf5c19554730189d7727f"
+  }
+}
