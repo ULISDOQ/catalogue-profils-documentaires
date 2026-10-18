@@ -11,6 +11,8 @@
 
 **État réel :** le document et le code sont publiés ; le client et le profil n'ont **pas encore été exécutés ensemble ni qualifiés** sur ce PDF. Aucun taux de réussite n'est revendiqué.
 
+Pour préparer un descripteur local, voir [l'éditeur de TAG candidat](client/tag_candidate.py) et son [protocole](../../project/TAG_CANDIDATE_PROTOCOL.md). La consultation du catalogue reste à implémenter.
+
 ## Séparation des identités
 
 Le nom **Fournisseur-EXP-01** est un alias limité à cette expérience. Le profil technique utilise une référence opaque, sans prétendre identifier l'émetteur. L'architecture cible sépare [entité canonique, TAG de format, profil et correspondances](../../project/HORIZON_IDENTITY_MAPPING.md). La reconnaissance du format doit être qualifiée indépendamment de l'identité commerciale.
