@@ -12,6 +12,10 @@ Statut : **candidat de fonctionnement**, indépendant du POM du projet CLAU. Ce 
 - **Exécution** : moteur et version, environnement, date, paramètres, sorties et écarts.
 - **Décision** : CANDIDATE, TESTED, QUALIFIED, REJECTED ou WITHDRAWN ; jamais déduite d'une simple création de fichier.
 
+## Horizon architectural déclaré
+
+[HORIZON-FORMAT-001](HORIZON_FORMAT_MATCHER.md) formalise la distinction entre signature observée, TAG de format, profil d'extraction, preuve de qualification et client consommateur. L'architecture vise la récupération de profils par Git/API, la reconnaissance et l'extraction locales, sans ChatGPT en fonctionnement nominal. Ce chantier est un horizon : ses métriques, sa nécessité technique et sa qualification restent à établir.
+
 ## Règles de publication
 
 Une copie modifiée d'un document commercial réel n'est pas automatiquement librement redistribuable. La vérification de confidentialité, de droits et des métadonnées précède sa publication. Les éléments non publiables restent dans l'environnement privé autorisé. Aucun fichier public ne doit contenir d'identifiants personnels, de secrets ou de données de santé identifiables.
