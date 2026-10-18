@@ -70,7 +70,7 @@ Document privé entrant ─► lecteur local ─► signature observée
 |---|---|
 | **Document entrant** | Document privé du consommateur ; ne quitte pas son environnement. |
 | **Signature observée** | Descripteurs dérivés localement d'un document ; ne pas publier sans examen de confidentialité. |
-| **TAG de format** | Identifiant stable, version, indices discriminants, tolérances, seuils et limites ; indépendant des valeurs de facture. |
+| **TAG de format** | Identifiant stable, version, indices discriminants, tolérances, seuils et limites ; indépendant des valeurs variables propres au document observé. |
 | **Profil d'extraction** | Règles versionnées et moteur d'extraction compatible. |
 | **Liaison TAG → profil** | Référence explicite et versionnée ; un TAG peut désigner plusieurs profils candidats. |
 | **Preuve de qualification** | Corpus caractérisé, protocole, versions, résultats, métriques, limites et décision. |
