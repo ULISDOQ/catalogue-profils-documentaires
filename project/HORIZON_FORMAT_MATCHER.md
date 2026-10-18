@@ -6,14 +6,12 @@
 
 ## Intention
 
-Permettre à un logiciel consommateur de retrouver automatiquement, parmi les profils ULISDOQ, celui qui convient à un document entrant, puis d'en exploiter les règles d'extraction **localement et sans appel à ChatGPT**. La métaphore « Shazam du format documentaire » désigne une capacité de reconnaissance de **mise en forme**, non d'identification de la personne ou du contenu privé.
-
-Ce chantier est un **horizon déclaré**, non une capacité existante ou une obligation d'inventer un moteur. L'évaluation des mécanismes de reconnaissance des briques techniques référencées est préalable à toute nouvelle implémentation. La sélection d'une brique compatible dépend des capacités requises et des preuves disponibles, et non d'un moteur imposé. Voir aussi [l'architecture des identités canoniques](HORIZON_IDENTITY_MAPPING.md).
+Permettre à un logiciel consommateur de retrouver automatiquement, parmi les profils ULISDOQ, celui qui convient à un document entrant, puis d'en exploiter les règles d'extraction **localement et sans appel à ChatGPT**. Ce chantier est un **horizon déclaré**, non une capacité existante ou une obligation d'inventer un moteur. L'évaluation des mécanismes de reconnaissance des briques techniques référencées est préalable à toute nouvelle implémentation. La sélection d'une brique compatible dépend des capacités requises et des preuves disponibles, et non d'un moteur imposé. Voir aussi [l'architecture des identités canoniques](HORIZON_IDENTITY_MAPPING.md).
 
 L'[éditeur local de TAG candidat](TAG_CANDIDATE_PROTOCOL.md) est un premier démonstrateur borné : il ne réalise pas encore la recherche de correspondances.
 
 L'[état de l'art des signatures documentaires et l'étude d'opportunité ULISTAG](HORIZON_FORMAT_STATE_OF_ART.md) complètent cet horizon sans créer de chantier architectural distinct.
-La [recherche ULISTAG inspirée de Shazam](ULISTAG_STRUCTURAL_FINGERPRINT_RESEARCH.md) approfondit l'hypothèse d'une empreinte structurelle comparable fondée sur des repères et relations spatiales, à qualifier expérimentalement.
+La [recherche ULISTAG sur les empreintes structurelles documentaires](ULISTAG_STRUCTURAL_FINGERPRINT_RESEARCH.md) approfondit l'hypothèse d'une empreinte comparable fondée sur des repères et relations spatiales, à qualifier expérimentalement.
 
 ## Architecture conceptuelle
 
