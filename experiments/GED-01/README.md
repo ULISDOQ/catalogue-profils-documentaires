@@ -6,12 +6,12 @@
 
 1. **Voir le document source expérimental :** [facture Fournisseur-EXP-01 modifiée (PDF image)](fixtures/Fournisseur-EXP-01_document_experimental.pdf), ou [page 1](fixtures/Fournisseur-EXP-01_page_1.png) et [page 2](fixtures/Fournisseur-EXP-01_page_2.png).
 2. **Voir le profil candidat :** [fournisseur_exp_01.yml](templates/fournisseur_exp_01.yml), au format d'[invoice2data](https://github.com/invoice-x/invoice2data).
-3. **Voir le client :** [mode d'emploi et commande](client/README.md) ; [script Python](client/extract.py).
+3. **Voir le client ULISDOQ :** [mode d'emploi et commande](../../client/README.md) ; [script Python](../../client/extract.py).
 4. **Voir comment juger le résultat :** [protocole](docs/PROTOCOLE.md).
 
 **État réel :** le document et le code sont publiés ; le client et le profil n'ont **pas encore été exécutés ensemble ni qualifiés** sur ce PDF. Aucun taux de réussite n'est revendiqué.
 
-Pour préparer un descripteur local, voir [l'éditeur de TAG candidat](client/tag_candidate.py) et son [protocole](../../project/TAG_CANDIDATE_PROTOCOL.md). La consultation du catalogue reste à implémenter.
+Pour préparer un descripteur local, voir [l'éditeur de TAG candidat](../../client/tag_candidate.py) et son [protocole](../../project/TAG_CANDIDATE_PROTOCOL.md). La consultation du catalogue reste à implémenter.
 
 ## Séparation des identités
 
@@ -43,4 +43,4 @@ Une fois un profil **qualifié**, un consommateur (GED, script ou autre) récup�
 - **Sécurité :** ne pas charger automatiquement une nouvelle version non qualifiée ; figer le commit ou l'empreinte approuvée.
 - **Évolution :** si signature de facture inconnue, extraction ambiguë ou contrôles en échec, renvoyer un état explicite et ouvrir un travail de qualification ; ne pas inventer de valeurs.
 
-**État actuel : architecture cible documentée, pas encore réalisée de bout en bout.** Le client local présent dans `client/extract.py` ne télécharge pas encore les profils depuis l'API GitHub et le profil Fournisseur-EXP-01 n'est pas qualifié.
+**État actuel : architecture cible documentée, pas encore réalisée de bout en bout.** Le client ULISDOQ présent dans `client/extract.py` ne télécharge pas encore les profils depuis l'API GitHub et le profil Fournisseur-EXP-01 n'est pas qualifié.
