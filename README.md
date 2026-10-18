@@ -18,6 +18,10 @@ Les briques techniques sont des ressources parmi N, caractérisées par leurs ca
 
 **[HORIZON-IDENTITY-001 — Référentiel canonique et correspondances](project/HORIZON_IDENTITY_MAPPING.md)** : dissocier entités, formats et profils ; concevoir un référentiel extensible d'entités sans fixer de nombre cible ; « 88 821 » n'est qu'un exemple arbitraire, équivalent à « des milliers de fournisseurs référencés ». Les noms commerciaux n'appartiennent pas aux identifiants de profils.
 
+## Faisabilité de couverture documentaire
+
+Une première [étude de dimensionnement](project/FEASIBILITY_PROFILE_COVERAGE_1000_ORGANIZATIONS.md) examine l'ordre de grandeur du nombre de profils qualifiés nécessaire pour viser environ 80 % de la paperasserie courante de 1 000 organisations. L'hypothèse centrale est d'environ 1 000 profils, à vérifier sur un corpus représentatif ; l'indicateur principal est le **taux de documents couverts**, non le nombre brut de profils.
+
 ## Qualification
 
 Une source identifiée n'est pas nécessairement un profil d'extraction qualifié. Un profil qualifié sur un périmètre donné ne garantit pas tous les résultats d'extraction. Chaque proposition devra préciser provenance, droits, version, critères de reconnaissance, contrôles et limites.
