@@ -1,18 +1,18 @@
-# ULISDOQ — Catalogue de profils documentaires
+# ULISDOQ — Unificateur documentaire libre
 
-**Union Libre Interprofessionnelle de Sources Documentaires Qualifiées**
+**Unificateur Libre Interprofessionnel de Sources Documentaires Qualifiées**
 
 *Explorer les documents. Partager les connaissances. Qualifier l'information.*
 
-ULISDOQ est une initiative communautaire indépendante dédiée à la **reconnaissance et qualification de profils documentaires, visant à faciliter une extraction numérique fiable et réutilisable**.
+ULISDOQ est un **unificateur libre de ressources et de capacités documentaires** : il référence, relie, versionne et qualifie les sources, formats, profils, moteurs et contrôles nécessaires au traitement informationnel local. Il ne se substitue pas aux moteurs techniques.
 
 [Lire le prologue fondateur](PROLOGUE_FONDATEUR.md).
 
 ## Périmètre
 
-Le catalogue relie sélectivement des profils, références et méthodes utiles à la reconnaissance et à l'extraction de documents : factures, documents administratifs et officiels, documents de santé et autres familles pertinentes. Il ne prétend pas référencer tout Internet.
+Le référentiel relie sélectivement des profils, sources, méthodes et briques techniques utiles à la reconnaissance, la classification, l'extraction et la validation des documents : factures, documents administratifs et officiels, documents de santé et autres familles pertinentes. Il ne prétend pas référencer tout Internet.
 
-Nous privilégions le réemploi de moteurs d'extraction externes sans faire dépendre le projet d'une marque ou d'un fournisseur particulier. Les références aux outils concrets sont réservées aux expériences unitaires.
+Les briques techniques sont des ressources parmi N, caractérisées par leurs capacités, interfaces, versions, licences, compatibilités, limites et preuves. Les noms d'outils particuliers sont réservés à leurs fiches techniques ou aux expériences unitaires. Voir [l'architecture d'unification](project/UNIFICATION_TECHNICAL_COMPONENTS.md).
 
 ## Horizontalité et identités canoniques
 
