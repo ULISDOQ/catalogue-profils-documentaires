@@ -13,6 +13,7 @@ Ce chantier est un **horizon déclaré**, non une capacité existante ou une obl
 L'[éditeur local de TAG candidat](TAG_CANDIDATE_PROTOCOL.md) est un premier démonstrateur borné : il ne réalise pas encore la recherche de correspondances.
 
 L'[état de l'art des signatures documentaires et l'étude d'opportunité ULISTAG](HORIZON_FORMAT_STATE_OF_ART.md) complètent cet horizon sans créer de chantier architectural distinct.
+La [recherche ULISTAG inspirée de Shazam](ULISTAG_STRUCTURAL_FINGERPRINT_RESEARCH.md) approfondit l'hypothèse d'une empreinte structurelle comparable fondée sur des repères et relations spatiales, à qualifier expérimentalement.
 
 ## Architecture conceptuelle
 
