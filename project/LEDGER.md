@@ -18,6 +18,8 @@ Version de structure : **0.1**. Les commits Git constituent l'historique techniq
 
 | 2026-10-18 | HORIZON-FORMAT-001 | Reconnaissance de format par TAG qualifié sur corpus ; architecture conceptuelle déclarée | HORIZON_DECLARED | Voir `project/HORIZON_FORMAT_MATCHER.md` ; aucune performance ni implémentation du matcher revendiquée |
 
+| 2026-10-18 | HORIZON-IDENTITY-001 | Identités canoniques, formats, profils et table de correspondance ; cible de dimensionnement 88 821 entités | HORIZON_DECLARED | Voir `project/HORIZON_IDENTITY_MAPPING.md` ; aucun registre de 88 821 entités constitué |
+
 ## Ajouter une entrée
 
 Date, identifiant, objet, statut, lien vers protocole ou preuve vérifiable, auteur/relecteur si publiable, limites et décision explicite. Les informations privées ne figurent jamais dans ce registre.
