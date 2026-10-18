@@ -1,27 +1,33 @@
-# GED-01 — Reconnaissance et extraction de factures
+# GED-01 — Une facture, un profil, un résultat
 
-**Statut : CANDIDATE / NOT_RUN.** Première expérience publique ULISDOQ, avec un cas synthétique publiable et une extension prévue à quatre familles de factures issues de documents réels transformés (SFR, électricité, télécommunications, eau).
+**Objectif pour les relecteurs :** montrer comment un document d'expérience peut être reconnu et exploité avec un profil partageable, sans envoyer de données à ULISDOQ.
 
-## Matériaux publics
+## Commencer ici (5 minutes)
 
-- `fixtures/facture_fictive_001.txt` : facture fictive textuelle.
-- `fixtures/attendu_001.json` : vérité attendue pour cette fixture.
-- `profiles/profil_facture_fictive_001.json` : profil candidat.
-- `tests/cas_ged01.json` : scénarios positifs/négatifs.
-- `docs/PROTOCOLE.md` : protocole d'évaluation.
+1. **Voir le document source expérimental :** [facture SFR modifiée (PDF image)](fixtures/SFR_EXP01_document_experimental.pdf), ou [page 1](fixtures/SFR_EXP01_page_1.png) et [page 2](fixtures/SFR_EXP01_page_2.png).
+2. **Voir le profil candidat :** [sfr_exp01.yml](templates/sfr_exp01.yml), au format d'[invoice2data](https://github.com/invoice-x/invoice2data).
+3. **Voir le client :** [mode d'emploi et commande](client/README.md) ; [script Python](client/extract.py).
+4. **Voir comment juger le résultat :** [protocole](docs/PROTOCOLE.md).
 
-## SFR-EXP01 : provenance réelle, publication différée
+**État réel :** le document et le code sont publiés ; le client et le profil n'ont **pas encore été exécutés ensemble ni qualifiés** sur ce PDF. Aucun taux de réussite n'est revendiqué.
 
-Une facture SFR réelle a été utilisée **hors dépôt** pour créer un dérivé expérimental de deux pages (PNG et PDF image-only) avec substitutions de données personnelles et marquage expérimental. Cette transformation **ne constitue pas une anonymisation certifiée** et ne démontre pas encore la fiabilité d'une extraction.
+## Ce que doit apporter ULISDOQ
 
-**Les images, le PDF, l'original, leurs empreintes et les informations permettant de relier ce dérivé à une personne ne sont pas publiés ici** : revue visuelle, risque de réidentification et droits de redistribution de la présentation commerciale restent à instruire.
+ULISDOQ publie un **profil versionné et vérifiable**, ainsi que des fixtures et des contrôles. Il **ne reçoit pas les factures de production**. Un outil tiers (CLAU, Paperless, script, application métier) récupère une version précise du catalogue et exécute localement un moteur tel qu'invoice2data, puis vérifie le résultat.
 
-## Critère de réussite
+```text
+Document local → profil ULISDOQ versionné → OCR + invoice2data
+               → JSON d'extraction → contrôles du client → GED du client
+```
 
-Une preuve réutilisable requiert : fixture autorisée, valeurs attendues, moteur/version, commande ou procédure reproductible, résultats observés, écarts, contrôles arithmétiques et décision de revue. Aucun profil n'est qualifié à ce jour.
+Le lien avec invoice2data est désormais **concret dans le code**, mais la réussite d'extraction reste à prouver. Les SVG de reconstitution ont été retirés pour éviter un deuxième jeu documentaire.
 
-## Lecture publique du cas SFR
+## Pourquoi ces données ?
 
-Deux **reconstitutions SVG lisibles**, créées à partir du dérivé expérimental, sont publiées : [page 1](fixtures/SFR-EXP01_page_1_reconstitution.svg) et [page 2](fixtures/SFR-EXP01_page_2_reconstitution.svg). Elles montrent les champs et la logique de facture avec des données fictives, mais **ne sont pas des scans fidèles** : la mise en page et certains libellés sont simplifiés. Elles ne peuvent donc pas servir à mesurer une performance OCR sur la facture d'origine.
+Le PDF et les deux PNG sont des **dérivés d'une facture SFR réelle avec données modifiées**, signalés comme documents expérimentaux sans valeur contractuelle. Ils ne doivent pas être confondus avec une facture originale, ni avec une certification de leur anonymisation. Les droits sur la présentation commerciale peuvent subsister ; ce cas ne vaut pas autorisation générale de reproduire des factures tierces.
 
-Le PDF image-only et les PNG de la transformation initiale ne sont pas encore hébergés dans ce dépôt. Une preuve OCR devra porter sur des fichiers d'entrée effectivement publiés et identifiés par empreinte.
+## Compléments secondaires
+
+Le premier exemple entièrement fictif en texte brut (`facture_fictive_001.txt`, `attendu_001.json`, `profil_facture_fictive_001.json` et `cas_ged01.json`) reste disponible comme matériau préparatoire ; **il ne fait pas partie du chemin de preuve SFR**.
+
+Pour contribuer : proposer une amélioration du profil, une exécution reproductible ou une critique précise ; ne pas déposer de facture personnelle brute.
