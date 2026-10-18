@@ -11,6 +11,10 @@
 
 **État réel :** le document et le code sont publiés ; le client et le profil n'ont **pas encore été exécutés ensemble ni qualifiés** sur ce PDF. Aucun taux de réussite n'est revendiqué.
 
+## Séparation des identités
+
+Le nom **Fournisseur-EXP-01** est un alias limité à cette expérience. Le profil technique utilise une référence opaque, sans prétendre identifier l'émetteur. L'architecture cible sépare [entité canonique, TAG de format, profil et correspondances](../../project/HORIZON_IDENTITY_MAPPING.md). La reconnaissance du format doit être qualifiée indépendamment de l'identité commerciale.
+
 ## Ce que doit apporter ULISDOQ
 
 ULISDOQ publie un **profil versionné et vérifiable**, ainsi que des fixtures et des contrôles. Il **ne reçoit pas les factures de production**. Un outil tiers (GED, script ou application métier) récupère une version précise du catalogue et exécute localement un moteur tel qu'invoice2data, puis vérifie le résultat.
