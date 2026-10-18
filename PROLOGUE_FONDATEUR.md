@@ -1,6 +1,6 @@
 # ULISDOQ — Prologue fondateur
 
-**Union Libre Interprofessionnelle de Sources Documentaires Qualifiées**
+**Unificateur Libre Interprofessionnel de Sources Documentaires Qualifiées**
 
 ## L'esprit d'exploration
 
@@ -24,9 +24,9 @@ Ce lignage est **sémantique** : il ne crée ni trois entités distinctes, ni tr
 
 **Une connaissance documentaire découverte n'acquiert sa pleine valeur commune que lorsqu'elle est située, vérifiable, qualifiée et transmissible.**
 
-ULISDOQ a pour vocation de réunir librement des personnes et des métiers autour de profils documentaires connus ou à découvrir, afin de faciliter la reconnaissance des documents et l'extraction numérique de leurs informations, tout en rendant explicites les limites de fiabilité.
+ULISDOQ a pour vocation d'unifier librement des connaissances et capacités documentaires issues de plusieurs métiers : sources, formats, profils, moteurs techniques et contrôles. Il facilite leur découverte, leur mise en correspondance et leur qualification, tout en rendant explicites leurs limites de fiabilité.
 
-Nous ne prétendons ni recenser toute la toile, ni remplacer les outils et communautés existants. Nous cherchons à **relier sélectivement des sources pertinentes**, à reconnaître les acquis, à réemployer les briques disponibles — notamment *invoice2data* pour les factures — et à documenter ce qui manque. Les domaines administratifs, officiels, sanitaires et professionnels pourront être explorés progressivement, au rythme de besoins et de contributions qualifiables.
+Nous ne prétendons ni recenser toute la toile, ni remplacer les outils et communautés existants. Nous cherchons à **relier sélectivement des sources et capacités pertinentes**, à reconnaître les acquis, à réemployer les briques techniques disponibles sans en privilégier une comme fondement obligatoire et à documenter ce qui manque. Les domaines administratifs, officiels, sanitaires et professionnels pourront être explorés progressivement, au rythme de besoins et de contributions qualifiables.
 
 ## De l'exploration à la confiance
 
