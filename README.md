@@ -24,7 +24,7 @@ Une source identifiée n'est pas nécessairement un profil d'extraction qualifi�
 
 ## Horizon déclaré : reconnaître automatiquement les formats
 
-**[HORIZON-FORMAT-001 — Architecture conceptuelle du « Shazam documentaire »](project/HORIZON_FORMAT_MATCHER.md)** : établir, sur des corpus indépendants, des TAGs de formats qualifiés permettant aux clients de retrouver le profil d'extraction adapté. Horizon de recherche et de qualification, **non une fonctionnalité déjà opérationnelle**. Priorité au réemploi des mécanismes existants.
+**[HORIZON-FORMAT-001 — Reconnaissance et qualification des formats documentaires](project/HORIZON_FORMAT_MATCHER.md)** : établir, sur des corpus indépendants, des TAGs de formats qualifiés permettant aux clients de retrouver le profil d'extraction adapté. Horizon de recherche et de qualification, **non une fonctionnalité déjà opérationnelle**. Priorité au réemploi des mécanismes existants.
 
 ## Expériences par familles documentaires
 
