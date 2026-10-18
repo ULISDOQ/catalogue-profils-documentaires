@@ -12,6 +12,10 @@ Version de structure : **0.1**. Les commits Git constituent l'historique techniq
 
 | 2026-10-18 | SFR-EXP01-SVG | Deux reconstitutions visuelles publiques de la facture SFR transformée | PUBLISHED_RECONSTRUCTION | SVG lisibles, non équivalents aux PNG/PDF image-only ; aucune preuve OCR | 
 
+| 2026-10-18 | GED01-SIMPLIFY | Suppression des deux SVG redondants et parcours de lecture unique | DONE | Voir `experiments/GED-01/README.md` |
+| 2026-10-18 | GED01-CLIENT | Adaptateur Python invoice2data + profil YAML SFR candidat | IMPLEMENTED_NOT_TESTED | Interface locale JSON ; extraction OCR non exécutée et non qualifiée |
+| 2026-10-18 | SFR-EXP01-PUBLIC | PNG et PDF expérimentaux visibles dans le dépôt (import manuel) | PUBLISHED_UNQUALIFIED | Présentation issue d'une facture commerciale ; aucune certification d'anonymisation ni de droits |
+
 ## Ajouter une entrée
 
 Date, identifiant, objet, statut, lien vers protocole ou preuve vérifiable, auteur/relecteur si publiable, limites et décision explicite. Les informations privées ne figurent jamais dans ce registre.
