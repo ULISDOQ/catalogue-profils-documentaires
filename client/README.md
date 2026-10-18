@@ -13,8 +13,8 @@ Exemple avec GED-01, depuis la racine du dépôt :
 ```bash
 python -m pip install invoice2data
 python client/extract.py \
-  experiments/GED-01/fixtures/Fournisseur-EXP-01_document_experimental.pdf \
-  --templates experiments/GED-01/templates \
+  experiments/factures/GED-01/fixtures/Fournisseur-EXP-01_document_experimental.pdf \
+  --templates experiments/factures/GED-01/templates \
   --reader tesseract > resultat.json
 ```
 

@@ -26,13 +26,13 @@ Une source identifiée n'est pas nécessairement un profil d'extraction qualifi�
 
 **[HORIZON-FORMAT-001 — Architecture conceptuelle du « Shazam documentaire »](project/HORIZON_FORMAT_MATCHER.md)** : établir, sur des corpus indépendants, des TAGs de formats qualifiés permettant aux clients de retrouver le profil d'extraction adapté. Horizon de recherche et de qualification, **non une fonctionnalité déjà opérationnelle**. Priorité au réemploi des mécanismes existants.
 
-## Voir notre première expérience
+## Expériences par familles documentaires
 
-**[GED-01 : une facture expérimentale, un profil et un client d'extraction](experiments/GED-01/README.md)**. La démonstration est en cours de qualification ; les fichiers et le code sont consultables, mais l'extraction n'est pas encore validée.
+La famille [Factures](experiments/factures/README.md) regroupe les expériences de profils de factures. [GED-01](experiments/factures/GED-01/README.md) en est le premier cas borné.
 
 ## Démonstration de classification locale
 
-Le [protocole TAG candidat](project/TAG_CANDIDATE_PROTOCOL.md) fournit un éditeur local minimal et expose la prochaine fonction manquante : la consultation du catalogue. Le cas [GED-02 — formulaire 2044](experiments/GED-02/README.md) examine la généralité du modèle hors factures ; il reste non qualifié.
+Le [protocole TAG candidat](project/TAG_CANDIDATE_PROTOCOL.md) fournit un éditeur local minimal et expose la prochaine fonction manquante : la consultation du catalogue. Le cas [GED-02 — formulaire 2044](experiments/formulaires/GED-02/README.md) examine la généralité du modèle hors factures ; il reste non qualifié.
 
 ## Participer
 

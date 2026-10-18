@@ -281,7 +281,7 @@ Le but n'est pas seulement d'obtenir un score élevé A↔B, mais également une
 
 Si le rapprochement structurel place correctement GED-01 parmi les candidats :
 
-- résoudre vers `experiments/GED-01/templates/fournisseur_exp_01.yml` ;
+- résoudre vers `experiments/factures/GED-01/templates/fournisseur_exp_01.yml` ;
 - exécuter l'extraction sur le document réel local ;
 - vérifier les champs attendus ;
 - qualifier séparément le profil et l'empreinte.

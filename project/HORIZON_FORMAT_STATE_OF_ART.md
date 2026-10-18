@@ -156,7 +156,7 @@ Le cas disponible est adapté à une première verticale **sans développement p
 3. définir un TAG candidat correspondant au modèle déjà étudié dans GED-01 ;
 4. évaluer d'abord les mécanismes existants de sélection de template d'`invoice2data` comme matcher de référence ;
 5. si nécessaire seulement, ajouter un comparateur ULISDOQ minimal ;
-6. vérifier que la correspondance conduit au profil `experiments/GED-01/templates/fournisseur_exp_01.yml` ;
+6. vérifier que la correspondance conduit au profil `experiments/factures/GED-01/templates/fournisseur_exp_01.yml` ;
 7. exécuter ce profil localement sur la source originale et vérifier les champs attendus ;
 8. qualifier séparément :
    - la compatibilité du profil avec cette source originale ;
