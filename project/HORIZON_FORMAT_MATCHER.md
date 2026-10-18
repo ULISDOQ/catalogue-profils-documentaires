@@ -2,7 +2,7 @@
 
 **Référence : HORIZON-FORMAT-001**  
 **Statut : HORIZON DÉCLARÉ — ARCHITECTURE CONCEPTUELLE CANDIDATE**  
-**Périmètre : ULISDOQ, indépendant de CLAU**  
+**Périmètre : ULISDOQ, indépendant de tout projet consommateur**  
 **Principe : simplicité, interopérabilité, lisibilité et prudence juridique.**
 
 ## Intention
@@ -76,7 +76,7 @@ Document privé entrant ─► lecteur local ─► signature observée
 
 ## Stratégie de construction : réemployer avant d'inventer
 
-1. Évaluer la reconnaissance native d'invoice2data (mots-clés, modèles YAML, règles existantes) sur les factures SFR.
+1. Évaluer la reconnaissance native d'invoice2data (mots-clés, modèles YAML, règles existantes) sur les factures Fournisseur-EXP-01.
 2. Caractériser les échecs réels : confusion entre formats, variantes de mise en page, OCR, refus.
 3. Ajouter seulement les descripteurs nécessaires : positions relatives, structure de page, zones stables, repères visuels. Ne pas utiliser les montants, identifiants clients ou dates comme signature d'identité du format.
 4. Comparer les approches sur **les mêmes corpus indépendants**, et retenir la plus simple satisfaisant les critères.
@@ -96,7 +96,7 @@ Le nombre de factures requis dépend de la diversité des formats et des résult
 ## Contrat d'interopérabilité visé
 
 - Catalogue Git public versionné ; profil et TAG récupérables par **API GitHub ou Git**, avec identifiants et empreintes vérifiables.
-- Descriptions lisibles et sérialisables dans des formats ouverts (JSON/YAML) ; schéma stable et documenté, sans dépendance à CLAU.
+- Descriptions lisibles et sérialisables dans des formats ouverts (JSON/YAML) ; schéma stable et documenté, sans dépendance à un logiciel consommateur.
 - Cache local, version épinglée, politique de mise à jour explicite ; **aucune promotion automatique** d'un TAG non qualifié.
 - Aucune facture de production transmise à GitHub/ULISDOQ ; aucune requête à ChatGPT nécessaire au chemin nominal.
 - Échec fermé en cas de format inconnu, score insuffisant, conflit entre profils ou contrôles d'extraction échoués.
@@ -108,7 +108,7 @@ Conserver les factures privées dans le SI autorisé. Publier préférentielleme
 
 ## Première étape bornée
 
-**GED-01 / SFR** : faire fonctionner le profil invoice2data actuel, observer ses erreurs, réunir un corpus de factures SFR indépendantes et de contre-exemples, puis décider **si un TAG graphique ajoute réellement de la valeur**. Pas de développement d'un nouveau moteur avant cette décision.
+**GED-01 / Fournisseur-EXP-01** : faire fonctionner le profil invoice2data actuel, observer ses erreurs, réunir un corpus de factures Fournisseur-EXP-01 indépendantes et de contre-exemples, puis décider **si un TAG graphique ajoute réellement de la valeur**. Pas de développement d'un nouveau moteur avant cette décision.
 
 ## Non-objectifs à ce stade
 

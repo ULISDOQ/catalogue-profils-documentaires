@@ -1,6 +1,6 @@
 # ULISDOQ — Modèle opératoire du projet (POM léger v0.1)
 
-Statut : **candidat de fonctionnement**, indépendant du POM du projet CLAU. Ce document s'inspire de la discipline de traçabilité de CLAU sans transférer ses autorités, secrets ou objets internes.
+Statut : **candidat de fonctionnement propre à ULISDOQ**. Ce modèle est autonome et n'importe aucune autorité, donnée privée ou dépendance d'un projet extérieur.
 
 ## Objets et filiation
 

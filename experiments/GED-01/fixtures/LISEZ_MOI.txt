@@ -1,5 +1,5 @@
-ULISDOQ SFR EXP01
+ULISDOQ Fournisseur-EXP-01 EXP01
 Copie experimentale derivee d une facture reelle; valeurs client remplacees.
-Ne pas presenter comme une facture emise par SFR.
+Ne pas presenter comme une facture emise par Fournisseur-EXP-01.
 Verifier visuellement et juridiquement avant toute publication publique.
 Les originaux ne sont pas inclus.

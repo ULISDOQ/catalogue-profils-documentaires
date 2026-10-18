@@ -1,7 +1,6 @@
-# Profil candidat pour la facture SFR expérimentale ; à ajuster selon la sortie OCR réelle.
-issuer: SFR
+# Profil expérimental générique Fournisseur-EXP-01. Reconnaissance non discriminante ; non qualifié.
+issuer: Fournisseur-EXP-01
 keywords:
-  - '(?i)SFR|RED'
   - '(?i)FACTURE'
 fields:
   invoice_number: '(?i)FACTURE\s*N[°o.]?\s*([A-Z0-9-]+)'

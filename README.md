@@ -24,7 +24,7 @@ Une source identifiée n'est pas nécessairement un profil d'extraction qualifi�
 
 ## Voir notre première expérience
 
-**[GED-01 : une facture SFR expérimentale, un profil, un client invoice2data](experiments/GED-01/README.md)**. La démonstration est en cours de qualification ; les fichiers et le code sont consultables, mais l'extraction n'est pas encore validée.
+**[GED-01 : une facture Fournisseur-EXP-01 expérimentale, un profil, un client invoice2data](experiments/GED-01/README.md)**. La démonstration est en cours de qualification ; les fichiers et le code sont consultables, mais l'extraction n'est pas encore validée.
 
 ## Participer
 
