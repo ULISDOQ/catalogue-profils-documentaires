@@ -1,0 +1,25 @@
+{
+  "status": "not_run",
+  "cases": [
+    {
+      "id": "GED01-POS-001",
+      "input": "fixtures/facture_fictive_001.txt",
+      "expected": "recognized_and_fields_match"
+    },
+    {
+      "id": "GED01-NEG-001",
+      "mutation": "remove invoice number",
+      "expected": "missing_required_field_not_invented"
+    },
+    {
+      "id": "GED01-NEG-002",
+      "mutation": "change total TTC to 121.00",
+      "expected": "arithmetic_mismatch_detected"
+    },
+    {
+      "id": "GED01-NEG-003",
+      "mutation": "remove recognition header",
+      "expected": "recognition_uncertain_or_rejected"
+    }
+  ]
+}
