@@ -30,6 +30,10 @@ Une source identifiée n'est pas nécessairement un profil d'extraction qualifi�
 
 **[GED-01 : une facture expérimentale, un profil et un client d'extraction](experiments/GED-01/README.md)**. La démonstration est en cours de qualification ; les fichiers et le code sont consultables, mais l'extraction n'est pas encore validée.
 
+## Démonstration de classification locale
+
+Le [protocole TAG candidat](project/TAG_CANDIDATE_PROTOCOL.md) fournit un éditeur local minimal et expose la prochaine fonction manquante : la consultation du catalogue. Le cas [GED-02 — formulaire 2044](experiments/GED-02/README.md) examine la généralité du modèle hors factures ; il reste non qualifié.
+
 ## Participer
 
 Consulter [CONTRIBUTING.md](CONTRIBUTING.md). Les contributions sont soumises à revue avant intégration. **Aucun document personnel réel, donnée médicale identifiable, secret ou document confidentiel ne doit être déposé ici.**
