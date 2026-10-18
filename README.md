@@ -20,7 +20,7 @@ Les briques techniques sont des ressources parmi N, caractérisées par leurs ca
 
 ## Faisabilité de couverture documentaire
 
-Une première [étude de dimensionnement](project/FEASIBILITY_PROFILE_COVERAGE_1000_ORGANIZATIONS.md) examine l'ordre de grandeur du nombre de profils qualifiés nécessaire pour viser environ 80 % de la paperasserie courante de 1 000 organisations. L'hypothèse centrale est d'environ 1 000 profils, à vérifier sur un corpus représentatif ; l'indicateur principal est le **taux de documents couverts**, non le nombre brut de profils.
+Une première [étude de dimensionnement](project/ETUDE_FAISABILITE_COUVERTURE_PROFILS_1000_ORGANISATIONS.md) examine l'ordre de grandeur du nombre de profils qualifiés nécessaire pour viser environ 80 % de la paperasserie courante de 1 000 organisations. L'hypothèse centrale est d'environ 1 000 profils, à vérifier sur un corpus représentatif ; l'indicateur principal est le **taux de documents couverts**, non le nombre brut de profils.
 
 ## Qualification
 
