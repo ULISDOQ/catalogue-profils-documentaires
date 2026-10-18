@@ -2,12 +2,12 @@
 
 **Statut : démonstrateur local, non moteur de reconnaissance.**
 
-L'éditeur `experiments/GED-01/client/tag_candidate.py` produit un objet JSON versionné à partir d'indices **saisis explicitement** et d'une géométrie optionnelle. Il ne lit pas de PDF, ne réalise pas d'OCR et ne contacte aucun serveur. Son empreinte SHA-256 garantit la stabilité du descripteur canonisé, **pas la reconnaissance d'un document**.
+L'éditeur `client/tag_candidate.py` produit un objet JSON versionné à partir d'indices **saisis explicitement** et d'une géométrie optionnelle. Il ne lit pas de PDF, ne réalise pas d'OCR et ne contacte aucun serveur. Son empreinte SHA-256 garantit la stabilité du descripteur canonisé, **pas la reconnaissance d'un document**.
 
 Exemple :
 
 ```bash
-python experiments/GED-01/client/tag_candidate.py \
+python client/tag_candidate.py \
   --family tax_declaration_form \
   --marker '2044' --marker 'revenus fonciers' \
   --output tag_candidate_2044.json
