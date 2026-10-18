@@ -1,0 +1,9 @@
+FACTURE — EXEMPLE FICTIF
+Émetteur : Fournisseur Exemple
+Client : Client Démonstration
+Numéro de facture : DEMO-2026-001
+Date de facture : 18/10/2026
+Total HT : 100,00 EUR
+TVA 20 % : 20,00 EUR
+Total TTC : 120,00 EUR
+DOCUMENT SYNTHÉTIQUE — AUCUNE VALEUR CONTRACTUELLE
