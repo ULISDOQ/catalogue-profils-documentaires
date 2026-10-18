@@ -2,7 +2,6 @@
 
 **Référence : HORIZON-IDENTITY-001**  
 **Statut : architecture conceptuelle candidate, non implémentée**  
-**Échelle : ouverte ; « 88 821 » est un exemple arbitraire sans portée normative ni valeur intrinsèque.**
 
 ## Doctrine
 
