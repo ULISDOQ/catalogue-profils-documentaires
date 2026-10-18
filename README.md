@@ -18,6 +18,10 @@ Nous privilégions le réemploi des travaux existants. [invoice2data](https://gi
 
 Une source identifiée n'est pas nécessairement un profil d'extraction qualifié. Un profil qualifié sur un périmètre donné ne garantit pas tous les résultats d'extraction. Chaque proposition devra préciser provenance, droits, version, critères de reconnaissance, contrôles et limites.
 
+## Voir notre première expérience
+
+**[GED-01 : une facture SFR expérimentale, un profil, un client invoice2data](experiments/GED-01/README.md)**. La démonstration est en cours de qualification ; les fichiers et le code sont consultables, mais l'extraction n'est pas encore validée.
+
 ## Participer
 
 Consulter [CONTRIBUTING.md](CONTRIBUTING.md). Les contributions sont soumises à revue avant intégration. **Aucun document personnel réel, donnée médicale identifiable, secret ou document confidentiel ne doit être déposé ici.**
