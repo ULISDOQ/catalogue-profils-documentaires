@@ -1,78 +1,94 @@
-# GED-02 — Relier un formulaire administratif à la connaissance officielle publiée
+# GED-02 — Formulaire 2044 et connaissance officielle associée
 
 **Statut : expérience conceptuelle candidate, non qualifiée.**
 
-Cette expérience ne vise pas d'abord la fiscalité comme domaine métier. Son objet principal est d'éprouver une capacité fondatrice d'ULISDOQ : **partir d'un document administratif identifiable et le relier à la connaissance officielle publiée par l'administration française**.
+GED-02 utilise le **formulaire 2044 — déclaration des revenus fonciers** comme cas concret pour éprouver une capacité fondatrice d'ULISDOQ : partir d'un document administratif identifiable et le relier à la connaissance officielle publiée qui le décrit, l'explique et le situe dans une version précise.
 
-Le formulaire 2044 sert ici de cas concret parce qu'il appartient à un corpus public structuré : formulaire, millésime, notice, références administratives, règles et documentation associée peuvent être recherchés, sourcés, versionnés et reliés.
+L'extraction n'est pas le cœur premier de cette expérience.
 
-## Question expérimentale
+## Sources déjà identifiées pour le cas 2044
 
-À partir d'un document local ou de ses caractéristiques non sensibles, ULISDOQ doit pouvoir rechercher et restituer les connaissances publiques pertinentes autour de ce document, par exemple :
+### impots.gouv.fr
 
-- la source administrative officielle ;
-- l'identité et la version du formulaire ;
-- la notice ou documentation associée ;
-- les millésimes et variantes connus ;
-- les règles ou références publiques utiles à son interprétation ;
-- les profils d'extraction candidats et leurs limites ;
-- la provenance et la date des connaissances utilisées.
+Page officielle du formulaire 2044 :
 
-L'objectif n'est donc pas seulement :
+https://www.impots.gouv.fr/formulaire/2044/declaration-des-revenus-fonciers
 
-```text
-document → profil d'extraction
-```
+Cette source permet de travailler sur :
 
-mais également :
+- l'intitulé officiel ;
+- le formulaire publié ;
+- les millésimes disponibles ;
+- les notices associées ;
+- les variantes ou formulaires voisins.
 
-```text
-document identifiable
-→ source officielle publiée
-→ connaissances documentaires associées
-→ version / provenance / limites
-→ profils et capacités techniques réutilisables
-```
+Elle peut servir de référence pour distinguer une simple ressemblance documentaire d'une **identité documentaire datée et sourcée**.
 
-## Cas 2044
+### Service-Public.gouv.fr
+
+Fiche publique du formulaire 2044 :
+
+https://www.service-public.gouv.fr/particuliers/vosdroits/R1283
+
+La fiche permet de relier le formulaire à son identité administrative, son usage, son ministère émetteur et ses ressources associées. Elle fait également apparaître des relations avec des formulaires ou notices voisins, notamment les variantes de la famille 2044.
+
+### BOFiP
+
+https://bofip.impots.gouv.fr/
+
+Le BOFiP fournit la doctrine administrative permettant de comprendre **dans quel contexte fiscal utiliser la 2044 et comment elle se distingue de variantes comme la 2044-SPE**.
+
+Cette couche est importante pour ULISDOQ : deux documents visuellement ou lexicalement proches peuvent relever de règles d'usage différentes.
+
+### Légifrance
+
+https://www.legifrance.gouv.fr/
+
+Légifrance peut compléter la qualification lorsqu'un texte réglementaire ou législatif permet d'établir l'origine normative, la période de validité ou le cadre juridique du document.
+
+## Profil candidat
 
 Le profil candidat est [profiles/fr_formulaire_2044_candidate.json](profiles/fr_formulaire_2044_candidate.json).
 
-Il retient une famille de déclaration de revenus fonciers, le numéro de formulaire déclaré et des indices à vérifier sur des sources officielles datées. Les versions annuelles, annexes et variantes doivent être distinguées.
+Il ne doit pas être considéré comme qualifié du seul fait que le numéro « 2044 » ou l'expression « revenus fonciers » sont reconnus.
 
-La présence du numéro « 2044 » ou de termes fiscaux n'est pas suffisante à elle seule pour qualifier le document ou sa version. La connaissance retenue doit être reliée à des sources officielles et explicitement datées.
+Les versions annuelles, annexes et variantes doivent être distinguées à partir de sources officielles datées.
+
+## Chaîne de connaissance recherchée
+
+```text
+document / caractéristiques observées
+→ candidat « formulaire 2044 »
+→ référence officielle impots.gouv.fr
+→ identité et contexte Service-Public
+→ millésime / notice / variantes
+→ doctrine BOFiP pertinente
+→ texte normatif si nécessaire
+→ connaissance documentaire sourcée
+→ éventuel profil technique
+```
+
+## Trois qualifications distinctes
+
+**Qualification identitaire** : établir qu'il s'agit bien d'un formulaire 2044 déterminé, avec son numéro administratif, sa version ou son millésime et sa source officielle.
+
+**Qualification sémantique** : relier ce formulaire à son usage, sa notice, ses variantes et aux connaissances publiques qui expliquent son emploi.
+
+**Qualification technique** : déterminer si ULISDOQ sait reconnaître ce modèle, lui associer un TAG ou ULISTAG, sélectionner un profil et en extraire correctement les informations.
+
+Ces trois niveaux ne doivent pas être confondus.
 
 ## Ce que doit démontrer GED-02
 
 GED-02 doit montrer qu'ULISDOQ sait :
 
-1. reconnaître ou caractériser suffisamment un document administratif ;
-2. retrouver une ou plusieurs références officielles candidates ;
+1. caractériser suffisamment un document administratif ;
+2. retrouver la référence officielle correspondante ;
 3. établir un lien sourcé entre document, version et connaissance publiée ;
-4. conserver les distinctions entre document, source de connaissance, TAG, profil et moteur ;
-5. signaler `UNKNOWN` ou `AMBIGUOUS` lorsque la version ou la correspondance n'est pas suffisamment établie ;
-6. réutiliser cette connaissance sans dépendre d'un moteur d'extraction particulier.
+4. distinguer les variantes et millésimes ;
+5. conserver les distinctions entre document, source de connaissance, TAG, profil et moteur ;
+6. signaler `UNKNOWN` ou `AMBIGUOUS` lorsque la correspondance n'est pas suffisamment établie.
 
-## Frontière avec l'extraction
-
-Le TAG peut être préparé localement avec l'[éditeur ULISDOQ](../../../client/tag_candidate.py), puis comparé à un catalogue versionné.
-
-Mais **l'extraction n'est pas le cœur de cette expérience**. Un moteur compatible pourra être choisi ensuite, lorsque l'identité documentaire, sa version et les sources officielles pertinentes auront été suffisamment établies.
+Le TAG peut être préparé localement avec l'[éditeur ULISDOQ](../../../client/tag_candidate.py), mais **l'extraction vient après la qualification documentaire**.
 
 Aucun document fiscal personnel réel n'est requis dans le dépôt pour conduire cette expérimentation.
-
-## Critère de preuve
-
-La preuve attendue est une chaîne reconstructible :
-
-```text
-document / caractéristiques observées
-→ identification candidate du formulaire
-→ source officielle
-→ version ou millésime
-→ connaissance publiée associée
-→ provenance vérifiable
-→ éventuel profil d'extraction candidat
-```
-
-Une simple reconnaissance textuelle ou la présence d'un profil dans le dépôt ne suffit pas à qualifier ce lien.
