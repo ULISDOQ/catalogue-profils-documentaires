@@ -22,7 +22,11 @@ Le résultat est un JSON avec `status`, `source_sha256`, `engine`, `reader` et `
 
 ## TAG candidat
 
-`tag_candidate.py` prépare localement un descripteur de TAG candidat à partir d'indices explicitement fournis. Son protocole est documenté dans [project/TAG_CANDIDATE_PROTOCOL.md](../project/TAG_CANDIDATE_PROTOCOL.md).
+`tag_candidate.py` prépare localement un descripteur de TAG candidat à partir d'indices explicitement fournis. `test_tag_candidate.py` vérifie ce composant. Son protocole est documenté dans [project/TAG_CANDIDATE_PROTOCOL.md](../project/TAG_CANDIDATE_PROTOCOL.md).
+
+## Reconnaissance de format
+
+Le manque fonctionnel identifié relève de **HORIZON-FORMAT-001** : comparer une signature observée aux TAGs du catalogue, retourner une correspondance qualifiée, ambiguë ou inconnue, puis résoudre la liaison **TAG → profil d'extraction**. Le terme `PROFIL_MATCHER` n'est pas retenu comme nom canonique : il réduirait à tort cet horizon à la seule sélection d'un profil.
 
 ## Positionnement
 
