@@ -26,7 +26,7 @@ Le résultat est un JSON avec `status`, `source_sha256`, `engine`, `reader` et `
 
 ## Reconnaissance de format
 
-Le manque fonctionnel identifié relève de **HORIZON-FORMAT-001** : comparer une signature observée aux TAGs du catalogue, retourner une correspondance qualifiée, ambiguë ou inconnue, puis résoudre la liaison **TAG → profil d'extraction**. Le terme `PROFIL_MATCHER` n'est pas retenu comme nom canonique : il réduirait à tort cet horizon à la seule sélection d'un profil.
+Le manque fonctionnel identifié relève de **HORIZON-FORMAT-001** : comparer une signature observée aux TAGs du catalogue, retourner une correspondance qualifiée, ambiguë ou inconnue, puis résoudre la liaison **TAG → profil d'extraction**.
 
 ## Positionnement
 
