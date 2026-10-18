@@ -2,7 +2,6 @@
 
 **Référence : HORIZON-FORMAT-001**  
 **Statut : HORIZON DÉCLARÉ — ARCHITECTURE CONCEPTUELLE CANDIDATE**  
-**Périmètre : ULISDOQ, indépendant de tout projet consommateur**  
 **Principe : simplicité, interopérabilité, lisibilité et prudence juridique.**
 
 ## Intention
@@ -67,7 +66,7 @@ Document privé entrant ─► lecteur local ─► signature observée
 | **Document entrant** | Document privé du consommateur ; ne quitte pas son environnement. |
 | **Signature observée** | Descripteurs dérivés localement d'un document ; ne pas publier sans examen de confidentialité. |
 | **TAG de format** | Identifiant stable, version, indices discriminants, tolérances, seuils et limites ; indépendant des valeurs de facture. |
-| **Profil d'extraction** | Règles versionnées compatibles avec un moteur déclaré, déclaré et remplaçable. |
+| **Profil d'extraction** | Règles versionnées et moteur d'extraction compatible. |
 | **Liaison TAG → profil** | Référence explicite et versionnée ; un TAG peut désigner plusieurs profils candidats. |
 | **Preuve de qualification** | Corpus caractérisé, protocole, versions, résultats, métriques, limites et décision. |
 | **Client consommateur** | Télécharge et épingle les versions approuvées ; reconnaît, extrait, contrôle et journalise localement. |
