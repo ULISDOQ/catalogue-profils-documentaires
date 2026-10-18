@@ -12,7 +12,11 @@ ULISDOQ est une initiative communautaire indépendante dédiée à la **reconnai
 
 Le catalogue relie sélectivement des profils, références et méthodes utiles à la reconnaissance et à l'extraction de documents : factures, documents administratifs et officiels, documents de santé et autres familles pertinentes. Il ne prétend pas référencer tout Internet.
 
-Nous privilégions le réemploi des travaux existants. [invoice2data](https://github.com/invoice-x/invoice2data) est une **ressource technique externe de référence** pour les factures, sans affiliation ni approbation revendiquée, et sans copie automatique de ses contenus.
+Nous privilégions le réemploi de moteurs d'extraction externes sans faire dépendre le projet d'une marque ou d'un fournisseur particulier. Les références aux outils concrets sont réservées aux expériences unitaires.
+
+## Horizontalité et identités canoniques
+
+**[HORIZON-IDENTITY-001 — Référentiel canonique et correspondances](project/HORIZON_IDENTITY_MAPPING.md)** : dissocier entités, formats et profils ; concevoir un référentiel capable de gérer à terme **88 821 entités** sans présumer qu'elles sont déjà identifiées. Les noms commerciaux n'appartiennent pas aux identifiants de profils.
 
 ## Qualification
 
@@ -20,11 +24,11 @@ Une source identifiée n'est pas nécessairement un profil d'extraction qualifi�
 
 ## Horizon déclaré : reconnaître automatiquement les formats
 
-**[HORIZON-FORMAT-001 — Architecture conceptuelle du « Shazam documentaire »](project/HORIZON_FORMAT_MATCHER.md)** : établir, sur des corpus indépendants, des TAGs de formats qualifiés permettant aux clients de retrouver le profil d'extraction adapté. Horizon de recherche et de qualification, **non une fonctionnalité déjà opérationnelle**. Priorité au réemploi d'invoice2data.
+**[HORIZON-FORMAT-001 — Architecture conceptuelle du « Shazam documentaire »](project/HORIZON_FORMAT_MATCHER.md)** : établir, sur des corpus indépendants, des TAGs de formats qualifiés permettant aux clients de retrouver le profil d'extraction adapté. Horizon de recherche et de qualification, **non une fonctionnalité déjà opérationnelle**. Priorité au réemploi des mécanismes existants.
 
 ## Voir notre première expérience
 
-**[GED-01 : une facture Fournisseur-EXP-01 expérimentale, un profil, un client invoice2data](experiments/GED-01/README.md)**. La démonstration est en cours de qualification ; les fichiers et le code sont consultables, mais l'extraction n'est pas encore validée.
+**[GED-01 : une facture expérimentale, un profil et un client d'extraction](experiments/GED-01/README.md)**. La démonstration est en cours de qualification ; les fichiers et le code sont consultables, mais l'extraction n'est pas encore validée.
 
 ## Participer
 
