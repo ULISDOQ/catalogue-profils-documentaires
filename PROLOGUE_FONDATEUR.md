@@ -10,6 +10,16 @@ Cette image n'est ni une revendication de filiation institutionnelle, ni une pro
 
 Ulysse ne représente pas ici la conquête d'un territoire, mais **l'intelligence de l'orientation** : savoir distinguer une piste d'une preuve, une ressemblance d'une identité, une découverte d'une connaissance établie. Et surtout, savoir revenir avec quelque chose qui puisse être transmis.
 
+## Lignage du nom
+
+Le nom **ULISDOQ** porte trois évocations complémentaires :
+
+- **ULIS** renvoie à Ulysse : exploration, orientation et transmission des connaissances acquises.
+- **DOCQ** rapproche le document de sa qualification : provenance, fiabilité, limites et réutilisabilité.
+- **DOCK** évoque le port documentaire : un lieu d'accueil, de rencontre et d'échange où documents et profils peuvent être identifiés, contrôlés et orientés.
+
+Ce lignage est **sémantique** : il ne crée ni trois entités distinctes, ni trois marques, ni trois composants logiciels. **ULISDOQ reste le nom unique du projet.** La proximité sonore avec « Docker » n'implique aucune affiliation avec cette technologie.
+
 ## Notre principe fondateur
 
 **Une connaissance documentaire découverte n'acquiert sa pleine valeur commune que lorsqu'elle est située, vérifiable, qualifiée et transmissible.**
