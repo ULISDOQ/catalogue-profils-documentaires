@@ -9,7 +9,7 @@
 
 Permettre à un logiciel consommateur de retrouver automatiquement, parmi les profils ULISDOQ, celui qui convient à un document entrant, puis d'en exploiter les règles d'extraction **localement et sans appel à ChatGPT**. La métaphore « Shazam du format documentaire » désigne une capacité de reconnaissance de **mise en forme**, non d'identification de la personne ou du contenu privé.
 
-Ce chantier est un **horizon déclaré**, non une capacité existante ou une obligation d'inventer un moteur. L'évaluation des mécanismes de reconnaissance d'[invoice2data](https://github.com/invoice-x/invoice2data) est préalable à toute nouvelle implémentation.
+Ce chantier est un **horizon déclaré**, non une capacité existante ou une obligation d'inventer un moteur. L'évaluation des mécanismes de reconnaissance des moteurs existants est préalable à toute nouvelle implémentation. Voir aussi [l'architecture des identités canoniques](HORIZON_IDENTITY_MAPPING.md).
 
 ## Architecture conceptuelle
 
@@ -48,7 +48,7 @@ Document privé entrant ─► lecteur local ─► signature observée
                         profil compatible              refus explicite
                                │                        / revue hors flux
                                ▼
-                   OCR + invoice2data local
+                   OCR + moteur d'extraction local
                                │
                                ▼
                       extraction structurée
@@ -67,7 +67,7 @@ Document privé entrant ─► lecteur local ─► signature observée
 | **Document entrant** | Document privé du consommateur ; ne quitte pas son environnement. |
 | **Signature observée** | Descripteurs dérivés localement d'un document ; ne pas publier sans examen de confidentialité. |
 | **TAG de format** | Identifiant stable, version, indices discriminants, tolérances, seuils et limites ; indépendant des valeurs de facture. |
-| **Profil d'extraction** | Règles versionnées compatibles avec un moteur déclaré, p. ex. invoice2data. |
+| **Profil d'extraction** | Règles versionnées compatibles avec un moteur déclaré, déclaré et remplaçable. |
 | **Liaison TAG → profil** | Référence explicite et versionnée ; un TAG peut désigner plusieurs profils candidats. |
 | **Preuve de qualification** | Corpus caractérisé, protocole, versions, résultats, métriques, limites et décision. |
 | **Client consommateur** | Télécharge et épingle les versions approuvées ; reconnaît, extrait, contrôle et journalise localement. |
@@ -76,7 +76,7 @@ Document privé entrant ─► lecteur local ─► signature observée
 
 ## Stratégie de construction : réemployer avant d'inventer
 
-1. Évaluer la reconnaissance native d'invoice2data (mots-clés, modèles YAML, règles existantes) sur les factures Fournisseur-EXP-01.
+1. Évaluer la reconnaissance native d'un moteur existant (mots-clés, modèles, règles) sur un corpus expérimental.
 2. Caractériser les échecs réels : confusion entre formats, variantes de mise en page, OCR, refus.
 3. Ajouter seulement les descripteurs nécessaires : positions relatives, structure de page, zones stables, repères visuels. Ne pas utiliser les montants, identifiants clients ou dates comme signature d'identité du format.
 4. Comparer les approches sur **les mêmes corpus indépendants**, et retenir la plus simple satisfaisant les critères.
@@ -100,7 +100,7 @@ Le nombre de factures requis dépend de la diversité des formats et des résult
 - Cache local, version épinglée, politique de mise à jour explicite ; **aucune promotion automatique** d'un TAG non qualifié.
 - Aucune facture de production transmise à GitHub/ULISDOQ ; aucune requête à ChatGPT nécessaire au chemin nominal.
 - Échec fermé en cas de format inconnu, score insuffisant, conflit entre profils ou contrôles d'extraction échoués.
-- Le moteur OCR, le moteur d'extraction et la GED restent remplaçables.
+- Le moteur OCR, le moteur d'extraction et la GED restent remplaçables. La reconnaissance du format ne suppose pas l'identification de l'entité émettrice.
 
 ## Prudence juridique et publication
 
@@ -108,7 +108,7 @@ Conserver les factures privées dans le SI autorisé. Publier préférentielleme
 
 ## Première étape bornée
 
-**GED-01 / Fournisseur-EXP-01** : faire fonctionner le profil invoice2data actuel, observer ses erreurs, réunir un corpus de factures Fournisseur-EXP-01 indépendantes et de contre-exemples, puis décider **si un TAG graphique ajoute réellement de la valeur**. Pas de développement d'un nouveau moteur avant cette décision.
+**GED-01** : faire fonctionner le profil d'extraction candidat, observer ses erreurs, réunir un corpus de factures indépendantes et de contre-exemples, puis décider **si un TAG graphique ajoute réellement de la valeur**. Pas de développement d'un nouveau moteur avant cette décision.
 
 ## Non-objectifs à ce stade
 
