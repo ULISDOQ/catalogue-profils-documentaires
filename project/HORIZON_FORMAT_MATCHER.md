@@ -116,4 +116,4 @@ Conserver les factures privées dans le SI autorisé. Publier préférentielleme
 
 ## Non-objectifs à ce stade
 
-Pas d'entraînement de LLM, pas d'API centralisée recevant les factures, pas de classement de personnes, pas de garantie universelle de reconnaissance, pas de certification de performance avant tests indépendants.
+Pas d'entraînement de LLM, pas d'API centralisée recevant les documents privés, pas de garantie universelle de reconnaissance, pas de certification de performance avant tests indépendants.
