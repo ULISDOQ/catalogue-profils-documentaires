@@ -18,6 +18,10 @@ Nous privilégions le réemploi des travaux existants. [invoice2data](https://gi
 
 Une source identifiée n'est pas nécessairement un profil d'extraction qualifié. Un profil qualifié sur un périmètre donné ne garantit pas tous les résultats d'extraction. Chaque proposition devra préciser provenance, droits, version, critères de reconnaissance, contrôles et limites.
 
+## Horizon déclaré : reconnaître automatiquement les formats
+
+**[HORIZON-FORMAT-001 — Architecture conceptuelle du « Shazam documentaire »](project/HORIZON_FORMAT_MATCHER.md)** : établir, sur des corpus indépendants, des TAGs de formats qualifiés permettant aux clients de retrouver le profil d'extraction adapté. Horizon de recherche et de qualification, **non une fonctionnalité déjà opérationnelle**. Priorité au réemploi d'invoice2data.
+
 ## Voir notre première expérience
 
 **[GED-01 : une facture SFR expérimentale, un profil, un client invoice2data](experiments/GED-01/README.md)**. La démonstration est en cours de qualification ; les fichiers et le code sont consultables, mais l'extraction n'est pas encore validée.
