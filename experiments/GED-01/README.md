@@ -19,3 +19,9 @@ Une facture SFR réelle a été utilisée **hors dépôt** pour créer un dériv
 ## Critère de réussite
 
 Une preuve réutilisable requiert : fixture autorisée, valeurs attendues, moteur/version, commande ou procédure reproductible, résultats observés, écarts, contrôles arithmétiques et décision de revue. Aucun profil n'est qualifié à ce jour.
+
+## Lecture publique du cas SFR
+
+Deux **reconstitutions SVG lisibles**, créées à partir du dérivé expérimental, sont publiées : [page 1](fixtures/SFR-EXP01_page_1_reconstitution.svg) et [page 2](fixtures/SFR-EXP01_page_2_reconstitution.svg). Elles montrent les champs et la logique de facture avec des données fictives, mais **ne sont pas des scans fidèles** : la mise en page et certains libellés sont simplifiés. Elles ne peuvent donc pas servir à mesurer une performance OCR sur la facture d'origine.
+
+Le PDF image-only et les PNG de la transformation initiale ne sont pas encore hébergés dans ce dépôt. Une preuve OCR devra porter sur des fichiers d'entrée effectivement publiés et identifiés par empreinte.
