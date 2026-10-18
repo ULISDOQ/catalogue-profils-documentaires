@@ -1,0 +1,18 @@
+# Profil candidat pour la facture SFR expérimentale ; à ajuster selon la sortie OCR réelle.
+issuer: SFR
+keywords:
+  - '(?i)SFR|RED'
+  - '(?i)FACTURE'
+fields:
+  invoice_number: '(?i)FACTURE\s*N[°o.]?\s*([A-Z0-9-]+)'
+  date: '(?i)FACTURE\s*N[°o.]?\s*[A-Z0-9-]+\s*DU\s*(\d{2}/\d{2}/\d{4})'
+  amount: '(?i)Montant\s+factur[eé]\s*\([^)]+\)\s*(\d+[,.]\d{2})'
+required_fields:
+  - invoice_number
+  - date
+  - amount
+options:
+  currency: EUR
+  decimal_separator: ','
+  date_formats:
+    - '%d/%m/%Y'
