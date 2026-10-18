@@ -2,7 +2,7 @@
 
 **Référence : HORIZON-IDENTITY-001**  
 **Statut : architecture conceptuelle candidate, non implémentée**  
-**Dimensionnement de référence : 88 821 entités (objectif, pas inventaire existant)**
+**Échelle : ouverte ; « 88 821 » est un exemple arbitraire sans portée normative ni valeur intrinsèque.**
 
 ## Doctrine
 
@@ -13,7 +13,7 @@ Une entité, un format et un profil sont trois objets distincts. Une entité peu
 ## Graphe conceptuel
 
 ```text
-   Référentiel des entités (dimensionnement cible : 88 821)
+   Référentiel des entités (échelle ouverte)
       ENTITY-ID canonique ── alias / marques / dénominations
                 │
                 │ relations datées, sourcées, non exclusives
@@ -57,7 +57,7 @@ Un moteur externe peut imposer un champ technique `issuer` ou des mots-clés de 
 
 ## Qualification et échelle
 
-Les **88 821 entités** représentent un **horizon de dimensionnement** demandé, sans prétendre que les entités sont recensées, uniques ou qualifiées. Un catalogue à cette échelle nécessite une politique de dédoublonnage, des identifiants pérennes, des sources légitimes, un suivi des changements de nom et des tests de performance d'indexation. Le nombre d'entités n'est pas le nombre de formats ni le nombre de profils.
+Le nombre **« 88 821 »** est une simple illustration interchangeable avec « des milliers de fournisseurs référencés » : il ne constitue ni cible, ni seuil, ni estimation d'ordre de grandeur, ni indication de valeur intrinsèque. Un catalogue extensible nécessite une politique de dédoublonnage, des identifiants pérennes, des sources légitimes, un suivi des changements de nom et des tests de performance d'indexation. Le nombre d'entités n'est pas le nombre de formats ni le nombre de profils.
 
 L'horizontalité doit être démontrée sur des documents de plusieurs familles et organisations, par des mesures de reconnaissance, extraction, faux positifs, ambiguïtés et coût de calcul, et non par une simple taille de référentiel.
 
