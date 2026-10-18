@@ -16,7 +16,7 @@ Nous privilégions le réemploi de moteurs d'extraction externes sans faire dép
 
 ## Horizontalité et identités canoniques
 
-**[HORIZON-IDENTITY-001 — Référentiel canonique et correspondances](project/HORIZON_IDENTITY_MAPPING.md)** : dissocier entités, formats et profils ; concevoir un référentiel capable de gérer à terme **88 821 entités** sans présumer qu'elles sont déjà identifiées. Les noms commerciaux n'appartiennent pas aux identifiants de profils.
+**[HORIZON-IDENTITY-001 — Référentiel canonique et correspondances](project/HORIZON_IDENTITY_MAPPING.md)** : dissocier entités, formats et profils ; concevoir un référentiel extensible d'entités sans fixer de nombre cible ; « 88 821 » n'est qu'un exemple arbitraire, équivalent à « des milliers de fournisseurs référencés ». Les noms commerciaux n'appartiennent pas aux identifiants de profils.
 
 ## Qualification
 
