@@ -2,6 +2,10 @@
 
 Statut : **candidat de fonctionnement propre à ULISDOQ**. Ce modèle est autonome et n'importe aucune autorité, donnée privée ou dépendance d'un projet extérieur.
 
+## Fonction d'unification
+
+ULISDOQ référence et qualifie des **briques techniques parmi N** (lecture, OCR, reconnaissance, extraction, validation, indexation), avec capacités, versions, interfaces, droits et preuves. Le choix du moteur appartient au contrat de compatibilité du profil, pas à l'identité d'ULISDOQ. Voir [UNIFICATION_TECHNICAL_COMPONENTS.md](UNIFICATION_TECHNICAL_COMPONENTS.md).
+
 ## Objets et filiation
 
 `besoin → famille documentaire → source autorisée → profil candidat versionné → fixture autorisée → protocole de test → observation → décision de qualification → publication`.
@@ -14,7 +18,7 @@ Statut : **candidat de fonctionnement propre à ULISDOQ**. Ce modèle est autono
 
 ## Identité canonique et horizontalité
 
-[HORIZON-IDENTITY-001](HORIZON_IDENTITY_MAPPING.md) définit les objets distincts entité, alias, format, profil et correspondance. Aucun nom commercial ne doit être nécessaire dans les identifiants canoniques des profils. L'objectif de dimensionnement de 88 821 entités ne constitue pas un inventaire réalisé.
+[HORIZON-IDENTITY-001](HORIZON_IDENTITY_MAPPING.md) définit les objets distincts entité, alias, format, profil et correspondance. Aucun nom commercial ne doit être nécessaire dans les identifiants canoniques des profils. L'échelle du référentiel reste ouverte ; aucun nombre cible d'entités n'est fixé.
 
 ## Horizon architectural déclaré
 
