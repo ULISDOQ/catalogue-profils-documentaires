@@ -16,6 +16,8 @@ Version de structure : **0.1**. Les commits Git constituent l'historique techniq
 | 2026-10-18 | GED01-CLIENT | Adaptateur Python invoice2data + profil YAML SFR candidat | IMPLEMENTED_NOT_TESTED | Interface locale JSON ; extraction OCR non exécutée et non qualifiée |
 | 2026-10-18 | SFR-EXP01-PUBLIC | PNG et PDF expérimentaux visibles dans le dépôt (import manuel) | PUBLISHED_UNQUALIFIED | Présentation issue d'une facture commerciale ; aucune certification d'anonymisation ni de droits |
 
+| 2026-10-18 | HORIZON-FORMAT-001 | Reconnaissance de format par TAG qualifié sur corpus ; architecture conceptuelle déclarée | HORIZON_DECLARED | Voir `project/HORIZON_FORMAT_MATCHER.md` ; aucune performance ni implémentation du matcher revendiquée |
+
 ## Ajouter une entrée
 
 Date, identifiant, objet, statut, lien vers protocole ou preuve vérifiable, auteur/relecteur si publiable, limites et décision explicite. Les informations privées ne figurent jamais dans ce registre.
