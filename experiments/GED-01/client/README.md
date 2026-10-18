@@ -4,18 +4,18 @@
 
 ## Prérequis
 
-Python 3, \`invoice2data\`, et un moteur OCR local pour le PDF scanné. Voir [les dépendances OCR](https://invoice2data.readthedocs.io/stable/installation.html) ; pour \`--reader tesseract\`, installer Tesseract et ImageMagick ainsi que les données de langue nécessaires.
+Python 3, `invoice2data`, et un moteur OCR local pour le PDF scanné. Voir [les dépendances OCR](https://invoice2data.readthedocs.io/stable/installation.html) ; pour `--reader tesseract`, installer Tesseract et ImageMagick ainsi que les données de langue nécessaires.
 
 Depuis la racine du dépôt :
 
-\`\`\`bash
+```bash
 python -m pip install invoice2data
 python experiments/GED-01/client/extract.py \
   experiments/GED-01/fixtures/SFR_EXP01_document_experimental.pdf \
   --reader tesseract > resultat.json
-\`\`\`
+```
 
-Le résultat est un JSON sur la sortie standard avec \`status\`, \`source_sha256\`, \`engine\`, \`reader\` et \`data\` (si extraction). Codes retour : 0 extraction non vérifiée ; 1 aucun profil reconnu ; 2 erreur. **Une extraction n'est jamais une qualification**.
+Le résultat est un JSON sur la sortie standard avec `status`, `source_sha256`, `engine`, `reader` et `data` (si extraction). Codes retour : 0 extraction non vérifiée ; 1 aucun profil reconnu ; 2 erreur. **Une extraction n'est jamais une qualification**.
 
 ## Intégration dans un client tiers (CLAU, GED, script...)
 
