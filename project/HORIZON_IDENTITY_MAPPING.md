@@ -51,6 +51,10 @@ Document local → signature observée → TAG-FORMAT-ID
 5. Utiliser des identifiants canoniques opaques plutôt que des noms de marques dans les contrats d'interopérabilité.
 6. Éviter le catalogue géant de copies : mutualiser les formats et les profils ; versionner les liens d'entités séparément.
 
+## Unification des briques techniques
+
+Le profil référence des capacités requises ; un registre distinct relie ces capacités à N briques techniques versionnées, compatibles et qualifiées dans un périmètre explicite. Voir [UNIFICATION_TECHNICAL_COMPONENTS.md](UNIFICATION_TECHNICAL_COMPONENTS.md).
+
 ## Portabilité des moteurs
 
 Un moteur externe peut imposer un champ technique `issuer` ou des mots-clés de sélection. Cet adaptateur reste **une contrainte du moteur**, pas la définition canonique de l'entité. Si nécessaire, générer un gabarit technique avec un identifiant opaque, ou sélectionner explicitement le profil avant extraction. Ne pas présumer que tout moteur reconnaît un format sans indices discriminants.
