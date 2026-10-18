@@ -24,19 +24,15 @@ Document local → profil ULISDOQ versionné → OCR + invoice2data
                → JSON d'extraction → contrôles du client → GED du client
 ```
 
-Le lien avec invoice2data est désormais **concret dans le code**, mais la réussite d'extraction reste à prouver. Les SVG de reconstitution ont été retirés pour éviter un deuxième jeu documentaire.
+L'adaptateur utilise invoice2data ; la réussite d'extraction reste à démontrer.
 
 ## Pourquoi ces données ?
 
 Le PDF et les deux PNG sont des **dérivés d'une facture Fournisseur-EXP-01 réelle avec données modifiées**, signalés comme documents expérimentaux sans valeur contractuelle. Ils ne doivent pas être confondus avec une facture originale, ni avec une certification de leur anonymisation. Les droits sur la présentation commerciale peuvent subsister ; ce cas ne vaut pas autorisation générale de reproduire des factures tierces.
 
-## Compléments secondaires
-
-Le premier exemple entièrement fictif en texte brut (`facture_fictive_001.txt`, `attendu_001.json`, `profil_facture_fictive_001.json` et `cas_ged01.json`) reste disponible comme matériau préparatoire ; **il ne fait pas partie du chemin de preuve Fournisseur-EXP-01**.
-
 Pour contribuer : proposer une amélioration du profil, une exécution reproductible ou une critique précise ; ne pas déposer de facture personnelle brute.
 
-## Réutilisation opérationnelle cible (sans ChatGPT)
+## Réutilisation opérationnelle cible
 
 Une fois un profil **qualifié**, un consommateur (GED, script ou autre) récupère via l'API GitHub une **version immuable** du profil ULISDOQ, vérifie son identité et sa compatibilité, puis la conserve en cache local. Chaque facture Fournisseur-EXP-01 suivante est traitée localement avec ce profil, un moteur OCR et invoice2data ; les contrôles métier vérifient les résultats avant admission dans la GED.
 
