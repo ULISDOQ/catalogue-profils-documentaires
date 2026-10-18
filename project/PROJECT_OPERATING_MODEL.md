@@ -12,6 +12,10 @@ Statut : **candidat de fonctionnement propre à ULISDOQ**. Ce modèle est autono
 - **Exécution** : moteur et version, environnement, date, paramètres, sorties et écarts.
 - **Décision** : CANDIDATE, TESTED, QUALIFIED, REJECTED ou WITHDRAWN ; jamais déduite d'une simple création de fichier.
 
+## Identité canonique et horizontalité
+
+[HORIZON-IDENTITY-001](HORIZON_IDENTITY_MAPPING.md) définit les objets distincts entité, alias, format, profil et correspondance. Aucun nom commercial ne doit être nécessaire dans les identifiants canoniques des profils. L'objectif de dimensionnement de 88 821 entités ne constitue pas un inventaire réalisé.
+
 ## Horizon architectural déclaré
 
 [HORIZON-FORMAT-001](HORIZON_FORMAT_MATCHER.md) formalise la distinction entre signature observée, TAG de format, profil d'extraction, preuve de qualification et client consommateur. L'architecture vise la récupération de profils par Git/API, la reconnaissance et l'extraction locales, sans ChatGPT en fonctionnement nominal. Ce chantier est un horizon : ses métriques, sa nécessité technique et sa qualification restent à établir.
