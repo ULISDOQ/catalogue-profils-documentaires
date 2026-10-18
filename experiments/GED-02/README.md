@@ -4,7 +4,7 @@
 
 Le profil candidat est [profiles/fr_formulaire_2044_candidate.json](profiles/fr_formulaire_2044_candidate.json). Il retient une **famille de déclaration fiscale de revenus fonciers**, un numéro de formulaire déclaré et des indices textuels à vérifier sur un exemplaire officiel daté. Les versions annuelles, annexes et éventuelles variantes doivent être distinguées.
 
-Le TAG peut être préparé localement avec l'éditeur [GED-01 / tag_candidate.py](../GED-01/client/tag_candidate.py), puis comparé à un catalogue versionné. **Aucun document 2044 réel ni exemplaire officiel vérifié n'est fourni dans cette expérience** ; aucun résultat de reconnaissance n'est revendiqué.
+Le TAG peut être préparé localement avec l'[éditeur ULISDOQ](../../client/tag_candidate.py), puis comparé à un catalogue versionné. **Aucun document 2044 réel ni exemplaire officiel vérifié n'est fourni dans cette expérience** ; aucun résultat de reconnaissance n'est revendiqué.
 
 ## Critère de preuve
 
