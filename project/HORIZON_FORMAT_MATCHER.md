@@ -8,7 +8,7 @@
 
 Permettre à un logiciel consommateur de retrouver automatiquement, parmi les profils ULISDOQ, celui qui convient à un document entrant, puis d'en exploiter les règles d'extraction **localement et sans appel à ChatGPT**. La métaphore « Shazam du format documentaire » désigne une capacité de reconnaissance de **mise en forme**, non d'identification de la personne ou du contenu privé.
 
-Ce chantier est un **horizon déclaré**, non une capacité existante ou une obligation d'inventer un moteur. L'évaluation des mécanismes de reconnaissance des moteurs existants est préalable à toute nouvelle implémentation. Voir aussi [l'architecture des identités canoniques](HORIZON_IDENTITY_MAPPING.md).
+Ce chantier est un **horizon déclaré**, non une capacité existante ou une obligation d'inventer un moteur. L'évaluation des mécanismes de reconnaissance des briques techniques référencées est préalable à toute nouvelle implémentation. La sélection d'une brique compatible dépend des capacités requises et des preuves disponibles, et non d'un moteur imposé. Voir aussi [l'architecture des identités canoniques](HORIZON_IDENTITY_MAPPING.md).
 
 L'[éditeur local de TAG candidat](TAG_CANDIDATE_PROTOCOL.md) est un premier démonstrateur borné : il ne réalise pas encore la recherche de correspondances.
 
@@ -101,7 +101,7 @@ Le nombre de factures requis dépend de la diversité des formats et des résult
 - Cache local, version épinglée, politique de mise à jour explicite ; **aucune promotion automatique** d'un TAG non qualifié.
 - Aucune facture de production transmise à GitHub/ULISDOQ ; aucune requête à ChatGPT nécessaire au chemin nominal.
 - Échec fermé en cas de format inconnu, score insuffisant, conflit entre profils ou contrôles d'extraction échoués.
-- Le moteur OCR, le moteur d'extraction et la GED restent remplaçables. La reconnaissance du format ne suppose pas l'identification de l'entité émettrice.
+- Les briques de lecture, d'OCR, de reconnaissance, d'extraction et de validation restent substituables selon leurs contrats de compatibilité. La reconnaissance du format ne suppose pas l'identification de l'entité émettrice.
 
 ## Prudence juridique et publication
 
