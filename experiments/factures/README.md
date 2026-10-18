@@ -1,6 +1,6 @@
-# Factures — famille documentaire
+# Factures & achats — famille documentaire
 
-Cette famille regroupe les expériences ULISDOQ consacrées aux **profils de factures**, indépendamment d'un fournisseur, d'un moteur ou d'un modèle particulier.
+Cette famille regroupe les expériences ULISDOQ consacrées aux **factures, achats, reçus et documents fournisseurs**, indépendamment d'un fournisseur, d'un moteur ou d'un modèle particulier.
 
 ## Objet
 
