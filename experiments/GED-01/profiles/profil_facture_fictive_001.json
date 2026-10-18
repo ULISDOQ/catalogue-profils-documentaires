@@ -1,0 +1,20 @@
+{
+  "profile_id": "ulisdoq-ged01-invoice-synthetic-001",
+  "version": "0.1.0",
+  "status": "candidate_unqualified",
+  "family": "invoice",
+  "variant": "plain_text_fictional_fr",
+  "source_fixture": "../fixtures/facture_fictive_001.txt",
+  "recognition_markers": [
+    "FACTURE — EXEMPLE FICTIF",
+    "Numéro de facture",
+    "Total TTC"
+  ],
+  "expected_fields_ref": "../fixtures/attendu_001.json",
+  "limitations": [
+    "Only the published synthetic text fixture is in scope",
+    "No real-document qualification",
+    "No parser execution yet"
+  ],
+  "provenance": "Original synthetic example created for ULISDOQ GED-01"
+}
