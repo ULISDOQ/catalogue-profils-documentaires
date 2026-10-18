@@ -33,3 +33,7 @@ Elles ne constituent pas à elles seules une preuve que le document est correcte
 - https://bofip.impots.gouv.fr/
 - https://www.service-public.fr/
 - https://www.legifrance.gouv.fr/
+
+## Expériences
+
+- [GED-02 — formulaire 2044](GED-02/README.md) : cas fiscal consacré au rapprochement entre un formulaire d'imposition, ses versions et la connaissance officielle publiée qui lui est associée.
