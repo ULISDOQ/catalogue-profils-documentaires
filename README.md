@@ -28,11 +28,22 @@ Une source identifiée n'est pas nécessairement un profil d'extraction qualifi�
 
 ## Expériences par familles documentaires
 
-La famille [Factures](experiments/factures/README.md) regroupe les expériences de profils de factures. [GED-01](experiments/factures/GED-01/README.md) en est le premier cas borné.
+Pour rendre le catalogue immédiatement lisible, les premières expériences sont rangées dans six familles documentaires courantes :
+
+- [Factures & achats](experiments/factures/README.md)
+- [Impôts & finances](experiments/impots-finances/README.md)
+- [Santé & protection sociale](experiments/sante-protection-sociale/README.md)
+- [Assurances & sinistres](experiments/assurances/README.md)
+- [Administration & droits](experiments/administration-droits/README.md)
+- [Logement, véhicules & services courants](experiments/logement-vehicules-services/README.md)
+
+Ces familles constituent un classement humain de haut niveau ; elles ne remplacent ni les TAGs de format, ni les profils techniques.
+
+[GED-01](experiments/factures/GED-01/README.md) est le premier cas borné de la famille Factures. [GED-02 — formulaire 2044](experiments/impots-finances/GED-02/README.md) est rangé dans Impôts & finances.
 
 ## Démonstration de classification locale
 
-Le [protocole TAG candidat](project/TAG_CANDIDATE_PROTOCOL.md) fournit un éditeur local minimal et expose la prochaine fonction manquante : la consultation du catalogue. Le cas [GED-02 — formulaire 2044](experiments/formulaires/GED-02/README.md) examine la généralité du modèle hors factures ; il reste non qualifié.
+Le [protocole TAG candidat](project/TAG_CANDIDATE_PROTOCOL.md) fournit un éditeur local minimal et expose la prochaine fonction manquante : la consultation du catalogue.
 
 ## Participer
 
