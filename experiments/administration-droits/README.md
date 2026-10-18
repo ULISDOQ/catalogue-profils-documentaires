@@ -38,6 +38,3 @@ Un document peut donc être bien qualifié sur son identité et son contexte adm
 - https://www.data.gouv.fr/datasets/fiches-pratiques-et-ressources-entreprendre-service-public-gouv-fr
 - https://www.legifrance.gouv.fr/
 
-## Expériences
-
-- [GED-02 — formulaire 2044](GED-02/README.md) : éprouver, sur un cas réel de formulaire administratif, le lien entre document identifiable et connaissance officielle publiée.
