@@ -1,6 +1,6 @@
 # ULISDOQ — Prologue fondateur
 
-**Union Interprofessionnelle de Sources Documentaires Qualifiées**
+**Union Libre Interprofessionnelle de Sources Documentaires Qualifiées**
 
 ## L'esprit d'exploration
 

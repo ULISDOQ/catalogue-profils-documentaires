@@ -1,6 +1,6 @@
 # ULISDOQ — Catalogue de profils documentaires
 
-**Union Interprofessionnelle de Sources Documentaires Qualifiées**
+**Union Libre Interprofessionnelle de Sources Documentaires Qualifiées**
 
 *Explorer les documents. Partager les connaissances. Qualifier l'information.*
 
