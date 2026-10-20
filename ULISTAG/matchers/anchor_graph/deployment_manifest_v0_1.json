@@ -1,0 +1,17 @@
+{
+  "schema_version": "ulisdoq-method-deployment/0.1",
+  "method_id": "ULISTAG-ANCHOR-GRAPH",
+  "method_version": "0.1.0-phase1",
+  "maturity": "PHASE1_CANDIDATE",
+  "source": {
+    "implementation_path": "ULISTAG/matchers/anchor_graph/ulistag_v0.py",
+    "implementation_blob_sha": "d7d3c2e1967ffe8246d998e93143f19deb7e93de"
+  },
+  "environment": "anchor_graph",
+  "python_dependencies": [
+    {"distribution": "pdfplumber", "version": "0.11.10"}
+  ],
+  "system_dependencies": [],
+  "verification": "complete profile global battery + GED-01 evidence",
+  "production_qualified": false
+}
