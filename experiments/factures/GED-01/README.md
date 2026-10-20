@@ -13,6 +13,8 @@ Cette expérience appartient à la famille [Factures & achats](../README.md).
 
 **État actuel :** le candidat ULISTAG v0.1 a passé une première exécution réelle sur PCIA : `MATCH_CANDIDATE`, `node_ratio=1.0`, `edge_ratio=1.0`, puis extraction technique des trois champs attendus avec `EXTRACTED_UNVERIFIED`. Aucune valeur privée n'a été retournée. Ce résultat porte sur la source ayant servi à la conception et reste **non qualifié**. Voir le [RETEX PCIA](docs/RETEX_ULISTAG_V0_1_PCIA_EXECUTION_001.md).
 
+Voir la [conception spécialisée GED-01](ulistag/ANCHOR_GRAPH_V0_1.md). Le matcher générique candidat correspondant vit désormais dans le cœur [ULISTAG/](../../../ULISTAG/README.md).
+
 Pour préparer un descripteur local, voir [l'éditeur de TAG candidat](../../../client/tag_candidate.py) et son [protocole](../../../project/TAG_CANDIDATE_PROTOCOL.md). La consultation du catalogue reste à implémenter.
 
 ## Séparation des identités
