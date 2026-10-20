@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """GED-02 phase-1 candidate: multi-page layout-density ULISTAG matcher."""
 import argparse
+import base64
 import json
 import shutil
 import subprocess
@@ -60,7 +61,12 @@ def observe(pdf_path: Path, ref):
 
 def compare(pdf_path: Path, ref):
     obs = observe(pdf_path, ref)
-    ref_vec = np.asarray(ref["reference_vector"], dtype=np.float32)
+    if ref.get("reference_vector_encoding") != "float32-le-base64":
+        raise SystemExit("unsupported reference vector encoding")
+    raw = base64.b64decode(ref["reference_vector_b64"])
+    ref_vec = np.frombuffer(raw, dtype="<f4")
+    if len(ref_vec) != int(ref["reference_vector_length"]):
+        raise SystemExit("reference vector length mismatch")
     if obs["page_count"] != int(ref["page_count"]) or len(obs["vector"]) != len(ref_vec):
         similarity = 0.0
         status = "UNKNOWN"
