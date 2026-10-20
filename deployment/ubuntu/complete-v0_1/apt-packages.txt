@@ -1,0 +1,10 @@
+# ULISDOQ-COMPLETE-UBUNTU-V0.1 system packages
+git
+ca-certificates
+curl
+python3-venv
+python3-pip
+poppler-utils
+tesseract-ocr
+tesseract-ocr-fra
+tesseract-ocr-eng
