@@ -59,3 +59,25 @@ INSTALLATION_DATE=
 ```
 
 **Règle : ne jamais enregistrer une installation non vérifiée comme configuration qualifiée.**
+
+
+## Rattachement au profil complet
+
+Un environnement historique PCIA peut être réutilisé par `ULISDOQ-COMPLETE-UBUNTU-V0.1` uniquement par rattachement explicite :
+
+```text
+ENVIRONMENT_NAME=
+PATH=
+MODE=ATTACHED
+LIVE_FREEZE_SHA256=
+GLOBAL_VERIFICATION_RESULT=
+```
+
+Le rattachement :
+
+- ne transfère pas la propriété de l'environnement à ULISDOQ ;
+- interdit sa suppression par rollback ;
+- ne signifie pas compatibilité tant que la batterie globale n'est pas PASS ;
+- permet d'installer uniquement le delta manquant autour de l'existant.
+
+Aucun rattachement n'est actuellement enregistré comme qualifié tant qu'un retour runtime PCIA n'a pas été reçu.
