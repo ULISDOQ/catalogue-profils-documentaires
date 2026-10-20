@@ -6,7 +6,10 @@
   "capabilities": [
     {
       "id": "client.tag_candidate",
-      "source": ["client/tag_candidate.py", "client/test_tag_candidate.py"],
+      "source": [
+        "client/tag_candidate.py",
+        "client/test_tag_candidate.py"
+      ],
       "environment": "core",
       "python_dependencies": [],
       "system_dependencies": [],
@@ -15,30 +18,65 @@
     },
     {
       "id": "client.invoice2data_extraction",
-      "source": ["client/extract.py"],
+      "source": [
+        "client/extract.py"
+      ],
       "environment": "invoice2data",
-      "python_dependencies": [{"name": "invoice2data", "version": "0.4.5", "status": "CANDIDATE_PIN"}],
-      "system_dependencies": ["tesseract-ocr", "tesseract-ocr-fra", "tesseract-ocr-eng", "poppler-utils"],
+      "python_dependencies": [
+        {
+          "name": "invoice2data",
+          "version": "0.4.5",
+          "status": "CANDIDATE_PIN"
+        }
+      ],
+      "system_dependencies": [
+        "tesseract-ocr",
+        "tesseract-ocr-fra",
+        "tesseract-ocr-eng",
+        "poppler-utils"
+      ],
       "evidence": "import + CLI reader availability + GED experiment",
       "maturity": "PHASE1_CANDIDATE"
     },
     {
       "id": "ulistag.anchor_graph",
-      "source": ["ULISTAG/matchers/anchor_graph/ulistag_v0.py"],
+      "source": [
+        "ULISTAG/matchers/anchor_graph/ulistag_v0.py"
+      ],
       "environment": "anchor_graph",
-      "python_dependencies": [{"name": "pdfplumber", "version": "0.11.10", "status": "PCIA_OBSERVED"}],
+      "python_dependencies": [
+        {
+          "name": "pdfplumber",
+          "version": "0.11.10",
+          "status": "PCIA_OBSERVED"
+        }
+      ],
       "system_dependencies": [],
       "evidence": "dependency/version + matcher CLI + GED-01 evidence",
       "maturity": "PHASE1_CANDIDATE"
     },
     {
       "id": "ulistag.visual_keypoints",
-      "source": ["ULISTAG/matchers/visual_keypoints/ulistag_visual_keypoints_v0.py"],
+      "source": [
+        "ULISTAG/matchers/visual_keypoints/ulistag_visual_keypoints_v0.py"
+      ],
       "environment": "visual_keypoints",
       "python_dependencies": [
-        {"name": "opencv-python-headless", "version": "4.13.0.92", "status": "DESIGN_ENVIRONMENT_TESTED"},
-        {"name": "numpy", "version": "2.3.5", "status": "DESIGN_ENVIRONMENT_TESTED"},
-        {"name": "PyMuPDF", "version": "1.26.7", "status": "DESIGN_ENVIRONMENT_TESTED"}
+        {
+          "name": "opencv-python-headless",
+          "version": "4.13.0.92",
+          "status": "DESIGN_ENVIRONMENT_TESTED"
+        },
+        {
+          "name": "numpy",
+          "version": "2.3.5",
+          "status": "DESIGN_ENVIRONMENT_TESTED"
+        },
+        {
+          "name": "PyMuPDF",
+          "version": "1.26.7",
+          "status": "DESIGN_ENVIRONMENT_TESTED"
+        }
       ],
       "system_dependencies": [],
       "evidence": "ORB + Hamming + RANSAC + PDF render functional test + GED-02 evidence",
@@ -49,7 +87,11 @@
       "source": [],
       "environment": "system",
       "python_dependencies": [],
-      "system_dependencies": ["tesseract-ocr", "tesseract-ocr-fra", "tesseract-ocr-eng"],
+      "system_dependencies": [
+        "tesseract-ocr",
+        "tesseract-ocr-fra",
+        "tesseract-ocr-eng"
+      ],
       "tested_version": "5.3.4",
       "other_versions": "REQUIRE_VERIFICATION",
       "evidence": "tesseract --version + list-langs + OCR functional probe",
@@ -57,11 +99,46 @@
     },
     {
       "id": "semantic.json_schema_validation",
-      "source": ["experiments/impots-finances/GED-02/extraction/semantic_extraction_schema_v0_1.json"],
+      "source": [
+        "experiments/impots-finances/GED-02/extraction/semantic_extraction_schema_v0_1.json"
+      ],
       "environment": "semantic_validation",
-      "python_dependencies": [{"name": "jsonschema", "version": "4.25.1", "status": "CANDIDATE_PIN"}],
+      "python_dependencies": [
+        {
+          "name": "jsonschema",
+          "version": "4.25.1",
+          "status": "CANDIDATE_PIN"
+        }
+      ],
       "system_dependencies": [],
       "evidence": "schema validator import + minimal validation test",
+      "maturity": "PHASE1_CANDIDATE"
+    },
+    {
+      "id": "client.profile_driven_ocr_geometric_extraction",
+      "source": [
+        "client/profile_ocr_extract_v0_1.py",
+        "project/PROFILE_REGISTRY_V0_1.json"
+      ],
+      "environment": "profile_extraction",
+      "python_dependencies": [
+        {
+          "name": "PyMuPDF",
+          "version": "1.26.7",
+          "status": "DESIGN_ENVIRONMENT_TESTED"
+        },
+        {
+          "name": "jsonschema",
+          "version": "4.25.1",
+          "status": "CANDIDATE_PIN"
+        }
+      ],
+      "system_dependencies": [
+        "tesseract-ocr",
+        "tesseract-ocr-fra",
+        "tesseract-ocr-eng"
+      ],
+      "evidence": "profile discovery + binding load + ROI OCR + schema validation + traceability",
       "maturity": "PHASE1_CANDIDATE"
     }
   ],
