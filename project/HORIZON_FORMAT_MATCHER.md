@@ -10,8 +10,8 @@ Permettre à un logiciel consommateur de retrouver automatiquement, parmi les pr
 
 L'[éditeur local de TAG candidat](TAG_CANDIDATE_PROTOCOL.md) est un premier démonstrateur borné : il ne réalise pas encore la recherche de correspondances.
 
-L'[état de l'art des signatures documentaires et l'étude d'opportunité ULISTAG](HORIZON_FORMAT_STATE_OF_ART.md) complètent cet horizon sans créer de chantier architectural distinct.
-La [recherche ULISTAG sur les empreintes structurelles documentaires](ULISTAG_STRUCTURAL_FINGERPRINT_RESEARCH.md) approfondit l'hypothèse d'une empreinte comparable fondée sur des repères et relations spatiales, à qualifier expérimentalement.
+L'[état de l'art des signatures documentaires et l'étude d'opportunité ULISTAG](HORIZON_FORMAT_STATE_OF_ART.md) complètent cet horizon. Le sous-système ULISTAG possède désormais son [espace cœur et son cycle de vie propres](../ULISTAG/README.md), tout en restant intégré au projet ULISDOQ.
+La [recherche ULISTAG sur les empreintes structurelles documentaires](../ULISTAG/research/STRUCTURAL_FINGERPRINT_RESEARCH.md) approfondit l'hypothèse d'une empreinte comparable fondée sur des repères et relations spatiales, à qualifier expérimentalement.
 
 ## Architecture conceptuelle
 
