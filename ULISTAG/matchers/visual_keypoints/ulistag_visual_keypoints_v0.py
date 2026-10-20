@@ -41,22 +41,39 @@ def observe_page(img, nfeatures=5000):
         return [], np.empty((0,32), dtype=np.uint8)
     return kps, desc
 
-def build_reference(pdf_path: Path, ulistag_id: str, dpi: int, keep_per_page: int):
+def build_reference(pdf_path: Path, ulistag_id: str, dpi: int, keep_per_page: int, calibration_path: Path | None = None):
     pages=render_pdf(pdf_path, dpi)
+    calibration_pages=render_pdf(calibration_path, dpi) if calibration_path else None
     out={
         "schema_version":SCHEMA,
         "ulistag_id":ulistag_id,
         "status":"CANDIDATE_UNQUALIFIED",
         "observer":{"type":"pdf_render_grayscale","dpi":dpi},
         "matcher":{"type":"orb_hamming_homography","ratio_test":0.72,"ransac_reproj_px":5.0},
-        "decision_policy":{"min_good_matches":35,"min_inliers":25,"min_inlier_ratio":0.55,"min_matching_pages_ratio":0.75},
+        "decision_policy":{"min_good_matches":10,"min_inliers":8,"min_inlier_ratio":0.55,"min_matching_pages_ratio":0.75},
         "reference":{"page_count":len(pages),"source_sha256":sha256_file(pdf_path),"pages":[]},
+        "calibration":{"source_sha256":sha256_file(calibration_path)} if calibration_path else None,
         "qualification":"NONE",
         "score_semantics":"local visual keypoint compatibility with geometric coherence; not a probability"
     }
+    if calibration_pages is not None and len(calibration_pages) != len(pages):
+        raise SystemExit("reference and calibration documents must have the same page count")
     for pno,img in enumerate(pages,1):
         kps,desc=observe_page(img)
-        idx=sorted(range(len(kps)), key=lambda i:kps[i].response, reverse=True)[:keep_per_page]
+        if calibration_pages is None:
+            idx=sorted(range(len(kps)), key=lambda i:kps[i].response, reverse=True)[:keep_per_page]
+        else:
+            ckps,cdesc=observe_page(calibration_pages[pno-1])
+            pairs=cv2.BFMatcher(cv2.NORM_HAMMING).knnMatch(desc,cdesc,k=2)
+            good=[a for a,b in pairs if a.distance < 0.72*b.distance]
+            stable=[]
+            if len(good)>=8:
+                src=np.float32([kps[m.queryIdx].pt for m in good]).reshape(-1,1,2)
+                dst=np.float32([ckps[m.trainIdx].pt for m in good]).reshape(-1,1,2)
+                _H,mask=cv2.findHomography(src,dst,cv2.RANSAC,5.0)
+                if mask is not None:
+                    stable=[m.queryIdx for m,ok in zip(good,mask.ravel()) if ok]
+            idx=sorted(set(stable), key=lambda i:kps[i].response, reverse=True)[:keep_per_page]
         out["reference"]["pages"].append({
             "page":pno,"width":int(img.shape[1]),"height":int(img.shape[0]),
             "features":[
@@ -124,13 +141,14 @@ def main():
     b.add_argument("--ulistag-id",required=True)
     b.add_argument("--output",type=Path,required=True)
     b.add_argument("--dpi",type=int,default=120)
-    b.add_argument("--keep-per-page",type=int,default=600)
+    b.add_argument("--keep-per-page",type=int,default=100)
+    b.add_argument("--calibration-document",type=Path)
     m=sub.add_parser("match")
     m.add_argument("document",type=Path)
     m.add_argument("--reference",type=Path,required=True)
     args=ap.parse_args()
     if args.cmd=="build-reference":
-        ref=build_reference(args.document,args.ulistag_id,args.dpi,args.keep_per_page)
+        ref=build_reference(args.document,args.ulistag_id,args.dpi,args.keep_per_page,args.calibration_document)
         args.output.write_text(json.dumps(ref,ensure_ascii=False,indent=2),encoding="utf-8")
         print(json.dumps({"status":"REFERENCE_BUILT","ulistag_id":args.ulistag_id,
                           "pages":ref["reference"]["page_count"],
