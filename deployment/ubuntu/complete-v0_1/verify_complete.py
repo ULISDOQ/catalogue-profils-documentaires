@@ -45,7 +45,7 @@ for item in args.env:
     name, value = item.split("=", 1)
     envs[name] = Path(value).resolve()
 
-required_envs = {"core", "anchor_graph", "visual_keypoints", "invoice2data", "semantic_validation"}
+required_envs = {"core", "anchor_graph", "visual_keypoints", "invoice2data", "semantic_validation", "profile_extraction"}
 missing_envs = sorted(required_envs - set(envs))
 
 checks = {}
@@ -82,6 +82,24 @@ rc, out, err = run(["git", "-C", str(repo), "status", "--porcelain"])
 overall &= check("source_clean", rc == 0 and not out.strip(), dirty=out.strip())
 
 # Verify every explicit environment binding before using it.
+# Profile-extraction environment: version and import sanity.
+rc, out, err = run(
+    [
+        py("profile_extraction"),
+        "-c",
+        "from importlib.metadata import version; import fitz, jsonschema; "
+        "print(version('PyMuPDF') + '|' + version('jsonschema'))",
+    ]
+)
+profile_extract_versions = out.strip()
+overall &= check(
+    "profile_extraction_dependencies",
+    rc == 0 and profile_extract_versions == "1.26.7|4.25.1",
+    observed=profile_extract_versions,
+    expected="1.26.7|4.25.1",
+    stderr=err[-1000:],
+)
+
 for name in sorted(required_envs):
     exe = envs.get(name, Path("/missing")) / "bin/python"
     ok = exe.is_file() and exe.stat().st_mode & 0o111 != 0
