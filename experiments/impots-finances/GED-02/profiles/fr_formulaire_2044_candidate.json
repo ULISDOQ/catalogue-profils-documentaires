@@ -1,19 +1,21 @@
 {
   "profile_id": "ULISDOQ-PROFILE-FR-2044-CANDIDATE",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "status": "CANDIDATE_UNQUALIFIED",
   "family": "tax_declaration_form",
   "document_type": "déclaration des revenus fonciers",
   "form_number": "2044",
   "jurisdiction": "FR",
-  "format_tag_id": null,
+  "format_tag_id": "ULISTAG-GED02-FR-2044-2025-LAYOUT-DENSITY-V0.1",
   "recognition": {
-    "textual_markers_candidate": [
-      "2044",
-      "revenus fonciers"
-    ],
-    "year_variant": "UNKNOWN",
-    "geometric_features": "NOT_OBSERVED",
+    "method": "layout_density_v0_1",
+    "reference": "../ulistag/reference_layout_density_v0_1.json",
+    "matcher": "../ulistag/layout_density_v0_1.py",
+    "corpus_result": "PASS_CANDIDATE",
+    "positive_count": 8,
+    "negative_count": 1,
+    "year_variant": "2025_CANDIDATE",
+    "qualification": "NONE",
     "requires_official_sample_validation": true
   },
   "extraction": {
@@ -21,9 +23,11 @@
     "fields": "TO_DEFINE_FROM_VERIFIED_YEAR_SPECIFIC_FORM"
   },
   "limits": [
-    "Profil conceptuel seulement",
-    "Aucun formulaire officiel vérifié dans cette expérience",
-    "Aucune donnée fiscale personnelle",
-    "Aucune qualification ni extraction réalisée"
+    "Profil candidat de phase 1",
+    "Reconnaissance éprouvée uniquement sur le corpus synthétique GED-02",
+    "Un seul témoin négatif et aucun corpus négatif indépendant",
+    "Millésime et identité documentaire à confirmer par références officielles",
+    "Aucune qualification de production",
+    "Extraction métier non définie à ce stade"
   ]
 }
