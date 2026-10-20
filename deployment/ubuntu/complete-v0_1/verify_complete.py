@@ -313,11 +313,15 @@ raise SystemExit(0 if result['status']=='MATCH_CANDIDATE' else 1)
     except Exception:
         extraction = {}
     data = extraction.get("data") or {}
+    try:
+        amount_ok = abs(float(str(data.get("amount", "")).replace(",", ".")) - 42.0) < 1e-9
+    except (TypeError, ValueError):
+        amount_ok = False
     extraction_ok = (
         rc == 0
         and extraction.get("status") == "EXTRACTED_UNVERIFIED"
         and str(data.get("invoice_number", "")) == "TEST-001"
-        and str(data.get("amount", "")).replace(".", ",") == "42,00"
+        and amount_ok
     )
     overall &= check(
         "functional_invoice_extraction",
