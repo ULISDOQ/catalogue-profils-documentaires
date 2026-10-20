@@ -110,7 +110,11 @@ Conserver les factures privées dans le SI autorisé. Publier préférentielleme
 
 ## Première étape bornée
 
-**GED-01** : faire fonctionner le profil d'extraction candidat, observer ses erreurs, réunir un corpus de factures indépendantes et de contre-exemples, puis décider **si un TAG graphique ajoute réellement de la valeur**. Pas de développement d'un nouveau moteur avant cette décision.
+**GED-01** : le RETEX réel a montré qu'il n'est pas utile de faire dépendre la suite d'une succession de corrections locales du profil d'extraction actuel. La priorité expérimentale devient la constitution d'un **ensemble documentaire candidat exploitable** : référence structurelle minimale, comparaison explicable, liaison versionnée vers un profil d'extraction et procédure locale reproductible.
+
+L'extraction réelle peut avancer en parallèle avec les profils disponibles ; elle ne doit pas attendre la qualification générale d'ULISTAG. Réciproquement, un succès d'extraction ne qualifie pas la reconnaissance structurelle.
+
+Voir [GED-01 — Profil documentaire exploitable pour le modèle SFR étudié](GED01_SFR_PROFIL_DOCUMENTAIRE_EXPLOITABLE.md).
 
 ## Non-objectifs à ce stade
 
