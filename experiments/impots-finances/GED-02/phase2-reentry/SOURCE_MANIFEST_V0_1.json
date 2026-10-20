@@ -1,0 +1,60 @@
+{
+  "schema_version": "ged02-phase2-reentry-source-manifest/0.1",
+  "experiment": "GED-02",
+  "phase1_status": "CONCLUSIVE_COMPLETE_ENOUGH_TO_ADVANCE",
+  "privacy": {
+    "personal_data": false,
+    "dataset_kind": "synthetic experimental production",
+    "note": "No personal fiscal data is included in this re-entry package."
+  },
+  "canonical_sources": [
+    {
+      "role": "official_blank_reference",
+      "filename": "2044_5132.pdf",
+      "sha256": "6c9798559408deef0646cf93cbf9f933c7da1cbd404ac2129e54d52fc3369e9b",
+      "repository_storage": "NOT_DUPLICATED_BINARY",
+      "recovery": "retrieve public official 2044 source and verify SHA256 before reuse"
+    },
+    {
+      "role": "synthetic_source_pdf",
+      "filename": "GED02-S11_2044_2025_SYNTHETIC_COMPLETE.pdf",
+      "sha256": "817b0d70508c7eae40ff936add8b4bdb17c72bc5717fc71149d43ac97b1c6fbd",
+      "repository_storage": "NOT_DUPLICATED_BINARY",
+      "recovery": "local experimental corpus; exact SHA256 required"
+    },
+    {
+      "role": "synthetic_scan_gray_phase1_target",
+      "filename": "GED02-S11_2044_2025_SYNTHETIC_COMPLETE_SCAN_GRAY.pdf",
+      "sha256": "260a0a1f7930ca32420879111a202c8636300c65c6fa6bf7378b912ff6ba999d",
+      "repository_storage": "NOT_DUPLICATED_BINARY",
+      "recovery": "local experimental corpus; exact SHA256 required"
+    },
+    {
+      "role": "synthetic_scan_color_auxiliary",
+      "filename": "GED02-S11_2044_2025_SYNTHETIC_COMPLETE_SCAN_COLOR.pdf",
+      "sha256": "d272981b7258dd09c3194c72a178fe87ffe783d019d3229b1c91a694e91a4123",
+      "repository_storage": "NOT_DUPLICATED_BINARY",
+      "recovery": "local experimental corpus; exact SHA256 required"
+    },
+    {
+      "role": "synthetic_ground_truth",
+      "repository_path": "experiments/impots-finances/GED-02/phase2-reentry/evidence/S11_DGFIP_SYNTHETIC_GROUND_TRUTH.json",
+      "sha256": "30f3e1a24922efa28ba91f73b078748fba92fcdfee735b530ba34c7dbcef81a9"
+    },
+    {
+      "role": "phase1_profile_driven_frozen_extraction",
+      "repository_path": "experiments/impots-finances/GED-02/phase2-reentry/evidence/S11_PROFILE_DRIVEN_EXTRACTED_FROZEN.json",
+      "sha256": "9ca2151afe78ff2f54a2b04595c9823a1f7d07b12c80a468267c448026611c69"
+    }
+  ],
+  "canonical_implementation": [
+    "project/PROFILE_REGISTRY_V0_1.json",
+    "client/profile_ocr_extract_v0_1.py",
+    "client/deployment/profile_ocr_extract_manifest_v0_1.json",
+    "experiments/impots-finances/GED-02/profiles/fr_formulaire_2044_candidate.json",
+    "experiments/impots-finances/GED-02/extraction/fr_2044_2025_property1_binding_v0_1.json",
+    "experiments/impots-finances/GED-02/extraction/semantic_extraction_schema_v0_1.json",
+    "experiments/impots-finances/GED-02/profiles/DEBT-GED02-PROFILE-SEMANTIC-ROBUSTNESS-001.md"
+  ],
+  "phase2_entry_rule": "Do not silently regenerate or substitute any S11 source. If an exact binary is unavailable, treat the source as missing until its SHA256 identity is restored."
+}
