@@ -70,7 +70,7 @@ DOCUMENT
 - [research/](research/) — état de l'art et travaux de conception génériques ;
 - [matchers/](matchers/) — méthodes de comparaison réutilisables ;
 - [schemas/](schemas/) — contrats de représentation ;
-- [protocols/](protocols/) — protocoles génériques d'évaluation ;
+- [protocols/](protocols/) — protocoles génériques d'évaluation, dont la [méthode GED-N phase 1](protocols/PHASE1_GED_CASE_METHOD.md) ;
 - [tests/](tests/) — tests du cœur, indépendants des preuves propres aux GED-N.
 
 Les données privées ne sont pas capitalisées dans ce dossier.
