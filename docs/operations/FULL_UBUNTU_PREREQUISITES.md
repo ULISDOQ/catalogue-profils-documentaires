@@ -1,3 +1,6 @@
+> **SUPERSEDED_BY:** `ULISDOQ-COMPLETE-UBUNTU-V0.1` — `deployment/ubuntu/complete-v0_1/`  
+> Ce document est conservé comme étape de conception. Il ne doit plus être utilisé comme contrat canonique d'installation, notamment parce qu'il incluait des capacités GPU spéculatives non exigées par la version déclarée.
+
 # ULISDOQ FULL — Prérequis Ubuntu réutilisables
 
 **Référence : ULISDOQ-FULL-UBUNTU-PREREQUISITES-001**  
