@@ -1,0 +1,31 @@
+{
+  "schema_version": "ulistag-visual-keypoints-reference-manifest/0.1",
+  "ulistag_id": "ULISTAG-GED02-2044-VISUAL-KEYPOINTS-V0.1",
+  "status": "CANDIDATE_UNQUALIFIED",
+  "method_ref": "ULISTAG/matchers/visual_keypoints/ulistag_visual_keypoints_v0.py",
+  "reference_source": {
+    "filename": "2044_5132.pdf",
+    "sha256": "6c9798559408deef0646cf93cbf9f933c7da1cbd404ac2129e54d52fc3369e9b"
+  },
+  "calibration_source": {
+    "filename": "GED02-S01_2044_2025_SYNTHETIC.pdf",
+    "sha256": "1e3cda81f5491cdb8898410f0aa3908776c59247a64a9044f47d2a87c366f3d0"
+  },
+  "build": {
+    "dpi": 120,
+    "keep_per_page": 100,
+    "feature": "ORB",
+    "descriptor_match": "HAMMING",
+    "ratio_test": 0.72,
+    "geometric_coherence": "RANSAC_HOMOGRAPHY",
+    "ransac_reproj_px": 5.0
+  },
+  "decision_policy": {
+    "min_good_matches": 10,
+    "min_inliers": 8,
+    "min_inlier_ratio": 0.55,
+    "min_matching_pages_ratio": 0.75
+  },
+  "qualification": "NONE",
+  "note": "Phase-1 reproducible build manifest. The concrete descriptor reference is generated from the pinned source and S01 calibration document; thresholds are experimental, not probabilities."
+}
