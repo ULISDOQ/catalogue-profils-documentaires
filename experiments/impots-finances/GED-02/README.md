@@ -56,6 +56,24 @@ https://www.legifrance.gouv.fr/
 
 Légifrance peut compléter la qualification lorsqu'un texte réglementaire ou législatif permet d'établir l'origine normative, la période de validité ou le cadre juridique du document.
 
+## ULISTAG phase 1
+
+GED-02 dispose désormais d'un candidat de reconnaissance structurelle de phase 1 fondé sur le matcher réutilisable [visual_keypoints](../../../ULISTAG/matchers/visual_keypoints/README.md).
+
+La référence est construite à partir du PDF officiel `2044_5132.pdf` puis stabilisée avec une première représentation synthétique S01. Le même TAG candidat est ensuite éprouvé successivement sur S02 à S08, puis sur un témoin négatif fiscal ressemblant.
+
+Résultat expérimental :
+
+```text
+S01..S08 = MATCH_CANDIDATE
+N01       = UNKNOWN
+QUALIFICATION = NONE
+```
+
+Voir [l'expérience ULISTAG GED-02](ulistag/PHASE1_2044_VISUAL_KEYPOINTS_V0_1.md) et le [manifest de construction reproductible](ulistag/reference_visual_v0_1_manifest.json).
+
+Cette réussite reste un résultat de **phase 1** : elle sert à éprouver une méthode industrialisable de fabrication des GED-N, non à produire dès maintenant un TAG définitif ou une qualification de production.
+
 ## Profil candidat
 
 Le profil candidat est [profiles/fr_formulaire_2044_candidate.json](profiles/fr_formulaire_2044_candidate.json).
