@@ -1,0 +1,60 @@
+# ULISDOQ FULL phase-1 requirements input.
+# Known-tested GED-02 core dependencies are exact.
+# The remaining capabilities use minimum constraints until the first full-stack
+# PCIA qualification freezes a canonical exact lock.
+
+# Core / contracts / CLI
+pydantic>=2.9
+jsonschema>=4.23
+PyYAML>=6.0
+typer>=0.12
+rich>=13.9
+orjson>=3.10
+requests>=2.32
+httpx>=0.27
+
+# PDF / document IO
+pypdf>=5.0
+pdfplumber==0.11.10
+PyMuPDF==1.26.7
+pdf2image>=1.17
+python-magic>=0.4.27
+
+# Image processing / matching
+Pillow>=11.0
+numpy==2.3.5
+scipy>=1.14
+opencv-python-headless==4.13.0.92
+scikit-image>=0.24
+
+# OCR / text
+pytesseract>=0.3.13
+ocrmypdf>=16.0
+rapidfuzz>=3.10
+regex>=2024.9
+
+# Tables / structured data
+pandas>=2.2
+openpyxl>=3.1
+tabula-py>=2.9
+
+# Office formats
+python-docx>=1.1
+odfpy>=1.4
+
+# Barcode / QR
+pyzbar>=0.1.9
+
+# Existing extraction ecosystem
+invoice2data>=0.4
+
+# Tests / evidence
+pytest>=8.3
+pytest-json-report>=1.5
+
+# GPU / ML experimental baseline
+torch>=2.6
+torchvision>=0.21
+transformers>=4.48
+safetensors>=0.5
+onnxruntime-gpu>=1.20
