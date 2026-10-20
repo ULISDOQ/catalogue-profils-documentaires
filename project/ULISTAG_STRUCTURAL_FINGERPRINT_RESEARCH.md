@@ -3,6 +3,7 @@
 **Référence : ULISTAG-RESEARCH-001**  
 **Statut : proposition de recherche rattachée à HORIZON-FORMAT-001**  
 **Origine de la proposition : Jean**  
+**Source de travail : collaboration CLAU/GED-RÉEL, coordonnée par CLAU/LIFECYCLE**  
 **Date d'instruction : 2026-10-18**
 
 ## 1 — Positionnement
@@ -19,7 +20,9 @@ ULISTAG n'est :
 
 L'objectif est de représenter des caractéristiques relativement invariantes d'un **modèle documentaire** afin de rapprocher des documents structurellement similaires malgré les variations de contenu, de dates, de montants, de numéros, d'altérations locales et de représentation PDF.
 
-## 2 — Inspiration Shazam : acquis réutilisables et limites
+## 2 — Repère pédagogique : comparaison avec Shazam
+
+La référence à Shazam est conservée ici comme **repère pédagogique et source bibliographique de recherche**, et non comme identité d'ULISDOQ, dépendance technique ou déclaration d'une reproduction de ses mécanismes.
 
 L'algorithme décrit par Avery Wang pour Shazam repose sur une réduction du signal audio en **points caractéristiques robustes**, organisés en carte de constellation. Des points ancres sont appariés à des points d'une zone cible ; chaque paire produit une empreinte combinant deux fréquences et leur différence temporelle. La recherche ne se contente pas de compter des collisions de hashes : elle vérifie aussi la **cohérence des décalages temporels** entre les correspondances.
 
@@ -246,7 +249,11 @@ Le préfiltre visuel peut rester utile pour ordonner des candidats, mais ne doit
 
 Le premier essai invoice2data ayant comporté une erreur de transcription des expressions régulières, il n'est pas retenu comme preuve d'échec du profil.
 
-## 10 — Protocole expérimental GED-01 candidat
+## 10 — Protocole expérimental GED-01 candidat — collaboration avec CLAU/GED-RÉEL
+
+GED-01 est un **cas réel porté par CLAU/GED-RÉEL et coordonné par CLAU/LIFECYCLE**. ULISDOQ fournit et fait évoluer les objets génériques utiles à l'expérience (profil candidat, conventions TAG/ULISTAG, règles de comparaison et de qualification), puis reçoit les RETEX et preuves partageables. Le document privé, les exécutions locales et les observations contenant des données personnelles restent dans le périmètre autorisé de CLAU/GED-RÉEL.
+
+Cette séparation signifie que la feuille de route ci-dessous décrit les besoins expérimentaux d'ULISDOQ ; elle ne transfère pas le pilotage opérationnel du cas réel à ULISDOQ.
 
 ### P0 — Gros plan structurel
 
@@ -341,12 +348,12 @@ Avant toute généralisation :
 ## 13 — Feuille de route candidate
 
 ```text
-R0  caractérisation structurelle GED-01
-R1  schéma ULISTAG expérimental minimal
-R2  génération A/B + témoin négatif
-R3  comparateur déterministe explicable
-R4  liaison TAG → fournisseur_exp_01
-R5  extraction et vérification locales
+R0  CLAU/GED-RÉEL : caractérisation structurelle locale GED-01 ; ULISDOQ : critères attendus
+R1  ULISDOQ : schéma ULISTAG expérimental minimal
+R2  collaboration : génération A/B + témoin négatif, sans transfert du document privé
+R3  ULISDOQ : comparateur déterministe explicable candidat
+R4  ULISDOQ : liaison TAG → fournisseur_exp_01
+R5  CLAU/GED-RÉEL : extraction et vérification locales ; retour de preuves partageables
 R6  corpus indépendant
 R7  décision : poursuivre / simplifier / abandonner / introduire brique plus avancée
 ```
