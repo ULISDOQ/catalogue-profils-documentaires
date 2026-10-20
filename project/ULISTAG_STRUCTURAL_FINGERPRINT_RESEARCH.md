@@ -348,15 +348,55 @@ Avant toute généralisation :
 ## 13 — Feuille de route candidate
 
 ```text
-R0  CLAU/GED-RÉEL : caractérisation structurelle locale GED-01 ; ULISDOQ : critères attendus
-R1  ULISDOQ : schéma ULISTAG expérimental minimal
-R2  collaboration : génération A/B + témoin négatif, sans transfert du document privé
-R3  ULISDOQ : comparateur déterministe explicable candidat
-R4  ULISDOQ : liaison TAG → fournisseur_exp_01
-R5  CLAU/GED-RÉEL : extraction et vérification locales ; retour de preuves partageables
-R6  corpus indépendant
-R7  décision : poursuivre / simplifier / abandonner / introduire brique plus avancée
+R0  CLAU/GED-RÉEL
+    Réutiliser la caractérisation structurelle locale déjà acquise.
+    Compléter uniquement les éléments manquants au regard
+    des critères attendus fournis par ULISDOQ.
+
+R1  ULISDOQ
+    Définir le schéma ULISTAG expérimental minimal.
+
+R2  COLLABORATION
+    Construire deux exemples synthétiques A/B de même structure
+    avec des valeurs différentes, plus un témoin négatif
+    de structure différente.
+    Vérifier les invariants et les différences de l'empreinte.
+    Aucun transfert du document privé.
+
+R3  ULISDOQ
+    Éprouver un comparateur déterministe explicable candidat.
+    Documenter ce que sa mesure signifie et ses limites,
+    sans assimiler automatiquement similarité et probabilité.
+
+R4  ULISDOQ
+    Établir la liaison :
+    ULISTAG → profil candidat versionné → fournisseur_exp_01.
+
+    Une correspondance propose un traitement ;
+    elle ne prouve pas sa validité sur le document réel.
+
+R5  CLAU/GED-RÉEL
+    Exécuter et vérifier l'extraction localement.
+    Retourner des preuves partageables et les écarts observés.
+
+R6  COLLABORATION
+    Éprouver la généralisation sur un petit corpus indépendant
+    des exemples utilisés pour concevoir et régler le mécanisme.
+
+R7  DÉCISION
+    Poursuivre / simplifier / abandonner /
+    introduire une brique plus avancée.
 ```
+
+### Parallélisation admise
+
+R5 peut avancer **en parallèle de R1 à R4** avec le profil canonique exact déjà disponible. L'extraction réelle GED-01 n'a pas à attendre l'existence d'un matcher général.
+
+Le retour R5 qualifie l'exécution et la compatibilité du profil sur le cas observé ; il ne qualifie pas à lui seul ULISTAG ni la reconnaissance générale du modèle.
+
+### Arbitrage continu
+
+La décision de poursuivre, simplifier, abandonner ou changer de brique reste possible **après chaque étape**. R7 formalise la décision de synthèse ; il n'interdit pas d'arrêter plus tôt une piste dont l'utilité n'est pas démontrée.
 
 Aucune étape n'autorise par elle-même une déclaration de technologie qualifiée ou de taux de reconnaissance généralisable.
 
