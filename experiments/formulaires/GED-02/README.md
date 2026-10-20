@@ -1,6 +1,6 @@
 # GED-02 — Formulaire fiscal 2044, millésime 2025 (DGFiP)
 
-**Statut :** SOURCE_OFFICIELLE_IDENTIFIEE — PROTOCOLE_PREPARE — EXECUTION_PCIA_NON_REALISEE  
+**Statut :** R0_PASS_PCIA — QUALIFICATION_SCAN_BASSE_RESOLUTION_A_REALISER  
 **Autorité :** Jean — CLAU_METHODE_V2_BETA_5  
 **Famille :** formulaire administratif / déclaration fiscale structurée  
 **Nature :** document public authentique vierge ; aucune déclaration personnelle
@@ -14,8 +14,8 @@
 - PDF original : https://www.impots.gouv.fr/sites/default/files/formulaires/2044/2025/2044_5132.pdf
 - Page de référence : https://www.impots.gouv.fr/formulaire/2044/declaration-des-revenus-fonciers
 - Pages PDF : 4 (observation de la source officielle via consultation)
-- Source téléchargée sur PCIA : **NON ENCORE PROUVE**
-- SHA256 du PDF local : **A ETABLIR A LA PREMIERE ACQUISITION**
+- Source téléchargée sur PCIA : **OUI, R0 PASS, 2026-10-20**
+- SHA256 du PDF R0 : `6c9798559408deef0646cf93cbf9f933c7da1cbd404ac2129e54d52fc3369e9b`
 - Droit de redistribution : **A VERIFIER AVANT REHEBERGEMENT** ; conserver ici seulement URL et métadonnées.
 
 ## Pourquoi GED-02
@@ -55,3 +55,29 @@ Tester si une même famille de méthodes permet d'identifier les rubriques, la s
 - R3 : capitaliser les méthodes transverses pour les futurs cas GED.
 
 **NEXT_ACTOR : CLAU/GED-RÉEL — acquisition et observation PCIA R0.**
+
+
+## Exigence de qualification GED-02 — scan consommateur basse résolution
+
+**Décision de Jean (2026-10-20) :** GED-02 doit viser la reconnaissance d'une 2044 millésime 2025 numérisée, même dégradée, telle qu'un consommateur réel pourrait la fournir. Le PASS_R0 sur PDF natif ne qualifie pas cette capacité.
+
+### Contrat de reconnaissance à qualifier
+
+- Entrées : image/PDF raster de pages scannées, sans couche texte ni AcroForm utilisable ; résolution basse, bruit, compression, rotation, pages multiples ; données personnelles interdites dans les fixtures publiques.
+- Sorties : `MATCH_CANDIDATE` / `UNKNOWN` / `AMBIGUOUS`, identité 2044, millésime 2025, pages détectées, éléments structurels de preuve, limites et provenance de la méthode.
+- Ne jamais présenter un score comme probabilité sans calibration ; ne pas confondre reconnaissance, extraction des données fiscales et validation fiscale.
+- Une page absente, illisible ou une version indiscernable doit conduire à une décision explicitement partielle, ambiguë ou inconnue, et non à une qualification implicite.
+
+### Protocole progressif
+
+1. **R1 — Corpus contrôlé :** partir du PDF officiel et générer des scans simulés à plusieurs résolutions (dont 100/150/200 dpi), niveaux JPEG, bruit, inclinaison, contraste, rognage ; documenter paramètres et empreintes. Ce sont des **dérivés synthétiques**, pas des scans consommateurs authentiques.
+2. **R2 — Baseline :** essayer les lecteurs OCR et/ou empreintes de layout avec preuves d'ancres, géométrie et repères de pages. Consigner les échecs sans modifier le candidat pendant la passe.
+3. **R3 — Témoins négatifs :** autres formulaires fiscaux, autres millésimes de 2044, pages permutées/manquantes et documents voisins ; vérifier faux positifs et confusion de millésime.
+4. **R4 — Validation indépendante :** scans réellement produits avec plusieurs équipements, paramètres et opérateurs, puis si possible échantillons de consommateurs légalement obtenus, minimisés et autorisés. Garder les échantillons d'évaluation séparés des documents de conception.
+5. **R5 — Qualification bornée :** publier une matrice de tests, taux de reconnaissance/faux positifs/faux rejets, conditions d'utilisation, limites, décision humaine et statut de maturité. Aucun seuil numérique de qualification n'est fixé sans protocole et corpus représentatifs.
+
+### Frontières
+
+Ne pas publier de déclaration fiscale remplie, données fiscales privées, OCR brut de consommateurs ou scans non autorisés. La qualification vise d'abord **l'identité du formulaire et du millésime**, non la justesse des montants déclarés. Les scans issus du PDF officiel sont des essais de robustesse et ne suffisent pas seuls à revendiquer un fonctionnement en conditions réelles.
+
+**NEXT_ACTION :** préparer R1 et R3 comme lots reproductibles, puis définir la baseline de reconnaissance avec ULISDOQ avant toute affirmation de qualification.
