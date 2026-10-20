@@ -1,0 +1,61 @@
+{
+  "experiment": "GED-02",
+  "specimen": "S11",
+  "institution": "DGFiP",
+  "document": {
+    "form": "2044",
+    "cerfa": "10334*29",
+    "edition": 2025,
+    "income_year": 2024
+  },
+  "scenario": "One rented urban property, positive rental income, no prior losses, no special tax regimes",
+  "synthetic": true,
+  "fiscal_values_by_official_line": {
+    "211": 12000,
+    "212": 0,
+    "213": 0,
+    "214": 0,
+    "215": 12000,
+    "221": 480,
+    "222": 20,
+    "223": 340,
+    "224": 1800,
+    "224bis": 0,
+    "225": 0,
+    "226": 0,
+    "227": 1050,
+    "228": 0,
+    "229": 900,
+    "230": 0,
+    "240": 4590,
+    "250": 1500,
+    "261": 5910,
+    "262": 0,
+    "263": 5910,
+    "420": 5910
+  },
+  "property_1": {
+    "tenant": "ALEX LOCATAIRE (FICTIF)",
+    "address": "8 RUE DES TILLEULS, 31000 TOULOUSE (FICTIF)",
+    "rental_units": 1
+  },
+  "fields_not_applicable": [
+    "110-115",
+    "228",
+    "430-442",
+    "450",
+    "460"
+  ],
+  "rules": {
+    "215": "211+212+213+214",
+    "240": "sum(221,222,223,224,225,226,227,228,229)-230",
+    "261": "215-240-250",
+    "263": "261+262",
+    "420": "sum(114,263)"
+  },
+  "limitations": [
+    "synthetic printed data; not actual handwriting",
+    "field alignment and business validation require human review",
+    "no fiscal filing validity claimed"
+  ]
+}
