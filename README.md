@@ -30,6 +30,14 @@ Une source identifiée n'est pas nécessairement un profil d'extraction qualifi�
 
 **[HORIZON-FORMAT-001 — Reconnaissance et qualification des formats documentaires](project/HORIZON_FORMAT_MATCHER.md)** : établir, sur des corpus indépendants, des TAGs de formats qualifiés permettant aux clients de retrouver le profil d'extraction adapté. Horizon de recherche et de qualification, **non une fonctionnalité déjà opérationnelle**. Priorité au réemploi des mécanismes existants.
 
+## ULISTAG — reconnaissance documentaire
+
+[ULISTAG](ULISTAG/README.md) est le sous-système cœur d'ULISDOQ consacré à la description, l'indexation et la reconnaissance structurelle des modèles documentaires.
+
+Son cycle de conception est séparé pour préserver la lisibilité d'ULISDOQ. Les méthodes génériques vivent dans `ULISTAG/` ; leur élaboration et leurs preuves spécifiques restent dans les répertoires `experiments/.../GED-N/ulistag/`.
+
+La [roadmap ULISTAG](ULISTAG/ROADMAP.md) vise une première phase d'environ 70 types, formats et fournisseurs différents afin de faire émerger empiriquement les primitives, regroupements et matchers réellement réutilisables.
+
 ## Expériences par familles documentaires
 
 Pour rendre le catalogue immédiatement lisible, les premières expériences sont rangées dans six familles documentaires courantes :
