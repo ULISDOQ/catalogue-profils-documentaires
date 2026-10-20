@@ -20,28 +20,15 @@ python client/extract.py \
 
 Le résultat est un JSON avec `status`, `source_sha256`, `engine`, `reader` et `data` si extraction. Codes retour : 0 extraction non vérifiée ; 1 aucun profil reconnu ; 2 erreur. **Une extraction n'est jamais une qualification.**
 
-## ULISTAG v0.1 — reconnaissance structurelle GED-01
+## ULISTAG
 
-`ulistag_v0.py` est le premier comparateur déterministe candidat fondé sur un graphe d'ancres textuelles et leurs relations géométriques.
+La reconnaissance structurelle possède désormais son propre espace cœur dans [`ULISTAG/`](../ULISTAG/README.md). Le client ULISDOQ reste transverse et ne porte plus l'implémentation interne des matchers.
 
-Prérequis candidat : Python 3 et `pdfplumber>=0.11`.
+Le premier matcher candidat est :
 
-Depuis la racine du dépôt :
+`ULISTAG/matchers/anchor_graph/ulistag_v0.py`
 
-```bash
-python client/ulistag_v0.py match /chemin/vers/facture.pdf \
-  --reference experiments/factures/GED-01/ulistag/reference_v0_1.json
-```
-
-Si le résultat est `MATCH_CANDIDATE`, l'extraction structurelle candidate peut être essayée :
-
-```bash
-python client/ulistag_v0.py extract /chemin/vers/facture.pdf \
-  --profile experiments/factures/GED-01/profiles/sfr_structural_v0_1.json \
-  --evidence-only
-```
-
-`--evidence-only` retourne les statuts de champs sans leurs valeurs. Le score de reconnaissance est une compatibilité structurelle déterministe, **pas une probabilité**. Aucun résultat v0.1 ne vaut qualification.
+Les références et preuves propres à GED-01 restent sous `experiments/factures/GED-01/ulistag/`.
 
 ## TAG candidat
 
