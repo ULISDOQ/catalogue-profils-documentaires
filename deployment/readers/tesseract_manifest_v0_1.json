@@ -1,0 +1,21 @@
+{
+  "schema_version": "ulisdoq-reader-deployment/0.1",
+  "reader_id": "TESSERACT-OCR",
+  "maturity": "PHASE1_CANDIDATE",
+  "system_packages_ubuntu": [
+    "tesseract-ocr",
+    "tesseract-ocr-fra",
+    "tesseract-ocr-eng"
+  ],
+  "reference_observation": {
+    "version": "5.3.4",
+    "source": "PCIA prior observation",
+    "lifecycle_confirmation": "PENDING"
+  },
+  "compatibility_policy": "Other versions require capability verification; newer is not assumed compatible.",
+  "verification": [
+    "tesseract --version",
+    "tesseract --list-langs includes fra and eng"
+  ],
+  "production_qualified": false
+}
