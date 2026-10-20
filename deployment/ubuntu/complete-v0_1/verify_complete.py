@@ -82,6 +82,22 @@ rc, out, err = run(["git", "-C", str(repo), "status", "--porcelain"])
 overall &= check("source_clean", rc == 0 and not out.strip(), dirty=out.strip())
 
 # Verify every explicit environment binding before using it.
+for name in sorted(required_envs):
+    exe = envs.get(name, Path("/missing")) / "bin/python"
+    ok = exe.is_file() and exe.stat().st_mode & 0o111 != 0
+    overall &= check(f"env_{name}_python", ok, path=str(exe))
+
+if missing_envs:
+    result = {
+        "profile_id": "ULISDOQ-COMPLETE-UBUNTU-V0.1",
+        "status": "FAIL",
+        "qualification": "CAPABILITY_PROFILE_VERIFICATION_ONLY",
+        "source_commit": head,
+        "checks": checks,
+    }
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+    sys.exit(1)
+
 # Profile-extraction environment: version and import sanity.
 rc, out, err = run(
     [
@@ -99,22 +115,6 @@ overall &= check(
     expected="1.26.7|4.25.1",
     stderr=err[-1000:],
 )
-
-for name in sorted(required_envs):
-    exe = envs.get(name, Path("/missing")) / "bin/python"
-    ok = exe.is_file() and exe.stat().st_mode & 0o111 != 0
-    overall &= check(f"env_{name}_python", ok, path=str(exe))
-
-if missing_envs:
-    result = {
-        "profile_id": "ULISDOQ-COMPLETE-UBUNTU-V0.1",
-        "status": "FAIL",
-        "qualification": "CAPABILITY_PROFILE_VERIFICATION_ONLY",
-        "source_commit": head,
-        "checks": checks,
-    }
-    print(json.dumps(result, ensure_ascii=False, indent=2))
-    sys.exit(1)
 
 # Core client TAG functional test.
 rc, out, err = run([py("core"), "test_tag_candidate.py"], cwd=repo / "client")
