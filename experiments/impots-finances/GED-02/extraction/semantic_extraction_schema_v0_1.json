@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ulisdoq.example/schemas/ged02-semantic-extraction-v0.1.json",
+  "title": "GED-02 semantic extraction candidate",
+  "type": "object",
+  "required": ["document_profile_id", "specimen_id", "fields"],
+  "properties": {
+    "document_profile_id": {"type": "string"},
+    "specimen_id": {"type": "string"},
+    "profile_decision": {"enum": ["MATCH_CANDIDATE", "UNKNOWN", "ERROR"]},
+    "method_qualification": {"enum": ["NONE", "PHASE1_CANDIDATE", "PHASE1_PASS", "PARTIAL", "FAIL"]},
+    "fields": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["official_label", "status", "page"],
+        "properties": {
+          "official_id": {"type": ["string", "null"]},
+          "official_label": {"type": "string"},
+          "status": {"enum": ["VALUE", "EMPTY", "NOT_APPLICABLE", "UNREADABLE", "AMBIGUOUS"]},
+          "value": {},
+          "page": {"type": "integer", "minimum": 1},
+          "evidence": {
+            "type": "object",
+            "properties": {
+              "reader": {"type": "string"},
+              "confidence": {}
+            },
+            "additionalProperties": true
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}
