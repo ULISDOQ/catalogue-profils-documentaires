@@ -1,0 +1,36 @@
+{
+  "schema_version": "ulistag-anchor-graph/0.1",
+  "ulistag_id": "ULISTAG-GED01-SFR-MOBILE-V0.1",
+  "status": "CANDIDATE_UNQUALIFIED",
+  "family": "invoice_mobile_telecom",
+  "page_count": 2,
+  "calibration_basis": "stable anchors measured on private source; existence and layout cross-checked on public GED-01 fixture PNGs",
+  "nodes": [
+    {"id":"p1_title","page":1,"label":"VOTRE FACTURE MOBILE","cx":0.1860,"cy":0.1161,"tol":0.035},
+    {"id":"p1_invoice","page":1,"label":"FACTURE N°","cx":0.1209,"cy":0.3817,"tol":0.035},
+    {"id":"p1_due","page":1,"label":"Montant net à prélever","cx":0.1807,"cy":0.4103,"tol":0.035},
+    {"id":"p1_amount","page":1,"label":"Montant facturé","cx":0.1167,"cy":0.4299,"tol":0.035},
+    {"id":"p1_vat","page":1,"label":"Dont TVA","cx":0.0969,"cy":0.4450,"tol":0.035},
+    {"id":"p2_detail","page":2,"label":"Votre facture en détail","cx":0.1367,"cy":0.1115,"tol":0.035},
+    {"id":"p2_subs","page":2,"label":"VOS ABONNEMENTS, FORFAITS ET OPTIONS","cx":0.2197,"cy":0.1393,"tol":0.035},
+    {"id":"p2_usage","page":2,"label":"VOS CONSOMMATIONS TÉLÉPHONIQUES","cx":0.2077,"cy":0.1951,"tol":0.035},
+    {"id":"p2_included","page":2,"label":"Compris dans vos forfaits","cx":0.1543,"cy":0.2128,"tol":0.035},
+    {"id":"p2_previous","page":2,"label":"Compris dans votre forfait précédent","cx":0.1894,"cy":0.2855,"tol":0.035}
+  ],
+  "edges": [
+    {"a":"p1_title","b":"p1_invoice","tol":0.045},
+    {"a":"p1_invoice","b":"p1_due","tol":0.035},
+    {"a":"p1_due","b":"p1_amount","tol":0.030},
+    {"a":"p1_amount","b":"p1_vat","tol":0.025},
+    {"a":"p2_detail","b":"p2_subs","tol":0.035},
+    {"a":"p2_subs","b":"p2_usage","tol":0.040},
+    {"a":"p2_usage","b":"p2_included","tol":0.030},
+    {"a":"p2_included","b":"p2_previous","tol":0.045}
+  ],
+  "decision_policy": {
+    "candidate_min_node_ratio": 0.8,
+    "candidate_min_edge_ratio": 0.75,
+    "note": "Experimental retrieval thresholds; not probabilities and not qualification thresholds."
+  },
+  "profile_ref": "../profiles/sfr_structural_v0_1.json"
+}
