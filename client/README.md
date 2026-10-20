@@ -6,13 +6,12 @@ Le client ULISDOQ est une **capacité transverse du projet**, indépendante d'un
 
 `extract.py` charge explicitement un répertoire de profils YAML et appelle l'API Python publique d'[invoice2data](https://invoice2data.readthedocs.io/stable/usage.html). Aucun document n'est transmis à ULISDOQ.
 
-Prérequis : Python 3, `invoice2data` et, selon le document, un moteur OCR local.
+Pour un déploiement reproductible, ne pas installer `invoice2data` globalement. Utiliser le profil complet Ubuntu ou l'environnement isolé `invoice2data` qu'il crée.
 
-Exemple avec GED-01, depuis la racine du dépôt :
+Exemple avec GED-01 après installation du profil complet :
 
 ```bash
-python -m pip install invoice2data
-python client/extract.py \
+"$HOME/.local/share/ulisdoq/complete-v0_1/venvs/invoice2data/bin/python" client/extract.py \
   experiments/factures/GED-01/fixtures/Fournisseur-EXP-01_document_experimental.pdf \
   --templates experiments/factures/GED-01/templates \
   --reader tesseract > resultat.json
@@ -41,3 +40,20 @@ Le manque fonctionnel identifié relève de **HORIZON-FORMAT-001** : comparer un
 ## Positionnement
 
 Le client n'appartient ni à GED-01, ni à GED-02, ni à une maturité particulière du catalogue. Une expérience peut fournir ses fixtures, profils, paramètres et critères de preuve ; le client reste générique et réutilisable.
+
+
+## Déploiement reproductible
+
+Le contrat de déploiement du client complet est documenté dans [deployment/ubuntu/complete-v0_1/README.md](../deployment/ubuntu/complete-v0_1/README.md).
+
+Le profil sépare actuellement :
+
+```text
+core
+anchor_graph
+visual_keypoints
+invoice2data
+semantic_validation
+```
+
+afin d'éviter les conflits de dépendances. Tesseract et ses données linguistiques FR/EN sont des prérequis système du profil Ubuntu complet.
