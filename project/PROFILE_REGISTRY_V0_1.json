@@ -1,0 +1,27 @@
+{
+  "schema_version": "ulisdoq-profile-registry/0.1",
+  "status": "PHASE1_CANDIDATE",
+  "profiles": [
+    {
+      "profile_id": "ULISDOQ-PROFILE-FR-2044-CANDIDATE",
+      "profile_version": "0.3.0",
+      "profile_path": "experiments/impots-finances/GED-02/profiles/fr_formulaire_2044_candidate.json",
+      "profile_git_blob_sha": "58f07533e94dc248315fd4ce9a9b14dbf74d1bb9",
+      "format_tag_id": "ULISTAG-GED02-2044-VISUAL-KEYPOINTS-V0.1",
+      "recognition": {
+        "method_id": "ULISTAG-VISUAL-KEYPOINTS-ORB-HAMMING-RANSAC",
+        "method_version": "0.1.0-phase1",
+        "reference_manifest_path": "experiments/impots-finances/GED-02/ulistag/reference_visual_v0_1_manifest.json",
+        "reference_sha256": "8950bbaf084e02ceab841835e72287a369cc77e999332af55c1c893dd7704e24"
+      },
+      "extraction": {
+        "capability_id": "PROFILE_DRIVEN_OCR_GEOMETRIC_EXTRACTION_V0.1",
+        "adapter_path": "client/profile_ocr_extract_v0_1.py",
+        "binding_path": "experiments/impots-finances/GED-02/extraction/fr_2044_2025_property1_binding_v0_1.json",
+        "semantic_schema_path": "experiments/impots-finances/GED-02/extraction/semantic_extraction_schema_v0_1.json",
+        "qualification": "NONE"
+      },
+      "production_qualified": false
+    }
+  ]
+}
