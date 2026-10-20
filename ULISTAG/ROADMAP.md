@@ -42,3 +42,7 @@ Elle est promue dans le cœur `ULISTAG/` lorsqu'elle devient :
 - testable indépendamment du cas initial.
 
 Les méthodes devenues inutiles peuvent être retirées sans remettre en cause les preuves historiques conservées dans les expériences.
+
+## Dette active GED-01
+
+`DEBT-GED01-ANCHOR-GRAPH-SAME-SUPPLIER-001` — éprouver `ANCHOR_GRAPH_V0_1` sur plusieurs factures distinctes du même fournisseur afin d'en mesurer la stabilité intra-modèle et les limites. Référence : `experiments/factures/GED-01/ulistag/DEBT_SAME_SUPPLIER_VALIDATION.md`.
