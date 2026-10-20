@@ -1,6 +1,16 @@
 # GED-02 — Formulaire 2044 et connaissance officielle associée
 
-**Statut : expérience conceptuelle candidate, non qualifiée.**
+**Statut : expérience phase 1 — PASS_CANDIDATE technique, non qualifiée.**
+
+GED-02 suit la [méthode GED-N phase 1](../../../ULISTAG/protocols/PHASE1_GED_CASE_METHOD.md). Le corpus synthétique comporte huit variantes positives du formulaire 2044 étudié et un témoin négatif fiscal ressemblant. Une première méthode ULISTAG spécialisée, fondée sur la densité de mise en page multi-pages, sépare les huit positifs du négatif sur ce corpus.
+
+Voir :
+- [méthode ULISTAG GED-02](ulistag/LAYOUT_DENSITY_V0_1.md) ;
+- [résultats v0.1](ulistag/RESULTS_V0_1.md) ;
+- [référence v0.1](ulistag/reference_layout_density_v0_1.json) ;
+- [matcher expérimental](ulistag/layout_density_v0_1.py).
+
+Ce succès est un résultat de **phase 1** : il justifie la poursuite horizontale des GED-N, pas une qualification de production.
 
 GED-02 utilise le **formulaire 2044 — déclaration des revenus fonciers** comme cas concret pour éprouver une capacité fondatrice d'ULISDOQ : partir d'un document administratif identifiable et le relier à la connaissance officielle publiée qui le décrit, l'explique et le situe dans une version précise.
 
