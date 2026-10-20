@@ -1,0 +1,23 @@
+{
+  "schema_version": "ulisdoq-complete-ubuntu-profile/0.1",
+  "profile_id": "ULISDOQ-COMPLETE-UBUNTU-V0.1",
+  "status": "CANDIDATE_NOT_YET_FULLY_QUALIFIED",
+  "control_baseline_read_by_lifecycle": "e51ab7f40a9a4c42ee3039cf78633c2629e4a2ff",
+  "canonical_inventory": "deployment/ubuntu/complete-v0_1/capability_inventory.json",
+  "compatibility_matrix": "deployment/ubuntu/complete-v0_1/COMPATIBILITY.md",
+  "system_packages": "deployment/ubuntu/complete-v0_1/apt-packages.txt",
+  "entrypoint": "deployment/ubuntu/complete-v0_1/ulisdoq-deploy.sh",
+  "verification": "deployment/ubuntu/complete-v0_1/verify_complete.py",
+  "environments": {
+    "core": null,
+    "anchor_graph": "deployment/ubuntu/complete-v0_1/requirements-anchor_graph.txt",
+    "visual_keypoints": "deployment/ubuntu/complete-v0_1/requirements-visual_keypoints.txt",
+    "invoice2data": "deployment/ubuntu/complete-v0_1/requirements-invoice2data.txt",
+    "semantic_validation": "deployment/ubuntu/complete-v0_1/requirements-semantic_validation.txt"
+  },
+  "gpu": {
+    "declared_function_requires_gpu": false,
+    "cuda_dependency": false
+  },
+  "rollback": "entrypoint rollback removes only profile-owned venvs and evidence; system packages are never auto-removed"
+}
