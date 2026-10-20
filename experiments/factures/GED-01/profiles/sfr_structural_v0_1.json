@@ -1,0 +1,47 @@
+{
+  "profile_id": "ULISDOQ-PROFILE-GED01-SFR-STRUCTURAL-V0.1",
+  "version": "0.1.0",
+  "status": "CANDIDATE_UNQUALIFIED",
+  "family": "invoice_mobile_telecom",
+  "selection": {
+    "ulistag_id": "ULISTAG-GED01-SFR-MOBILE-V0.1",
+    "required_match_status": "MATCH_CANDIDATE"
+  },
+  "reader_contract": {
+    "capability": "text_with_coordinates",
+    "candidate_implementation": "pdfplumber>=0.11",
+    "implementation_is_mandatory": false
+  },
+  "fields": [
+    {
+      "name": "invoice_number",
+      "page": 1,
+      "anchor": "FACTURE N°",
+      "strategy": "between_anchor_and_token",
+      "stop_token": "DU"
+    },
+    {
+      "name": "date",
+      "page": 1,
+      "anchor": "FACTURE N°",
+      "strategy": "after_token_same_line",
+      "token": "DU"
+    },
+    {
+      "name": "amount",
+      "page": 1,
+      "anchor": "Montant net à prélever",
+      "strategy": "right_band_same_line",
+      "x_min_norm": 0.70,
+      "value_regex": "(\\d+[,.]\\d{2})"
+    }
+  ],
+  "required_fields": ["invoice_number", "date", "amount"],
+  "qualification": "NONE",
+  "limits": [
+    "Designed with one private real document and one public transformed fixture pair",
+    "Not independently validated",
+    "Text-layer PDF path only in v0.1",
+    "OCR adapter not yet implemented"
+  ]
+}
