@@ -13,7 +13,8 @@
     "anchor_graph": "deployment/ubuntu/complete-v0_1/requirements-anchor_graph.txt",
     "visual_keypoints": "deployment/ubuntu/complete-v0_1/requirements-visual_keypoints.txt",
     "invoice2data": "deployment/ubuntu/complete-v0_1/requirements-invoice2data.txt",
-    "semantic_validation": "deployment/ubuntu/complete-v0_1/requirements-semantic_validation.txt"
+    "semantic_validation": "deployment/ubuntu/complete-v0_1/requirements-semantic_validation.txt",
+    "profile_extraction": "deployment/ubuntu/complete-v0_1/requirements-profile_extraction.txt"
   },
   "gpu": {
     "declared_function_requires_gpu": false,
