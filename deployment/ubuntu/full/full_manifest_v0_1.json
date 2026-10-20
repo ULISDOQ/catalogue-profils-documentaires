@@ -1,7 +1,7 @@
 {
   "schema_version": "ulisdoq-full-linux-stack/0.1",
   "stack_id": "ULISDOQ-FULL-UBUNTU-PHASE1-V0.1",
-  "status": "PHASE1_CANDIDATE",
+  "status": "SUPERSEDED",
   "scope": "Complete reusable baseline for ULISDOQ phase-1 experimentation, not limited to one GED-N case",
   "target": {
     "os_family": "ubuntu",
@@ -42,5 +42,7 @@
     "system_packages": "explicitly authorized apt install only",
     "cuda_driver_or_toolkit_installation": "NOT_IMPLICIT_VERIFY_FIRST"
   },
-  "production_qualified": false
+  "production_qualified": false,
+  "superseded_by": "deployment/ubuntu/complete-v0_1/profile_manifest.json",
+  "reason": "Replaced by inventory-driven complete profile containing only declared ULISDOQ v0.1 capabilities; GPU/CUDA removed until a declared capability requires them."
 }
