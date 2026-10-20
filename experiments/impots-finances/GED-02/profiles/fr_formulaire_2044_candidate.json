@@ -6,7 +6,7 @@
   "document_type": "déclaration des revenus fonciers",
   "form_number": "2044",
   "jurisdiction": "FR",
-  "format_tag_id": "ULISTAG-GED02-FR-2044-2025-LAYOUT-DENSITY-V0.1",
+  "format_tag_id": "ULISTAG-GED02-2044-VISUAL-KEYPOINTS-V0.1",
   "recognition": {
     "method": "layout_density_v0_1",
     "reference": "../ulistag/reference_layout_density_v0_1.json",
@@ -16,7 +16,24 @@
     "negative_count": 1,
     "year_variant": "2025_CANDIDATE",
     "qualification": "NONE",
-    "requires_official_sample_validation": true
+    "requires_official_sample_validation": false,
+    "geometric_features": "VISUAL_KEYPOINTS_ORB_HAMMING_RANSAC_CANDIDATE",
+    "phase1_evidence": {
+      "positives": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08"
+      ],
+      "positive_result": "MATCH_CANDIDATE",
+      "negative": "N01_FISCAL_LOOKALIKE",
+      "negative_result": "UNKNOWN",
+      "qualification": "NONE"
+    }
   },
   "extraction": {
     "engine": "UNSELECTED",
@@ -24,10 +41,10 @@
   },
   "limits": [
     "Profil candidat de phase 1",
-    "Reconnaissance éprouvée uniquement sur le corpus synthétique GED-02",
-    "Un seul témoin négatif et aucun corpus négatif indépendant",
-    "Millésime et identité documentaire à confirmer par références officielles",
-    "Aucune qualification de production",
-    "Extraction métier non définie à ce stade"
+    "Reconnaissance éprouvée sur source officielle + huit représentations synthétiques",
+    "Un témoin négatif fiscal ressemblant rejeté",
+    "Aucune qualification indépendante",
+    "Aucune donnée fiscale personnelle requise",
+    "Extraction métier à définir séparément"
   ]
 }
