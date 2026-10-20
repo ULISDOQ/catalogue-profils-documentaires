@@ -1,0 +1,73 @@
+{
+  "schema_version": "ulisdoq-capability-inventory/0.1",
+  "profile_id": "ULISDOQ-COMPLETE-UBUNTU-V0.1",
+  "status": "CANDIDATE_NOT_YET_FULLY_QUALIFIED",
+  "principle": "Contains every software capability declared by ULISDOQ v0.1; future capabilities require a versioned profile evolution.",
+  "capabilities": [
+    {
+      "id": "client.tag_candidate",
+      "source": ["client/tag_candidate.py", "client/test_tag_candidate.py"],
+      "environment": "core",
+      "python_dependencies": [],
+      "system_dependencies": [],
+      "evidence": "client unit tests",
+      "maturity": "IMPLEMENTED"
+    },
+    {
+      "id": "client.invoice2data_extraction",
+      "source": ["client/extract.py"],
+      "environment": "invoice2data",
+      "python_dependencies": [{"name": "invoice2data", "version": "0.4.5", "status": "CANDIDATE_PIN"}],
+      "system_dependencies": ["tesseract-ocr", "tesseract-ocr-fra", "tesseract-ocr-eng", "poppler-utils"],
+      "evidence": "import + CLI reader availability + GED experiment",
+      "maturity": "PHASE1_CANDIDATE"
+    },
+    {
+      "id": "ulistag.anchor_graph",
+      "source": ["ULISTAG/matchers/anchor_graph/ulistag_v0.py"],
+      "environment": "anchor_graph",
+      "python_dependencies": [{"name": "pdfplumber", "version": "0.11.10", "status": "PCIA_OBSERVED"}],
+      "system_dependencies": [],
+      "evidence": "dependency/version + matcher CLI + GED-01 evidence",
+      "maturity": "PHASE1_CANDIDATE"
+    },
+    {
+      "id": "ulistag.visual_keypoints",
+      "source": ["ULISTAG/matchers/visual_keypoints/ulistag_visual_keypoints_v0.py"],
+      "environment": "visual_keypoints",
+      "python_dependencies": [
+        {"name": "opencv-python-headless", "version": "4.13.0.92", "status": "DESIGN_ENVIRONMENT_TESTED"},
+        {"name": "numpy", "version": "2.3.5", "status": "DESIGN_ENVIRONMENT_TESTED"},
+        {"name": "PyMuPDF", "version": "1.26.7", "status": "DESIGN_ENVIRONMENT_TESTED"}
+      ],
+      "system_dependencies": [],
+      "evidence": "ORB + Hamming + RANSAC + PDF render functional test + GED-02 evidence",
+      "maturity": "PHASE1_CANDIDATE"
+    },
+    {
+      "id": "reader.tesseract_ocr",
+      "source": [],
+      "environment": "system",
+      "python_dependencies": [],
+      "system_dependencies": ["tesseract-ocr", "tesseract-ocr-fra", "tesseract-ocr-eng"],
+      "tested_version": "5.3.4",
+      "other_versions": "REQUIRE_VERIFICATION",
+      "evidence": "tesseract --version + list-langs + OCR functional probe",
+      "maturity": "PHASE1_CANDIDATE"
+    },
+    {
+      "id": "semantic.json_schema_validation",
+      "source": ["experiments/impots-finances/GED-02/extraction/semantic_extraction_schema_v0_1.json"],
+      "environment": "semantic_validation",
+      "python_dependencies": [{"name": "jsonschema", "version": "4.25.1", "status": "CANDIDATE_PIN"}],
+      "system_dependencies": [],
+      "evidence": "schema validator import + minimal validation test",
+      "maturity": "PHASE1_CANDIDATE"
+    }
+  ],
+  "gpu": {
+    "required_by_declared_v0_1_capability": false,
+    "cuda_required": false,
+    "policy": "Do not install CUDA, GPU frameworks or models until a declared ULISDOQ capability requires them. Record host GPU facts only as informational evidence."
+  }
+}
