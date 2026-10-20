@@ -30,7 +30,7 @@ Le TAG candidat est construit à partir du rendu du PDF officiel :
 
 ```text
 4 pages
-→ 600 points ORB conservés par page
+→ jusqu'à 100 points ORB stables conservés par page
 → coordonnées normalisées
 → descripteurs binaires
 → appariement Hamming
@@ -105,3 +105,19 @@ Ne pas perfectionner ce TAG maintenant. Capitaliser les observations de phase 1 
 - calibrage des seuils ;
 - faux positifs et faux négatifs sur corpus indépendant ;
 - robustesse aux millésimes et transformations réelles.
+
+
+## Référence canonique immuable
+
+Le descripteur utilisé pour Gate A est désormais matérialisé comme artefact versionné.
+
+```text
+REFERENCE_VERSION=0.1
+RESTORED_FILE=reference_visual_v0_1.json
+SHA256=8950bbaf084e02ceab841835e72287a369cc77e999332af55c1c893dd7704e24
+SIZE=70043
+```
+
+Le dépôt conserve cet artefact sous forme compressée découpée en quatre parties texte. `restore_reference_visual_v0_1.py` ne calcule aucun point ORB : il décode uniquement l'artefact canonique et refuse toute dérive de hash.
+
+Pour S11 : **aucune reconstruction, recalibration ou modification de seuil n'est autorisée**.
