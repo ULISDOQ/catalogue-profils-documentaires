@@ -120,3 +120,18 @@ GED-02 doit montrer qu'ULISDOQ sait :
 Le TAG peut être préparé localement avec l'[éditeur ULISDOQ](../../../client/tag_candidate.py), mais **l'extraction vient après la qualification documentaire**.
 
 Aucun document fiscal personnel réel n'est requis dans le dépôt pour conduire cette expérimentation.
+
+
+## Clôture phase 1 et reprise phase 2
+
+La phase 1 GED-02 est désormais considérée comme **concluante et suffisante pour poursuivre vers GED-N+1**, sans qualification production du profil 2044.
+
+Le package canonique de reprise phase 2 est :
+
+- [phase2-reentry/README.md](phase2-reentry/README.md)
+- [phase2-reentry/SOURCE_MANIFEST_V0_1.json](phase2-reentry/SOURCE_MANIFEST_V0_1.json)
+- [phase2-reentry/evidence/S11_PROFILE_DRIVEN_EXTRACTED_FROZEN.json](phase2-reentry/evidence/S11_PROFILE_DRIVEN_EXTRACTED_FROZEN.json)
+- [phase2-reentry/evidence/S11_DGFIP_SYNTHETIC_GROUND_TRUTH.json](phase2-reentry/evidence/S11_DGFIP_SYNTHETIC_GROUND_TRUTH.json)
+- [profiles/DEBT-GED02-PROFILE-SEMANTIC-ROBUSTNESS-001.md](profiles/DEBT-GED02-PROFILE-SEMANTIC-ROBUSTNESS-001.md)
+
+Règle de reprise : **ne pas repartir de zéro**. Reprendre l'implémentation et les preuves existantes, traiter les deltas explicitement inscrits dans la dette, puis qualifier si et seulement si les preuves deviennent suffisantes.
