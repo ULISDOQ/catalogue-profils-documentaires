@@ -256,7 +256,7 @@ ag=importlib.util.module_from_spec(spec); spec.loader.exec_module(ag)
 pdf=Path({str(pdf)!r})
 seed={{'nodes':[
  {{'id':'TITLE','page':1,'label':'ULISDOQ FACTURE TEST'}},
- {{'id':'NUMBER','page':1,'label':'FACTURE N TEST 001 DU 01 01 2026'}}
+ {{'id':'NUMBER','page':1,'label':'FACTURE N'}}
 ]}}
 obs=ag.observe(pdf,seed)
 nodes=[]
