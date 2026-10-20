@@ -1,0 +1,37 @@
+{
+  "schema_version": "ulisdoq-linux-host/0.1",
+  "deployment_id": "ULISDOQ-LINUX-BASE-V0.1",
+  "status": "PHASE1_CANDIDATE",
+  "target_os": {
+    "family": "linux",
+    "architectures": ["x86_64"],
+    "other_architectures": "UNQUALIFIED"
+  },
+  "host_requirements": [
+    {"capability": "git", "constraint": "present"},
+    {"capability": "https_ca_trust", "constraint": "working"},
+    {"capability": "python", "constraint": "3.12.x"},
+    {"capability": "python_venv", "constraint": "present"},
+    {"capability": "pip_in_venv", "constraint": "present"},
+    {"capability": "sha256", "constraint": "present"}
+  ],
+  "source": {
+    "repository": "ULISDOQ/catalogue-profils-documentaires",
+    "transport": "git_https",
+    "pinning": "exact_commit",
+    "worktree_policy": "clean"
+  },
+  "environment_policy": {
+    "global_pip": "FORBIDDEN",
+    "pip_user": "FORBIDDEN",
+    "existing_venv_mutation": "FORBIDDEN",
+    "default_isolation": "one_venv_per_qualified_capability_bundle"
+  },
+  "layout_example": {
+    "root": "/opt/ulisdoq",
+    "source": "/opt/ulisdoq/source/<commit>",
+    "venvs": "/opt/ulisdoq/venvs/<bundle-id>",
+    "evidence": "/opt/ulisdoq/evidence"
+  },
+  "qualification": "NONE"
+}
