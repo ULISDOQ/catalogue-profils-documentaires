@@ -58,6 +58,31 @@
     "Aucune donnée fiscale personnelle requise",
     "Binding d'extraction géométrique v0.1 limité au property slot 1 et au jeu de champs S11",
     "Extraction OCR pilotée par profil à qualifier sur PCIA",
-    "Aucune qualification production"
+    "Aucune qualification production",
+    "Dette sémantique explicite DEBT-GED02-PROFILE-SEMANTIC-ROBUSTNESS-001 ouverte et non bloquante pour la poursuite phase 1"
+  ],
+  "debts": [
+    {
+      "id": "DEBT-GED02-PROFILE-SEMANTIC-ROBUSTNESS-001",
+      "status": "OPEN_NON_BLOCKING_PHASE1",
+      "scope": "phase2_or_profile_qualification",
+      "observed_on": "GED02-S11_2044_2025_SYNTHETIC_COMPLETE_SCAN_GRAY",
+      "evidence_summary": {
+        "fiscal_core_arithmetic": "PASS",
+        "profile_binding": "PARTIAL",
+        "text_semantics": "PARTIAL",
+        "status_semantics": "PARTIAL",
+        "overall": "PARTIAL_STRONG"
+      },
+      "known_gaps": [
+        "Computed-field semantic consistency should detect OCR drift such as line 420 read as 591 while the DGFIP rule implies 5910.",
+        "property_1.rental_units ROI/binding produced 4 whereas the validated scenario contains one local.",
+        "Free-text validation is too permissive: property_1.address accepted VALUE='|' instead of UNREADABLE or AMBIGUOUS.",
+        "VALUE=0, EMPTY and NOT_APPLICABLE are not yet reliably distinguished for business semantics."
+      ],
+      "phase1_decision": "DO_NOT_PERFECT_NOW",
+      "qualification_effect": "PROFILE_REMAINS_CANDIDATE_UNQUALIFIED",
+      "next_expected_work": "Revisit before local 2044 profile qualification or production use."
+    }
   ]
 }
