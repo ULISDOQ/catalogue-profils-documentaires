@@ -57,6 +57,17 @@ Ces familles constituent un classement humain de haut niveau ; elles ne remplace
 
 Le [protocole TAG candidat](project/TAG_CANDIDATE_PROTOCOL.md) fournit un éditeur local minimal et expose la prochaine fonction manquante : la consultation du catalogue.
 
+## Installation ULISDOQ sur Ubuntu
+
+Le profil complet versionné est [ULISDOQ-COMPLETE-UBUNTU-V0.1](deployment/ubuntu/complete-v0_1/README.md). Il installe le client, les matchers ULISTAG, les lecteurs/OCR et les capacités sémantiques actuellement déclarées, dans des environnements isolés.
+
+```bash
+bash deployment/ubuntu/complete-v0_1/ulisdoq-deploy.sh install --install-system
+bash deployment/ubuntu/complete-v0_1/ulisdoq-deploy.sh verify
+```
+
+La [notice des dépendances](docs/operations/SOFTWARE_DEPENDENCY_NOTICE.md) explique comment les nouvelles dépendances découvertes pendant les GED-N sont capitalisées pour les futurs consommateurs. La compatibilité est fondée sur des combinaisons testées, jamais sur l'hypothèse qu'une version plus récente est automatiquement compatible.
+
 ## Participer
 
 Consulter [CONTRIBUTING.md](CONTRIBUTING.md). Les contributions sont soumises à revue avant intégration. **Aucun document personnel réel, donnée médicale identifiable, secret ou document confidentiel ne doit être déposé ici.**
