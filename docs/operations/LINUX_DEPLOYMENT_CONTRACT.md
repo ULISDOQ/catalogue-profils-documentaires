@@ -13,9 +13,14 @@ Ce contrat décrit les prérequis et l'ordre de déploiement nécessaires pour i
 4. les lecteurs / moteurs d'extraction optionnels nécessaires au cas d'usage ;
 5. les tests de capacité et les preuves de déploiement.
 
-Il ne suppose pas qu'un hôte doive recevoir toutes les dépendances ULISDOQ.
+Deux modes existent :
 
-Le déploiement est **piloté par capacités requises**.
+- **profil complet** : installe toutes les capacités déclarées par une version ULISDOQ ; c'est le mode canonique pour une nouvelle machine de laboratoire ou un consommateur complet ;
+- **bundle de capacité** : installe seulement une capacité explicitement choisie ; utile pour une cible contrainte.
+
+Le profil complet canonique courant est `ULISDOQ-COMPLETE-UBUNTU-V0.1` sous `deployment/ubuntu/complete-v0_1/`.
+
+Le déploiement par capacité reste un mécanisme de composition interne et ne remplace pas le contrat complet lorsqu'un déploiement ULISDOQ complet est demandé.
 
 ```text
 BESOIN
@@ -80,7 +85,7 @@ Les dépendances sont déterminées par la fonction utilisée :
 | Reconnaissance ULISTAG | dépend du matcher sélectionné |
 | OCR | dépend du lecteur OCR sélectionné |
 
-Le client de base ne doit donc pas forcer l'installation des dépendances de toutes les méthodes.
+Dans le **profil complet**, toutes les capacités déclarées de la version sont orchestrées et installées dans des environnements isolés distincts. Dans un bundle minimal, seules les dépendances demandées sont installées.
 
 ### L3 — ULISTAG cœur
 
@@ -352,3 +357,34 @@ Lorsqu'une nouvelle expérience GED-N commence :
 5. ne créer une nouvelle combinaison de dépendances que si nécessaire.
 
 Le déploiement devient ainsi progressivement moins coûteux avec l'accumulation des GED-N.
+
+
+## 13 — Profil complet Ubuntu canonique
+
+Référence :
+
+`deployment/ubuntu/complete-v0_1/`
+
+Point d'entrée unique :
+
+```bash
+bash deployment/ubuntu/complete-v0_1/ulisdoq-deploy.sh install --install-system
+```
+
+Vérification globale :
+
+```bash
+bash deployment/ubuntu/complete-v0_1/ulisdoq-deploy.sh verify
+```
+
+Le profil complet possède :
+
+- un inventaire versionné des capacités ;
+- des manifests par capacité/méthode ;
+- des environnements Python isolés ;
+- des prérequis système déclarés ;
+- une matrice de compatibilité ;
+- une batterie globale ;
+- un rollback borné.
+
+Une capacité nouvelle issue d'un GED-N doit faire évoluer cet inventaire de manière versionnée.
