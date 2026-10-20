@@ -11,7 +11,9 @@ Cette expérience appartient à la famille [Factures & achats](../README.md).
 3. **Voir le client ULISDOQ :** [mode d'emploi et commande](../../../client/README.md) ; [script Python](../../../client/extract.py).
 4. **Voir comment juger le résultat :** [protocole](docs/PROTOCOLE.md).
 
-**État réel :** le document et le code sont publiés ; le client et le profil n'ont **pas encore été exécutés ensemble ni qualifiés** sur ce PDF. Aucun taux de réussite n'est revendiqué.
+**État actuel :** le profil `invoice2data` historique a produit un `NO_MATCH` conservé comme RETEX. Une seconde voie candidate, fondée sur un **ULISTAG en graphe d'ancres structurelles** et un profil d'extraction relatif aux ancres, est désormais disponible et a été éprouvée sur la source privée pendant sa conception. Elle reste **non qualifiée** et doit être réexécutée par GED-RÉEL sur PCIA puis testée sur des positifs, variantes et négatifs indépendants.
+
+Voir aussi la [réalisation ULISTAG GED-01 v0.1](../../../project/ULISTAG_GED01_ANCHOR_GRAPH_V0_1.md), sa [référence structurelle](ulistag/reference_v0_1.json), son [profil d'extraction structurel](profiles/sfr_structural_v0_1.json) et le client [\`client/ulistag_v0.py\`](../../../client/ulistag_v0.py).
 
 Pour préparer un descripteur local, voir [l'éditeur de TAG candidat](../../../client/tag_candidate.py) et son [protocole](../../../project/TAG_CANDIDATE_PROTOCOL.md). La consultation du catalogue reste à implémenter.
 
