@@ -400,7 +400,29 @@ La décision de poursuivre, simplifier, abandonner ou changer de brique reste po
 
 Aucune étape n'autorise par elle-même une déclaration de technologie qualifiée ou de taux de reconnaissance généralisable.
 
-## 14 — Références
+## 14 — Première réalisation GED-01 v0.1
+
+La première méthode effectivement élue et prototypée pour GED-01 est documentée dans :
+
+`project/ULISTAG_GED01_ANCHOR_GRAPH_V0_1.md`
+
+Choix v0.1 :
+
+```text
+ANCRES_TEXTUELLES_STABLES
+→ COORDONNEES_NORMALISEES
+→ GRAPHE_DE_RELATIONS_GEOMETRIQUES
+→ COMPARAISON_DETERMINISTE_EXPLICABLE
+→ MATCH_CANDIDATE | UNKNOWN
+→ PROFIL_STRUCTUREL_ASSOCIE
+→ EXTRACTION_RELATIVE_AUX_ANCRES
+```
+
+Ce choix ne remplace pas l'état de l'art général. Il constitue la solution minimale retenue pour le premier cas réel, jusqu'à preuve de son insuffisance.
+
+Le profil d'extraction structurel v0.1 est distinct du profil `invoice2data` historique et conserve la géométrie afin d'éviter les erreurs dues à l'aplatissement du texte.
+
+## 15 — Références
 
 - Avery Li-Chun Wang, *An Industrial-Strength Audio Search Algorithm*, ISMIR 2003.
 - Jianying Hu, Ramanujan Kashi, Gordon Wilfong, *Comparison and Classification of Documents Based on Layout Similarity*, Information Retrieval.
