@@ -1,6 +1,6 @@
 {
   "profile_id": "ULISDOQ-PROFILE-FR-2044-CANDIDATE",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "status": "CANDIDATE_UNQUALIFIED",
   "family": "tax_declaration_form",
   "document_type": "déclaration des revenus fonciers",
@@ -8,16 +8,17 @@
   "jurisdiction": "FR",
   "format_tag_id": "ULISTAG-GED02-2044-VISUAL-KEYPOINTS-V0.1",
   "recognition": {
-    "method": "layout_density_v0_1",
-    "reference": "../ulistag/reference_layout_density_v0_1.json",
-    "matcher": "../ulistag/layout_density_v0_1.py",
+    "method": "visual_keypoints_orb_hamming_ransac_v0_1",
+    "method_id": "ULISTAG-VISUAL-KEYPOINTS-ORB-HAMMING-RANSAC",
+    "method_version": "0.1.0-phase1",
+    "reference": "../ulistag/reference_visual_v0_1_manifest.json",
+    "matcher": "../../../../ULISTAG/matchers/visual_keypoints/ulistag_visual_keypoints_v0.py",
     "corpus_result": "PASS_CANDIDATE",
     "positive_count": 8,
     "negative_count": 1,
     "year_variant": "2025_CANDIDATE",
     "qualification": "NONE",
     "requires_official_sample_validation": false,
-    "geometric_features": "VISUAL_KEYPOINTS_ORB_HAMMING_RANSAC_CANDIDATE",
     "phase1_evidence": {
       "positives": [
         "S01",
@@ -33,11 +34,21 @@
       "negative": "N01_FISCAL_LOOKALIKE",
       "negative_result": "UNKNOWN",
       "qualification": "NONE"
+    },
+    "legacy_layout_density": {
+      "status": "SUPERSEDED_FOR_PRIMARY_RECOGNITION",
+      "reference": "../ulistag/reference_layout_density_v0_1.json",
+      "matcher": "../ulistag/layout_density_v0_1.py"
     }
   },
   "extraction": {
-    "engine": "UNSELECTED",
-    "fields": "TO_DEFINE_FROM_VERIFIED_YEAR_SPECIFIC_FORM"
+    "capability_id": "PROFILE_DRIVEN_OCR_GEOMETRIC_EXTRACTION_V0.1",
+    "engine": "client/profile_ocr_extract_v0_1.py",
+    "binding": "../extraction/fr_2044_2025_property1_binding_v0_1.json",
+    "semantic_schema": "../extraction/semantic_extraction_schema_v0_1.json",
+    "target_fields": 25,
+    "status": "PHASE1_CANDIDATE_UNQUALIFIED",
+    "ground_truth_policy": "SEPARATE_AND_FORBIDDEN_DURING_EXTRACTION"
   },
   "limits": [
     "Profil candidat de phase 1",
@@ -45,6 +56,8 @@
     "Un témoin négatif fiscal ressemblant rejeté",
     "Aucune qualification indépendante",
     "Aucune donnée fiscale personnelle requise",
-    "Extraction métier à définir séparément"
+    "Binding d'extraction géométrique v0.1 limité au property slot 1 et au jeu de champs S11",
+    "Extraction OCR pilotée par profil à qualifier sur PCIA",
+    "Aucune qualification production"
   ]
 }
