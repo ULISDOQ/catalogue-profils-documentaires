@@ -1,0 +1,408 @@
+{
+  "schema_version": "ulisdoq-profile-extraction-binding/0.1",
+  "binding_id": "ULISDOQ-BINDING-FR-2044-2025-PROPERTY1-V0.1",
+  "version": "0.1.0",
+  "status": "PHASE1_CANDIDATE_UNQUALIFIED",
+  "profile_id": "ULISDOQ-PROFILE-FR-2044-CANDIDATE",
+  "form": {
+    "number": "2044",
+    "edition": 2025,
+    "income_year": 2024
+  },
+  "source": {
+    "filename": "2044_5132.pdf",
+    "sha256": "6c9798559408deef0646cf93cbf9f933c7da1cbd404ac2129e54d52fc3369e9b",
+    "page_count": 4,
+    "derivation": "geometry measured from official blank form only; no S11 ground-truth values used"
+  },
+  "reader_contract": {
+    "type": "ocr_region",
+    "preferred_engine": "tesseract",
+    "languages": [
+      "fra",
+      "eng"
+    ],
+    "render_dpi": 240,
+    "numeric_psm": 7,
+    "text_psm": 6
+  },
+  "fields": [
+    {
+      "official_id": "211",
+      "official_label": "Loyers (ou fermages) bruts encaissés",
+      "page": 2,
+      "property_slot": 1,
+      "value_region_norm": [
+        0.54501,
+        0.387501,
+        0.659025,
+        0.397563
+      ],
+      "value_type": "integer",
+      "parser": "strict_integer",
+      "binding_source": "official_blank_form_geometry"
+    },
+    {
+      "official_id": "212",
+      "official_label": "Dépenses mises par convention à la charge des locataires",
+      "page": 2,
+      "property_slot": 1,
+      "value_region_norm": [
+        0.54501,
+        0.401033,
+        0.659025,
+        0.414184
+      ],
+      "value_type": "integer",
+      "parser": "strict_integer",
+      "binding_source": "official_blank_form_geometry"
+    },
+    {
+      "official_id": "213",
+      "official_label": "Recettes brutes diverses (y compris subventions ANAH et indemnités d’assurance)",
+      "page": 2,
+      "property_slot": 1,
+      "value_region_norm": [
+        0.54501,
+        0.417654,
+        0.659025,
+        0.42995
+      ],
+      "value_type": "integer",
+      "parser": "strict_integer",
+      "binding_source": "official_blank_form_geometry"
+    },
+    {
+      "official_id": "214",
+      "official_label": "Valeur locative réelle des propriétés dont vous vous réservez la jouissance",
+      "page": 2,
+      "property_slot": 1,
+      "value_region_norm": [
+        0.54501,
+        0.43342,
+        0.659025,
+        0.464776
+      ],
+      "value_type": "integer",
+      "parser": "strict_integer",
+      "binding_source": "official_blank_form_geometry"
+    },
+    {
+      "official_id": "215",
+      "official_label": "Total des recettes : lignes 211 à 214",
+      "page": 2,
+      "property_slot": 1,
+      "value_region_norm": [
+        0.54501,
+        0.468246,
+        0.659025,
+        0.485527
+      ],
+      "value_type": "integer",
+      "parser": "strict_integer",
+      "binding_source": "official_blank_form_geometry"
+    },
+    {
+      "official_id": "221",
+      "official_label": "Frais d’administration et de gestion",
+      "page": 2,
+      "property_slot": 1,
+      "value_region_norm": [
+        0.54501,
+        0.51649,
+        0.659025,
+        0.553653
+      ],
+      "value_type": "integer",
+      "parser": "strict_integer",
+      "binding_source": "official_blank_form_geometry"
+    },
+    {
+      "official_id": "222",
+      "official_label": "Autres frais de gestion : 20 € par local",
+      "page": 2,
+      "property_slot": 1,
+      "value_region_norm": [
+        0.54501,
+        0.557123,
+        0.659025,
+        0.569846
+      ],
+      "value_type": "integer",
+      "parser": "strict_integer",
+      "binding_source": "official_blank_form_geometry"
+    },
+    {
+      "official_id": "223",
+      "official_label": "Primes d’assurance",
+      "page": 2,
+      "property_slot": 1,
+      "value_region_norm": [
+        0.54501,
+        0.573316,
+        0.659025,
+        0.586039
+      ],
+      "value_type": "integer",
+      "parser": "strict_integer",
+      "binding_source": "official_blank_form_geometry"
+    },
+    {
+      "official_id": "224",
+      "official_label": "Dépenses de réparation, d'entretien et d'amélioration et en cas d'option, hors dépenses de travaux de rénovation énergétique reportées ligne ci-dessous (remplir la rubrique 400)",
+      "page": 2,
+      "property_slot": 1,
+      "value_region_norm": [
+        0.54501,
+        0.589509,
+        0.659025,
+        0.614007
+      ],
+      "value_type": "integer",
+      "parser": "strict_integer",
+      "binding_source": "official_blank_form_geometry"
+    },
+    {
+      "official_id": "225",
+      "official_label": "Charges récupérables non récupérées au départ du locataire",
+      "page": 2,
+      "property_slot": 1,
+      "value_region_norm": [
+        0.54501,
+        0.644716,
+        0.659025,
+        0.657486
+      ],
+      "value_type": "integer",
+      "parser": "strict_integer",
+      "binding_source": "official_blank_form_geometry"
+    },
+    {
+      "official_id": "226",
+      "official_label": "Indemnités d’éviction, frais de relogement",
+      "page": 2,
+      "property_slot": 1,
+      "value_region_norm": [
+        0.54501,
+        0.660955,
+        0.659025,
+        0.67354
+      ],
+      "value_type": "integer",
+      "parser": "strict_integer",
+      "binding_source": "official_blank_form_geometry"
+    },
+    {
+      "official_id": "227",
+      "official_label": "Taxes foncières, taxes annexes de 2024",
+      "page": 2,
+      "property_slot": 1,
+      "value_region_norm": [
+        0.54501,
+        0.67701,
+        0.659025,
+        0.701311
+      ],
+      "value_type": "integer",
+      "parser": "strict_integer",
+      "binding_source": "official_blank_form_geometry"
+    },
+    {
+      "official_id": "228",
+      "official_label": "Déductions spécifiques (sous certaines conditions : voir notice)",
+      "page": 2,
+      "property_slot": 1,
+      "value_region_norm": [
+        0.54501,
+        0.704781,
+        0.659025,
+        0.747589
+      ],
+      "value_type": "integer",
+      "parser": "strict_integer",
+      "binding_source": "official_blank_form_geometry"
+    },
+    {
+      "official_id": "229",
+      "official_label": "Provisions pour charges payées en 2024",
+      "page": 2,
+      "property_slot": 1,
+      "value_region_norm": [
+        0.54501,
+        0.751058,
+        0.659025,
+        0.782346
+      ],
+      "value_type": "integer",
+      "parser": "strict_integer",
+      "binding_source": "official_blank_form_geometry"
+    },
+    {
+      "official_id": "230",
+      "official_label": "Régularisation des provisions pour charges déduites au titre de 2023",
+      "page": 2,
+      "property_slot": 1,
+      "value_region_norm": [
+        0.54501,
+        0.785816,
+        0.659025,
+        0.798458
+      ],
+      "value_type": "integer",
+      "parser": "strict_integer",
+      "binding_source": "official_blank_form_geometry"
+    },
+    {
+      "official_id": "240",
+      "official_label": "Total des frais et charges : lignes 221 à 229 – ligne 230",
+      "page": 2,
+      "property_slot": 1,
+      "value_region_norm": [
+        0.54501,
+        0.801928,
+        0.659025,
+        0.814848
+      ],
+      "value_type": "integer",
+      "parser": "strict_integer",
+      "binding_source": "official_blank_form_geometry"
+    },
+    {
+      "official_id": "250",
+      "official_label": "Intérêts d’emprunt (remplir également la rubrique 410)",
+      "page": 2,
+      "property_slot": 1,
+      "value_region_norm": [
+        0.54501,
+        0.826877,
+        0.659025,
+        0.848645
+      ],
+      "value_type": "integer",
+      "parser": "strict_integer",
+      "binding_source": "official_blank_form_geometry"
+    },
+    {
+      "official_id": "261",
+      "official_label": "Ligne 215 – ligne 240 – ligne 250",
+      "page": 2,
+      "property_slot": 1,
+      "value_region_norm": [
+        0.54501,
+        0.868354,
+        0.659025,
+        0.892239
+      ],
+      "value_type": "integer",
+      "parser": "strict_integer",
+      "binding_source": "official_blank_form_geometry"
+    },
+    {
+      "official_id": "262",
+      "official_label": "Réintégration du supplément de déduction (voir notice)",
+      "page": 2,
+      "property_slot": 1,
+      "value_region_norm": [
+        0.54501,
+        0.895709,
+        0.659025,
+        0.909045
+      ],
+      "value_type": "integer",
+      "parser": "strict_integer",
+      "binding_source": "official_blank_form_geometry"
+    },
+    {
+      "official_id": "263",
+      "official_label": "Bénéfice (+) ou déficit (–) : ligne 261 + ligne 262",
+      "page": 2,
+      "property_slot": 1,
+      "value_region_norm": [
+        0.54501,
+        0.912515,
+        0.659025,
+        0.929691
+      ],
+      "value_type": "integer",
+      "parser": "strict_integer",
+      "binding_source": "official_blank_form_geometry"
+    },
+    {
+      "official_id": "224bis",
+      "official_label": "En cas d'option : dépenses de travaux de rénovation énergétique permettant à un bien de passer d'une classe énergétique E, F ou G à une classe A, B, C ou D (remplir la rubrique 400)",
+      "page": 2,
+      "property_slot": 1,
+      "value_region_norm": [
+        0.54501,
+        0.617477,
+        0.659025,
+        0.641246
+      ],
+      "value_type": "integer",
+      "parser": "strict_integer",
+      "binding_source": "official_blank_form_geometry"
+    },
+    {
+      "official_id": "420",
+      "official_label": "Résultat : Bénéfice ou déficit total : case D + case I",
+      "page": 4,
+      "value_region_norm": [
+        0.560247,
+        0.264294,
+        0.688759,
+        0.279331
+      ],
+      "value_type": "integer",
+      "parser": "strict_integer",
+      "binding_source": "official_blank_form_geometry"
+    },
+    {
+      "official_id": "property_1.tenant",
+      "official_label": "Nom et prénom du locataire",
+      "page": 2,
+      "value_region_norm": [
+        0.440621,
+        0.165609,
+        0.974728,
+        0.178922
+      ],
+      "value_type": "text",
+      "parser": "strict_text",
+      "binding_source": "official_blank_form_geometry"
+    },
+    {
+      "official_id": "property_1.address",
+      "official_label": "Adresse (numéro et rue, commune et code postal)",
+      "page": 3,
+      "value_region_norm": [
+        0.221209,
+        0.165991,
+        0.944742,
+        0.179246
+      ],
+      "value_type": "text",
+      "parser": "strict_text",
+      "binding_source": "official_blank_form_geometry"
+    },
+    {
+      "official_id": "property_1.rental_units",
+      "official_label": "Nombre de locaux",
+      "page": 2,
+      "value_region_norm": [
+        0.604697,
+        0.333948,
+        0.629912,
+        0.349667
+      ],
+      "value_type": "count",
+      "parser": "strict_integer",
+      "binding_source": "official_blank_form_geometry"
+    }
+  ],
+  "limits": [
+    "Binding covers property slot 1 and the S11 target field set only.",
+    "Geometry is derived from the official blank 2044 source and remains phase-1 candidate.",
+    "Other property slots can be added by versioned extension after this binding is validated.",
+    "No value or expected S11 result is encoded in this binding."
+  ]
+}
