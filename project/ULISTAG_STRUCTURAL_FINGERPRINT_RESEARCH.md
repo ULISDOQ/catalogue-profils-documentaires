@@ -422,6 +422,35 @@ Ce choix ne remplace pas l'état de l'art général. Il constitue la solution mi
 
 Le profil d'extraction structurel v0.1 est distinct du profil `invoice2data` historique et conserve la géométrie afin d'éviter les erreurs dues à l'aplatissement du texte.
 
+
+### RETEX PCIA — PASS_CANDIDATE
+
+CLAU/GED-RÉEL a exécuté le candidat v0.1 sur PCIA avec Python 3.12.3 et pdfplumber 0.11.10, en références épinglées.
+
+Résultat :
+
+```text
+MATCH_CANDIDATE
+page_count=2
+node_ratio=1.0
+edge_ratio=1.0
+missing_nodes=NONE
+failed_edges=NONE
+
+EXTRACTED_UNVERIFIED
+invoice_number=EXTRACTED
+date=EXTRACTED
+amount=EXTRACTED
+
+qualification=NONE
+```
+
+Aucune valeur privée n'a été retournée. Ce résultat valide l'**exécutabilité du candidat sur sa source de conception**, pas sa généralisation ni la correction des valeurs extraites.
+
+RETEX détaillé : [GED01_ULISTAG_V0_1_PCIA_EXECUTION_001](../experiments/factures/GED-01/docs/RETEX_ULISTAG_V0_1_PCIA_EXECUTION_001.md).
+
+La prochaine étape prioritaire devient l'épreuve **A/B synthétiques + témoin négatif** selon le même règlement, puis un corpus indépendant.
+
 ## 15 — Références
 
 - Avery Li-Chun Wang, *An Industrial-Strength Audio Search Algorithm*, ISMIR 2003.
