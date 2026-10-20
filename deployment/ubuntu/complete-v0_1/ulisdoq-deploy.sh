@@ -40,7 +40,7 @@ Usage:
   $0 rollback [--root PATH]
 
 Known environment names:
-  core anchor_graph visual_keypoints invoice2data semantic_validation
+  core anchor_graph visual_keypoints invoice2data semantic_validation profile_extraction
 
 --attach explicitly binds a pre-existing compatible venv.
 Only missing environments are installed.
@@ -175,6 +175,7 @@ case "$ACTION" in
     ensure_env visual_keypoints requirements-visual_keypoints.txt
     ensure_env invoice2data requirements-invoice2data.txt
     ensure_env semantic_validation requirements-semantic_validation.txt
+    ensure_env profile_extraction requirements-profile_extraction.txt
 
     verify_cmd > "$EVIDENCE/verify-complete.json"
     cat "$EVIDENCE/verify-complete.json"
