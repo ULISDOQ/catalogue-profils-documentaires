@@ -1,0 +1,66 @@
+{
+  "schema_version": "ged-core-phase1-measures/0.1",
+  "ged_id": "GED-03",
+  "status": "PREPARED_NOT_EXECUTED",
+  "measures": [
+    {
+      "id": "reused_contracts_count",
+      "type": "integer",
+      "definition": "generic contracts reused without GED-03-specific rewrite"
+    },
+    {
+      "id": "new_configuration_items",
+      "type": "integer"
+    },
+    {
+      "id": "new_specialized_components",
+      "type": "integer"
+    },
+    {
+      "id": "human_design_steps",
+      "type": "integer"
+    },
+    {
+      "id": "runtime_processing_steps",
+      "type": "integer"
+    },
+    {
+      "id": "avoided_processing_steps",
+      "type": "array",
+      "expected": [
+        "ocr",
+        "visual_matcher",
+        "llm",
+        "network"
+      ]
+    },
+    {
+      "id": "python_external_dependencies_added",
+      "type": "integer",
+      "target": 0
+    },
+    {
+      "id": "positive_cases_passed",
+      "type": "ratio",
+      "denominator": 6
+    },
+    {
+      "id": "negative_cases_explicitly_rejected_or_flagged",
+      "type": "ratio",
+      "denominator": 3
+    },
+    {
+      "id": "schema_validation_pass",
+      "type": "boolean"
+    },
+    {
+      "id": "new_reusable_assets",
+      "type": "array"
+    },
+    {
+      "id": "new_debts",
+      "type": "array"
+    }
+  ],
+  "comparison_goal": "Compare GED-03 profile fabrication effort with prior GED cases qualitatively first; avoid false precision until enough GED-N cases exist."
+}
