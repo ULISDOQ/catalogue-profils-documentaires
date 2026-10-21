@@ -1,0 +1,10 @@
+From: malformed@example.test
+To: receiver@example.test
+Subject: GED-03 malformed MIME
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="MISSING-END"
+
+--MISSING-END
+Content-Type: text/plain; charset="utf-8"
+
+Synthetic malformed MIME body without closing boundary.
