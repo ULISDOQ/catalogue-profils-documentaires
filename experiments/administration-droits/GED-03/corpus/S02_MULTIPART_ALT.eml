@@ -1,0 +1,17 @@
+From: Alice Example <alice@example.test>
+To: Bob Example <bob@example.test>
+Date: Wed, 21 Oct 2026 10:05:00 +0200
+Message-ID: <ged03-s02@example.test>
+Subject: GED-03 synthetic multipart alternative
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="GED03ALT"
+
+--GED03ALT
+Content-Type: text/plain; charset="utf-8"
+
+Plain synthetic body.
+--GED03ALT
+Content-Type: text/html; charset="utf-8"
+
+<html><body><p>HTML synthetic body.</p></body></html>
+--GED03ALT--
