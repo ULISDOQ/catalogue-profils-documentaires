@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ulisdoq.example/schemas/ged03-eml-normalized-v0.1.json",
+  "title": "GED-03 normalized EML candidate",
+  "type": "object",
+  "required": [
+    "specimen_id",
+    "parse_status",
+    "message",
+    "attachments",
+    "traceability"
+  ],
+  "properties": {
+    "specimen_id": {
+      "type": "string"
+    },
+    "parse_status": {
+      "enum": [
+        "PARSED",
+        "INVALID",
+        "MALFORMED",
+        "TRUNCATED",
+        "AMBIGUOUS",
+        "ERROR"
+      ]
+    },
+    "message": {
+      "type": "object",
+      "required": [
+        "message_id",
+        "date",
+        "from",
+        "to",
+        "cc",
+        "subject",
+        "body_text",
+        "body_html_present",
+        "mime_structure"
+      ],
+      "properties": {
+        "message_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "from": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "to": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "cc": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "subject": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "body_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "body_html_present": {
+          "type": "boolean"
+        },
+        "mime_structure": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "filename",
+          "content_type",
+          "disposition"
+        ],
+        "properties": {
+          "filename": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "content_type": {
+            "type": "string"
+          },
+          "disposition": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "size_bytes": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "traceability": {
+      "type": "object",
+      "required": [
+        "source_sha256",
+        "parser",
+        "network_used",
+        "ocr_used",
+        "visual_matcher_used",
+        "llm_used"
+      ],
+      "properties": {
+        "source_sha256": {
+          "type": "string"
+        },
+        "parser": {
+          "type": "string"
+        },
+        "network_used": {
+          "const": false
+        },
+        "ocr_used": {
+          "const": false
+        },
+        "visual_matcher_used": {
+          "const": false
+        },
+        "llm_used": {
+          "const": false
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}
