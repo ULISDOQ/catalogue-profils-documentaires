@@ -1,0 +1,12 @@
+From: truncated@example.test
+To: receiver@example.test
+Date: Wed, 21 Oct 2026 10:30:00 +0200
+Message-ID: <ged03-n03@example.test>
+Subject: GED-03 truncated
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="TRUNC"
+
+--TRUNC
+Content-Type: text/plain; charset="utf-8"
+
+Synthetic truncated message
