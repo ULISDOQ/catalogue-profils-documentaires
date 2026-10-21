@@ -1,0 +1,91 @@
+{
+  "schema_version": "ged03-corpus-ground-truth/0.1",
+  "status": "PREPARED_NOT_EXECUTED",
+  "privacy": "SYNTHETIC_ONLY_NO_PERSONAL_DATA",
+  "specimens": {
+    "S01_SIMPLE_TEXT": {
+      "expected_class": "VALID_EML",
+      "expected_status": "PARSED",
+      "message_id": "<ged03-s01@example.test>",
+      "subject": "GED-03 synthetic simple text",
+      "from": [
+        "alice@example.test"
+      ],
+      "to": [
+        "bob@example.test"
+      ],
+      "cc": [],
+      "body_html_present": false,
+      "attachments": []
+    },
+    "S02_MULTIPART_ALT": {
+      "expected_class": "VALID_EML",
+      "expected_status": "PARSED",
+      "message_id": "<ged03-s02@example.test>",
+      "subject": "GED-03 synthetic multipart alternative",
+      "from": [
+        "alice@example.test"
+      ],
+      "to": [
+        "bob@example.test"
+      ],
+      "cc": [],
+      "body_html_present": true,
+      "attachments": []
+    },
+    "S03_ATTACHMENT_PDF": {
+      "expected_class": "VALID_EML",
+      "expected_status": "PARSED",
+      "message_id": "<ged03-s03@example.test>",
+      "subject": "GED-03 synthetic attachment",
+      "attachments": [
+        {
+          "filename": "synthetic-document.pdf",
+          "content_type": "application/pdf"
+        }
+      ]
+    },
+    "S04_MULTI_RECIPIENTS": {
+      "expected_class": "VALID_EML",
+      "expected_status": "PARSED",
+      "message_id": "<ged03-s04@example.test>",
+      "to": [
+        "one@example.test",
+        "two@example.test"
+      ],
+      "cc": [
+        "three@example.test"
+      ]
+    },
+    "S05_ENCODED_FOLDED_HEADERS": {
+      "expected_class": "VALID_EML",
+      "expected_status": "PARSED",
+      "message_id": "<ged03-s05@example.test>",
+      "decoded_subject": "GED-03 — objet synthétique",
+      "from_address": "sender@example.test"
+    },
+    "S06_UNICODE_ATTACHMENT": {
+      "expected_class": "VALID_EML",
+      "expected_status": "PARSED",
+      "message_id": "<ged03-s06@example.test>",
+      "attachment_filename": "résumé-synthétique.txt",
+      "attachment_content_type": "text/plain"
+    },
+    "N01_RENAMED_TEXT": {
+      "expected_class": "INVALID_CONTAINER",
+      "expected_status": "INVALID",
+      "reason": "missing required RFC-style message structure"
+    },
+    "N02_MALFORMED_MIME": {
+      "expected_class": "MALFORMED_EML",
+      "expected_status": "MALFORMED",
+      "reason": "unterminated multipart boundary"
+    },
+    "N03_TRUNCATED": {
+      "expected_class": "TRUNCATED_EML",
+      "expected_status": "TRUNCATED",
+      "reason": "message ends inside multipart entity"
+    }
+  },
+  "comparison_policy": "Ground truth is used only after parser output is frozen; it must not drive parsing decisions."
+}
