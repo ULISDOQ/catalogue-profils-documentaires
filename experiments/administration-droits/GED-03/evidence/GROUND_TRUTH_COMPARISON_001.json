@@ -1,0 +1,97 @@
+{
+  "subject": "GED03_PHASE1_GROUND_TRUTH_COMPARISON_001",
+  "ground_truth_access_after_freeze": true,
+  "passed": 9,
+  "total": 9,
+  "results": {
+    "S01_SIMPLE_TEXT": {
+      "pass": true,
+      "checks": {
+        "status": true,
+        "message_id": true,
+        "subject": true,
+        "from": true,
+        "to": true,
+        "cc": true,
+        "body_html_present": true,
+        "attachments": true
+      },
+      "observed_status": "PARSED"
+    },
+    "S02_MULTIPART_ALT": {
+      "pass": true,
+      "checks": {
+        "status": true,
+        "message_id": true,
+        "subject": true,
+        "from": true,
+        "to": true,
+        "cc": true,
+        "body_html_present": true,
+        "attachments": true
+      },
+      "observed_status": "PARSED"
+    },
+    "S03_ATTACHMENT_PDF": {
+      "pass": true,
+      "checks": {
+        "status": true,
+        "message_id": true,
+        "subject": true,
+        "attachments": true
+      },
+      "observed_status": "PARSED"
+    },
+    "S04_MULTI_RECIPIENTS": {
+      "pass": true,
+      "checks": {
+        "status": true,
+        "message_id": true,
+        "to": true,
+        "cc": true
+      },
+      "observed_status": "PARSED"
+    },
+    "S05_ENCODED_FOLDED_HEADERS": {
+      "pass": true,
+      "checks": {
+        "status": true,
+        "message_id": true,
+        "decoded_subject": true,
+        "from_address": true
+      },
+      "observed_status": "PARSED"
+    },
+    "S06_UNICODE_ATTACHMENT": {
+      "pass": true,
+      "checks": {
+        "status": true,
+        "message_id": true,
+        "attachment_filename": true,
+        "attachment_content_type": true
+      },
+      "observed_status": "PARSED"
+    },
+    "N01_RENAMED_TEXT": {
+      "pass": true,
+      "checks": {
+        "status": true
+      },
+      "observed_status": "INVALID"
+    },
+    "N02_MALFORMED_MIME": {
+      "pass": true,
+      "checks": {
+        "status": true
+      },
+      "observed_status": "MALFORMED"
+    },
+    "N03_TRUNCATED": {
+      "pass": true,
+      "checks": {
+        "status": true
+      },
+      "observed_status": "TRUNCATED"
+    }
+  }
+}
