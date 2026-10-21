@@ -1,0 +1,50 @@
+{
+  "profile_id": "ULISDOQ-PROFILE-EML-GENERIC-CANDIDATE",
+  "version": "0.1.0",
+  "status": "CANDIDATE_UNQUALIFIED",
+  "family": "structured_message",
+  "document_type": "courriel RFC/MIME local",
+  "jurisdiction": "GENERIC",
+  "recognition": {
+    "mode": "CONTAINER_NATIVE",
+    "container_contract": {
+      "media_types": [
+        "message/rfc822"
+      ],
+      "extensions": [
+        ".eml"
+      ],
+      "identity_semantics": "candidate preselection only; structural parser validation remains mandatory"
+    }
+  },
+  "extraction": {
+    "capability_id": "NATIVE_MIME_EMAIL_EXTRACTION_V0.1",
+    "engine": "client/eml_extract_v0_1.py",
+    "semantic_schema": "../contracts/normalized_eml_schema_v0_1.json",
+    "status": "PHASE1_CANDIDATE_UNQUALIFIED"
+  },
+  "container_validation": {
+    "required_headers": [
+      "From",
+      "To",
+      "Subject",
+      "Date",
+      "Message-ID"
+    ],
+    "malformed_policy": "EXPLICIT_STATUS_NO_SILENT_ACCEPTANCE"
+  },
+  "processing_policy": {
+    "ocr": false,
+    "visual_matcher": false,
+    "llm": false,
+    "network": false,
+    "attachment_execution": false
+  },
+  "limits": [
+    "Phase-1 synthetic corpus only",
+    "No sender identity/authenticity qualification",
+    "No DKIM/SPF validation",
+    "Attachments inventoried but never executed",
+    "No semantic interpretation of message body"
+  ]
+}
