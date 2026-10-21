@@ -1,0 +1,428 @@
+{
+  "subject": "GED03_PHASE1_FROZEN_RESULTS_BUNDLE_001",
+  "freeze_receipt": {
+    "subject": "GED03_PHASE1_FROZEN_EXTRACTIONS_001",
+    "frozen_before_ground_truth_comparison": true,
+    "execution_python": "/opt/pyvenv/bin/python3 -I",
+    "python_version": "3.13.5",
+    "adapter_source": "client/eml_extract_v0_1.py",
+    "adapter_commit": "3a3121e2db117043a8722800406102a9360685c8",
+    "adapter_sha256": "b40b76e37bc9f4412a5c90433664d9acbedc464fe751c4154e3370f9523ec53d",
+    "profile_source": "experiments/administration-droits/GED-03/profiles/eml_candidate.json",
+    "profile_commit": "6a6337c1b8370550ca3e5c636a39a970a6e40787",
+    "profile_sha256": "d3f601433d27399f176a5823842b4f6ab69e06b8cc41266b89ae554a1af443ca",
+    "schema_source": "experiments/administration-droits/GED-03/contracts/normalized_eml_schema_v0_1.json",
+    "schema_sha256": "826e550e9a41239364ca7df3ddf15c5acff2936c8c2f33d557527c64d62a48b0",
+    "outputs": [
+      {
+        "specimen_id": "N01_RENAMED_TEXT",
+        "output_file": "N01_RENAMED_TEXT.json",
+        "output_sha256": "d0f75cae5e56b9b34ca993966c6dd76001f1f37b8a7425f55d1c945274a672e9",
+        "source_sha256": "339ebc29bd64552dd8961bae6e94e6b071b65149ca3331434eabbba7b03c17a5"
+      },
+      {
+        "specimen_id": "N02_MALFORMED_MIME",
+        "output_file": "N02_MALFORMED_MIME.json",
+        "output_sha256": "2e0c304f9aae5ffc74d9b219b464a92e198deacb4ccdf6ecce1ae2489e01a045",
+        "source_sha256": "0ef299766b6e1e1a0b30a16d94b0f1dff3a5233b5a7edacef27310a59f54c028"
+      },
+      {
+        "specimen_id": "N03_TRUNCATED",
+        "output_file": "N03_TRUNCATED.json",
+        "output_sha256": "bd486f9e6d16176f970bb2d631a2124b8949fd1fdf2afaaa747aba483ce83820",
+        "source_sha256": "81ba8da1a0f993fe9e54ba070f98c12b2ee64ea963aba035796549dbc79d42dd"
+      },
+      {
+        "specimen_id": "S01_SIMPLE_TEXT",
+        "output_file": "S01_SIMPLE_TEXT.json",
+        "output_sha256": "b7e5cd5cd4cb8997d83c70d0fd277b4f5c25665f89c63ec21b95e5afa583a579",
+        "source_sha256": "74b7b2bab4d41c661f3e80f9a2e642cb08a70d09f44fa287be4ac0de29ff1ecf"
+      },
+      {
+        "specimen_id": "S02_MULTIPART_ALT",
+        "output_file": "S02_MULTIPART_ALT.json",
+        "output_sha256": "cb6f1e440c2c2c70456a7679f70012989a8e582eef6ba2d07b934661708f66a1",
+        "source_sha256": "9ccca862d9760e3665de14afd8b6d4a5aa38990514e242b0f1910556b40fbd9f"
+      },
+      {
+        "specimen_id": "S03_ATTACHMENT_PDF",
+        "output_file": "S03_ATTACHMENT_PDF.json",
+        "output_sha256": "1d035c4113ceb2c241d319137d1c83372e57930150ea47036d28a3daba6dd5ce",
+        "source_sha256": "c275f072db3ef31aec3a50aed2b295587224c6e15dd4a952a67da34a11b249d1"
+      },
+      {
+        "specimen_id": "S04_MULTI_RECIPIENTS",
+        "output_file": "S04_MULTI_RECIPIENTS.json",
+        "output_sha256": "d917d95981d50ef1fafe7e5f8b414d37c6a24af773a0c42914a54f4387affcf7",
+        "source_sha256": "66ca1456b833e9c6688f54af70f8b27133df29d764f7b5ee76ca81f887fef07e"
+      },
+      {
+        "specimen_id": "S05_ENCODED_FOLDED_HEADERS",
+        "output_file": "S05_ENCODED_FOLDED_HEADERS.json",
+        "output_sha256": "86c47c1ea1b4aa25c7d43a3584372876ad4beea0053347b61294f2a19ddaf150",
+        "source_sha256": "7abae30ec354cc120286fdaf09c47ba74b6b946b8c795b8b031f9f18bd1f0da7"
+      },
+      {
+        "specimen_id": "S06_UNICODE_ATTACHMENT",
+        "output_file": "S06_UNICODE_ATTACHMENT.json",
+        "output_sha256": "1985130b7dc91d325c28e92f5e55db5273ffe506e8c33ca8ac2074f339f5741e",
+        "source_sha256": "8b7097e8654d4277a1d2f3eeb47fd50fb1f0c1c91d5232d9affd7df5cb560b1d"
+      }
+    ],
+    "constraints": {
+      "network_used": false,
+      "ocr_used": false,
+      "visual_matcher_used": false,
+      "llm_used": false,
+      "attachment_execution": false
+    },
+    "network_namespace_enforced": false,
+    "network_note": "Execution path contains no network operation; kernel network namespace isolation was unavailable in this test environment."
+  },
+  "results": {
+    "N01_RENAMED_TEXT": {
+      "specimen_id": "N01_RENAMED_TEXT",
+      "parse_status": "INVALID",
+      "message": {
+        "message_id": null,
+        "date": null,
+        "from": [],
+        "to": [],
+        "cc": [],
+        "subject": null,
+        "body_text": "This is not an RFC-style email message.\nIt is only synthetic plain text saved with an .eml extension.\n",
+        "body_html_present": false,
+        "mime_structure": [
+          "text/plain"
+        ]
+      },
+      "attachments": [],
+      "traceability": {
+        "source_sha256": "339ebc29bd64552dd8961bae6e94e6b071b65149ca3331434eabbba7b03c17a5",
+        "parser": "python_stdlib_email.policy.default",
+        "profile_id": "ULISDOQ-PROFILE-EML-GENERIC-CANDIDATE",
+        "profile_version": "0.1.0",
+        "parser_defects": [
+          "NO_RFC_STYLE_HEADERS"
+        ],
+        "network_used": false,
+        "ocr_used": false,
+        "visual_matcher_used": false,
+        "llm_used": false,
+        "attachment_execution": false,
+        "schema_validated": true
+      }
+    },
+    "N02_MALFORMED_MIME": {
+      "specimen_id": "N02_MALFORMED_MIME",
+      "parse_status": "MALFORMED",
+      "message": {
+        "message_id": null,
+        "date": null,
+        "from": [
+          "malformed@example.test"
+        ],
+        "to": [
+          "receiver@example.test"
+        ],
+        "cc": [],
+        "subject": "GED-03 malformed MIME",
+        "body_text": "Synthetic malformed MIME body without closing boundary.",
+        "body_html_present": false,
+        "mime_structure": [
+          "multipart/mixed",
+          "text/plain"
+        ]
+      },
+      "attachments": [],
+      "traceability": {
+        "source_sha256": "0ef299766b6e1e1a0b30a16d94b0f1dff3a5233b5a7edacef27310a59f54c028",
+        "parser": "python_stdlib_email.policy.default",
+        "profile_id": "ULISDOQ-PROFILE-EML-GENERIC-CANDIDATE",
+        "profile_version": "0.1.0",
+        "parser_defects": [
+          "CloseBoundaryNotFoundDefect",
+          "MISSING_REQUIRED_HEADER:Date",
+          "MISSING_REQUIRED_HEADER:Message-ID"
+        ],
+        "network_used": false,
+        "ocr_used": false,
+        "visual_matcher_used": false,
+        "llm_used": false,
+        "attachment_execution": false,
+        "schema_validated": true
+      }
+    },
+    "N03_TRUNCATED": {
+      "specimen_id": "N03_TRUNCATED",
+      "parse_status": "TRUNCATED",
+      "message": {
+        "message_id": "<ged03-n03@example.test>",
+        "date": "Wed, 21 Oct 2026 10:30:00 +0200",
+        "from": [
+          "truncated@example.test"
+        ],
+        "to": [
+          "receiver@example.test"
+        ],
+        "cc": [],
+        "subject": "GED-03 truncated",
+        "body_text": "Synthetic truncated message",
+        "body_html_present": false,
+        "mime_structure": [
+          "multipart/alternative",
+          "text/plain"
+        ]
+      },
+      "attachments": [],
+      "traceability": {
+        "source_sha256": "81ba8da1a0f993fe9e54ba070f98c12b2ee64ea963aba035796549dbc79d42dd",
+        "parser": "python_stdlib_email.policy.default",
+        "profile_id": "ULISDOQ-PROFILE-EML-GENERIC-CANDIDATE",
+        "profile_version": "0.1.0",
+        "parser_defects": [
+          "CloseBoundaryNotFoundDefect"
+        ],
+        "network_used": false,
+        "ocr_used": false,
+        "visual_matcher_used": false,
+        "llm_used": false,
+        "attachment_execution": false,
+        "schema_validated": true
+      }
+    },
+    "S01_SIMPLE_TEXT": {
+      "specimen_id": "S01_SIMPLE_TEXT",
+      "parse_status": "PARSED",
+      "message": {
+        "message_id": "<ged03-s01@example.test>",
+        "date": "Wed, 21 Oct 2026 10:00:00 +0200",
+        "from": [
+          "alice@example.test"
+        ],
+        "to": [
+          "bob@example.test"
+        ],
+        "cc": [],
+        "subject": "GED-03 synthetic simple text",
+        "body_text": "Synthetic GED-03 message body.\n",
+        "body_html_present": false,
+        "mime_structure": [
+          "text/plain"
+        ]
+      },
+      "attachments": [],
+      "traceability": {
+        "source_sha256": "74b7b2bab4d41c661f3e80f9a2e642cb08a70d09f44fa287be4ac0de29ff1ecf",
+        "parser": "python_stdlib_email.policy.default",
+        "profile_id": "ULISDOQ-PROFILE-EML-GENERIC-CANDIDATE",
+        "profile_version": "0.1.0",
+        "parser_defects": [],
+        "network_used": false,
+        "ocr_used": false,
+        "visual_matcher_used": false,
+        "llm_used": false,
+        "attachment_execution": false,
+        "schema_validated": true
+      }
+    },
+    "S02_MULTIPART_ALT": {
+      "specimen_id": "S02_MULTIPART_ALT",
+      "parse_status": "PARSED",
+      "message": {
+        "message_id": "<ged03-s02@example.test>",
+        "date": "Wed, 21 Oct 2026 10:05:00 +0200",
+        "from": [
+          "alice@example.test"
+        ],
+        "to": [
+          "bob@example.test"
+        ],
+        "cc": [],
+        "subject": "GED-03 synthetic multipart alternative",
+        "body_text": "Plain synthetic body.",
+        "body_html_present": true,
+        "mime_structure": [
+          "multipart/alternative",
+          "text/plain",
+          "text/html"
+        ]
+      },
+      "attachments": [],
+      "traceability": {
+        "source_sha256": "9ccca862d9760e3665de14afd8b6d4a5aa38990514e242b0f1910556b40fbd9f",
+        "parser": "python_stdlib_email.policy.default",
+        "profile_id": "ULISDOQ-PROFILE-EML-GENERIC-CANDIDATE",
+        "profile_version": "0.1.0",
+        "parser_defects": [],
+        "network_used": false,
+        "ocr_used": false,
+        "visual_matcher_used": false,
+        "llm_used": false,
+        "attachment_execution": false,
+        "schema_validated": true
+      }
+    },
+    "S03_ATTACHMENT_PDF": {
+      "specimen_id": "S03_ATTACHMENT_PDF",
+      "parse_status": "PARSED",
+      "message": {
+        "message_id": "<ged03-s03@example.test>",
+        "date": "Wed, 21 Oct 2026 10:10:00 +0200",
+        "from": [
+          "alice@example.test"
+        ],
+        "to": [
+          "bob@example.test"
+        ],
+        "cc": [],
+        "subject": "GED-03 synthetic attachment",
+        "body_text": "Message with synthetic PDF attachment metadata.",
+        "body_html_present": false,
+        "mime_structure": [
+          "multipart/mixed",
+          "text/plain",
+          "application/pdf"
+        ]
+      },
+      "attachments": [
+        {
+          "filename": "synthetic-document.pdf",
+          "content_type": "application/pdf",
+          "disposition": "attachment",
+          "size_bytes": 14
+        }
+      ],
+      "traceability": {
+        "source_sha256": "c275f072db3ef31aec3a50aed2b295587224c6e15dd4a952a67da34a11b249d1",
+        "parser": "python_stdlib_email.policy.default",
+        "profile_id": "ULISDOQ-PROFILE-EML-GENERIC-CANDIDATE",
+        "profile_version": "0.1.0",
+        "parser_defects": [],
+        "network_used": false,
+        "ocr_used": false,
+        "visual_matcher_used": false,
+        "llm_used": false,
+        "attachment_execution": false,
+        "schema_validated": true
+      }
+    },
+    "S04_MULTI_RECIPIENTS": {
+      "specimen_id": "S04_MULTI_RECIPIENTS",
+      "parse_status": "PARSED",
+      "message": {
+        "message_id": "<ged03-s04@example.test>",
+        "date": "Wed, 21 Oct 2026 10:15:00 +0200",
+        "from": [
+          "sender@example.test"
+        ],
+        "to": [
+          "one@example.test",
+          "two@example.test"
+        ],
+        "cc": [
+          "three@example.test"
+        ],
+        "subject": "GED-03 multiple recipients",
+        "body_text": "Synthetic multi-recipient message.\n",
+        "body_html_present": false,
+        "mime_structure": [
+          "text/plain"
+        ]
+      },
+      "attachments": [],
+      "traceability": {
+        "source_sha256": "66ca1456b833e9c6688f54af70f8b27133df29d764f7b5ee76ca81f887fef07e",
+        "parser": "python_stdlib_email.policy.default",
+        "profile_id": "ULISDOQ-PROFILE-EML-GENERIC-CANDIDATE",
+        "profile_version": "0.1.0",
+        "parser_defects": [],
+        "network_used": false,
+        "ocr_used": false,
+        "visual_matcher_used": false,
+        "llm_used": false,
+        "attachment_execution": false,
+        "schema_validated": true
+      }
+    },
+    "S05_ENCODED_FOLDED_HEADERS": {
+      "specimen_id": "S05_ENCODED_FOLDED_HEADERS",
+      "parse_status": "PARSED",
+      "message": {
+        "message_id": "<ged03-s05@example.test>",
+        "date": "Wed, 21 Oct 2026 10:20:00 +0200",
+        "from": [
+          "sender@example.test"
+        ],
+        "to": [
+          "receiver@example.test"
+        ],
+        "cc": [],
+        "subject": "GED-03 — objet synthétique",
+        "body_text": "Synthetic encoded-header message.\n",
+        "body_html_present": false,
+        "mime_structure": [
+          "text/plain"
+        ]
+      },
+      "attachments": [],
+      "traceability": {
+        "source_sha256": "7abae30ec354cc120286fdaf09c47ba74b6b946b8c795b8b031f9f18bd1f0da7",
+        "parser": "python_stdlib_email.policy.default",
+        "profile_id": "ULISDOQ-PROFILE-EML-GENERIC-CANDIDATE",
+        "profile_version": "0.1.0",
+        "parser_defects": [],
+        "network_used": false,
+        "ocr_used": false,
+        "visual_matcher_used": false,
+        "llm_used": false,
+        "attachment_execution": false,
+        "schema_validated": true
+      }
+    },
+    "S06_UNICODE_ATTACHMENT": {
+      "specimen_id": "S06_UNICODE_ATTACHMENT",
+      "parse_status": "PARSED",
+      "message": {
+        "message_id": "<ged03-s06@example.test>",
+        "date": "Wed, 21 Oct 2026 10:25:00 +0200",
+        "from": [
+          "sender@example.test"
+        ],
+        "to": [
+          "receiver@example.test"
+        ],
+        "cc": [],
+        "subject": "GED-03 Unicode attachment name",
+        "body_text": "Synthetic Unicode filename case.",
+        "body_html_present": false,
+        "mime_structure": [
+          "multipart/mixed",
+          "text/plain",
+          "text/plain"
+        ]
+      },
+      "attachments": [
+        {
+          "filename": "résumé-synthétique.txt",
+          "content_type": "text/plain",
+          "disposition": "attachment",
+          "size_bytes": 21
+        }
+      ],
+      "traceability": {
+        "source_sha256": "8b7097e8654d4277a1d2f3eeb47fd50fb1f0c1c91d5232d9affd7df5cb560b1d",
+        "parser": "python_stdlib_email.policy.default",
+        "profile_id": "ULISDOQ-PROFILE-EML-GENERIC-CANDIDATE",
+        "profile_version": "0.1.0",
+        "parser_defects": [],
+        "network_used": false,
+        "ocr_used": false,
+        "visual_matcher_used": false,
+        "llm_used": false,
+        "attachment_execution": false,
+        "schema_validated": true
+      }
+    }
+  }
+}
