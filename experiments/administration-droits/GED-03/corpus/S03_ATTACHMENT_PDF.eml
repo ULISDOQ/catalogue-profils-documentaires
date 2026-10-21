@@ -1,0 +1,19 @@
+From: Alice Example <alice@example.test>
+To: Bob Example <bob@example.test>
+Date: Wed, 21 Oct 2026 10:10:00 +0200
+Message-ID: <ged03-s03@example.test>
+Subject: GED-03 synthetic attachment
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="GED03MIX"
+
+--GED03MIX
+Content-Type: text/plain; charset="utf-8"
+
+Message with synthetic PDF attachment metadata.
+--GED03MIX
+Content-Type: application/pdf
+Content-Disposition: attachment; filename="synthetic-document.pdf"
+Content-Transfer-Encoding: base64
+
+JVBERi0xLjQKJUVPRgo=
+--GED03MIX--
