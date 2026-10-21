@@ -1,0 +1,72 @@
+{
+  "schema_version": "ged-core-phase1-measures/0.1",
+  "ged_id": "GED-03",
+  "status": "OBSERVED_PHASE1",
+  "reused_contracts": [
+    "ULISTAG-PHASE1-GED-METHOD-001",
+    "profile registry identity/version pattern",
+    "explicit result statuses",
+    "JSON schema output validation pattern",
+    "SHA256/version traceability pattern",
+    "separate ground-truth-after-freeze pattern"
+  ],
+  "reused_contracts_count": 6,
+  "new_configuration_items": 3,
+  "new_configuration_items_detail": [
+    "GED-03 candidate profile",
+    "GED-03 normalized output schema",
+    "CONTAINER_NATIVE registry declaration"
+  ],
+  "new_specialized_components": 1,
+  "new_specialized_components_detail": [
+    "local EML normalization adapter"
+  ],
+  "new_generic_components": 1,
+  "new_generic_components_detail": [
+    "container-native profile resolver"
+  ],
+  "human_design_steps_observed": 6,
+  "human_design_steps_definition": [
+    "characterize",
+    "reuse matrix",
+    "output contract",
+    "synthetic corpus",
+    "technical deltas",
+    "test protocol"
+  ],
+  "runtime_processing_steps": 4,
+  "runtime_processing_steps_definition": [
+    "read local bytes",
+    "stdlib MIME parse",
+    "normalize",
+    "schema validate"
+  ],
+  "avoided_processing_steps": [
+    "ocr",
+    "visual_matcher",
+    "llm",
+    "network"
+  ],
+  "python_external_dependencies_added": 0,
+  "positive_cases_passed": {
+    "numerator": 6,
+    "denominator": 6
+  },
+  "negative_cases_explicitly_rejected_or_flagged": {
+    "numerator": 3,
+    "denominator": 3
+  },
+  "schema_validation_pass": true,
+  "profile_resolver_positive": "MATCH",
+  "profile_resolver_negative": "UNKNOWN",
+  "new_reusable_assets": [
+    "CONTAINER_NATIVE registry mode",
+    "generic container-native resolver",
+    "normalized EML adapter pattern"
+  ],
+  "new_debts": [
+    "DEBT-GED03-STRUCTURAL-VALIDATION-DIVERSITY-001"
+  ],
+  "qualification": "NONE",
+  "production_qualified": false
+}
