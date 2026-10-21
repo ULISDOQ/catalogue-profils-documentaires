@@ -9,6 +9,7 @@
       "profile_git_blob_sha": "58f07533e94dc248315fd4ce9a9b14dbf74d1bb9",
       "format_tag_id": "ULISTAG-GED02-2044-VISUAL-KEYPOINTS-V0.1",
       "recognition": {
+        "mode": "MATCHER",
         "method_id": "ULISTAG-VISUAL-KEYPOINTS-ORB-HAMMING-RANSAC",
         "method_version": "0.1.0-phase1",
         "reference_manifest_path": "experiments/impots-finances/GED-02/ulistag/reference_visual_v0_1_manifest.json",
@@ -19,6 +20,31 @@
         "adapter_path": "client/profile_ocr_extract_v0_1.py",
         "binding_path": "experiments/impots-finances/GED-02/extraction/fr_2044_2025_property1_binding_v0_1.json",
         "semantic_schema_path": "experiments/impots-finances/GED-02/extraction/semantic_extraction_schema_v0_1.json",
+        "qualification": "NONE"
+      },
+      "production_qualified": false
+    },
+    {
+      "profile_id": "ULISDOQ-PROFILE-EML-GENERIC-CANDIDATE",
+      "profile_version": "0.1.0",
+      "profile_path": "experiments/administration-droits/GED-03/profiles/eml_candidate.json",
+      "profile_git_blob_sha": "4c9fb20fe90dfb72859303b704a6a43835370a2c",
+      "recognition": {
+        "mode": "CONTAINER_NATIVE",
+        "container_contract": {
+          "media_types": [
+            "message/rfc822"
+          ],
+          "extensions": [
+            ".eml"
+          ]
+        },
+        "resolver": "client/profile_resolver_v0_1.py"
+      },
+      "extraction": {
+        "capability_id": "NATIVE_MIME_EMAIL_EXTRACTION_V0.1",
+        "adapter_path": "client/eml_extract_v0_1.py",
+        "semantic_schema_path": "experiments/administration-droits/GED-03/contracts/normalized_eml_schema_v0_1.json",
         "qualification": "NONE"
       },
       "production_qualified": false
