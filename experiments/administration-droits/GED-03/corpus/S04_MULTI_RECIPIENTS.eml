@@ -1,0 +1,10 @@
+From: Sender Synthetic <sender@example.test>
+To: One <one@example.test>, Two <two@example.test>
+Cc: Three <three@example.test>
+Date: Wed, 21 Oct 2026 10:15:00 +0200
+Message-ID: <ged03-s04@example.test>
+Subject: GED-03 multiple recipients
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+Synthetic multi-recipient message.
