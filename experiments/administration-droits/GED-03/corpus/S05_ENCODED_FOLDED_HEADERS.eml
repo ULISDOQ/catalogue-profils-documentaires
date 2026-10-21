@@ -1,0 +1,11 @@
+From: =?UTF-8?Q?Exp=C3=A9diteur_Synth=C3=A9tique?= <sender@example.test>
+To: Receiver <receiver@example.test>
+Date: Wed, 21 Oct 2026 10:20:00 +0200
+Message-ID: <ged03-s05@example.test>
+Subject: =?UTF-8?Q?GED-03_=E2=80=94_objet_synth=C3=A9tique?=
+X-Synthetic-Long-Header: first-part
+ second-part
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+Synthetic encoded-header message.
