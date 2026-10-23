@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ulisdoq.example/profile-builder/requested-need-v0.1.schema.json",
+  "title": "ULISDOQ Profile Builder Requested Need v0.1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "need_id",
+    "objectives",
+    "required_outputs"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "ged-core-requested-need/0.1"
+    },
+    "need_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "objectives": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "RECOGNIZE_DOCUMENT_FAMILY",
+          "EXTRACT_STRUCTURED_FIELDS",
+          "NORMALIZE_CONTENT",
+          "VALIDATE_STRUCTURE",
+          "VALIDATE_BUSINESS_RULES"
+        ]
+      }
+    },
+    "required_outputs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "quality_requirements": {
+      "type": "object",
+      "properties": {
+        "deterministic": {
+          "type": "boolean",
+          "default": true
+        },
+        "offline": {
+          "type": "boolean",
+          "default": true
+        },
+        "fail_closed": {
+          "type": "boolean",
+          "default": true
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
