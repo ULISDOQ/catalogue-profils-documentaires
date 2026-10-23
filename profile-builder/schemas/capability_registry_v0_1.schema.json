@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ulisdoq.example/profile-builder/capability-registry-v0.1.schema.json",
+  "title": "GED-core Capability Registry v0.1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "registry_version",
+    "capabilities"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "ged-core-capability-registry/0.1"
+    },
+    "registry_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "capability_id",
+          "version",
+          "class",
+          "inputs",
+          "outputs",
+          "cost_rank",
+          "maturity",
+          "deterministic"
+        ],
+        "properties": {
+          "capability_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "version": {
+            "type": "string",
+            "minLength": 1
+          },
+          "class": {
+            "enum": [
+              "NATIVE_PARSE",
+              "RULE_BASED_PARSE",
+              "TEXT_MATCHER",
+              "STRUCTURAL_MATCHER",
+              "OCR",
+              "VISUAL_MATCHER",
+              "SPECIALIZED_ENGINE",
+              "VALIDATOR",
+              "LEARNED_MODEL",
+              "EXTERNAL_ESCALATION"
+            ]
+          },
+          "inputs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "outputs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "preconditions": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "cost_rank": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "maturity": {
+            "enum": [
+              "EXPERIMENTAL",
+              "PHASE1_CANDIDATE",
+              "TESTED",
+              "QUALIFIED",
+              "WITHDRAWN"
+            ]
+          },
+          "deterministic": {
+            "type": "boolean"
+          },
+          "offline_capable": {
+            "type": "boolean",
+            "default": true
+          },
+          "adapter_path": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "limits": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
