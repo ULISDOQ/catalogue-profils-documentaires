@@ -1,6 +1,6 @@
 # ULISDOQ Profile Builder
 
-> **Statut actuel : chantier actif — contrat machine v0.1 et registre initial en construction ; CLI non encore disponible.**
+> **Statut actuel : paquet candidat 0.1.0 produit — planner déterministe et CLI disponibles pour acceptation PCIA ; fabrication automatique d'un nouveau profil pas encore autorisée.**
 
 Le **Profile Builder** est le futur outil distribué avec ULISDOQ pour aider une personne à créer un **profil documentaire candidat** à partir d'un nouveau type de document.
 
@@ -163,8 +163,10 @@ profils réellement exploitables en phase 3
 - GED-core possède déjà plusieurs capacités expérimentales réutilisables ;
 - des profils candidats existent pour plusieurs familles documentaires ;
 - un premier mode générique `CONTAINER_NATIVE` a été expérimenté ;
-- le contrat machine complet du Builder reste à produire ;
-- le CLI distribuable n'est pas encore implémenté.
+- le contrat machine v0.1 est matérialisé ;
+- le capability registry v0.1 est matérialisé ;
+- le planner déterministe v0.1 et le CLI minimal sont implémentés ;
+- l'acceptation indépendante sur PCIA reste à réaliser.
 
 ## Prochain chantier
 
@@ -199,4 +201,4 @@ Les objets initiaux vivent dans :
 
 Un premier replay attendu de GED-03 est préparé sous `examples/ged03/`.
 
-La prochaine étape est l'implémentation du planner déterministe v0.1, pas encore disponible.
+Le planner déterministe v0.1 est maintenant disponible. Le prochain gate est l'acceptation indépendante du paquet 0.1.0 sur PCIA selon `PCIA_ACCEPTANCE_V0_1.md`, avant toute utilisation prospective sur GED-04.
