@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ulisdoq.example/profile-builder/characterization-v0.1.schema.json",
+  "title": "ULISDOQ Profile Builder Characterization v0.1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "corpus_id",
+    "container",
+    "native_features",
+    "privacy",
+    "observations"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "ged-core-characterization/0.1"
+    },
+    "corpus_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "container": {
+      "type": "object",
+      "required": [
+        "media_type",
+        "extension"
+      ],
+      "properties": {
+        "media_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "extension": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "page_count": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "native_features": {
+      "type": "object",
+      "required": [
+        "structured",
+        "text_available",
+        "image_available"
+      ],
+      "properties": {
+        "structured": {
+          "type": "boolean"
+        },
+        "text_available": {
+          "type": "boolean"
+        },
+        "image_available": {
+          "type": "boolean"
+        },
+        "metadata_available": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "local_only",
+        "personal_data_present"
+      ],
+      "properties": {
+        "local_only": {
+          "type": "boolean"
+        },
+        "personal_data_present": {
+          "type": "boolean"
+        },
+        "publication_allowed": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "observations": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "null"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}
