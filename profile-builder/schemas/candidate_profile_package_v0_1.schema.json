@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ulisdoq.example/profile-builder/candidate-profile-package-v0.1.schema.json",
+  "title": "ULISDOQ Candidate Profile Package v0.1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "profile",
+    "builder",
+    "source_plan",
+    "tests",
+    "evidence",
+    "limits",
+    "debts",
+    "qualification_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "ulisdoq-candidate-profile-package/0.1"
+    },
+    "profile": {
+      "type": "object",
+      "required": [
+        "profile_id",
+        "profile_version",
+        "family"
+      ],
+      "properties": {
+        "profile_id": {
+          "type": "string"
+        },
+        "profile_version": {
+          "type": "string"
+        },
+        "family": {
+          "type": "string"
+        },
+        "profile_path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "builder": {
+      "type": "object",
+      "required": [
+        "profile_builder_version",
+        "ged_core_machine_version",
+        "capability_set_version"
+      ],
+      "properties": {
+        "profile_builder_version": {
+          "type": "string"
+        },
+        "ged_core_machine_version": {
+          "type": "string"
+        },
+        "capability_set_version": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "source_plan": {
+      "type": "object"
+    },
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "debts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "qualification_status": {
+      "enum": [
+        "CANDIDATE_UNQUALIFIED",
+        "TESTED",
+        "QUALIFIED",
+        "REJECTED",
+        "WITHDRAWN"
+      ]
+    }
+  },
+  "additionalProperties": false
+}
