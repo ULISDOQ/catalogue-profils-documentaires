@@ -18,7 +18,7 @@ sha256sum ulisdoq-profile-builder-0.1.0.tar.gz
 
 SHA-256 attendu de l'archive distribuée dans la conversation :
 
-`f23b9837ad6f19b46f70ab6b276a0207e39e5ccdf204da7e40d745ed9325244a`
+`f82e610db48b8d894f702485ec0e7f9fc89599fd385105f19c1b75441fa7a66f`
 
 ## Exécution
 
