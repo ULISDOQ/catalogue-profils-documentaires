@@ -75,3 +75,11 @@ Consulter [CONTRIBUTING.md](CONTRIBUTING.md). Les contributions sont soumises à
 ## Statut
 
 **Amorçage public.** Les profils candidats, licences de contenu et règles définitives de gouvernance restent en qualification. Aucun profil d'extraction n'est annoncé comme validé à ce stade.
+
+## Profile Builder — fabrication distribuable de profils candidats
+
+Le projet [ULISDOQ Profile Builder](profile-builder/README.md) vise à fournir un outil distribuable permettant de fabriquer localement de nouveaux profils documentaires candidats à partir de la boîte à outils versionnée de GED-core Machine.
+
+Architecture candidate : [GED-core Machine & Profile Builder](project/GED_CORE_MACHINE_PROFILE_BUILDER_ARCHITECTURE_CANDIDATE_V0_1.md).
+
+Le Builder devra rester plafonné par les capacités connues de la version installée, produire des décisions explicites lorsqu'une capacité manque, et ne jamais confondre production d'un candidat et qualification de production.
