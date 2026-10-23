@@ -1,6 +1,6 @@
 # ULISDOQ Profile Builder
 
-> **Statut actuel : projet d'application — pas encore disponible pour produire des profils.**
+> **Statut actuel : chantier actif — contrat machine v0.1 et registre initial en construction ; CLI non encore disponible.**
 
 Le **Profile Builder** est le futur outil distribué avec ULISDOQ pour aider une personne à créer un **profil documentaire candidat** à partir d'un nouveau type de document.
 
@@ -183,3 +183,20 @@ Le prochain chantier produira progressivement :
 Le but n'est pas de vous demander de devenir architecte d'ULISDOQ.
 
 Le but est que vous puissiez apporter un nouveau cas documentaire, comprendre ce que l'outil sait faire ou ne sait pas faire, obtenir des résultats reproductibles et contribuer une matière examinable par le projet.
+## Contrat machine v0.1
+
+Le chantier est maintenant entré en production du socle machine-readable.
+
+Les objets initiaux vivent dans :
+
+- `spec/GED_CORE_MACHINE_CONTRACT_V0_1.md` ;
+- `schemas/characterization_v0_1.schema.json` ;
+- `schemas/requested_need_v0_1.schema.json` ;
+- `schemas/capability_registry_v0_1.schema.json` ;
+- `schemas/processing_plan_v0_1.schema.json` ;
+- `schemas/candidate_profile_package_v0_1.schema.json` ;
+- `registry/CAPABILITY_REGISTRY_V0_1.json`.
+
+Un premier replay attendu de GED-03 est préparé sous `examples/ged03/`.
+
+La prochaine étape est l'implémentation du planner déterministe v0.1, pas encore disponible.
