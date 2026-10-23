@@ -1,6 +1,6 @@
 import json, unittest
 from pathlib import Path
-from profile_builder.planner import plan
+from ulisdoq_profile_builder.planner import plan
 
 ROOT=Path(__file__).resolve().parents[1]
 
