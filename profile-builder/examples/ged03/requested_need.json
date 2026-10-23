@@ -1,0 +1,19 @@
+{
+  "schema_version": "ged-core-requested-need/0.1",
+  "need_id": "GED03_STRUCTURED_MESSAGE_EXTRACTION",
+  "objectives": [
+    "VALIDATE_STRUCTURE",
+    "EXTRACT_STRUCTURED_FIELDS",
+    "NORMALIZE_CONTENT"
+  ],
+  "required_outputs": [
+    "normalized_message_json",
+    "parse_status",
+    "attachment_inventory"
+  ],
+  "quality_requirements": {
+    "deterministic": true,
+    "offline": true,
+    "fail_closed": true
+  }
+}
