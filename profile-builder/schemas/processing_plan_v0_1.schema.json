@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ulisdoq.example/profile-builder/processing-plan-v0.1.schema.json",
+  "title": "GED-core Processing Plan v0.1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "ged_core_machine_version",
+    "ruleset_version",
+    "capability_registry_version",
+    "decision",
+    "selected_capabilities",
+    "excluded_capabilities",
+    "expected_outputs"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "ged-core-processing-plan/0.1"
+    },
+    "ged_core_machine_version": {
+      "type": "string"
+    },
+    "ruleset_version": {
+      "type": "string"
+    },
+    "capability_registry_version": {
+      "type": "string"
+    },
+    "decision": {
+      "enum": [
+        "PROFILE_CANDIDATE_PRODUCED",
+        "NO_EXTRA_PROCESSING_REQUIRED",
+        "REUSE_PROFILE",
+        "ADAPT_PROFILE",
+        "COMPOSE_CAPABILITIES",
+        "SPECIALIZATION_REQUIRED",
+        "CAPABILITY_GAP",
+        "AMBIGUOUS",
+        "UNSUPPORTED",
+        "INSUFFICIENT_CORPUS"
+      ]
+    },
+    "selected_capabilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "capability_id",
+          "version",
+          "order"
+        ],
+        "properties": {
+          "capability_id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "order": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "excluded_capabilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "capability_id",
+          "reason"
+        ],
+        "properties": {
+          "capability_id": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "reused_profile_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "unsatisfied_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expected_outputs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "canonical_sha256": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false
+}
