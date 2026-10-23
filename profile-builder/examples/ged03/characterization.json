@@ -1,0 +1,24 @@
+{
+  "schema_version": "ged-core-characterization/0.1",
+  "corpus_id": "GED03_SYNTHETIC_EML_PHASE1",
+  "container": {
+    "media_type": "message/rfc822",
+    "extension": ".eml",
+    "page_count": null
+  },
+  "native_features": {
+    "structured": true,
+    "text_available": true,
+    "image_available": false,
+    "metadata_available": true
+  },
+  "privacy": {
+    "local_only": true,
+    "personal_data_present": false,
+    "publication_allowed": true
+  },
+  "observations": {
+    "multipart_supported": true,
+    "attachments_possible": true
+  }
+}
