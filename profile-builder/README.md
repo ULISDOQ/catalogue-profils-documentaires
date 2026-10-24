@@ -202,3 +202,14 @@ Les objets initiaux vivent dans :
 Un premier replay attendu de GED-03 est préparé sous `examples/ged03/`.
 
 Le planner déterministe v0.1 est maintenant disponible. Le prochain gate est l'acceptation indépendante du paquet 0.1.0 sur PCIA selon `PCIA_ACCEPTANCE_V0_1.md`, avant toute utilisation prospective sur GED-04.
+## Frontière de publication publique
+
+Un document réel et les valeurs observées pendant sa lecture appartiennent au **workspace privé local**.
+
+Le futur package communautaire est un objet différent, reconstruit par allowlist dans un staging neuf. Le Builder ne doit pas publier directement sur Git.
+
+Avant toute contribution issue d'un document réel, un privacy gate devra notamment vérifier l'absence de fichiers sources, valeurs observées, chemins locaux et la non-fuite d'un canari privé.
+
+Référence : `spec/PUBLICATION_BOUNDARY_V0_1.md`.
+
+Le paquet 0.1.0 déjà accepté sur PCIA reste un paquet de **planification** ; il n'est pas encore autorisé à produire un export public depuis un corpus réel.
