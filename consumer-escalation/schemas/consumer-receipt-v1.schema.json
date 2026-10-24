@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ulisdoq.example/consumer-escalation/consumer-receipt-v1.schema.json",
+  "title": "ULISDOQ Consumer Receipt v1",
+  "type": "object",
+  "required": [
+    "schema",
+    "request_id",
+    "request_version",
+    "correlation_id",
+    "request_commit",
+    "received_at",
+    "acceptance_status",
+    "reason",
+    "processing_contract_version"
+  ],
+  "properties": {
+    "schema": {
+      "const": "ULISDOQ_CONSUMER_RECEIPT_V1"
+    },
+    "request_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "request_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "correlation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "request_commit": {
+      "type": "string",
+      "minLength": 7
+    },
+    "received_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "acceptance_status": {
+      "enum": [
+        "ACCEPTED",
+        "REJECTED_INVALID_REQUEST",
+        "REJECTED_CONFIDENTIALITY",
+        "DUPLICATE_ALREADY_ACCEPTED",
+        "UNKNOWN"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "processing_contract_version": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": false
+}
