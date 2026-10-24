@@ -4,59 +4,299 @@
   "request_version": 1,
   "correlation_id": "GED04-DOCUMENTARY-CAPABILITY-20261024-001",
   "request_commit": "3bac3126e552fb6227e0ac041b2c636e884423c2",
-  "result_status": "NEEDS_MORE_EVIDENCE",
-  "capability_decision": "SOURCE_EVIDENCE_REQUIRED",
+  "result_status": "COMPLETED",
+  "capability_decision": "NEW_PROFILE_CANDIDATE_REQUIRED",
   "documentary_classification": {
-    "issuer_or_source_category": {
-      "value": "INSURANCE_PROVIDER_OR_INTERMEDIARY",
+    "source_category": {
+      "value": "INSURANCE_CONTRACT_ISSUER_OR_DISTRIBUTION_NETWORK",
       "status": "INFERRED"
     },
     "business_domain": {
-      "value": "INSURANCE",
-      "status": "INFERRED"
+      "value": "MOTOR_INSURANCE",
+      "status": "VERIFIED"
     },
     "presumed_document_family": {
-      "value": "INSURANCE_CONTRACTUAL_DOCUMENT_OR_AMENDMENT",
-      "status": "HYPOTHESIS"
+      "value": "MOTORCYCLE_INSURANCE_SPECIAL_TERMS",
+      "status": "VERIFIED"
     },
     "document_role": {
-      "value": "CONTRACTUAL_TERMS_AND_PARTICULARS",
-      "status": "HYPOTHESIS"
+      "value": "CONTRACT_ENDORSEMENT",
+      "status": "VERIFIED"
+    },
+    "observed_family_anchors": [
+      {
+        "value": "DISPOSITIONS PARTICULIERES",
+        "status": "OBSERVED"
+      },
+      {
+        "value": "Allianz 2 roues",
+        "status": "OBSERVED"
+      },
+      {
+        "value": "Avenant au contrat",
+        "status": "OBSERVED"
+      }
+    ],
+    "field_semantic_model": {
+      "document_identity": [
+        {
+          "field_id": "document_role",
+          "meaning": "Role of the contractual document, such as endorsement/amendment.",
+          "value_type": "enum"
+        },
+        {
+          "field_id": "contract_reference",
+          "meaning": "Identifier of the insurance contract affected by the document.",
+          "value_type": "string"
+        },
+        {
+          "field_id": "product_reference",
+          "meaning": "Insurer product identifier printed with the contract reference.",
+          "value_type": "string"
+        },
+        {
+          "field_id": "effective_date",
+          "meaning": "Date on which the contractual modification takes effect.",
+          "value_type": "date"
+        },
+        {
+          "field_id": "main_expiry_date",
+          "meaning": "Main annual policy expiry date.",
+          "value_type": "month-day or date"
+        }
+      ],
+      "insured_object": [
+        {
+          "field_id": "vehicle_registration",
+          "meaning": "Registration identifier of the insured vehicle.",
+          "value_type": "string"
+        },
+        {
+          "field_id": "vehicle_first_registration_date",
+          "meaning": "First registration/in-service date of the insured vehicle.",
+          "value_type": "date"
+        },
+        {
+          "field_id": "engine_displacement",
+          "meaning": "Declared engine displacement of the insured vehicle.",
+          "value_type": "quantity"
+        },
+        {
+          "field_id": "garage_location",
+          "meaning": "Declared normal garaging location.",
+          "value_type": "location"
+        }
+      ],
+      "coverage": [
+        {
+          "field_id": "subscribed_coverages",
+          "meaning": "List of guarantees/coverages explicitly subscribed in the special terms.",
+          "value_type": "list[string]"
+        }
+      ],
+      "declared_driver": [
+        {
+          "field_id": "declared_driver_identity",
+          "meaning": "Identity of the habitual or declared driver.",
+          "value_type": "person"
+        },
+        {
+          "field_id": "declared_driver_birth_date",
+          "meaning": "Birth date of the declared driver.",
+          "value_type": "date"
+        },
+        {
+          "field_id": "declared_driver_licence_date",
+          "meaning": "Driving-licence issue date declared for the driver.",
+          "value_type": "date"
+        },
+        {
+          "field_id": "declared_driver_profession",
+          "meaning": "Declared profession of the driver.",
+          "value_type": "string"
+        }
+      ],
+      "premium_and_adjustment": [
+        {
+          "field_id": "annual_reference_premium",
+          "meaning": "Annual reference premium before reduction/majoration and ancillary guarantees/taxes where specified.",
+          "value_type": "money"
+        },
+        {
+          "field_id": "annual_effective_premium",
+          "meaning": "Annual premium at the effective date after the stated reduction/majoration coefficient.",
+          "value_type": "money"
+        },
+        {
+          "field_id": "reduction_majoration_coefficient",
+          "meaning": "Contract reduction/majoration coefficient.",
+          "value_type": "decimal"
+        },
+        {
+          "field_id": "payment_frequency",
+          "meaning": "Contractual payment periodicity.",
+          "value_type": "enum"
+        },
+        {
+          "field_id": "refund_period",
+          "meaning": "Period to which an announced premium refund applies.",
+          "value_type": "date_range"
+        },
+        {
+          "field_id": "refund_amount",
+          "meaning": "Amount of premium announced as refundable for the stated period.",
+          "value_type": "money"
+        }
+      ],
+      "contractual_context": [
+        {
+          "field_id": "applicable_clauses",
+          "meaning": "Contract-specific clauses stated as applicable.",
+          "value_type": "list[text]"
+        },
+        {
+          "field_id": "execution_place",
+          "meaning": "Place where the document states it was executed.",
+          "value_type": "string"
+        },
+        {
+          "field_id": "execution_date",
+          "meaning": "Date where the document states it was executed.",
+          "value_type": "date"
+        },
+        {
+          "field_id": "signature_roles",
+          "meaning": "Roles expected in the signature zone, without observed personal values.",
+          "value_type": "list[string]"
+        }
+      ]
+    },
+    "extraction_grammar_candidate": {
+      "strategy": "HYBRID_NATIVE_TEXT_WITH_RENDER_FALLBACK",
+      "phase_1_document_identity": {
+        "anchors": [
+          "DISPOSITIONS PARTICULIERES",
+          "Allianz 2 roues",
+          "Avenant au contrat",
+          "Produit"
+        ],
+        "method": "Use stable printed header labels and adjacent values; reject identity if mandatory anchors conflict."
+      },
+      "phase_2_section_segmentation": {
+        "anchors": [
+          "Véhicule assuré",
+          "Garanties souscrites",
+          "Conducteur déclaré",
+          "Clauses applicables",
+          "Cotisation",
+          "Informations"
+        ],
+        "method": "Segment by visible section headings; use rendered-page reading when the PDF text layer corrupts a heading."
+      },
+      "phase_3_label_value_extraction": {
+        "method": "Within the active section, extract values adjacent to explicit labels or stable contractual phrases. Prefer native text when label and value are both reliable.",
+        "examples_of_labels": [
+          "Immatriculation",
+          "Première mise en circulation",
+          "Cylindrée",
+          "Cotisation annuelle de référence",
+          "Périodicité du paiement"
+        ]
+      },
+      "phase_4_render_fallback": {
+        "trigger": "Expected section/label is visibly present but native text is corrupted, missing, or non-normalizable.",
+        "method": "Read the rendered page region for that field only; do not OCR the whole document by default."
+      },
+      "phase_5_normalization": {
+        "dates": "Normalize to ISO date only when day/month/year are unambiguous.",
+        "money": "Normalize numeric amount and currency separately.",
+        "lists": "Preserve order of subscribed coverages.",
+        "unknown": "Return explicit UNKNOWN rather than infer a missing value."
+      },
+      "phase_6_traceability": {
+        "requirement": "Each extracted field must retain page number and extraction method: NATIVE_TEXT or RENDER_FALLBACK."
+      }
     }
   },
   "verification": {
-    "current_evidence_sufficient_for_profile_reuse_claim": false,
-    "current_evidence_sufficient_for_field_semantic_model": false,
+    "current_evidence_sufficient_for_documentary_classification": true,
+    "current_evidence_sufficient_for_candidate_field_semantics": true,
+    "current_evidence_sufficient_for_candidate_extraction_grammar": true,
+    "current_evidence_sufficient_for_reusable_profile_claim": false,
     "independent_same_family_specimen_available": false,
     "circular_self_match_forbidden": true,
-    "required_next_evidence": [
-      "Restricted local examination of the existing source, or a structure-preserving controlled representation, sufficient to define field semantics and extraction grammar.",
-      "At least one independent same-family specimen before claiming reusable family recognition or reusable profile robustness."
-    ]
+    "verification_protocol": [
+      "Check each extracted value against the rendered source page.",
+      "Require source page and extraction method for each field.",
+      "Reject silently inferred values; uncertain values become UNKNOWN.",
+      "Test the candidate grammar on at least one independent same-family specimen before claiming reusable profile robustness.",
+      "When family recognition is added, include at least one meaningful negative specimen to test false acceptance."
+    ],
+    "capability_mapping": {
+      "existing": [
+        {
+          "capability_id": "ULISTAG-ANCHOR-GRAPH-V0.1",
+          "fit": "PARTIAL",
+          "reason": "Potentially useful after stable text anchors and normalized geometry have been established; not required for first-document understanding."
+        },
+        {
+          "capability_id": "ULISTAG-VISUAL-KEYPOINTS-ORB-HAMMING-RANSAC",
+          "fit": "NOT_REQUIRED_FOR_CURRENT_INSTRUCTION",
+          "reason": "Useful for later family recognition only with independent reference/specimens; self-match would be circular."
+        },
+        {
+          "capability_id": "PROFILE_DRIVEN_OCR_GEOMETRIC_EXTRACTION_V0.1",
+          "fit": "PARTIAL",
+          "reason": "Can support rendered-region extraction after a profile binding exists, but cannot by itself construct the missing profile."
+        },
+        {
+          "capability_id": "JSON_SCHEMA_VALIDATION",
+          "fit": "STRUCTURE_ONLY",
+          "reason": "Can validate output structure but not documentary truth."
+        }
+      ],
+      "missing": [
+        {
+          "capability_id": "DOCUMENT_PROFILE_CONSTRUCTION_FROM_INSTRUCTED_GRAMMAR",
+          "status": "MISSING",
+          "function": "Materialize a candidate documentary profile from the instructed field semantics, section anchors, extraction grammar, normalization rules, verification protocol and reuse boundary."
+        },
+        {
+          "capability_id": "HYBRID_PDF_FIELD_EXTRACTION_WITH_TARGETED_RENDER_FALLBACK",
+          "status": "MISSING_AS_STABLE_GENERIC_APPLICATION",
+          "function": "Extract profile-defined fields using native PDF text where reliable and targeted rendered-page fallback only where required, with field-level provenance."
+        }
+      ]
+    }
   },
   "reuse_boundary": {
-    "current_claim": "DOCUMENTARY_CLASSIFICATION_HYPOTHESIS_ONLY",
+    "current_claim": "DOCUMENTARY_CLASSIFICATION_AND_EXTRACTION_GRAMMAR_CANDIDATE",
     "may_generalize_profile": false,
     "may_claim_family_recognition": false,
-    "may_publish_private_source": false
+    "may_publish_private_source": false,
+    "may_construct_unqualified_profile_candidate": true,
+    "reusable_profile_requires": "At least one independent same-family specimen successfully processed without case-specific reinterpretation."
   },
   "produced_refs": {
     "profile_id": null,
     "capability_id": null,
     "profile_builder_version": "0.1.1-candidate",
-    "instruction_contract": "ULISDOQ_DOCUMENTARY_INSTRUCTION_V1"
+    "instruction_contract": "ULISDOQ_DOCUMENTARY_INSTRUCTION_V1",
+    "source_evidence_mode": "RESTRICTED_EXISTING_PRIVATE_SOURCE_REUSE",
+    "public_source_document_ref": null
   },
   "limits": [
-    "No private source document was processed through this Git exchange.",
-    "No field grammar can be qualified from the minimized package alone.",
-    "One specimen is insufficient to demonstrate reusable family recognition.",
-    "This result is an instruction decision, not a profile candidate."
+    "Instruction is based on one real specimen.",
+    "No reusable profile robustness claim is made.",
+    "No family matcher was executed or qualified.",
+    "No private values, private source path, private source hash, or raw source document are included in this result.",
+    "Some PDF text-layer labels are encoding-degraded, so targeted rendered-page fallback is part of the candidate grammar."
   ],
   "next_action": {
     "action": "PROVIDE_ADDITIONAL_EVIDENCE",
     "target_ref": null,
-    "requirement": "Provide a restricted local review path or a controlled structure-preserving representation for semantic field and extraction-grammar instruction; keep the private source outside public Git. Obtain an independent same-family specimen before any reusable recognition claim."
+    "requirement": "Provide one independent same-family specimen to test the candidate field semantics and extraction grammar before any reusable profile claim. No additional evidence is required to preserve the current documentary instruction."
   },
-  "result_version": 1,
-  "created_at": "2026-10-24T21:40:00Z"
+  "result_version": 2,
+  "created_at": "2026-10-25T00:05:00Z"
 }
