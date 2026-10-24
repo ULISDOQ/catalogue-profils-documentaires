@@ -11,7 +11,7 @@ Cette expérience appartient à la famille [Factures & achats](../README.md).
 3. **Voir le client ULISDOQ :** [mode d'emploi et commande](../../../client/README.md) ; [script Python](../../../client/extract.py).
 4. **Voir comment juger le résultat :** [protocole](docs/PROTOCOLE.md).
 
-**État actuel :** le candidat ULISTAG v0.1 a passé une première exécution réelle sur PCIA : `MATCH_CANDIDATE`, `node_ratio=1.0`, `edge_ratio=1.0`, puis extraction technique des trois champs attendus avec `EXTRACTED_UNVERIFIED`. Aucune valeur privée n'a été retournée. Ce résultat porte sur la source ayant servi à la conception et reste **non qualifié**. Voir le [RETEX PCIA](docs/RETEX_ULISTAG_V0_1_PCIA_EXECUTION_001.md).
+**État actuel :** le candidat ULISTAG v0.1 a passé une première exécution réelle sur un environnement Linux indépendant : `MATCH_CANDIDATE`, `node_ratio=1.0`, `edge_ratio=1.0`, puis extraction technique des trois champs attendus avec `EXTRACTED_UNVERIFIED`. Aucune valeur privée n'a été retournée. Ce résultat porte sur la source ayant servi à la conception et reste **non qualifié**. Voir le [RETEX environnement indépendant](docs/RETEX_ULISTAG_V0_1_INDEPENDENT_ENV_EXECUTION_001.md).
 
 Voir la [conception spécialisée GED-01](ulistag/ANCHOR_GRAPH_V0_1.md). Le matcher générique candidat correspondant vit désormais dans le cœur [ULISTAG/](../../../ULISTAG/README.md).
 
