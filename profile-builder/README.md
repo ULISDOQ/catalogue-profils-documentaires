@@ -1,6 +1,6 @@
 # ULISDOQ Profile Builder
 
-> **Statut actuel : paquet candidat 0.1.0 produit — planner déterministe et CLI disponibles pour acceptation PCIA ; fabrication automatique d'un nouveau profil pas encore autorisée.**
+> **Statut actuel : paquet candidat 0.1.0 produit — planner déterministe et CLI disponibles pour acceptation independent Linux test environment ; fabrication automatique d'un nouveau profil pas encore autorisée.**
 
 Le **Profile Builder** est le futur outil distribué avec ULISDOQ pour aider une personne à créer un **profil documentaire candidat** à partir d'un nouveau type de document.
 
@@ -166,7 +166,7 @@ profils réellement exploitables en phase 3
 - le contrat machine v0.1 est matérialisé ;
 - le capability registry v0.1 est matérialisé ;
 - le planner déterministe v0.1 et le CLI minimal sont implémentés ;
-- l'acceptation indépendante sur PCIA reste à réaliser.
+- l'acceptation sur un environnement Linux indépendant a été observée PASS.
 
 ## Prochain chantier
 
@@ -191,7 +191,7 @@ Le chantier est maintenant entré en production du socle machine-readable.
 
 Les objets initiaux vivent dans :
 
-- `spec/GED_CORE_MACHINE_CONTRACT_V0_1.md` ;
+- `specs/GED_CORE_MACHINE_CONTRACT_V0_1.md` ;
 - `schemas/characterization_v0_1.schema.json` ;
 - `schemas/requested_need_v0_1.schema.json` ;
 - `schemas/capability_registry_v0_1.schema.json` ;
@@ -201,7 +201,7 @@ Les objets initiaux vivent dans :
 
 Un premier replay attendu de GED-03 est préparé sous `examples/ged03/`.
 
-Le planner déterministe v0.1 est maintenant disponible. Le prochain gate est l'acceptation indépendante du paquet 0.1.0 sur PCIA selon `PCIA_ACCEPTANCE_V0_1.md`, avant toute utilisation prospective sur GED-04.
+Le planner déterministe v0.1 est maintenant disponible. Le prochain gate est l'acceptation indépendante du paquet 0.1.0 sur independent Linux test environment selon `INDEPENDENT_TEST_ENVIRONMENT_ACCEPTANCE_V0_1.md`, avant toute utilisation prospective sur GED-04.
 ## Frontière de publication publique
 
 Un document réel et les valeurs observées pendant sa lecture appartiennent au **workspace privé local**.
@@ -210,9 +210,9 @@ Le futur package communautaire est un objet différent, reconstruit par allowlis
 
 Avant toute contribution issue d'un document réel, un privacy gate devra notamment vérifier l'absence de fichiers sources, valeurs observées, chemins locaux et la non-fuite d'un canari privé.
 
-Référence : `spec/PUBLICATION_BOUNDARY_V0_1.md`.
+Référence : `specs/PUBLICATION_BOUNDARY_V0_1.md`.
 
-Le paquet 0.1.0 déjà accepté sur PCIA reste un paquet de **planification** ; il n'est pas encore autorisé à produire un export public depuis un corpus réel.
+Le paquet 0.1.0 déjà accepté sur independent Linux test environment reste un paquet de **planification** ; il n'est pas encore autorisé à produire un export public depuis un corpus réel.
 ## Quarantaine et revue avant publication
 
 Un profil candidat qui a franchi le privacy gate n'est pas encore un profil disponible dans ULISDOQ.
