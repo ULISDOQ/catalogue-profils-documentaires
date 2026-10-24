@@ -270,7 +270,7 @@
     }
   },
   "reuse_boundary": {
-    "current_claim": "DOCUMENTARY_CLASSIFICATION_AND_EXTRACTION_GRAMMAR_CANDIDATE",
+    "current_claim": "UNQUALIFIED_PROFILE_CANDIDATE_MATERIALIZED",
     "may_generalize_profile": false,
     "may_claim_family_recognition": false,
     "may_publish_private_source": false,
@@ -278,12 +278,16 @@
     "reusable_profile_requires": "At least one independent same-family specimen successfully processed without case-specific reinterpretation."
   },
   "produced_refs": {
-    "profile_id": null,
+    "profile_id": "ULISDOQ-PROFILE-GED04-MOTORCYCLE-INSURANCE-SPECIAL-TERMS-CANDIDATE",
     "capability_id": null,
     "profile_builder_version": "0.1.1-candidate",
     "instruction_contract": "ULISDOQ_DOCUMENTARY_INSTRUCTION_V1",
     "source_evidence_mode": "RESTRICTED_EXISTING_PRIVATE_SOURCE_REUSE",
-    "public_source_document_ref": null
+    "public_source_document_ref": null,
+    "profile_version": "0.1.0",
+    "profile_path": "experiments/administration-droits/GED-04/profiles/motorcycle_insurance_special_terms_candidate.json",
+    "profile_creation_commit": "44a435a37b7d161b9c34e205d85754a7a7a7945b",
+    "candidate_package_path": "experiments/administration-droits/GED-04/profiles/candidate_profile_package_v0_1.json"
   },
   "limits": [
     "Instruction is based on one real specimen.",
@@ -294,9 +298,9 @@
   ],
   "next_action": {
     "action": "PROVIDE_ADDITIONAL_EVIDENCE",
-    "target_ref": null,
-    "requirement": "Provide one independent same-family specimen to test the candidate field semantics and extraction grammar before any reusable profile claim. No additional evidence is required to preserve the current documentary instruction."
+    "target_ref": "ULISDOQ-PROFILE-GED04-MOTORCYCLE-INSURANCE-SPECIAL-TERMS-CANDIDATE@0.1.0",
+    "requirement": "Provide one independent same-family specimen to replay the candidate extraction grammar without case-specific reinterpretation. Family-recognition qualification additionally requires a meaningful negative specimen."
   },
-  "result_version": 2,
-  "created_at": "2026-10-25T00:05:00Z"
+  "result_version": 3,
+  "created_at": "2026-10-25T00:20:00Z"
 }
