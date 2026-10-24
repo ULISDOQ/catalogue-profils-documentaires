@@ -62,6 +62,22 @@ profile-builder package
 
 Gate M4 : un utilisateur extérieur peut suivre le README sans connaître l'architecture du dépôt.
 
+## M4b — frontière de publication et privacy gate
+
+Avant toute fabrication sur document réel destinée à une contribution publique :
+
+- séparation workspace privé / staging public ;
+- export par allowlist ;
+- interdiction structurelle des valeurs observées ;
+- scan de chemins locaux et motifs à risque ;
+- test canari de non-fuite ;
+- aucune commande Git de publication dans le Builder ;
+- revue humaine obligatoire.
+
+Gate M4b : `PUBLIC_EXPORT_READY` impossible si un seul contrôle échoue.
+
+Référence : `spec/PUBLICATION_BOUNDARY_V0_1.md`.
+
 ## M5 — premier GED prospectif
 
 Choisir un GED nouveau et laisser le Builder produire le premier package candidat sans conception manuelle du processing plan.
