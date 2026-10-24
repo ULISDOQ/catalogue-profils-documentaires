@@ -1,0 +1,299 @@
+{
+  "profile_id": "ULISDOQ-PROFILE-GED04-MOTORCYCLE-INSURANCE-SPECIAL-TERMS-CANDIDATE",
+  "version": "0.1.0",
+  "status": "CANDIDATE_UNQUALIFIED",
+  "family": "motorcycle_insurance_special_terms",
+  "document_type": "insurance contract endorsement / special terms",
+  "jurisdiction": "FR_CANDIDATE",
+  "origin": {
+    "consumer_request_id": "ULISDOQ-REQ-GEDREAL-20261024T213000Z-001",
+    "documentary_instruction_result_version": 2,
+    "documentary_instruction_commit": "2588c9f8765ebbbc0c1e1166d58b756f4597cc40",
+    "source_evidence_policy": "PRIVATE_SOURCE_NOT_INCLUDED_IN_PROFILE"
+  },
+  "recognition": {
+    "status": "CANDIDATE_UNQUALIFIED",
+    "strategy": "INSTRUCTED_TEXT_ANCHORS_WITH_OPTIONAL_STRUCTURAL_MATCHER",
+    "mandatory_identity_anchors": [
+      "DISPOSITIONS PARTICULIERES",
+      "Allianz 2 roues",
+      "Avenant au contrat"
+    ],
+    "supporting_anchor": [
+      "Produit"
+    ],
+    "conflict_policy": "UNKNOWN_ON_MANDATORY_ANCHOR_CONFLICT",
+    "candidate_capability": {
+      "capability_id": "ULISTAG-ANCHOR-GRAPH-V0.1",
+      "use_condition": "ONLY_AFTER_STABLE_TEXT_ANCHORS_AND_NORMALIZED_GEOMETRY_ARE_ESTABLISHED"
+    },
+    "visual_matcher": {
+      "capability_id": "ULISTAG-VISUAL-KEYPOINTS-ORB-HAMMING-RANSAC",
+      "status": "NOT_REQUIRED_FOR_INITIAL_EXTRACTION",
+      "qualification_condition": "INDEPENDENT_POSITIVE_REFERENCE_AND_MEANINGFUL_NEGATIVE_SPECIMEN_REQUIRED"
+    }
+  },
+  "extraction": {
+    "status": "GRAMMAR_CANDIDATE_UNQUALIFIED",
+    "strategy": "HYBRID_NATIVE_TEXT_WITH_TARGETED_RENDER_FALLBACK",
+    "existing_capabilities_reused": [
+      "JSON_SCHEMA_VALIDATION",
+      "PROFILE_DRIVEN_OCR_GEOMETRIC_EXTRACTION_V0.1"
+    ],
+    "missing_generic_application": "HYBRID_PDF_FIELD_EXTRACTION_WITH_TARGETED_RENDER_FALLBACK",
+    "section_anchors": [
+      "Véhicule assuré",
+      "Garanties souscrites",
+      "Conducteur déclaré",
+      "Clauses applicables",
+      "Cotisation",
+      "Informations"
+    ],
+    "fields": [
+      {
+        "name": "document_role",
+        "section": "HEADER",
+        "semantic_type": "enum",
+        "required": true,
+        "method": "header_anchor_classification"
+      },
+      {
+        "name": "contract_reference",
+        "section": "HEADER",
+        "semantic_type": "string",
+        "required": true,
+        "method": "label_or_phrase_adjacent_value"
+      },
+      {
+        "name": "product_reference",
+        "section": "HEADER",
+        "semantic_type": "string",
+        "required": false,
+        "method": "label_or_phrase_adjacent_value"
+      },
+      {
+        "name": "effective_date",
+        "section": "HEADER",
+        "semantic_type": "date",
+        "required": true,
+        "method": "contractual_phrase_date"
+      },
+      {
+        "name": "main_expiry_date",
+        "section": "HEADER",
+        "semantic_type": "date_or_month_day",
+        "required": false,
+        "method": "contractual_phrase_date"
+      },
+      {
+        "name": "vehicle_registration",
+        "section": "Véhicule assuré",
+        "semantic_type": "string",
+        "required": true,
+        "method": "label_value"
+      },
+      {
+        "name": "vehicle_first_registration_date",
+        "section": "Véhicule assuré",
+        "semantic_type": "date",
+        "required": false,
+        "method": "label_value"
+      },
+      {
+        "name": "engine_displacement",
+        "section": "Véhicule assuré",
+        "semantic_type": "quantity",
+        "required": false,
+        "method": "label_value"
+      },
+      {
+        "name": "garage_location",
+        "section": "Véhicule assuré",
+        "semantic_type": "location",
+        "required": false,
+        "method": "label_or_contractual_phrase"
+      },
+      {
+        "name": "subscribed_coverages",
+        "section": "Garanties souscrites",
+        "semantic_type": "list[string]",
+        "required": true,
+        "method": "section_list"
+      },
+      {
+        "name": "declared_driver_identity",
+        "section": "Conducteur déclaré",
+        "semantic_type": "person",
+        "required": false,
+        "method": "label_value"
+      },
+      {
+        "name": "declared_driver_birth_date",
+        "section": "Conducteur déclaré",
+        "semantic_type": "date",
+        "required": false,
+        "method": "label_value"
+      },
+      {
+        "name": "declared_driver_licence_date",
+        "section": "Conducteur déclaré",
+        "semantic_type": "date",
+        "required": false,
+        "method": "label_value"
+      },
+      {
+        "name": "declared_driver_profession",
+        "section": "Conducteur déclaré",
+        "semantic_type": "string",
+        "required": false,
+        "method": "label_value"
+      },
+      {
+        "name": "annual_reference_premium",
+        "section": "Cotisation",
+        "semantic_type": "money",
+        "required": false,
+        "method": "label_value"
+      },
+      {
+        "name": "annual_effective_premium",
+        "section": "Cotisation",
+        "semantic_type": "money",
+        "required": false,
+        "method": "label_value"
+      },
+      {
+        "name": "reduction_majoration_coefficient",
+        "section": "Cotisation",
+        "semantic_type": "decimal",
+        "required": false,
+        "method": "contractual_phrase_value"
+      },
+      {
+        "name": "payment_frequency",
+        "section": "Cotisation",
+        "semantic_type": "enum",
+        "required": false,
+        "method": "label_value"
+      },
+      {
+        "name": "refund_period",
+        "section": "Cotisation",
+        "semantic_type": "date_range",
+        "required": false,
+        "method": "contractual_phrase_range"
+      },
+      {
+        "name": "refund_amount",
+        "section": "Cotisation",
+        "semantic_type": "money",
+        "required": false,
+        "method": "contractual_phrase_value"
+      },
+      {
+        "name": "applicable_clauses",
+        "section": "Clauses applicables",
+        "semantic_type": "list[text]",
+        "required": false,
+        "method": "section_blocks"
+      },
+      {
+        "name": "execution_place",
+        "section": "SIGNATURE",
+        "semantic_type": "string",
+        "required": false,
+        "method": "execution_phrase"
+      },
+      {
+        "name": "execution_date",
+        "section": "SIGNATURE",
+        "semantic_type": "date",
+        "required": false,
+        "method": "execution_phrase"
+      },
+      {
+        "name": "signature_roles",
+        "section": "SIGNATURE",
+        "semantic_type": "list[string]",
+        "required": false,
+        "method": "role_labels"
+      }
+    ],
+    "fallback_policy": {
+      "native_text_first": true,
+      "full_document_ocr_default": false,
+      "render_fallback_trigger": "EXPECTED_SECTION_OR_LABEL_VISIBLE_BUT_NATIVE_TEXT_CORRUPTED_MISSING_OR_NON_NORMALIZABLE",
+      "render_scope": "TARGET_FIELD_OR_SECTION_ONLY"
+    },
+    "normalization": {
+      "dates": "ISO_8601_WHEN_UNAMBIGUOUS_ELSE_UNKNOWN",
+      "money": "AMOUNT_PLUS_CURRENCY",
+      "lists": "PRESERVE_DOCUMENT_ORDER",
+      "uncertain": "UNKNOWN"
+    },
+    "provenance_required": [
+      "source_page",
+      "extraction_method"
+    ]
+  },
+  "verification": {
+    "field_truth": "COMPARE_WITH_RENDERED_SOURCE",
+    "silent_inference": false,
+    "uncertain_value": "UNKNOWN",
+    "reusable_profile_gate": {
+      "independent_same_family_specimens_min": 1,
+      "case_specific_reinterpretation_allowed": false
+    },
+    "family_recognition_gate": {
+      "independent_positive_required": true,
+      "meaningful_negative_required": true,
+      "self_match_forbidden": true
+    }
+  },
+  "qualification": "NONE",
+  "production_qualified": false,
+  "limits": [
+    "Constructed from one real private specimen; private values are not included.",
+    "Candidate field semantics and extraction grammar are instructed but not yet replayed on an independent same-family specimen.",
+    "Recognition is not qualified and no visual matcher reference is bound.",
+    "Hybrid native-text/render fallback is specified but no stable generic application currently implements the complete strategy.",
+    "No production qualification."
+  ],
+  "reusable_bricks": [
+    {
+      "origin": "GED-01",
+      "brick": "TEXT_ANCHOR_AND_GEOMETRY_PROFILE_PATTERN",
+      "reuse": "PROFILE_FIELD_ANCHORS_AND_STRUCTURAL_RECOGNITION_CANDIDATE"
+    },
+    {
+      "origin": "GED-02",
+      "brick": "RECOGNITION_EXTRACTION_SEPARATION",
+      "reuse": "KEEP_FAMILY_RECOGNITION_DISTINCT_FROM_FIELD_EXTRACTION"
+    },
+    {
+      "origin": "GED-02",
+      "brick": "PROFILE_DRIVEN_GEOMETRIC_EXTRACTION",
+      "reuse": "TARGETED_FALLBACK_WHERE_PROFILE_BINDING_IS_AVAILABLE"
+    },
+    {
+      "origin": "GED-03",
+      "brick": "MINIMUM_SUFFICIENT_CAPABILITY_SELECTION",
+      "reuse": "DO_NOT_USE_OCR_OR_VISUAL_MATCHER_WHEN_NATIVE_STRUCTURE_SUFFICES"
+    },
+    {
+      "origin": "GED-03",
+      "brick": "EXPLICIT_UNKNOWN_AND_SCHEMA_VALIDATION",
+      "reuse": "FAIL_CLOSED_OUTPUT_AND_NORMALIZED_SCHEMA"
+    },
+    {
+      "origin": "GED-04",
+      "brick": "CONSUMER_ESCALATION_PROTOCOL",
+      "reuse": "UNKNOWN_PROFILE_CAN_REQUEST_DOCUMENTARY_INSTRUCTION_WITHOUT_PRIVATE_GIT_TRANSFER"
+    },
+    {
+      "origin": "GED-04",
+      "brick": "HYBRID_TEXT_RENDER_EXTRACTION_GRAMMAR",
+      "reuse": "NATIVE_TEXT_FIRST_WITH_TARGETED_RENDER_FALLBACK"
+    }
+  ]
+}
