@@ -9,7 +9,7 @@ PROFILE_BUILDER_VERSION=0.1.1
 GED_CORE_MACHINE_VERSION=0.1.0-candidate
 RULESET_VERSION=0.1.0
 MATCHER_SELECTION_POLICY_VERSION=0.1.1
-SOURCE_COMMIT=a05e61d3240d0f29aec45251e5340c1c41513275
+SOURCE_COMMIT=6cf71207517ca3c9a7eac65757af6069ff982edc
 ```
 
 ## Scope
@@ -81,3 +81,14 @@ python3 -m ulisdoq_profile_builder plan \
 ```
 
 No network, matcher execution, private export or profile promulgation is performed by the planner.
+
+
+## Pinned distribution
+
+```text
+DISTRIBUTION_MANIFEST=profile-builder/DISTRIBUTION_MANIFEST_0_1_1.json
+DISTRIBUTION_MANIFEST_COMMIT=0b040ad43114d5e7175aa612297399abf51d434a
+CANONICAL_ENTRYPOINT=bin/profile-builder
+```
+
+The manifest pins the exact Git blob identity of every file in the 0.1.1 distribution set.
