@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import sys
 from pathlib import Path
 
 REQUEST_SCHEMA = "ULISDOQ_CONSUMER_REQUEST_V1"
@@ -28,9 +27,15 @@ NEXT_ACTIONS = {
     "USE_PROFILE","USE_CAPABILITY","RETRY_WITH_VERSION","PROVIDE_ADDITIONAL_EVIDENCE",
     "STOP_INSUFFICIENT_EVIDENCE","STOP_UNSUPPORTED"
 }
+PROCESSING_CONTRACT_VERSION = "ULISDOQ_CONSUMER_ESCALATION_CONTRACT_V1/1.0-candidate"
 
 def load(path: str):
     return json.loads(Path(path).read_text(encoding="utf-8"))
+
+def dump(path: str, obj):
+    p = Path(path)
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(json.dumps(obj, ensure_ascii=False, sort_keys=True, indent=2) + "\n", encoding="utf-8")
 
 def require(obj, keys, label):
     missing = sorted(keys - set(obj))
@@ -73,6 +78,46 @@ def validate_result(obj):
         raise ValueError("RESULT_NEXT_ACTION_INVALID")
     return True
 
+def processing_identity(request, request_commit):
+    return f'{request["request_id"]}:{request["request_version"]}:{request_commit}'
+
+def accept_request(request, request_commit, received_at, ledger):
+    validate_request(request)
+    identity = processing_identity(request, request_commit)
+    entries = ledger.setdefault("accepted", {})
+    existing = entries.get(identity)
+    if existing:
+        return {
+            "schema": RECEIPT_SCHEMA,
+            "request_id": request["request_id"],
+            "request_version": request["request_version"],
+            "correlation_id": request["correlation_id"],
+            "request_commit": request_commit,
+            "received_at": received_at,
+            "acceptance_status": "DUPLICATE_ALREADY_ACCEPTED",
+            "reason": "Identical request processing identity was already accepted; no productive retry performed.",
+            "processing_contract_version": PROCESSING_CONTRACT_VERSION,
+        }, False
+    receipt = {
+        "schema": RECEIPT_SCHEMA,
+        "request_id": request["request_id"],
+        "request_version": request["request_version"],
+        "correlation_id": request["correlation_id"],
+        "request_commit": request_commit,
+        "received_at": received_at,
+        "acceptance_status": "ACCEPTED",
+        "reason": "Request validated against the generic v1 privacy and identity contract.",
+        "processing_contract_version": PROCESSING_CONTRACT_VERSION,
+    }
+    entries[identity] = {
+        "request_id": request["request_id"],
+        "request_version": request["request_version"],
+        "request_commit": request_commit,
+        "correlation_id": request["correlation_id"],
+        "accepted_at": received_at,
+    }
+    return receipt, True
+
 def validate_cycle(request, receipt, result):
     validate_request(request)
     validate_receipt(receipt)
@@ -101,6 +146,12 @@ def main(argv=None):
     for name in ("validate-request","validate-receipt","validate-result"):
         s=sub.add_parser(name)
         s.add_argument("path")
+    s=sub.add_parser("accept-request")
+    s.add_argument("--request",required=True)
+    s.add_argument("--request-commit",required=True)
+    s.add_argument("--received-at",required=True)
+    s.add_argument("--ledger",required=True)
+    s.add_argument("--receipt-output",required=True)
     s=sub.add_parser("check-cycle")
     s.add_argument("--request",required=True)
     s.add_argument("--receipt",required=True)
@@ -113,6 +164,20 @@ def main(argv=None):
             validate_receipt(load(a.path)); out={"status":"PASS","kind":"receipt"}
         elif a.command=="validate-result":
             validate_result(load(a.path)); out={"status":"PASS","kind":"result"}
+        elif a.command=="accept-request":
+            request=load(a.request)
+            ledger_path=Path(a.ledger)
+            ledger=load(a.ledger) if ledger_path.is_file() else {"schema":"ULISDOQ_ESCALATION_ACCEPTANCE_LEDGER_V1","accepted":{}}
+            receipt, changed=accept_request(request,a.request_commit,a.received_at,ledger)
+            dump(a.receipt_output,receipt)
+            if changed:
+                dump(a.ledger,ledger)
+            out={
+                "status":"PASS",
+                "acceptance_status":receipt["acceptance_status"],
+                "productive_acceptance":changed,
+                "processing_identity":processing_identity(request,a.request_commit)
+            }
         else:
             out=validate_cycle(load(a.request),load(a.receipt),load(a.result))
     except Exception as exc:
