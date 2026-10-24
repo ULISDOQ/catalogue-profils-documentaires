@@ -41,3 +41,17 @@ Machine-specific operational records belong outside ULISDOQ, in the operator's p
 REPRODUCIBLE_CHARACTERISTICS=PUBLIC_OK
 PERSONAL_MACHINE_IDENTITY=PRIVATE
 ```
+
+
+## Git history hygiene
+
+Removing or renaming a file in the current tree does not remove its previous contents from Git history.
+
+If a personal machine identifier, private path or other non-public operational detail is committed by mistake:
+
+1. stop treating the repository history as publication-safe;
+2. remove the information from the current tree;
+3. rewrite/purge the affected Git history before public release when confidentiality requires it;
+4. re-check the rewritten history before publication.
+
+Public-project review must therefore cover both the current tree and relevant Git history.
