@@ -1,0 +1,73 @@
+{
+  "schema": "ULISDOQ_CONSUMER_REQUEST_V1",
+  "request_id": "ULISDOQ-REQ-GEDREAL-20261024T213000Z-001",
+  "request_version": 1,
+  "correlation_id": "GED04-DOCUMENTARY-CAPABILITY-20261024-001",
+  "consumer": {
+    "consumer_id": "GED-REAL",
+    "consumer_type": "DOCUMENTARY_CONSUMER",
+    "return_contract": "ULISDOQ_DOCUMENTARY_INSTRUCTION_V1"
+  },
+  "request_type": "UNKNOWN_DOCUMENTARY_PROFILE",
+  "documentary_need": {
+    "objective": "Determine the documentary family and the minimum reusable understanding/extraction capability required for this document class.",
+    "expected_result": [
+      "documentary classification candidate",
+      "field semantic model candidate",
+      "extraction grammar candidate",
+      "capability fit decision",
+      "verification protocol",
+      "reuse boundary"
+    ]
+  },
+  "characterization": {
+    "container": "PDF",
+    "page_count": 4,
+    "native_text_available": true,
+    "native_text_reliability": "PARTIAL_ENCODING_DEGRADED",
+    "renderable_pages": true,
+    "visual_structure": "STRONG",
+    "repeated_layout": true,
+    "section_headers": true,
+    "personal_data_present": true,
+    "local_only": true
+  },
+  "known_limits": [
+    "No applicable documentary profile demonstrated in the tested scope.",
+    "Only one real specimen is currently available.",
+    "Stable text anchors are not yet safely established.",
+    "Normalized geometry is not yet established.",
+    "Visual family recognition has not been independently demonstrated.",
+    "Private source PDF is intentionally excluded from this Git package."
+  ],
+  "evidence_refs": [
+    "profile-builder/docs/DOCTRINE_V0_1.md",
+    "profile-builder/specs/GED_CORE_MACHINE_CONTRACT_V0_1.md",
+    "profile-builder/registry/CAPABILITY_REGISTRY_V0_1.json",
+    "profile-builder/RELEASE_0_1_0.md"
+  ],
+  "version_refs": {
+    "profile_builder": "0.1.1-candidate",
+    "profile_builder_source_commit": "6cf71207517ca3c9a7eac65757af6069ff982edc",
+    "matcher_selection_release_metadata_commit": "57371110aff4dce8765498c1d6a9f0bca29c15c6",
+    "capability_registry": "0.1.0-candidate",
+    "doctrine": "PROFILE-BUILDER-DOCTRINE-0.1"
+  },
+  "questions": [
+    "What source or issuer category is appropriate?",
+    "What business domain applies?",
+    "What documentary type or family is most plausible?",
+    "Which fields are semantically stable enough to define?",
+    "What extraction grammar is appropriate?",
+    "Which existing capability can be reused or specialized?",
+    "What evidence is required before a reusable profile can be claimed?"
+  ],
+  "confidentiality": {
+    "source_document": "NOT_INCLUDED",
+    "private_values_included": false,
+    "private_paths_included": false,
+    "private_hashes_included": false,
+    "publication_class": "SHAREABLE_REQUEST"
+  },
+  "created_at": "2026-10-24T21:30:00Z"
+}
