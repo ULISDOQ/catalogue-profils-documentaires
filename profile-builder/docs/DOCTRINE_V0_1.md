@@ -266,8 +266,8 @@ Les résultats `CAPABILITY_GAP`, `SPECIALIZATION_REQUIRED`, `AMBIGUOUS`, `UNSUPP
 
 ## 18. Références
 
-- `spec/GED_CORE_MACHINE_CONTRACT_V0_1.md` ;
-- `spec/PUBLICATION_BOUNDARY_V0_1.md` ;
+- `specs/GED_CORE_MACHINE_CONTRACT_V0_1.md` ;
+- `specs/PUBLICATION_BOUNDARY_V0_1.md` ;
 - `docs/CANDIDATE_LIFECYCLE.md` ;
 - `docs/CANDIDATE_REVIEW.md` ;
 - `schemas/candidate_review_finding_v0_1.schema.json`.
