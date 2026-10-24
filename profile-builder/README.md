@@ -238,3 +238,14 @@ Documentation :
 - `docs/CANDIDATE_LIFECYCLE.md` ;
 - `docs/CANDIDATE_REVIEW.md` ;
 - `schemas/candidate_review_finding_v0_1.schema.json`.
+
+## Doctrine versionnée
+
+Le chantier applique désormais une doctrine explicite et versionnée.
+
+Référence en vigueur pour GED-04 :
+
+- `docs/DOCTRINE_V0_1.md` ;
+- `docs/DOCTRINE_CHANGELOG.md`.
+
+Cette doctrine fixe notamment les règles de déterminisme, confidentialité, quarantaine, revue probante, autorité humaine et promulgation.
