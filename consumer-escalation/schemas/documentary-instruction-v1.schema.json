@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ulisdoq.example/consumer-escalation/documentary-instruction-v1.schema.json",
+  "title": "ULISDOQ Documentary Instruction v1",
+  "type": "object",
+  "required": [
+    "schema",
+    "request_id",
+    "request_version",
+    "correlation_id",
+    "request_commit",
+    "result_status",
+    "capability_decision",
+    "documentary_classification",
+    "verification",
+    "reuse_boundary",
+    "produced_refs",
+    "limits",
+    "next_action",
+    "result_version",
+    "created_at"
+  ],
+  "properties": {
+    "schema": {
+      "const": "ULISDOQ_DOCUMENTARY_INSTRUCTION_V1"
+    },
+    "request_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "request_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "correlation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "request_commit": {
+      "type": "string",
+      "minLength": 7
+    },
+    "result_status": {
+      "enum": [
+        "COMPLETED",
+        "NEEDS_MORE_EVIDENCE",
+        "INSUFFICIENT_EVIDENCE",
+        "UNSUPPORTED",
+        "UNKNOWN"
+      ]
+    },
+    "capability_decision": {
+      "enum": [
+        "REUSE_EXISTING_PROFILE",
+        "REUSE_EXISTING_CAPABILITY",
+        "SPECIALIZE_EXISTING_PROFILE",
+        "SPECIALIZE_EXISTING_CAPABILITY",
+        "NEW_PROFILE_CANDIDATE_REQUIRED",
+        "NEW_CAPABILITY_REQUIRED",
+        "SOURCE_EVIDENCE_REQUIRED",
+        "INSUFFICIENT_EVIDENCE",
+        "UNSUPPORTED"
+      ]
+    },
+    "documentary_classification": {
+      "type": "object"
+    },
+    "verification": {
+      "type": "object"
+    },
+    "reuse_boundary": {
+      "type": "object"
+    },
+    "produced_refs": {
+      "type": "object"
+    },
+    "limits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "next_action": {
+      "type": "object",
+      "required": [
+        "action"
+      ],
+      "properties": {
+        "action": {
+          "enum": [
+            "USE_PROFILE",
+            "USE_CAPABILITY",
+            "RETRY_WITH_VERSION",
+            "PROVIDE_ADDITIONAL_EVIDENCE",
+            "STOP_INSUFFICIENT_EVIDENCE",
+            "STOP_UNSUPPORTED"
+          ]
+        },
+        "target_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "requirement": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "result_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}
