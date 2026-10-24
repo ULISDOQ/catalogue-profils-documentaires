@@ -1,8 +1,11 @@
 from __future__ import annotations
 import hashlib, json
 from copy import deepcopy
+
 MACHINE_VERSION='0.1.0-candidate'
 RULESET_VERSION='0.1.0'
+MATCHER_SELECTION_POLICY_VERSION='0.1.1'
+MATCHER_CLASSES={'STRUCTURAL_MATCHER','VISUAL_MATCHER'}
 
 def _canon(obj):
     return json.dumps(obj, ensure_ascii=False, sort_keys=True, separators=(',', ':'))
@@ -10,21 +13,28 @@ def _canon(obj):
 def _sha(obj):
     return hashlib.sha256(_canon(obj).encode('utf-8')).hexdigest()
 
-def _preconditions_satisfied(cap, characterization):
+def _available_preconditions(characterization):
     nf=characterization.get('native_features', {})
     obs=characterization.get('observations', {})
-    available={
+    return {
         'native_structure': bool(nf.get('structured')),
         'text_available': bool(nf.get('text_available')),
         'image_available': bool(nf.get('image_available')),
         **{k:v for k,v in obs.items() if isinstance(v,(bool,int,float,str))}
     }
+
+def _unmet_preconditions(cap, characterization):
+    available=_available_preconditions(characterization)
+    unmet=[]
     for key, expected in (cap.get('preconditions') or {}).items():
         if key == 'schema_available':
             continue
         if available.get(key) != expected:
-            return False
-    return True
+            unmet.append((key, expected, available.get(key)))
+    return unmet
+
+def _preconditions_satisfied(cap, characterization):
+    return not _unmet_preconditions(cap, characterization)
 
 def _container_match(cap, characterization):
     c=characterization.get('container', {})
@@ -32,6 +42,30 @@ def _container_match(cap, characterization):
     ext=(c.get('extension') or '').casefold()
     inputs={str(x).casefold() for x in cap.get('inputs', [])}
     return bool(media and media in inputs) or bool(ext and ext in inputs)
+
+def _matcher_reason(cap):
+    return (
+        'Registered deterministic matcher satisfies requested output and declared '
+        f'preconditions; selected by matcher policy {MATCHER_SELECTION_POLICY_VERSION} '
+        f'at cost_rank={int(cap.get("cost_rank",10**9))}'
+    )
+
+def _matcher_exclusion_reason(cap, characterization, selected_cost=None):
+    unmet=_unmet_preconditions(cap, characterization)
+    if unmet:
+        details=', '.join(
+            f'{key} expected {expected!r} observed {observed!r}'
+            for key, expected, observed in unmet
+        )
+        return f'Declared preconditions not satisfied: {details}'
+    if selected_cost is not None:
+        cost=int(cap.get('cost_rank',10**9))
+        if cost > selected_cost:
+            return (
+                f'Eligible matcher not selected because cost_rank={cost} is higher '
+                f'than selected cost_rank={selected_cost}'
+            )
+    return 'Eligible matcher not selected'
 
 def plan(characterization, requested_need, registry):
     required=list(requested_need.get('required_outputs') or [])
@@ -76,7 +110,67 @@ def plan(characterization, requested_need, registry):
         ]
         decision='PROFILE_CANDIDATE_PRODUCED'
     else:
-        unsatisfied=required[:] or ['NO_REQUIRED_OUTPUT_DECLARED']
+        matcher_candidates=[
+            c for c in caps
+            if c.get('class') in MATCHER_CLASSES
+            and c.get('deterministic', False)
+            and set(required).issubset(set(c.get('outputs', [])))
+        ]
+        eligible=[
+            c for c in matcher_candidates
+            if _preconditions_satisfied(c, characterization)
+        ]
+        if eligible:
+            lowest_cost=int(eligible[0].get('cost_rank',10**9))
+            lowest=[
+                c for c in eligible
+                if int(c.get('cost_rank',10**9)) == lowest_cost
+            ]
+            if len(lowest) == 1:
+                p=lowest[0]
+                selected.append({
+                    'capability_id':p['capability_id'],
+                    'version':p['version'],
+                    'order':1,
+                    'reason':_matcher_reason(p)
+                })
+                limits.extend(p.get('limits', []))
+                limits.append('PLANNING_ONLY_PROFILE_NOT_MATERIALIZED')
+                excluded=[
+                    {
+                        'capability_id':c['capability_id'],
+                        'reason':_matcher_exclusion_reason(c, characterization, lowest_cost)
+                    }
+                    for c in matcher_candidates
+                    if c.get('capability_id') != p.get('capability_id')
+                ]
+                decision='PROFILE_CANDIDATE_PRODUCED'
+            else:
+                tied_ids=sorted(c.get('capability_id','') for c in lowest)
+                excluded=[
+                    {
+                        'capability_id':c['capability_id'],
+                        'reason':(
+                            f'Equal lowest cost_rank={lowest_cost}; deterministic policy '
+                            'forbids arbitrary tie-breaking'
+                        )
+                    }
+                    for c in lowest
+                ]
+                limits.append(
+                    'AMBIGUOUS_EQUAL_COST_MATCHERS:' + ','.join(tied_ids)
+                )
+                unsatisfied=required[:] or ['NO_REQUIRED_OUTPUT_DECLARED']
+                decision='AMBIGUOUS'
+        else:
+            excluded=[
+                {
+                    'capability_id':c['capability_id'],
+                    'reason':_matcher_exclusion_reason(c, characterization)
+                }
+                for c in matcher_candidates
+            ]
+            unsatisfied=required[:] or ['NO_REQUIRED_OUTPUT_DECLARED']
     out={
         'schema_version':'ged-core-processing-plan/0.1',
         'ged_core_machine_version':MACHINE_VERSION,
