@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ulisdoq.example/profile-builder/candidate-review-finding-v0.1.schema.json",
+  "title": "ULISDOQ Candidate Review Finding v0.1",
+  "type": "object",
+  "required": [
+    "finding_id",
+    "candidate_profile_id",
+    "candidate_profile_version",
+    "review_scope",
+    "severity",
+    "category",
+    "claim",
+    "evidence_refs",
+    "reproduction_steps",
+    "expected_behavior",
+    "observed_behavior",
+    "impact",
+    "confidence",
+    "proposed_action",
+    "status"
+  ],
+  "properties": {
+    "finding_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_profile_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_profile_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "review_scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "severity": {
+      "enum": [
+        "BLOCKING",
+        "MAJOR",
+        "MINOR",
+        "OBSERVATION"
+      ]
+    },
+    "category": {
+      "enum": [
+        "PRIVACY",
+        "RECOGNITION",
+        "EXTRACTION",
+        "SEMANTICS",
+        "BUSINESS_RULE",
+        "ROBUSTNESS",
+        "REPRODUCIBILITY",
+        "DEPENDENCY",
+        "SECURITY",
+        "LICENSING",
+        "DOCUMENTATION",
+        "GENERALIZATION",
+        "OTHER"
+      ]
+    },
+    "claim": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "reproduction_steps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expected_behavior": {
+      "type": "string"
+    },
+    "observed_behavior": {
+      "type": "string"
+    },
+    "impact": {
+      "type": "string"
+    },
+    "confidence": {
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH"
+      ]
+    },
+    "proposed_action": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "OPEN",
+        "CONFIRMED",
+        "NOT_REPRODUCED",
+        "INVALID",
+        "CORRECTION_PROPOSED",
+        "FIXED_PENDING_RETEST",
+        "CLOSED"
+      ]
+    }
+  },
+  "additionalProperties": false
+}
