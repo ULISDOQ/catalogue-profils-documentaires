@@ -213,3 +213,28 @@ Avant toute contribution issue d'un document réel, un privacy gate devra notamm
 Référence : `spec/PUBLICATION_BOUNDARY_V0_1.md`.
 
 Le paquet 0.1.0 déjà accepté sur PCIA reste un paquet de **planification** ; il n'est pas encore autorisé à produire un export public depuis un corpus réel.
+## Quarantaine et revue avant publication
+
+Un profil candidat qui a franchi le privacy gate n'est pas encore un profil disponible dans ULISDOQ.
+
+Il entre d'abord en **quarantaine**, avec un statut du type `PENDING_PROJECT_REVIEW`.
+
+Pendant cette phase, il peut être relu, testé, challengé et corrigé. Une anomalie doit être décrite **preuve à l'appui** : résultat de test, fixture synthétique, violation de schéma, comparaison ground truth, hash, contradiction métier, ou autre preuve reproductible.
+
+Le dépôt distingue donc clairement :
+
+```text
+PUBLIC_CANDIDATE
+!=
+PUBLISHED_PROFILE
+```
+
+La revue peut être assistée par un fil ChatGPT spécialisé, mais ce fil n'est pas l'autorité de promulgation. Il peut instruire, questionner, proposer des tests et produire des findings structurés.
+
+La promulgation vers le silo ouvert n'intervient qu'après décision explicite de l'autorité du projet.
+
+Documentation :
+
+- `docs/CANDIDATE_LIFECYCLE.md` ;
+- `docs/CANDIDATE_REVIEW.md` ;
+- `schemas/candidate_review_finding_v0_1.schema.json`.
