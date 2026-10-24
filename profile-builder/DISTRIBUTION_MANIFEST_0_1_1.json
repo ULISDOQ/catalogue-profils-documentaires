@@ -1,0 +1,66 @@
+{
+  "schema": "ulisdoq-profile-builder-distribution/0.1",
+  "profile_builder_version": "0.1.1",
+  "source_commit": "6cf71207517ca3c9a7eac65757af6069ff982edc",
+  "package_root": "ulisdoq-profile-builder-0.1.1",
+  "entrypoint": "bin/profile-builder",
+  "semantics": {
+    "planner_executes_matchers": false,
+    "profile_materialization": false,
+    "private_export": false
+  },
+  "files": [
+    [
+      "bin/profile-builder",
+      "3b0d9f13f792d4ad737eaa5645441788926a8115"
+    ],
+    [
+      "ulisdoq_profile_builder/__init__.py",
+      "485f44ac21b2ee78a2ee1ed0ea584114a1c957c3"
+    ],
+    [
+      "ulisdoq_profile_builder/__main__.py",
+      "13be635566e79adccc98892cc67a44e636908b35"
+    ],
+    [
+      "ulisdoq_profile_builder/cli.py",
+      "55127fa735f1e4091cca92d8e70444575e7b2f58"
+    ],
+    [
+      "ulisdoq_profile_builder/planner.py",
+      "fc2888b5b610605f111acbc553a749ce1b1b87b3"
+    ],
+    [
+      "registry/CAPABILITY_REGISTRY_V0_1.json",
+      "953da0804b3240cebce1b0932583c0dac4771fe0"
+    ],
+    [
+      "examples/ged03/characterization.json",
+      "328ddcba80804ba8f608df4c5c4c90feb36fd9de"
+    ],
+    [
+      "examples/ged03/requested_need.json",
+      "b81ebd0103e9254e6eef47552bd56354b5a05c2f"
+    ],
+    [
+      "examples/ged03/expected_processing_plan.json",
+      "4e3db7942a5d92a6349dc7f2528afb893d67e9d7"
+    ],
+    [
+      "schemas/characterization_v0_1.schema.json",
+      "f21130ab71c72b88a7a3929107855f2e79ccf72e"
+    ],
+    [
+      "schemas/requested_need_v0_1.schema.json",
+      "8acc78d31cf252eefb45e945d6a21ad23a6d57e1"
+    ],
+    [
+      "schemas/processing_plan_v0_1.schema.json",
+      "57a60fff577bfd252d06f4e60da8a587360176c9"
+    ],
+    [
+      "RELEASE_0_1_1.md",
+      "d2de7e78ee8bde4dbe8be97d0f5d5d1f66beb104"
+    ]
+  ]
+}
