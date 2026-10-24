@@ -1,0 +1,11 @@
+{
+  "schema": "ULISDOQ_CONSUMER_RECEIPT_V1",
+  "request_id": "ULISDOQ-REQ-GEDREAL-20261024T213000Z-001",
+  "request_version": 1,
+  "correlation_id": "GED04-DOCUMENTARY-CAPABILITY-20261024-001",
+  "request_commit": "3bac3126e552fb6227e0ac041b2c636e884423c2",
+  "received_at": "2026-10-24T21:35:00Z",
+  "acceptance_status": "ACCEPTED",
+  "reason": "Valid minimized documentary capability request; no private source material or private values transported.",
+  "processing_contract_version": "ULISDOQ_CONSUMER_ESCALATION_CONTRACT_V1/1.0-candidate"
+}
