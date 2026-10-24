@@ -1,0 +1,126 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+from pathlib import Path
+
+REQUEST_SCHEMA = "ULISDOQ_CONSUMER_REQUEST_V1"
+RECEIPT_SCHEMA = "ULISDOQ_CONSUMER_RECEIPT_V1"
+RESULT_SCHEMA = "ULISDOQ_DOCUMENTARY_INSTRUCTION_V1"
+
+REQUEST_REQUIRED = {
+    "schema","request_id","request_version","correlation_id","consumer","request_type",
+    "documentary_need","characterization","known_limits","evidence_refs","version_refs",
+    "questions","confidentiality","created_at"
+}
+RECEIPT_REQUIRED = {
+    "schema","request_id","request_version","correlation_id","request_commit","received_at",
+    "acceptance_status","reason","processing_contract_version"
+}
+RESULT_REQUIRED = {
+    "schema","request_id","request_version","correlation_id","request_commit","result_status",
+    "capability_decision","documentary_classification","verification","reuse_boundary",
+    "produced_refs","limits","next_action","result_version","created_at"
+}
+NEXT_ACTIONS = {
+    "USE_PROFILE","USE_CAPABILITY","RETRY_WITH_VERSION","PROVIDE_ADDITIONAL_EVIDENCE",
+    "STOP_INSUFFICIENT_EVIDENCE","STOP_UNSUPPORTED"
+}
+
+def load(path: str):
+    return json.loads(Path(path).read_text(encoding="utf-8"))
+
+def require(obj, keys, label):
+    missing = sorted(keys - set(obj))
+    if missing:
+        raise ValueError(f"{label}_MISSING:" + ",".join(missing))
+
+def validate_request(obj):
+    require(obj, REQUEST_REQUIRED, "REQUEST")
+    if obj.get("schema") != REQUEST_SCHEMA:
+        raise ValueError("REQUEST_SCHEMA_MISMATCH")
+    if not isinstance(obj.get("request_version"), int) or obj["request_version"] < 1:
+        raise ValueError("REQUEST_VERSION_INVALID")
+    conf = obj.get("confidentiality")
+    if not isinstance(conf, dict):
+        raise ValueError("CONFIDENTIALITY_INVALID")
+    expected = {
+        "source_document": "NOT_INCLUDED",
+        "private_values_included": False,
+        "private_paths_included": False,
+        "private_hashes_included": False,
+        "publication_class": "SHAREABLE_REQUEST",
+    }
+    for key, value in expected.items():
+        if conf.get(key) != value:
+            raise ValueError(f"CONFIDENTIALITY_BOUNDARY_VIOLATION:{key}")
+    return True
+
+def validate_receipt(obj):
+    require(obj, RECEIPT_REQUIRED, "RECEIPT")
+    if obj.get("schema") != RECEIPT_SCHEMA:
+        raise ValueError("RECEIPT_SCHEMA_MISMATCH")
+    return True
+
+def validate_result(obj):
+    require(obj, RESULT_REQUIRED, "RESULT")
+    if obj.get("schema") != RESULT_SCHEMA:
+        raise ValueError("RESULT_SCHEMA_MISMATCH")
+    action = obj.get("next_action")
+    if not isinstance(action, dict) or action.get("action") not in NEXT_ACTIONS:
+        raise ValueError("RESULT_NEXT_ACTION_INVALID")
+    return True
+
+def validate_cycle(request, receipt, result):
+    validate_request(request)
+    validate_receipt(receipt)
+    validate_result(result)
+    for label, obj in (("RECEIPT", receipt), ("RESULT", result)):
+        for key in ("request_id","request_version","correlation_id"):
+            if obj.get(key) != request.get(key):
+                raise ValueError(f"{label}_{key.upper()}_MISMATCH")
+    if receipt.get("request_commit") != result.get("request_commit"):
+        raise ValueError("REQUEST_COMMIT_LINEAGE_MISMATCH")
+    if receipt.get("acceptance_status") != "ACCEPTED":
+        raise ValueError("REQUEST_NOT_ACCEPTED")
+    return {
+        "status": "PASS",
+        "request_id": request["request_id"],
+        "correlation_id": request["correlation_id"],
+        "acceptance_status": receipt["acceptance_status"],
+        "result_status": result["result_status"],
+        "capability_decision": result["capability_decision"],
+        "next_action": result["next_action"],
+    }
+
+def main(argv=None):
+    p=argparse.ArgumentParser(prog="ulisdoq-escalation")
+    sub=p.add_subparsers(dest="command",required=True)
+    for name in ("validate-request","validate-receipt","validate-result"):
+        s=sub.add_parser(name)
+        s.add_argument("path")
+    s=sub.add_parser("check-cycle")
+    s.add_argument("--request",required=True)
+    s.add_argument("--receipt",required=True)
+    s.add_argument("--result",required=True)
+    a=p.parse_args(argv)
+    try:
+        if a.command=="validate-request":
+            validate_request(load(a.path)); out={"status":"PASS","kind":"request"}
+        elif a.command=="validate-receipt":
+            validate_receipt(load(a.path)); out={"status":"PASS","kind":"receipt"}
+        elif a.command=="validate-result":
+            validate_result(load(a.path)); out={"status":"PASS","kind":"result"}
+        else:
+            out=validate_cycle(load(a.request),load(a.receipt),load(a.result))
+    except Exception as exc:
+        out={"status":"FAIL","error":f"{type(exc).__name__}:{exc}"}
+        print(json.dumps(out,ensure_ascii=False,sort_keys=True))
+        return 1
+    print(json.dumps(out,ensure_ascii=False,sort_keys=True))
+    return 0
+
+if __name__=="__main__":
+    raise SystemExit(main())
