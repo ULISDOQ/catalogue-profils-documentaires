@@ -76,7 +76,7 @@ Avant toute fabrication sur document réel destinée à une contribution publiqu
 
 Gate M4b : `PUBLIC_EXPORT_READY` impossible si un seul contrôle échoue.
 
-Référence : `spec/PUBLICATION_BOUNDARY_V0_1.md`.
+Référence : `specs/PUBLICATION_BOUNDARY_V0_1.md`.
 
 ## M5 — premier GED prospectif
 
