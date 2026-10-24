@@ -1,0 +1,4 @@
+#!/usr/bin/env python3
+from ulisdoq_profile_builder.cli import main
+
+raise SystemExit(main())
