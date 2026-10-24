@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ulisdoq.example/consumer-escalation/consumer-request-v1.schema.json",
+  "title": "ULISDOQ Consumer Request v1",
+  "type": "object",
+  "required": [
+    "schema",
+    "request_id",
+    "request_version",
+    "correlation_id",
+    "consumer",
+    "request_type",
+    "documentary_need",
+    "characterization",
+    "known_limits",
+    "evidence_refs",
+    "version_refs",
+    "questions",
+    "confidentiality",
+    "created_at"
+  ],
+  "properties": {
+    "schema": {
+      "const": "ULISDOQ_CONSUMER_REQUEST_V1"
+    },
+    "request_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "request_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "correlation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "consumer": {
+      "type": "object",
+      "required": [
+        "consumer_id",
+        "consumer_type",
+        "return_contract"
+      ],
+      "properties": {
+        "consumer_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "consumer_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "return_contract": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "request_type": {
+      "enum": [
+        "UNKNOWN_DOCUMENTARY_PROFILE",
+        "CAPABILITY_GAP",
+        "SPECIALIZATION_REQUIRED",
+        "PROFILE_REUSE_QUESTION",
+        "DOCUMENTARY_UNDERSTANDING_REQUEST"
+      ]
+    },
+    "documentary_need": {
+      "type": "object"
+    },
+    "characterization": {
+      "type": "object"
+    },
+    "known_limits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "version_refs": {
+      "type": "object"
+    },
+    "questions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "confidentiality": {
+      "type": "object",
+      "required": [
+        "source_document",
+        "private_values_included",
+        "private_paths_included",
+        "private_hashes_included",
+        "publication_class"
+      ],
+      "properties": {
+        "source_document": {
+          "const": "NOT_INCLUDED"
+        },
+        "private_values_included": {
+          "const": false
+        },
+        "private_paths_included": {
+          "const": false
+        },
+        "private_hashes_included": {
+          "const": false
+        },
+        "publication_class": {
+          "const": "SHAREABLE_REQUEST"
+        }
+      },
+      "additionalProperties": false
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}
