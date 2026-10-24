@@ -1,6 +1,6 @@
 # ULISDOQ Profile Builder 0.1.0 — distributable candidate
 
-**Status:** READY_FOR_PCIA_ACCEPTANCE
+**Status:** INDEPENDENT_ENVIRONMENT_ACCEPTANCE_PASS
 
 ## Identity
 
@@ -34,4 +34,4 @@ No external Python package is required by the distributed candidate.
 
 This candidate proves the deterministic planning contract and fail-closed behavior. It does **not** yet autonomously characterize GED-04 or fabricate a complete new profile.
 
-After independent PCIA acceptance, GED-04 may be submitted prospectively to the Builder without modifying the planner to fit the case.
+After acceptance on an independent Linux test environment, GED-04 may be submitted prospectively to the Builder without modifying the planner to fit the case.
