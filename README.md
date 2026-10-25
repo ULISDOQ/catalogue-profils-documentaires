@@ -22,6 +22,12 @@ Les briques techniques sont des ressources parmi N, caractérisées par leurs ca
 
 Une première [étude de dimensionnement](project/ETUDE_FAISABILITE_COUVERTURE_PROFILS_1000_ORGANISATIONS.md) examine l'ordre de grandeur du nombre de profils qualifiés nécessaire pour viser environ 80 % de la paperasserie courante de 1 000 organisations. L'hypothèse centrale est d'environ 1 000 profils, à vérifier sur un corpus représentatif ; l'indicateur principal est le **taux de documents couverts**, non le nombre brut de profils.
 
+## Priorité documentaire française
+
+ULISDOQ se construit d'abord autour de la **paperasserie française** : documents administratifs, fiscaux, sociaux, professionnels, assurantiels, de santé, de logement, de véhicule et de vie courante rencontrés en France.
+
+Cette priorité n'interdit aucune extension future. Elle donne au projet un terrain documentaire concret, une langue commune et une communauté naturelle de contributeurs. L'ambition initiale est donc de produire un catalogue particulièrement riche et utile pour les usages documentaires français, avant d'élargir progressivement son périmètre.
+
 ## Qualification
 
 Une source identifiée n'est pas nécessairement un profil d'extraction qualifié. Un profil qualifié sur un périmètre donné ne garantit pas tous les résultats d'extraction. Chaque proposition devra préciser provenance, droits, version, critères de reconnaissance, contrôles et limites.
@@ -34,7 +40,7 @@ Une source identifiée n'est pas nécessairement un profil d'extraction qualifi�
 
 [ULISTAG](ULISTAG/README.md) est le sous-système cœur d'ULISDOQ consacré à la description, l'indexation et la reconnaissance structurelle des modèles documentaires.
 
-Son cycle de conception est séparé pour préserver la lisibilité d'ULISDOQ. Les méthodes génériques vivent dans `ULISTAG/` ; leur élaboration et leurs preuves spécifiques restent dans les répertoires `experiments/.../GED-N/ulistag/`.
+Son cycle de conception est séparé pour préserver la lisibilité d'ULISDOQ. Les méthodes génériques vivent dans `ULISTAG/` ; leur élaboration et leurs preuves spécifiques restent dans les répertoires `experiences/.../GED-N/ulistag/`.
 
 La [roadmap ULISTAG](ULISTAG/ROADMAP.md) vise une première phase d'environ 70 types, formats et fournisseurs différents afin de faire émerger empiriquement les primitives, regroupements et matchers réellement réutilisables.
 
@@ -42,16 +48,16 @@ La [roadmap ULISTAG](ULISTAG/ROADMAP.md) vise une première phase d'environ 70 t
 
 Pour rendre le catalogue immédiatement lisible, les premières expériences sont rangées dans six familles documentaires courantes :
 
-- [Factures & achats](experiments/factures/README.md)
-- [Impôts & finances](experiments/impots-finances/README.md)
-- [Santé & protection sociale](experiments/sante-protection-sociale/README.md)
-- [Assurances & sinistres](experiments/assurances/README.md)
-- [Administration & droits](experiments/administration-droits/README.md)
-- [Logement, véhicules & services courants](experiments/logement-vehicules-services/README.md)
+- [Factures & achats](experiences/factures/README.md)
+- [Impôts & finances](experiences/impots-finances/README.md)
+- [Santé & protection sociale](experiences/sante-protection-sociale/README.md)
+- [Assurances & sinistres](experiences/assurances/README.md)
+- [Administration & droits](experiences/administration-droits/README.md)
+- [Logement, véhicules & services courants](experiences/logement-vehicules-services/README.md)
 
 Ces familles constituent un classement humain de haut niveau ; elles ne remplacent ni les TAGs de format, ni les profils techniques.
 
-[GED-01](experiments/factures/GED-01/README.md) est le premier cas borné de la famille Factures. [GED-02 — formulaire 2044](experiments/impots-finances/GED-02/README.md) éprouve surtout le lien entre un document administratif et la connaissance officielle publiée qui lui est associée.
+[GED-01](experiences/factures/GED-01/README.md) est le premier cas borné de la famille Factures. [GED-02 — formulaire 2044](experiences/impots-finances/GED-02/README.md) éprouve surtout le lien entre un document administratif et la connaissance officielle publiée qui lui est associée.
 
 ## Démonstration de classification locale
 
