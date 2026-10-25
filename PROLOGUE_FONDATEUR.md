@@ -28,6 +28,18 @@ ULISDOQ a pour vocation d'unifier librement des connaissances et capacités docu
 
 Nous ne prétendons ni recenser toute la toile, ni remplacer les outils et communautés existants. Nous cherchons à **relier sélectivement des sources et capacités pertinentes**, à reconnaître les acquis, à réemployer les briques techniques disponibles sans en privilégier une comme fondement obligatoire et à documenter ce qui manque. Les domaines administratifs, officiels, sanitaires et professionnels pourront être explorés progressivement, au rythme de besoins et de contributions qualifiables.
 
+## Une identité francophone
+
+ULISDOQ est un projet **francophone**.
+
+Lorsque nous nommons ce qui appartient en propre à son objet — domaines documentaires, catégories de documents, profils, usages, notions métier, arborescence du catalogue, documentation destinée aux contributeurs et expressions de gouvernance — nous privilégions le **français**, dès lors qu'un terme clair, naturel et suffisamment précis existe.
+
+Cette orientation n'est ni un refus de l'anglais ni une règle de traduction systématique. Les langages de programmation, outils informatiques, formats, API, bibliothèques, schémas techniques, identifiants, standards et concepts couramment employés dans le développement peuvent conserver leur terminologie anglaise lorsqu'elle est plus exacte, plus lisible ou constitue l'usage établi.
+
+Le principe recherché est donc simple :
+
+**francophone dans ce qui exprime l'identité documentaire et métier d'ULISDOQ ; pragmatique dans ce qui relève de l'ingénierie et de l'écosystème technique.**
+
 ## De l'exploration à la confiance
 
 Un document reconnu n'est pas nécessairement un document compris. Une source réputée n'est pas automatiquement adaptée à chaque usage. Une extraction réussie une fois n'est pas une garantie générale.
