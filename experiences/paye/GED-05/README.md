@@ -1,54 +1,54 @@
 # GED-05 — Bulletin de paie français
 
-## Purpose
+## Objet
 
-GED-05 is the catalogue-first qualification experiment for the documentary category:
+GED-05 est l'expérience de qualification, centrée sur le catalogue, de la catégorie documentaire :
 
 ```text
 BULLETIN_DE_PAIE_FRANCAIS
 ```
 
-The canonical profile is NOT duplicated in `experiments/`.
+Le profil canonique n'est pas dupliqué dans `experiences/`.
 
-Canonical profile:
+Profil canonique :
 
 ```text
-catalogue/profiles/paye/fr/bulletin-de-paie-francais/
+catalogue/profils/paye/fr/bulletin-de-paie-francais/
 ULISDOQ-PROFILE-FR-BULLETIN-DE-PAIE-CANDIDATE/
 0.1.0/
 ```
 
-## Experiment role
+## Rôle de l'expérience
 
-This directory contains:
-- GED-05 experiment framing;
-- corpus/evidence references;
-- qualification results;
-- reuse/RETEX material.
+Ce répertoire contient :
+- le cadrage de l'expérience GED-05 ;
+- les références de corpus et de preuve ;
+- les résultats de qualification ;
+- le RETEX de réemploi.
 
-It does not own the documentary profile.
+Il ne porte pas le profil documentaire canonique.
 
-## Current specimens
+## Spécimens actuels
 
-- Specimen A: real French payslip, March 2025, private source.
-- Specimen B: real French payslip, December 2024, different employer and materially different layout, private source.
+- Spécimen A : bulletin de paie français réel, mars 2025, source privée.
+- Spécimen B : bulletin de paie français réel, décembre 2024, autre employeur et mise en page sensiblement différente, source privée.
 
-Private source files and private observed values are not committed here.
+Les documents sources privés et les valeurs personnelles observées ne sont pas déposés ici.
 
-## Current objective
+## Objectif actuel
 
-Test whether the same documentary category and grammar remain valid across:
-- different employers;
-- different layouts;
-- multiple months;
-- changing payroll rows and values.
+Vérifier que la même catégorie documentaire et la même grammaire peuvent rester valides malgré :
+- des employeurs différents ;
+- des mises en page différentes ;
+- plusieurs mois ;
+- des lignes et valeurs de paie variables.
 
-## Boundary
+## Frontière
 
 ```text
-experiments/paye/GED-05/
-= experiment + evidence
+experiences/paye/GED-05/
+= expérience + preuves
 
 catalogue/.../ULISDOQ-PROFILE-FR-BULLETIN-DE-PAIE-CANDIDATE/
-= canonical reusable documentary knowledge
+= connaissance documentaire canonique réutilisable
 ```
