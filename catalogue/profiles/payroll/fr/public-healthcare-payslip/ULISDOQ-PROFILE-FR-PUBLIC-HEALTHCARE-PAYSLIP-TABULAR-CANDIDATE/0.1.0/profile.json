@@ -16,7 +16,7 @@
     "source_period": "2025-03"
   },
   "scope": {
-    "intended_reuse": "Same documentary family/template lineage, subject to qualification on independent monthly specimens.",
+    "intended_reuse": "Candidate specialization for one observed public-healthcare payslip layout/context lineage; employer and payroll software are contextual, not documentary invariants.",
     "not_claimed": [
       "All French payslips",
       "All public-sector payslips",
@@ -398,11 +398,11 @@
       "summary bands at bottom of page"
     ],
     "candidate_quasi_invariants": [
-      "employer identity and identifiers",
-      "employee identity and internal code",
-      "NIR",
-      "employment status / grade / occupation / assignment",
-      "table column semantics"
+      "presence of employer identification role",
+      "presence of employee identification role",
+      "employment/contract metadata role",
+      "payroll table column semantics within this layout lineage",
+      "gross/contributions/tax/net semantic sections within this layout lineage"
     ],
     "expected_monthly_variants": [
       "pay period",
@@ -424,7 +424,16 @@
       "benefits in kind",
       "attachments or deductions"
     ],
-    "qualification_rule": "A property becomes a qualified invariant only after surviving the multi-month corpus without case-specific reinterpretation."
+    "qualification_rule": "A property becomes a qualified invariant only after surviving the multi-month corpus without case-specific reinterpretation.",
+    "explicit_non_invariants": [
+      "employer identity and identifiers as values",
+      "employee identity and identifiers as values",
+      "payroll software/vendor/instance",
+      "observed payroll codes",
+      "exact monetary values",
+      "exact rates",
+      "exact monthly row set"
+    ]
   },
   "validation_rules": {
     "structural": [
@@ -522,5 +531,18 @@
     "No automatic recognition is qualified yet.",
     "No extraction implementation has been executed against the multi-month corpus yet.",
     "Arithmetic rules remain candidate checks until replayed across multiple months."
-  ]
+  ],
+  "parent_profile_id": "ULISDOQ-PROFILE-FR-PAYSLIP-GENERIC-CANDIDATE",
+  "specialization_type": "LAYOUT_AND_CONTEXT_LINEAGE_CANDIDATE",
+  "profile_identity_exclusions": [
+    "employer identity",
+    "employee identity",
+    "payroll software/vendor/instance"
+  ],
+  "lineage_context": {
+    "employer_sector": "public_healthcare",
+    "employer_identity_is_profile_invariant": false,
+    "payroll_software_identity_known": false,
+    "payroll_software_identity_is_profile_invariant": false
+  }
 }
