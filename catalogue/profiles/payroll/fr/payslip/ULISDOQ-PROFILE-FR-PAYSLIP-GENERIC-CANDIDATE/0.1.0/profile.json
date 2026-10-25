@@ -1,0 +1,115 @@
+{
+  "profile_id": "ULISDOQ-PROFILE-FR-PAYSLIP-GENERIC-CANDIDATE",
+  "profile_version": "0.1.0",
+  "status": "CANDIDATE_UNQUALIFIED",
+  "domain": "payroll",
+  "jurisdiction": "FR",
+  "family": "payslip",
+  "document_type": "bulletin_de_paie",
+  "document_role": "periodic_pay_statement",
+  "language": "fr",
+  "scope": {
+    "intended_reuse": "French payslip documentary semantics independent of employer identity, employee identity, payroll software, and exact layout.",
+    "excluded_from_profile_identity": [
+      "employer identity",
+      "employee identity",
+      "payroll software/vendor/instance",
+      "exact coordinates",
+      "exact row ordering",
+      "exact payroll codes",
+      "exact typography or branding"
+    ]
+  },
+  "documentary_invariants": {
+    "semantic_roles": [
+      "pay_period",
+      "employer_identity",
+      "employee_identity",
+      "employment_or_contract_context",
+      "remuneration_items",
+      "employee_contributions",
+      "employer_contributions_or_charges",
+      "gross_remuneration",
+      "income_tax_withholding_or_explicit_absence",
+      "net_social_or_equivalent_current_legal_field_when_applicable",
+      "net_pay",
+      "monthly_and_or_cumulative_summary_fields"
+    ],
+    "structural_relations": [
+      "remuneration_and_contribution_lines_are_grouped_into_a_primary_payroll_structure",
+      "amounts_are_semantically_bound_to_labels_and_roles",
+      "employee_and_employer_charge_semantics_must_remain_distinguishable",
+      "monthly_values_must_be_distinguishable_from_cumulative_values",
+      "document_identity_and_pay_period_must_be_recoverable"
+    ],
+    "value_policy": "Observed employer, employee, identifiers, amounts, rates, dates, codes and software metadata are instance values, never profile invariants."
+  },
+  "contextual_dimensions": {
+    "employer": {
+      "role": "INSTANCE_CONTEXT",
+      "may_help_specialization": true,
+      "profile_identity": false
+    },
+    "employee": {
+      "role": "INSTANCE_CONTEXT",
+      "may_help_ground_truth": true,
+      "profile_identity": false
+    },
+    "payroll_software": {
+      "role": "LINEAGE_METADATA_IF_KNOWN",
+      "may_help_specialization": true,
+      "profile_identity": false
+    },
+    "layout_lineage": {
+      "role": "SPECIALIZATION_CONTEXT",
+      "may_bind_geometry_or_exact_anchors": true,
+      "profile_identity": false
+    },
+    "sector_or_collective_agreement": {
+      "role": "OPTIONAL_SEMANTIC_CONTEXT",
+      "may_affect_optional_fields": true,
+      "profile_identity": false
+    }
+  },
+  "extraction_model": {
+    "generic_strategy": "SEMANTIC_FIRST_WITH_OPTIONAL_LAYOUT_SPECIALIZATION",
+    "required_capabilities": [
+      "identify_document_and_pay_period",
+      "identify_employer_and_employee_roles",
+      "segment_payroll_lines",
+      "preserve_employee_vs_employer_column_semantics",
+      "extract_gross_tax_withholding_net_social_and_net_pay_when_present",
+      "preserve_monthly_vs_cumulative_semantics",
+      "return_UNKNOWN_on_ambiguous_binding"
+    ],
+    "specialization_allowed_for": [
+      "exact anchors",
+      "column geometry",
+      "payroll code mapping",
+      "section order",
+      "vendor-specific labels"
+    ]
+  },
+  "qualification_model": {
+    "current_positive_specimens": 2,
+    "current_positive_contexts": [
+      "public healthcare employer payslip",
+      "private IT/technical-services employer payslip"
+    ],
+    "current_claim": "GENERIC_SEMANTIC_MODEL_CANDIDATE",
+    "not_yet_claimed": [
+      "generic extraction implementation",
+      "layout-independent recognition qualification",
+      "all French payslip coverage",
+      "production qualification"
+    ],
+    "next_evidence": [
+      "multiple months from first lineage",
+      "multiple months from second lineage",
+      "at least one materially different French payslip lineage",
+      "negative/lookalike documents"
+    ]
+  },
+  "qualification": "NONE",
+  "production_qualified": false
+}
