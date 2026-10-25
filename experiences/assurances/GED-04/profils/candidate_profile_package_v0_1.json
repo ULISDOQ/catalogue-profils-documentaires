@@ -4,7 +4,7 @@
     "profile_id": "ULISDOQ-PROFILE-GED04-MOTORCYCLE-INSURANCE-SPECIAL-TERMS-CANDIDATE",
     "profile_version": "0.1.0",
     "family": "motorcycle_insurance_special_terms",
-    "profile_path": "experiments/administration-droits/GED-04/profiles/motorcycle_insurance_special_terms_candidate.json"
+    "profile_path": "experiences/assurances/GED-04/profils/motorcycle_insurance_special_terms_candidate.json"
   },
   "builder": {
     "profile_builder_version": "0.1.1-candidate",
@@ -36,10 +36,10 @@
     }
   ],
   "evidence": [
-    "consumer-escalation/results/ULISDOQ-REQ-GEDREAL-20261024T213000Z-001/result.json",
-    "experiments/factures/GED-01/profiles/sfr_structural_v0_1.json",
-    "experiments/impots-finances/GED-02/profiles/fr_formulaire_2044_candidate.json",
-    "experiments/administration-droits/GED-03/profiles/eml_candidate.json",
+    "escalade-consommateur/results/ULISDOQ-REQ-GEDREAL-20261024T213000Z-001/result.json",
+    "experiences/factures/GED-01/profils/sfr_structural_v0_1.json",
+    "experiences/impots-finances/GED-02/profils/fr_formulaire_2044_candidate.json",
+    "experiences/administration-droits/GED-03/profils/eml_candidate.json",
     "profile-builder/registry/CAPABILITY_REGISTRY_V0_1.json"
   ],
   "limits": [
