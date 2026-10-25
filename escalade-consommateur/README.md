@@ -1,12 +1,12 @@
-# ULISDOQ Consumer Escalation v1
+# ULISDOQ — Escalade consommateur v1
 
-Status: candidate contract, first proof case GED-04.
+Statut : contrat candidat, premier cas probant GED-04.
 
-## Purpose
+## Objet
 
-This is the generic Git contract used by any ULISDOQ consumer when the current catalogue or capability set cannot satisfactorily handle a documentary case.
+Ce répertoire porte le contrat Git générique utilisé par tout consommateur ULISDOQ lorsque le catalogue ou les capacités disponibles ne suffisent pas à traiter correctement un cas documentaire.
 
-The protocol is deliberately independent from CLAU.
+Le protocole est volontairement indépendant de CLAU.
 
 ```text
 consumer
@@ -22,14 +22,14 @@ Git is the versioned exchange surface. Publication of a request is not acceptanc
 ## Canonical paths
 
 ```text
-consumer-escalation/
+escalade-consommateur/
   schemas/
     consumer-request-v1.schema.json
     consumer-receipt-v1.schema.json
     documentary-instruction-v1.schema.json
-  requests/<request_id>/request.json
-  receipts/<request_id>/receipt.json
-  results/<request_id>/result.json
+  demandes/<request_id>/request.json
+  accuses/<request_id>/receipt.json
+  resultats/<request_id>/result.json
   bin/ulisdoq-escalation
   tests/test_contract_v1.py
 ```
