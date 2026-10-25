@@ -33,6 +33,8 @@ Poursuivre l’exploration documentaire de phase 1. Les dettes de robustesse, pe
 
 Le [registre](project/LEDGER.md) conserve les décisions datées ; cette page présente leur état courant. Les contrôles de confidentialité précèdent toute publication de nouveau spécimen. La validation déjà donnée pour GED-01 reste acquise.
 
-## Clôture administrative en attente
+## Branches secondaires supprimées
 
-La consolidation du contenu et la vérification depuis un nouveau clone sont réalisées. Les trois anciens historiques sont ancêtres de main. Jean demande explicitement la suppression de leurs trois noms de branches, les travaux et historiques étant rapatriés dans main. Cette suppression et la création du tag restent en attente d’un accès permettant ces opérations GitHub ; elles ne sont pas annoncées comme effectuées. Le manifeste du Builder désigne un commit source exact et reste utilisable sans tag.
+Suppression effectuée par Jean et vérifiée le 25 octobre 2026 : seule `main` reste présente. Son commit était inchangé à `acab1b593a6887b8d791af71440a138ea03edecb` après suppression. Les trois anciens sommets restent ancêtres de main : aucun travail ni historique utile n’a été perdu.
+
+Toute nouvelle branche exige toujours une décision ou confirmation explicite de Jean. Le tag `v0.1.0-alpha.1` reste non créé ; la reconstruction fonctionne par commit exact et le manifeste du Builder ne dépend pas de ce tag.

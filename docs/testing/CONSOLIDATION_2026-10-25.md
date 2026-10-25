@@ -31,3 +31,7 @@ Les dettes GED-02/GED-04 restent ouvertes ; ce jalon ne qualifie ni tous les pro
 La consolidation a rejoint main au commit `bc23537e934140288ea66e3e34f73c431e8159d5`, qui conserve les deux historiques divergents comme parents supplémentaires. La correction de reconstruction propre a suivi au commit `1d0f8b17ece6c1c77a8380182e6064b0fb3015bc`. Les trois anciens sommets de branche sont désormais ancêtres de main.
 
 La suppression des trois noms de branches et la création du tag ne sont pas réalisées : la connexion sécurisée du navigateur a été refusée par le contrôle automatique avant saisie d’identifiants. Aucun contournement ni changement de permissions n’a été tenté. Les commandes de reconstruction utilisent main et son commit exact ; le manifeste du Builder conserve ses empreintes et un commit source explicite.
+
+## Vérification après suppression par Jean
+
+Le 25 octobre 2026, GitHub ne présente plus que `main`. Les trois branches secondaires ont été supprimées par Jean. Le commit de main est resté `acab1b593a6887b8d791af71440a138ea03edecb` pendant cette opération. Les trois anciens sommets restent ancêtres de main, vérifiés par Git. La suppression des références n’a donc modifié ni le contenu courant ni la conservation des travaux. Le blocage de connexion décrit précédemment ne concerne plus cette suppression accomplie. Le tag reste non créé.
