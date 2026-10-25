@@ -40,6 +40,8 @@ Le principe recherché est donc simple :
 
 **francophone dans ce qui exprime l'identité documentaire et métier d'ULISDOQ ; pragmatique dans ce qui relève de l'ingénierie et de l'écosystème technique.**
 
+Dans sa première ambition, cette identité s'incarne dans un terrain concret : la **paperasserie française**. ULISDOQ cherche d'abord à accumuler, structurer et qualifier une connaissance documentaire riche des documents réellement rencontrés en France. Une extension à d'autres langues ou contextes pourra venir ensuite sans diluer ce socle initial.
+
 ## De l'exploration à la confiance
 
 Un document reconnu n'est pas nécessairement un document compris. Une source réputée n'est pas automatiquement adaptée à chaque usage. Une extraction réussie une fois n'est pas une garantie générale.
