@@ -214,7 +214,7 @@ overall &= check(
 )
 
 # Semantic validation.
-schema_path = repo / "experiments/impots-finances/GED-02/extraction/semantic_extraction_schema_v0_1.json"
+schema_path = repo / "experiences/impots-finances/GED-02/extraction/semantic_extraction_schema_v0_1.json"
 semantic_code = f"""
 import json
 from jsonschema import validate

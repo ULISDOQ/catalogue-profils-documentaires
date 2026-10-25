@@ -20,7 +20,7 @@ Le document S11 n'est pas utilisé pour recalibrer ULISTAG avant le premier pass
 
 ## Références immuables à vérifier
 
-- profil : `profiles/fr_formulaire_2044_candidate.json`
+- profil : `profils/fr_formulaire_2044_candidate.json`
 - manifest ULISTAG : `../ulistag/reference_visual_v0_1_manifest.json`
 - matcher cœur : `../../../..//ULISTAG/matchers/visual_keypoints/ulistag_visual_keypoints_v0.py`
 - protocole ULISTAG GED-02 : `../ulistag/PHASE1_2044_VISUAL_KEYPOINTS_V0_1.md`

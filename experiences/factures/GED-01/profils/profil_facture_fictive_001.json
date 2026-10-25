@@ -4,13 +4,13 @@
   "status": "candidate_unqualified",
   "family": "invoice",
   "variant": "plain_text_fictional_fr",
-  "source_fixture": "../fixtures/facture_fictive_001.txt",
+  "source_fixture": "../specimens/facture_fictive_001.txt",
   "recognition_markers": [
     "FACTURE — EXEMPLE FICTIF",
     "Numéro de facture",
     "Total TTC"
   ],
-  "expected_fields_ref": "../fixtures/attendu_001.json",
+  "expected_fields_ref": "../specimens/attendu_001.json",
   "limitations": [
     "Only the published synthetic text fixture is in scope",
     "No real-document qualification",

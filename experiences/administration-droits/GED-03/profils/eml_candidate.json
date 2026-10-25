@@ -20,7 +20,7 @@
   "extraction": {
     "capability_id": "NATIVE_MIME_EMAIL_EXTRACTION_V0.1",
     "engine": "client/eml_extract_v0_1.py",
-    "semantic_schema": "../contracts/normalized_eml_schema_v0_1.json",
+    "semantic_schema": "../contrats/normalized_eml_schema_v0_1.json",
     "status": "PHASE1_CANDIDATE_UNQUALIFIED"
   },
   "container_validation": {
@@ -55,9 +55,9 @@
     "negatives_or_limits": "3/3_EXPLICIT",
     "schema_validation": "9/9_PASS",
     "ground_truth_comparison": "9/9_PASS",
-    "evidence_bundle": "../evidence/FROZEN_RESULTS_BUNDLE_001.json",
-    "comparison": "../evidence/GROUND_TRUTH_COMPARISON_001.json",
-    "measures": "../evidence/GED_CORE_MEASURES_RESULT_001.json",
+    "evidence_bundle": "../preuves/FROZEN_RESULTS_BUNDLE_001.json",
+    "comparison": "../preuves/GROUND_TRUTH_COMPARISON_001.json",
+    "measures": "../preuves/GED_CORE_MEASURES_RESULT_001.json",
     "debt": "../DEBT-GED03-STRUCTURAL-VALIDATION-DIVERSITY-001.md",
     "qualification": "NONE"
   }

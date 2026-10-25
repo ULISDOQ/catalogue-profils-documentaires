@@ -24,11 +24,11 @@
       "offline_capable": true,
       "adapter_path": "client/eml_extract_v0_1.py",
       "limits": [
-        "Synthetic GED-03 corpus only",
+        "Phase-1 synthetic corpus only",
         "No sender authenticity qualification"
       ],
       "evidence_refs": [
-        "experiments/administration-droits/GED-03/RESULTS_V0_1.md"
+        "experiences/administration-droits/GED-03/RESULTS_V0_1.md"
       ]
     },
     {
@@ -82,7 +82,7 @@
       ],
       "evidence_refs": [
         "ULISTAG/matchers/visual_keypoints/README.md",
-        "experiments/impots-finances/GED-02/README.md"
+        "experiences/impots-finances/GED-02/README.md"
       ]
     },
     {
@@ -109,7 +109,7 @@
         "Profile semantics remain profile-specific"
       ],
       "evidence_refs": [
-        "experiments/impots-finances/GED-02/phase2-reentry/README.md"
+        "experiences/impots-finances/GED-02/phase2-reentree/README.md"
       ]
     },
     {
@@ -136,7 +136,7 @@
         "Depends on invoice2data and template compatibility"
       ],
       "evidence_refs": [
-        "experiments/factures/GED-01/README.md"
+        "experiences/factures/GED-01/README.md"
       ]
     },
     {
@@ -162,8 +162,8 @@
         "Validates structure, not business truth"
       ],
       "evidence_refs": [
-        "experiments/administration-droits/GED-03/RESULTS_V0_1.md",
-        "experiments/impots-finances/GED-02/README.md"
+        "experiences/administration-droits/GED-03/RESULTS_V0_1.md",
+        "experiences/impots-finances/GED-02/README.md"
       ]
     }
   ]

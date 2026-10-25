@@ -14,3 +14,11 @@ Conserver les identifiants stables et l'historique ; une modification de sens ex
 
 
 **Amorçage public :** aucune donnée personnelle réelle, aucune donnée de santé identifiable, aucun secret et aucun document confidentiel. Les politiques de licence et le canal de signalement dédié sont en cours de formalisation ; aucune exécution automatique de code contribué n’est autorisée.
+
+## Protection des sources d'expérience
+
+Les originaux, résultats contenant des valeurs personnelles, captures et inventaires privés restent hors du dépôt. Une donnée issue d'une expérience ne peut remonter dans un spécimen public qu'après anonymisation vérifiée. Une simple substitution de nom ou pseudonymisation ne suffit pas. Les connaissances génériques, schémas et grammaires peuvent être capitalisés sans les valeurs sources.
+
+Avant intégration, vérifier le texte, les pages rendues, métadonnées, annotations, pièces jointes, noms de fichiers, valeurs extraites et possibilités de rapprochement. Déclarer provenance, transformations, contrôle et limites dans le manifeste du spécimen. En cas de doute, garder la source privée et employer un exemple entièrement synthétique.
+
+Le spécimen public GED-01 déjà validé par le fondateur est conservé ; cette validation porte sur ce spécimen et ne vaut pas autorisation générale pour d'autres documents. Les bulletins de paye privés de GED-05 ne sont pas publiables en l'état.

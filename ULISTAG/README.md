@@ -18,7 +18,7 @@ ULISTAG/
 → recherche
 → cycle de vie ULISTAG
 
-experiments/.../GED-N/ulistag/
+experiences/.../GED-N/ulistag/
 → application d'ULISTAG à un cas documentaire
 → références spécifiques
 → observations

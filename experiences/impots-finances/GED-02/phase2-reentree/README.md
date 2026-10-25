@@ -22,14 +22,14 @@ Le profil reste volontairement **candidat non qualifié**. La dette connue n'est
 
 Commencer par :
 
-`../profiles/DEBT-GED02-PROFILE-SEMANTIC-ROBUSTNESS-001.md`
+`../profils/DEBT-GED02-PROFILE-SEMANTIC-ROBUSTNESS-001.md`
 
 Puis relire :
 
 - `SOURCE_MANIFEST_V0_1.json`
-- `evidence/S11_PROFILE_DRIVEN_EXTRACTED_FROZEN.json`
-- `evidence/S11_DGFIP_SYNTHETIC_GROUND_TRUTH.json`
-- `../profiles/fr_formulaire_2044_candidate.json`
+- `preuves/S11_PROFILE_DRIVEN_EXTRACTED_FROZEN.json`
+- `preuves/S11_DGFIP_SYNTHETIC_GROUND_TRUTH.json`
+- `../profils/fr_formulaire_2044_candidate.json`
 - `../extraction/fr_2044_2025_property1_binding_v0_1.json`
 - `../extraction/semantic_extraction_schema_v0_1.json`
 - `../../../../client/profile_ocr_extract_v0_1.py`

@@ -11,8 +11,8 @@ La conception v0.1 a été établie à partir de deux représentations du même 
 
 - la facture source privée, déposée par Jean dans la Bibliothèque ChatGPT et consultée uniquement pour l'étude ; elle n'est ni copiée ni publiée dans le dépôt ;
 - les deux pages publiques transformées de GED-01 :
-  - `experiments/factures/GED-01/fixtures/Fournisseur-EXP-01_page_1.png`
-  - `experiments/factures/GED-01/fixtures/Fournisseur-EXP-01_page_2.png`
+  - `experiences/factures/GED-01/specimens/Fournisseur-EXP-01_page_1.png`
+  - `experiences/factures/GED-01/specimens/Fournisseur-EXP-01_page_2.png`
 
 Les deux représentations conservent la même organisation générale : deux pages, zones de titre, ligne d'identification de facture, bloc de synthèse, sections de détail et repères de pagination. Les valeurs privées ou variables ne sont pas retenues dans l'empreinte.
 
@@ -105,7 +105,7 @@ Le graphe d'ancres nommées est retenu parce qu'il est :
 
 Référence :
 
-`experiments/factures/GED-01/ulistag/reference_v0_1.json`
+`experiences/factures/GED-01/ulistag/reference_v0_1.json`
 
 Le candidat comporte dix ancres non privées :
 
@@ -144,7 +144,7 @@ Les ratios produits signifient uniquement **compatibilité structurelle selon ce
 
 Référence :
 
-`experiments/factures/GED-01/profiles/sfr_structural_v0_1.json`
+`experiences/factures/GED-01/profils/sfr_structural_v0_1.json`
 
 Le profil extrait les champs en utilisant les ancres et la géométrie, au lieu de supposer que l'ordre du texte aplati préserve la proximité visuelle.
 

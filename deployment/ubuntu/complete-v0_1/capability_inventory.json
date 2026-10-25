@@ -100,7 +100,7 @@
     {
       "id": "semantic.json_schema_validation",
       "source": [
-        "experiments/impots-finances/GED-02/extraction/semantic_extraction_schema_v0_1.json"
+        "experiences/impots-finances/GED-02/extraction/semantic_extraction_schema_v0_1.json"
       ],
       "environment": "semantic_validation",
       "python_dependencies": [

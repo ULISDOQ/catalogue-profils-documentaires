@@ -1,0 +1,7 @@
+# Sources et résultats personnels : conserver hors du dépôt.
+**/prive/
+**/private/
+**/sources-privees/
+**/resultats-prives/
+__pycache__/
+*.pyc

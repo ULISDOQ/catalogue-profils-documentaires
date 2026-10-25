@@ -3,7 +3,7 @@
   "cases": [
     {
       "id": "GED01-POS-001",
-      "input": "fixtures/facture_fictive_001.txt",
+      "input": "specimens/facture_fictive_001.txt",
       "expected": "recognized_and_fields_match"
     },
     {

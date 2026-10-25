@@ -45,4 +45,4 @@ Les méthodes devenues inutiles peuvent être retirées sans remettre en cause l
 
 ## Dette active GED-01
 
-`DEBT-GED01-ANCHOR-GRAPH-SAME-SUPPLIER-001` — éprouver `ANCHOR_GRAPH_V0_1` sur plusieurs factures distinctes du même fournisseur afin d'en mesurer la stabilité intra-modèle et les limites. Référence : `experiments/factures/GED-01/ulistag/DEBT_SAME_SUPPLIER_VALIDATION.md`.
+`DEBT-GED01-ANCHOR-GRAPH-SAME-SUPPLIER-001` — éprouver `ANCHOR_GRAPH_V0_1` sur plusieurs factures distinctes du même fournisseur afin d'en mesurer la stabilité intra-modèle et les limites. Référence : `experiences/factures/GED-01/ulistag/DEBT_SAME_SUPPLIER_VALIDATION.md`.

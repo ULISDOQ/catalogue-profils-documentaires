@@ -48,7 +48,7 @@ Un document reconnu n'est pas nécessairement un document compris. Une source r�
 
 Nous distinguons donc : **source identifiée**, **profil proposé**, **profil qualifié pour un périmètre déclaré** et **résultat d'extraction effectivement vérifié**. Chaque contribution doit pouvoir porter sa provenance, ses droits, sa version, ses contrôles, ses limites et, si nécessaire, sa contestation ou son retrait.
 
-L'ouverture n'efface pas la responsabilité : elle impose une méthode de partage. Le catalogue commence dans un cercle privé de contributeurs invités, avec l'ambition de construire une gouvernance communautaire durable, sans préjuger d'une ouverture publique ni d'une forme juridique future.
+L'ouverture n'efface pas la responsabilité : elle impose une méthode de partage. Le catalogue a été conçu pour commencer dans un cercle privé de contributeurs invités. Au 25 octobre 2026, le dépôt est public. Cette visibilité impose de ne publier que des connaissances réutilisables et des spécimens synthétiques ou dont l'anonymisation a été vérifiée, avec l'ambition de construire une gouvernance communautaire durable, sans préjuger d'une forme juridique future.
 
 ## Notre horizon
 

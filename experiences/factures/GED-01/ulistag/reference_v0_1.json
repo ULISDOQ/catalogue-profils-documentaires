@@ -32,5 +32,5 @@
     "candidate_min_edge_ratio": 0.75,
     "note": "Experimental retrieval thresholds; not probabilities and not qualification thresholds."
   },
-  "profile_ref": "../profiles/sfr_structural_v0_1.json"
+  "profile_ref": "../profils/sfr_structural_v0_1.json"
 }

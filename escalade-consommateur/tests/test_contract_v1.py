@@ -11,9 +11,9 @@ validate_cycle = NS["validate_cycle"]
 accept_request = NS["accept_request"]
 
 REQUEST_ID = "ULISDOQ-REQ-GEDREAL-20261024T213000Z-001"
-REQUEST = ROOT / "requests" / REQUEST_ID / "request.json"
-RECEIPT = ROOT / "receipts" / REQUEST_ID / "receipt.json"
-RESULT = ROOT / "results" / REQUEST_ID / "result.json"
+REQUEST = ROOT / "demandes" / REQUEST_ID / "request.json"
+RECEIPT = ROOT / "accuses" / REQUEST_ID / "receipt.json"
+RESULT = ROOT / "resultats" / REQUEST_ID / "result.json"
 
 
 class ConsumerEscalationV1Tests(unittest.TestCase):
@@ -21,8 +21,8 @@ class ConsumerEscalationV1Tests(unittest.TestCase):
         out = validate_cycle(load(REQUEST), load(RECEIPT), load(RESULT))
         self.assertEqual(out["status"], "PASS")
         self.assertEqual(out["acceptance_status"], "ACCEPTED")
-        self.assertEqual(out["result_status"], "NEEDS_MORE_EVIDENCE")
-        self.assertEqual(out["capability_decision"], "SOURCE_EVIDENCE_REQUIRED")
+        self.assertEqual(out["result_status"], "COMPLETED")
+        self.assertEqual(out["capability_decision"], "NEW_PROFILE_CANDIDATE_REQUIRED")
         self.assertEqual(out["next_action"]["action"], "PROVIDE_ADDITIONAL_EVIDENCE")
 
     def test_private_material_declaration_is_rejected(self):
@@ -43,7 +43,10 @@ class ConsumerEscalationV1Tests(unittest.TestCase):
         result = load(RESULT)
         self.assertEqual(result["next_action"]["action"], "PROVIDE_ADDITIONAL_EVIDENCE")
         self.assertTrue(result["next_action"]["requirement"])
-        self.assertIsNone(result["next_action"]["target_ref"])
+        self.assertEqual(result["next_action"]["target_ref"], "ULISDOQ-PROFILE-GED04-MOTORCYCLE-INSURANCE-SPECIAL-TERMS-CANDIDATE@0.1.0")
+        profile = load(ROOT.parent / result["produced_refs"]["profile_path"])
+        self.assertEqual(profile["profile_id"], result["produced_refs"]["profile_id"])
+        self.assertFalse(profile["production_qualified"])
 
     def test_identical_request_is_not_productively_accepted_twice(self):
         request = load(REQUEST)

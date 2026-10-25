@@ -38,7 +38,7 @@ Toutes les adresses utilisent `.test`. Le corpus ne contient aucun courriel pers
 
 ## Contrats
 
-- `contracts/normalized_eml_schema_v0_1.json` : contrat JSON normalisé ;
+- `contrats/normalized_eml_schema_v0_1.json` : contrat JSON normalisé ;
 - `REUSE_MATRIX_V0_1.md` : réemploi / non-réemploi proposé ;
 - `PHASE1_PROTOCOL_V0_1.md` : protocole futur d'exécution ;
 - `MEASURES_V0_1.json` : critères de mesure de la fabrique ;

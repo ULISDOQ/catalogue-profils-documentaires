@@ -288,7 +288,7 @@ Le but n'est pas seulement d'obtenir un score élevé A↔B, mais également une
 
 Si le rapprochement structurel place correctement GED-01 parmi les candidats :
 
-- résoudre vers `experiments/factures/GED-01/templates/fournisseur_exp_01.yml` ;
+- résoudre vers `experiences/factures/GED-01/modeles/fournisseur_exp_01.yml` ;
 - exécuter l'extraction sur le document réel local ;
 - vérifier les champs attendus ;
 - qualifier séparément le profil et l'empreinte.
@@ -404,7 +404,7 @@ Aucune étape n'autorise par elle-même une déclaration de technologie qualifi�
 
 La première méthode effectivement élue et prototypée pour GED-01 est documentée dans :
 
-`experiments/factures/GED-01/ulistag/ANCHOR_GRAPH_V0_1.md`
+`experiences/factures/GED-01/ulistag/ANCHOR_GRAPH_V0_1.md`
 
 Choix v0.1 :
 
@@ -447,7 +447,7 @@ qualification=NONE
 
 Aucune valeur privée n'a été retournée. Ce résultat valide l'**exécutabilité du candidat sur sa source de conception**, pas sa généralisation ni la correction des valeurs extraites.
 
-RETEX détaillé : [GED01_ULISTAG_V0_1_PCIA_EXECUTION_001](../experiments/factures/GED-01/docs/RETEX_ULISTAG_V0_1_PCIA_EXECUTION_001.md).
+RETEX détaillé : [GED01_ULISTAG_V0_1_PCIA_EXECUTION_001](../../experiences/factures/GED-01/documentation/RETEX_ULISTAG_V0_1_PCIA_EXECUTION_001.md).
 
 La prochaine étape prioritaire devient l'épreuve **A/B synthétiques + témoin négatif** selon le même règlement, puis un corpus indépendant.
 

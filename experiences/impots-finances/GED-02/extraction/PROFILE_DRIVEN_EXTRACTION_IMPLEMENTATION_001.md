@@ -8,8 +8,8 @@
 - `project/PROFILE_REGISTRY_V0_1.json`
 - `client/profile_ocr_extract_v0_1.py`
 - `client/deployment/profile_ocr_extract_manifest_v0_1.json`
-- `experiments/impots-finances/GED-02/profiles/fr_formulaire_2044_candidate.json` v0.3.0
-- `experiments/impots-finances/GED-02/extraction/fr_2044_2025_property1_binding_v0_1.json`
+- `experiences/impots-finances/GED-02/profils/fr_formulaire_2044_candidate.json` v0.3.0
+- `experiences/impots-finances/GED-02/extraction/fr_2044_2025_property1_binding_v0_1.json`
 - `deployment/ubuntu/complete-v0_1/requirements-profile_extraction.txt`
 
 ## Binding provenance

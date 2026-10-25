@@ -38,12 +38,12 @@
     },
     {
       "role": "synthetic_ground_truth",
-      "repository_path": "experiments/impots-finances/GED-02/phase2-reentry/evidence/S11_DGFIP_SYNTHETIC_GROUND_TRUTH.json",
+      "repository_path": "experiences/impots-finances/GED-02/phase2-reentree/preuves/S11_DGFIP_SYNTHETIC_GROUND_TRUTH.json",
       "sha256": "30f3e1a24922efa28ba91f73b078748fba92fcdfee735b530ba34c7dbcef81a9"
     },
     {
       "role": "phase1_profile_driven_frozen_extraction",
-      "repository_path": "experiments/impots-finances/GED-02/phase2-reentry/evidence/S11_PROFILE_DRIVEN_EXTRACTED_FROZEN.json",
+      "repository_path": "experiences/impots-finances/GED-02/phase2-reentree/preuves/S11_PROFILE_DRIVEN_EXTRACTED_FROZEN.json",
       "sha256": "9ca2151afe78ff2f54a2b04595c9823a1f7d07b12c80a468267c448026611c69"
     }
   ],
@@ -51,10 +51,10 @@
     "project/PROFILE_REGISTRY_V0_1.json",
     "client/profile_ocr_extract_v0_1.py",
     "client/deployment/profile_ocr_extract_manifest_v0_1.json",
-    "experiments/impots-finances/GED-02/profiles/fr_formulaire_2044_candidate.json",
-    "experiments/impots-finances/GED-02/extraction/fr_2044_2025_property1_binding_v0_1.json",
-    "experiments/impots-finances/GED-02/extraction/semantic_extraction_schema_v0_1.json",
-    "experiments/impots-finances/GED-02/profiles/DEBT-GED02-PROFILE-SEMANTIC-ROBUSTNESS-001.md"
+    "experiences/impots-finances/GED-02/profils/fr_formulaire_2044_candidate.json",
+    "experiences/impots-finances/GED-02/extraction/fr_2044_2025_property1_binding_v0_1.json",
+    "experiences/impots-finances/GED-02/extraction/semantic_extraction_schema_v0_1.json",
+    "experiences/impots-finances/GED-02/profils/DEBT-GED02-PROFILE-SEMANTIC-ROBUSTNESS-001.md"
   ],
   "phase2_entry_rule": "Do not silently regenerate or substitute any S11 source. If an exact binary is unavailable, treat the source as missing until its SHA256 identity is restored."
 }

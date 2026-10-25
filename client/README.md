@@ -1,6 +1,6 @@
 # Client ULISDOQ
 
-Le client ULISDOQ est une **capacité transverse du projet**, indépendante d'une expérience particulière. Il exécute localement des opérations documentaires à partir de ressources du catalogue ; les expériences sous `experiments/` l'utilisent comme cas d'épreuve.
+Le client ULISDOQ est une **capacité transverse du projet**, indépendante d'une expérience particulière. Il exécute localement des opérations documentaires à partir de ressources du catalogue ; les expériences sous `experiences/` l'utilisent comme cas d'épreuve.
 
 ## Extraction locale avec invoice2data
 
@@ -12,8 +12,8 @@ Exemple avec GED-01 après installation du profil complet :
 
 ```bash
 "$HOME/.local/share/ulisdoq/complete-v0_1/venvs/invoice2data/bin/python" client/extract.py \
-  experiments/factures/GED-01/fixtures/Fournisseur-EXP-01_document_experimental.pdf \
-  --templates experiments/factures/GED-01/templates \
+  experiences/factures/GED-01/specimens/Fournisseur-EXP-01_document_experimental.pdf \
+  --templates experiences/factures/GED-01/modeles \
   --reader tesseract > resultat.json
 ```
 
@@ -27,7 +27,7 @@ Le premier matcher candidat est :
 
 `ULISTAG/matchers/anchor_graph/ulistag_v0.py`
 
-Les références et preuves propres à GED-01 restent sous `experiments/factures/GED-01/ulistag/`.
+Les références et preuves propres à GED-01 restent sous `experiences/factures/GED-01/ulistag/`.
 
 ## TAG candidat
 

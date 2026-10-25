@@ -1,0 +1,9 @@
+{
+  "frozen_file": "experiences/administration-droits/GED-03/preuves/FROZEN_RESULTS_BUNDLE_001.json",
+  "frozen_sha256": "415cbd825b565baaa6636a3f7bd60a651499427e1d0c203d0378181546717de2",
+  "policy": "Historical source locators remain immutable; current resources are resolved by this mapping.",
+  "paths": {
+    "experiments/administration-droits/GED-03/profiles/eml_candidate.json": "experiences/administration-droits/GED-03/profils/eml_candidate.json",
+    "experiments/administration-droits/GED-03/contracts/normalized_eml_schema_v0_1.json": "experiences/administration-droits/GED-03/contrats/normalized_eml_schema_v0_1.json"
+  }
+}
