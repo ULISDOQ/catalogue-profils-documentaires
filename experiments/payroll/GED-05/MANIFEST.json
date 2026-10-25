@@ -1,0 +1,32 @@
+{
+  "schema_version": "ulisdoq-experiment-manifest/0.1",
+  "experiment_id": "GED-05",
+  "title": "Bulletin de paie français",
+  "status": "ACTIVE_CANDIDATE_QUALIFICATION",
+  "documentary_category": "BULLETIN_DE_PAIE_FRANCAIS",
+  "canonical_profile": {
+    "profile_id": "ULISDOQ-PROFILE-FR-BULLETIN-DE-PAIE-CANDIDATE",
+    "version": "0.1.0",
+    "path": "catalogue/profiles/payroll/fr/bulletin-de-paie-francais/ULISDOQ-PROFILE-FR-BULLETIN-DE-PAIE-CANDIDATE/0.1.0/profile.json"
+  },
+  "corpus": {
+    "private_source_files_committed": false,
+    "current_specimens": 2,
+    "diversity": [
+      "different_employers",
+      "materially_different_layouts"
+    ],
+    "next_target": "multi_month_replay"
+  },
+  "experiment_outputs": [
+    "qualification_evidence",
+    "grammar_refinement",
+    "reuse_retex"
+  ],
+  "invariant_policy": {
+    "category_invariant": "DOCUMENT_IS_A_FRENCH_PAYSLIP",
+    "employer_is_invariant": false,
+    "payroll_software_is_invariant": false,
+    "exact_layout_is_invariant": false
+  }
+}
