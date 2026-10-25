@@ -285,9 +285,9 @@
     "source_evidence_mode": "RESTRICTED_EXISTING_PRIVATE_SOURCE_REUSE",
     "public_source_document_ref": null,
     "profile_version": "0.1.0",
-    "profile_path": "experiments/administration-droits/GED-04/profiles/motorcycle_insurance_special_terms_candidate.json",
+    "profile_path": "experiences/assurances/GED-04/profils/motorcycle_insurance_special_terms_candidate.json",
     "profile_creation_commit": "44a435a37b7d161b9c34e205d85754a7a7a7945b",
-    "candidate_package_path": "experiments/administration-droits/GED-04/profiles/candidate_profile_package_v0_1.json"
+    "candidate_package_path": "experiences/assurances/GED-04/profils/candidate_profile_package_v0_1.json"
   },
   "limits": [
     "Instruction is based on one real specimen.",
