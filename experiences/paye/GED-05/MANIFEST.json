@@ -7,7 +7,7 @@
   "canonical_profile": {
     "profile_id": "ULISDOQ-PROFILE-FR-BULLETIN-DE-PAIE-CANDIDATE",
     "version": "0.1.0",
-    "path": "catalogue/profiles/paye/fr/bulletin-de-paie-francais/ULISDOQ-PROFILE-FR-BULLETIN-DE-PAIE-CANDIDATE/0.1.0/profile.json"
+    "path": "catalogue/profils/paye/fr/bulletin-de-paie-francais/ULISDOQ-PROFILE-FR-BULLETIN-DE-PAIE-CANDIDATE/0.1.0/profile.json"
   },
   "corpus": {
     "private_source_files_committed": false,
