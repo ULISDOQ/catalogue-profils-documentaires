@@ -5,7 +5,7 @@
       "profile_id": "ULISDOQ-PROFILE-FR-BULLETIN-DE-PAIE-CANDIDATE",
       "version": "0.1.0",
       "category": "BULLETIN_DE_PAIE_FRANCAIS",
-      "path": "catalogue/profils/paye/fr/bulletin-de-paie-francais/ULISDOQ-PROFILE-FR-BULLETIN-DE-PAIE-CANDIDATE/0.1.0/profile.json",
+      "path": "catalogue/profils/paye/fr/bulletin-de-paie-francais/ULISDOQ-PROFILE-FR-BULLETIN-DE-PAIE-CANDIDATE/0.1.0/profil.json",
       "status": "CANDIDATE_UNQUALIFIED",
       "automatically_selectable": false
     }
