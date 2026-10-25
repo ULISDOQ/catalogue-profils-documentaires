@@ -2,7 +2,7 @@
 
 Jalon : **0.1.0-alpha.1 — consolidation du 25 octobre 2026**.
 
-`main` est la référence courante du projet et la branche normale de travail. Le dépôt est public. Ce jalon décrit un état d’évaluation reconstructible ; aucun profil n’est déclaré qualifié pour la production.
+`main` est la référence courante et la branche de travail du projet, y compris pour les travaux en évaluation. Toute nouvelle branche exige une décision ou une confirmation explicite de Jean avant sa création. Le dépôt est public. Ce jalon décrit un état d’évaluation reconstructible ; aucun profil n’est déclaré qualifié pour la production.
 
 | Surface | État courant | Référence |
 | --- | --- | --- |
@@ -35,4 +35,4 @@ Le [registre](project/LEDGER.md) conserve les décisions datées ; cette page pr
 
 ## Clôture administrative en attente
 
-La consolidation du contenu et la vérification depuis un nouveau clone sont réalisées. Les trois anciens historiques sont ancêtres de main. La suppression de leurs noms de branches et la création du tag restent en attente d’un accès permettant ces opérations GitHub ; elles ne sont pas annoncées comme effectuées. Le manifeste du Builder désigne un commit source exact et reste utilisable sans tag.
+La consolidation du contenu et la vérification depuis un nouveau clone sont réalisées. Les trois anciens historiques sont ancêtres de main. Jean demande explicitement la suppression de leurs trois noms de branches, les travaux et historiques étant rapatriés dans main. Cette suppression et la création du tag restent en attente d’un accès permettant ces opérations GitHub ; elles ne sont pas annoncées comme effectuées. Le manifeste du Builder désigne un commit source exact et reste utilisable sans tag.

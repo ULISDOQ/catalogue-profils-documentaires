@@ -14,7 +14,9 @@ L'arborescence métier est donc francophone autant que possible. L'anglais reste
 
 `main` est la branche de travail normale et la référence courante du dépôt.
 
-Une branche séparée n'est utilisée que lorsqu'un développement logiciel risqué, une refonte importante ou une expérimentation pouvant casser l'existant le justifie.
+**Toute création d’une nouvelle branche exige une décision ou une confirmation explicite de Jean, avant sa création.** Aucun agent ou outil ne doit en créer de sa propre initiative, même pour un changement logiciel risqué, une refonte ou une expérimentation. Un tel besoin peut être proposé à Jean, avec son motif et sa durée prévue.
+
+Le projet est actuellement en évaluation : le statut testing ne justifie pas à lui seul une séparation de branches. Le code, les tests, les profils candidats et la documentation retenus sont conservés dans `main`, avec leurs limites explicites.
 
 ## Surfaces principales
 
@@ -86,6 +88,6 @@ Cette séparation doit éviter que les essais du Profile Builder ou d'un autre o
 
 ## Cycle de travail et versions
 
-Pour le contributeur unique, le travail ordinaire se fait dans `main`, avec des commits ciblés et vérifiés. Une branche temporaire se justifie seulement pour comparer une variante, essayer une refonte ou isoler un changement pouvant casser le fonctionnement courant. Elle a un objectif précis et rejoint `main` ou est abandonnée après conservation des résultats utiles. Elle ne sert pas d’archive permanente.
+Pour le contributeur unique, le travail se fait dans `main`, avec des commits ciblés et vérifiés. Si Jean autorise expressément une branche temporaire, elle a un objectif précis et rejoint `main` ou est abandonnée après conservation des résultats utiles. Après rapatriement et vérification, sa référence secondaire est supprimée selon la décision de Jean ; les commits utiles restent conservés. Une branche ne sert pas d’archive permanente.
 
 Les commits conservent l’historique ; les tags marquent les jalons reproductibles. Les versions des logiciels et profils restent indépendantes de celle du dépôt. Le point d’entrée courant est [ETAT_DU_PROJET.md](ETAT_DU_PROJET.md).
