@@ -8,6 +8,10 @@ ULISDOQ est un **unificateur libre de ressources et de capacités documentaires*
 
 [Lire le prologue fondateur](PROLOGUE_FONDATEUR.md). Voir aussi [l'organisation du dépôt](ORGANISATION_DU_DEPOT.md).
 
+**Point de reprise : [état courant du projet](ETAT_DU_PROJET.md).** Jalon d’évaluation `0.1.0-alpha.1` ; branche de travail normale : `main`. [Vérifier le dépôt depuis une copie propre](docs/testing/VERIFIER_LE_DEPOT.md).
+
+Le Profile Builder courant est en **0.1.2** : sélection déterministe des matchers, planification seule, sans matérialisation ni qualification automatique de profil. [Version et limites](profile-builder/RELEASE_0_1_2.md).
+
 ## Périmètre
 
 Le référentiel relie sélectivement des profils, sources, méthodes et briques techniques utiles à la reconnaissance, la classification, l'extraction et la validation des documents : factures, documents administratifs et officiels, documents de santé et autres familles pertinentes. Il ne prétend pas référencer tout Internet.

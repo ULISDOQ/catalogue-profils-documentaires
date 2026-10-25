@@ -205,6 +205,17 @@ class CoherenceVerticales(unittest.TestCase):
                     errors.append(str(p.relative_to(ROOT)) + ': ' + target)
         self.assertEqual(errors, [])
 
+    def test_12_current_builder_distribution(self):
+        manifest = load('profile-builder/DISTRIBUTION_MANIFEST_0_1_2.json')
+        self.assertEqual(manifest['profile_builder_version'], '0.1.2')
+        self.assertEqual(manifest['source_ref'], 'v' + (ROOT / 'VERSION').read_text().strip())
+        self.assertEqual(len(manifest['files']), len({path for path, _ in manifest['files']}))
+        for path, expected in manifest['files']:
+            data = (ROOT / 'profile-builder' / path).read_bytes()
+            observed = hashlib.sha1(b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest()
+            self.assertEqual(observed, expected, path)
+        self.assertTrue((ROOT / 'profile-builder' / manifest['entrypoint']).is_file())
+
 
 if __name__ == '__main__':
     unittest.main()

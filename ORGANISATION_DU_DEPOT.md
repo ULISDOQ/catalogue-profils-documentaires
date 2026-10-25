@@ -83,3 +83,9 @@ Lorsqu'un élément sert uniquement à démontrer, tester ou documenter un cas, 
 Lorsqu'un élément est du logiciel générique, il reste dans le composant logiciel concerné.
 
 Cette séparation doit éviter que les essais du Profile Builder ou d'un autre outil dictent l'organisation documentaire d'ULISDOQ.
+
+## Cycle de travail et versions
+
+Pour le contributeur unique, le travail ordinaire se fait dans `main`, avec des commits ciblés et vérifiés. Une branche temporaire se justifie seulement pour comparer une variante, essayer une refonte ou isoler un changement pouvant casser le fonctionnement courant. Elle a un objectif précis et rejoint `main` ou est abandonnée après conservation des résultats utiles. Elle ne sert pas d’archive permanente.
+
+Les commits conservent l’historique ; les tags marquent les jalons reproductibles. Les versions des logiciels et profils restent indépendantes de celle du dépôt. Le point d’entrée courant est [ETAT_DU_PROJET.md](ETAT_DU_PROJET.md).

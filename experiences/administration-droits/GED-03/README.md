@@ -1,7 +1,11 @@
 # GED-03 — Dossier de préparation phase 1
 
 **Référence : GED03_PHASE1_PREPARATION_AUTHORIZED_001**  
-**Statut : PREPARED / NOT_EXECUTED**
+**État courant : phase 1 exécutée sur corpus synthétique, candidat non qualifié pour la production.**
+
+Résultats et limites : [RESULTS_V0_1.md](RESULTS_V0_1.md).
+
+Le dossier de préparation historique ci-dessous est conservé pour la filiation ; ses mentions de travaux futurs et de non-exécution décrivent la préparation initiale, pas l’état courant.
 
 ## Objet
 
@@ -68,7 +72,7 @@ ATTACHMENT_EXECUTION=NO
 
 Ces absences sont une partie du test GED-core : la fabrique doit savoir ne pas mobiliser une capacité inutile.
 
-## Deltas avant exécution
+## Deltas avant exécution — préparation historique
 
 Deux deltas principaux sont identifiés, mais non implémentés :
 
@@ -77,7 +81,7 @@ Deux deltas principaux sont identifiés, mais non implémentés :
 
 Aucune dépendance Python externe n'est attendue pour le premier essai : la bibliothèque standard `email` doit être évaluée en premier.
 
-## Frontière actuelle
+## Frontière de la préparation initiale — historique
 
 ```text
 CORPUS=READY

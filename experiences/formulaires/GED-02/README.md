@@ -1,5 +1,7 @@
 # GED-02 — Formulaire fiscal 2044, millésime 2025 (DGFiP)
 
+**Document historique de préparation.** L’expérience courante est [GED-02 dans impots-finances](../../impots-finances/GED-02/README.md).
+
 **Statut :** R0_PASS_PCIA — QUALIFICATION_SCAN_BASSE_RESOLUTION_A_REALISER  
 **Autorité :** Jean — CLAU_METHODE_V2_BETA_5  
 **Famille :** formulaire administratif / déclaration fiscale structurée  

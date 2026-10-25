@@ -1,0 +1,90 @@
+{
+  "schema": "ulisdoq-profile-builder-distribution/0.1",
+  "profile_builder_version": "0.1.2",
+  "source_ref": "v0.1.0-alpha.1",
+  "package_root": "ulisdoq-profile-builder-0.1.2",
+  "entrypoint": "bin/profile-builder",
+  "semantics": {
+    "planner_executes_matchers": false,
+    "profile_materialization": false,
+    "private_export": false
+  },
+  "files": [
+    [
+      "README.md",
+      "d2f4d36196bafbdd20fba2066cf35c550e4f314b"
+    ],
+    [
+      "RELEASE_0_1_2.md",
+      "09101525c658d49d67ed75bb25b8ce00eb981239"
+    ],
+    [
+      "bin/profile-builder",
+      "3b0d9f13f792d4ad737eaa5645441788926a8115"
+    ],
+    [
+      "examples/ged03/characterization.json",
+      "328ddcba80804ba8f608df4c5c4c90feb36fd9de"
+    ],
+    [
+      "examples/ged03/expected_processing_plan.json",
+      "4e3db7942a5d92a6349dc7f2528afb893d67e9d7"
+    ],
+    [
+      "examples/ged03/requested_need.json",
+      "b81ebd0103e9254e6eef47552bd56354b5a05c2f"
+    ],
+    [
+      "registry/CAPABILITY_REGISTRY_V0_1.json",
+      "c9aaaf81861ff40af696198e98e6f68600026536"
+    ],
+    [
+      "schemas/candidate_profile_package_v0_1.schema.json",
+      "78bc5856e4a438c13f66e960c381270e67a6ac07"
+    ],
+    [
+      "schemas/candidate_review_finding_v0_1.schema.json",
+      "1cf567f7648ab5f07c2e2f50272136a338b8fc4e"
+    ],
+    [
+      "schemas/capability_registry_v0_1.schema.json",
+      "41a763251d16d4dee4b96b7e3e4d3cae1ff8bbaa"
+    ],
+    [
+      "schemas/characterization_v0_1.schema.json",
+      "f21130ab71c72b88a7a3929107855f2e79ccf72e"
+    ],
+    [
+      "schemas/processing_plan_v0_1.schema.json",
+      "57a60fff577bfd252d06f4e60da8a587360176c9"
+    ],
+    [
+      "schemas/requested_need_v0_1.schema.json",
+      "8acc78d31cf252eefb45e945d6a21ad23a6d57e1"
+    ],
+    [
+      "tests/test_matcher_selection_v0_1_1.py",
+      "470721e7c3e60259b66ef60185e38ed100f77983"
+    ],
+    [
+      "tests/test_planner_v0_1.py",
+      "e686e04caedfeeb5c8461ae56b08577ab5f5a399"
+    ],
+    [
+      "ulisdoq_profile_builder/__init__.py",
+      "b3f4756216d06217d275110297a69bbb7ea74a59"
+    ],
+    [
+      "ulisdoq_profile_builder/__main__.py",
+      "13be635566e79adccc98892cc67a44e636908b35"
+    ],
+    [
+      "ulisdoq_profile_builder/cli.py",
+      "55127fa735f1e4091cca92d8e70444575e7b2f58"
+    ],
+    [
+      "ulisdoq_profile_builder/planner.py",
+      "fc2888b5b610605f111acbc553a749ce1b1b87b3"
+    ]
+  ]
+}

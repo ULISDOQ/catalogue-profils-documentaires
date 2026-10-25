@@ -5,3 +5,4 @@
 **/resultats-prives/
 __pycache__/
 *.pyc
+.venv/
