@@ -6,7 +6,7 @@
 
 ULISDOQ est un **unificateur libre de ressources et de capacités documentaires** : il référence, relie, versionne et qualifie les sources, formats, profils, moteurs et contrôles nécessaires au traitement informationnel local. Il ne se substitue pas aux moteurs techniques.
 
-[Lire le prologue fondateur](PROLOGUE_FONDATEUR.md).
+[Lire le prologue fondateur](PROLOGUE_FONDATEUR.md). Voir aussi [l'organisation du dépôt](ORGANISATION_DU_DEPOT.md).
 
 ## Périmètre
 
