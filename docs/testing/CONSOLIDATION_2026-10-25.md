@@ -20,7 +20,7 @@ Le commit de consolidation conserve les historiques, tout en choisissant explici
 
 ## Validation
 
-Résultat sur l’arbre consolidé : **31 tests PASS** (cohérence 12, client 3, Builder 11, escalade 5), plus autocontrôle du Builder PASS. Une vérification de reconstruction depuis une copie propre est requise avant clôture du chantier.
+Résultat sur l’arbre consolidé : **31 tests PASS** (cohérence 12, client 3, Builder 11, escalade 5), plus autocontrôle du Builder PASS. La reconstruction est vérifiée depuis un nouveau clone, avec son propre environnement virtuel et les seules dépendances de test déclarées. Le premier contrôle a révélé que le scanner parcourait aussi les bibliothèques de cet environnement ; les répertoires de dépendances sont désormais exclus du contrôle des ressources du projet.
 
 La procédure [VERIFIER_LE_DEPOT.md](VERIFIER_LE_DEPOT.md) exécute les contrôles de cohérence, le client, le Builder, son autocontrôle et le contrat d’escalade. Le manifeste courant du Builder est vérifié par les empreintes de ses fichiers. Les preuves figées et les spécimens PDF/PNG GED-01 sont conservés.
 

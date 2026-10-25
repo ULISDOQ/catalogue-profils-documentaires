@@ -43,7 +43,7 @@ class CoherenceVerticales(unittest.TestCase):
         pattern = re.compile(r'(?<![\w/])(?:' + '|'.join(re.escape(r) for r in roots) + r')[^\s`"\'<>),;\]]+')
         errors = []
         for p in ROOT.rglob('*'):
-            if not p.is_file() or '.git' in p.parts or '__pycache__' in p.parts:
+            if not p.is_file() or set(p.parts) & {'.git', '.venv', 'venv', 'node_modules', '__pycache__'}:
                 continue
             rel = p.relative_to(ROOT).as_posix()
             if rel in (FROZEN, MAPPING):
@@ -195,7 +195,7 @@ class CoherenceVerticales(unittest.TestCase):
     def test_11_markdown_relative_links(self):
         errors = []
         for p in ROOT.rglob('*.md'):
-            if '.git' in p.parts:
+            if set(p.parts) & {'.git', '.venv', 'venv', 'node_modules', '__pycache__'}:
                 continue
             for value in re.findall(r'\]\(([^)]+)\)', p.read_text()):
                 if '://' in value or value.startswith('#'):
