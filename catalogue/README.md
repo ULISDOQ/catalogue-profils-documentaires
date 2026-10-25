@@ -1,25 +1,25 @@
-# ULISDOQ Catalogue
+# Catalogue ULISDOQ
 
-This directory is the canonical documentary-knowledge surface.
+Ce répertoire constitue la surface canonique de connaissance documentaire réutilisable.
 
-It is distinct from:
-- `experiments/`: historical evidence, exploratory work and research debt;
-- `profile-builder/`: generic profile-building/planning tooling;
-- `ULISTAG/`: recognition implementations;
-- `client/`: executable adapters.
+Il est distinct de :
+- `experiences/` : cas réels, preuves, essais et dettes de recherche ;
+- `profile-builder/` : sous-projet logiciel de construction et de planification de profils ;
+- `ULISTAG/` : capacités de reconnaissance documentaire ;
+- `client/` : adaptateurs et outils exécutables.
 
-## Organizing principle
+## Principe de classement
 
-The catalogue is organized by documentary category, not by experiment number, employer, software vendor, or current implementation.
+Le catalogue est organisé selon la **catégorie documentaire**, et non selon le numéro d'expérience, l'employeur, l'éditeur logiciel ou l'implémentation courante.
 
 ```text
 catalogue/
   index.json
-  profiles/
-    <domain>/
-      <jurisdiction>/
-        <documentary-category>/
-          <profile-id>/
+  profils/
+    <domaine>/
+      <juridiction>/
+        <categorie-documentaire>/
+          <identifiant-profil>/
             <version>/
               profile.json
               grammar.json
@@ -27,30 +27,32 @@ catalogue/
               EVIDENCE.md
 ```
 
-## Category identity rule
+Les noms de fichiers et objets techniques peuvent rester en anglais lorsque cette terminologie est celle de l'ingénierie ou d'un contrat logiciel stabilisé.
 
-A category profile contains the smallest identity statement that defines the documentary category.
+## Identité d'une catégorie
 
-Everything else belongs to one of:
-- semantic grammar;
-- extraction grammar;
-- observed variation;
-- optional specialization/adapters;
-- qualification evidence.
+Un profil de catégorie contient l'énoncé minimal qui définit l'identité documentaire.
 
-For GED-05:
+Tout le reste relève de :
+- la grammaire sémantique ;
+- la grammaire d'extraction ;
+- la variation observée ;
+- d'éventuels adaptateurs spécialisés ;
+- la preuve de qualification.
+
+Pour GED-05 :
 
 ```text
-CATEGORY = BULLETIN_DE_PAIE_FRANCAIS
-CATEGORY_INVARIANT = DOCUMENT_IS_A_FRENCH_PAYSLIP
+CATEGORIE = BULLETIN_DE_PAIE_FRANCAIS
+INVARIANT_DE_CATEGORIE = DOCUMENT_IS_A_FRENCH_PAYSLIP
 ```
 
-Employer identity, employee identity, payroll software, exact layout, coordinates, labels and payroll codes are not category invariants.
+L'identité de l'employeur ou du salarié, le logiciel de paie, la mise en page exacte, les coordonnées, libellés et codes de paie ne sont pas des invariants de catégorie.
 
-## Promotion boundary
+## Frontière de promotion
 
-`CANDIDATE_UNQUALIFIED` profiles may exist in the catalogue for study and replay.
+Un profil `CANDIDATE_UNQUALIFIED` peut exister dans le catalogue afin d'être étudié et éprouvé.
 
-A profile is not automatically selectable merely because it exists in `catalogue/`.
+Sa présence dans `catalogue/` ne le rend pas automatiquement sélectionnable.
 
-Qualification and publication remain distinct.
+Construction, qualification et publication restent distinctes.
