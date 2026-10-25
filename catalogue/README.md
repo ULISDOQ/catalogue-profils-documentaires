@@ -21,10 +21,10 @@ catalogue/
         <categorie-documentaire>/
           <identifiant-profil>/
             <version>/
-              profile.json
-              grammar.json
+              profil.json
+              grammaire.json
               QUALIFICATION.md
-              EVIDENCE.md
+              PREUVES.md
 ```
 
 Les noms de fichiers et objets techniques peuvent rester en anglais lorsque cette terminologie est celle de l'ingénierie ou d'un contrat logiciel stabilisé.
