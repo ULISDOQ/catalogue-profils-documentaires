@@ -1,7 +1,6 @@
 {
   "schema": "ulisdoq-profile-builder-distribution/0.1",
   "profile_builder_version": "0.1.2",
-  "source_ref": "v0.1.0-alpha.1",
   "package_root": "ulisdoq-profile-builder-0.1.2",
   "entrypoint": "bin/profile-builder",
   "semantics": {
@@ -86,5 +85,6 @@
       "ulisdoq_profile_builder/planner.py",
       "fc2888b5b610605f111acbc553a749ce1b1b87b3"
     ]
-  ]
+  ],
+  "source_commit": "1d0f8b17ece6c1c77a8380182e6064b0fb3015bc"
 }

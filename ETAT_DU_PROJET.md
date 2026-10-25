@@ -21,7 +21,7 @@ Les candidats conservés dans les expériences restent distincts du catalogue ca
 ## Reprendre ou reconstruire
 
 1. Lire cette page, puis [l’organisation du dépôt](ORGANISATION_DU_DEPOT.md).
-2. Récupérer le jalon `v0.1.0-alpha.1` pour reproduire cet état exact, ou `main` pour le travail courant.
+2. Récupérer `main` et noter son commit exact pour reproduire cet état. Le tag `v0.1.0-alpha.1` est prévu mais sa création reste en attente.
 3. Suivre [la vérification du dépôt](docs/testing/VERIFIER_LE_DEPOT.md).
 4. Consulter les expériences et preuves uniquement lorsque le travail l’exige.
 
@@ -32,3 +32,7 @@ Les versions ont des périmètres distincts : jalon du dépôt `0.1.0-alpha.1`, 
 Poursuivre l’exploration documentaire de phase 1. Les dettes de robustesse, performance et qualification approfondie GED-02/GED-04 restent réservées à la phase 2 ; la consolidation du logiciel existant ne les relance pas.
 
 Le [registre](project/LEDGER.md) conserve les décisions datées ; cette page présente leur état courant. Les contrôles de confidentialité précèdent toute publication de nouveau spécimen. La validation déjà donnée pour GED-01 reste acquise.
+
+## Clôture administrative en attente
+
+La consolidation du contenu et la vérification depuis un nouveau clone sont réalisées. Les trois anciens historiques sont ancêtres de main. La suppression de leurs noms de branches et la création du tag restent en attente d’un accès permettant ces opérations GitHub ; elles ne sont pas annoncées comme effectuées. Le manifeste du Builder désigne un commit source exact et reste utilisable sans tag.

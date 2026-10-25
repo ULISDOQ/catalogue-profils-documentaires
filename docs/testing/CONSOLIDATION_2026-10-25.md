@@ -25,3 +25,9 @@ Résultat sur l’arbre consolidé : **31 tests PASS** (cohérence 12, client 3,
 La procédure [VERIFIER_LE_DEPOT.md](VERIFIER_LE_DEPOT.md) exécute les contrôles de cohérence, le client, le Builder, son autocontrôle et le contrat d’escalade. Le manifeste courant du Builder est vérifié par les empreintes de ses fichiers. Les preuves figées et les spécimens PDF/PNG GED-01 sont conservés.
 
 Les dettes GED-02/GED-04 restent ouvertes ; ce jalon ne qualifie ni tous les profils, ni les moteurs OCR/OpenCV/invoice2data, ni un déploiement consommateur.
+
+## Situation de clôture
+
+La consolidation a rejoint main au commit `bc23537e934140288ea66e3e34f73c431e8159d5`, qui conserve les deux historiques divergents comme parents supplémentaires. La correction de reconstruction propre a suivi au commit `1d0f8b17ece6c1c77a8380182e6064b0fb3015bc`. Les trois anciens sommets de branche sont désormais ancêtres de main.
+
+La suppression des trois noms de branches et la création du tag ne sont pas réalisées : la connexion sécurisée du navigateur a été refusée par le contrôle automatique avant saisie d’identifiants. Aucun contournement ni changement de permissions n’a été tenté. Les commandes de reconstruction utilisent main et son commit exact ; le manifeste du Builder conserve ses empreintes et un commit source explicite.
