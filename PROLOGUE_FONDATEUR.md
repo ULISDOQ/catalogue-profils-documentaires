@@ -52,6 +52,10 @@ L'ouverture n'efface pas la responsabilité : elle impose une méthode de partag
 
 ## Notre horizon
 
+Nous retenons l'hypothèse qu'un catalogue d'environ **10 000 profils documentaires** permettrait à ULISDOQ de soutenir des usages en production et d'apporter des gains tangibles : réduire les ressaisies, faciliter la reconnaissance et le classement, et accélérer l'extraction et la vérification des informations.
+
+La couverture d'environ **80 % de la paperasserie courante de 1 000 organisations** constitue un objectif de travail. Ces repères expriment une ambition de développement ; leur portée et les gains obtenus devront être éprouvés dans les usages réels.
+
 **Explorer les documents. Partager les connaissances. Qualifier l'information.**
 
 Ce prologue exprime l'intention fondatrice d'ULISDOQ. Il ne constitue ni une licence, ni une certification, ni une validation juridique ou technique des profils référencés.
