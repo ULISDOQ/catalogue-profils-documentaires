@@ -29,6 +29,7 @@ Un candidat conservé dans une expérience n'est pas automatiquement promu dans 
 
 ## Utiliser et contribuer
 
+- [Reprendre le projet : étapes ordonnées et horizon](documentation/FEUILLE_DE_ROUTE.md).
 - [Comprendre l'organisation et l'architecture](documentation/architecture/ORGANISATION_DU_DEPOT.md).
 - [Vérifier le dépôt depuis une copie propre](logiciels/verification/VERIFIER_LE_DEPOT.md).
 - [Consulter les procédures de déploiement Ubuntu](logiciels/deploiement/ubuntu/complete-v0_1/README.md) et leurs limites de qualification.

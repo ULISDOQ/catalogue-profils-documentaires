@@ -54,6 +54,8 @@ L'exploitation visée est :
 
 Cette cible n'est pas livrée. Le contrat de sortie commun reste à définir. Les documents restent locaux ; aucun appel à ChatGPT n'est nécessaire au fonctionnement nominal. Le client fournit le traitement ; la GED ou l'application consommatrice conserve le classement, le stockage et l'usage métier. Une escalade peut utiliser le [contrat existant](../escalade-consommateur/README.md), sans transmission automatique de données privées.
 
+La [dette C du lecteur invoice2data](documentation/DETTE_INVOICE2DATA_LECTEUR.md) décrit le défaut bloquant et ses critères de clôture. La [feuille de route générale](../../documentation/FEUILLE_DE_ROUTE.md) ordonne les étapes du projet.
+
 ## Ce qu'il reste à développer ou qualifier
 
 | Chantier | Acquis disponibles | Écart à combler |
