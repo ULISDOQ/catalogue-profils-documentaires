@@ -1,6 +1,6 @@
 {
-  "identifiant": "ULISDOQ_MIGRATION_ORGANISATION_LOT_1",
-  "statut": "LOT_1_APPLIQUE",
+  "identifiant": "ULISDOQ_REORGANISATION_2026_10_29",
+  "statut": "APPLIQUE",
   "base_commit": "6dbf01e97a14e943cee2ab53a2d9aab6991be296",
   "date": "2026-10-29",
   "portee": "208 fichiers conservés, 116 déplacés ; références et racines adaptées ; aucune fusion ni suppression de contenu.",
@@ -1471,7 +1471,7 @@
       "octets_figes": false
     }
   ],
-  "autorisation": "Jean, validation explicite du lot 1 le 29 octobre 2026",
+  "autorisation": "Jean, validation explicite de la réorganisation en quatre espaces le 29 octobre 2026",
   "distribution_courante": "logiciels/profile-builder/DISTRIBUTION_MANIFEST_ORGANISATION_2.json",
   "controle_octets_figes": "29 fichiers dont les SHA-256 de départ restent inchangés."
 }

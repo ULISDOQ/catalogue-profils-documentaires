@@ -18,7 +18,7 @@ import zlib
 ROOT = Path(__file__).resolve().parents[3]
 FROZEN = 'experiences/administration-droits/GED-03/preuves/FROZEN_RESULTS_BUNDLE_001.json'
 MAPPING = 'experiences/administration-droits/GED-03/preuves/CORRESPONDANCE_CHEMINS_HISTORIQUES.json'
-MIGRATION = 'documentation/migration/CORRESPONDANCE_LOT_1.json'
+MIGRATION = 'documentation/migration/CORRESPONDANCE_CHEMINS.json'
 
 
 def load(rel):

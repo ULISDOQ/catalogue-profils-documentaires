@@ -31,7 +31,7 @@ Le code, les contrats, tests et documents propres restent auprès de chaque comp
 
 Le registre `catalogue/registre-profils.json` peut référencer des candidats des expériences ; leur référencement ne les promeut pas au catalogue canonique. Les registres du Builder décrivent ses capacités logicielles et gardent leur rôle distinct.
 
-La [correspondance de migration](../migration/CORRESPONDANCE_LOT_1.json) conserve les anciens chemins et les empreintes de départ. Ce document reste séparé jusqu'à l'examen de sa fusion avec l'architecture générale.
+La [correspondance de migration](../migration/CORRESPONDANCE_CHEMINS.json) conserve les anciens chemins et les empreintes de départ. Ce document reste séparé jusqu'à l'examen de sa fusion avec l'architecture générale.
 
 
 ## Catalogue
