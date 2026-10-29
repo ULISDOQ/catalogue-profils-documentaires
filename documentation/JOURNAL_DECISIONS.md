@@ -33,3 +33,9 @@ Les entrées du 18 octobre restent historiques ; elles ne décrivent pas toutes 
 ## Ajouter une entrée
 
 Date, identifiant, objet, statut, lien vers protocole ou preuve vérifiable, auteur/relecteur si publiable, limites et décision explicite. Les informations privées ne figurent jamais dans ce registre.
+
+## Correction du lanceur Builder — 29 octobre 2026
+
+| Date | Référence | Objet | Statut | Preuve / limite |
+| --- | --- | --- | --- | --- |
+| 2026-10-29 | BUILDER-LANCEUR | Autorisation de Jean après clarification : paquet présent, chemin d’import du lanceur défectueux ; correction 0.1.3 | TESTED_CANDIDATE | [Version et recette](../logiciels/profile-builder/RELEASE_0_1_3.md), tests extérieurs et archive reconstruite ; plan inchangé. Ni déploiement consommateur ni correction invoice2data. |

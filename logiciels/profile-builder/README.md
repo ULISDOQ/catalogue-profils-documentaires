@@ -1,6 +1,6 @@
 # ULISDOQ Profile Builder
 
-**Version courante : [0.1.2 — consolidation](RELEASE_0_1_2.md).** Les indications 0.1.0 ci-dessous décrivent le socle initial ; la version courante ajoute la sélection déterministe des matchers de la politique 0.1.1. [Manifeste courant](DISTRIBUTION_MANIFEST_ORGANISATION_2.json).
+**Version courante : [0.1.3 — correction du lanceur](RELEASE_0_1_3.md).** Les indications 0.1.0 ci-dessous décrivent le socle initial ; la version courante conserve la sélection déterministe des matchers de la politique 0.1.1 et permet le lancement depuis tout répertoire. [Manifeste courant](DISTRIBUTION_MANIFEST_ORGANISATION_2.json).
 
 > **Statut actuel : paquet candidat 0.1.0 produit — planner déterministe et CLI disponibles pour acceptation independent Linux test environment ; fabrication automatique d'un nouveau profil pas encore autorisée.**
 

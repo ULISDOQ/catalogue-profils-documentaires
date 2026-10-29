@@ -219,7 +219,7 @@ class CoherenceVerticales(unittest.TestCase):
 
     def test_12_current_builder_distribution(self):
         manifest = load('logiciels/profile-builder/DISTRIBUTION_MANIFEST_ORGANISATION_2.json')
-        self.assertEqual(manifest['profile_builder_version'], '0.1.2')
+        self.assertEqual(manifest['profile_builder_version'], '0.1.3')
         self.assertEqual(manifest['source_base_commit'], '6dbf01e97a14e943cee2ab53a2d9aab6991be296')
         self.assertEqual(manifest['source_scope'], 'CONTAINING_GIT_COMMIT')
         self.assertEqual(len(manifest['files']), len({path for path, _ in manifest['files']}))

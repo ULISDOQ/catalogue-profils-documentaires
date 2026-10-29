@@ -9,7 +9,7 @@ Jalon : **0.1.0-alpha.1 — consolidation du 25 octobre 2026**.
 | Catalogue | Profil canonique candidat de bulletin de paie français, non sélectionnable automatiquement | [Index](../catalogue/index.json) |
 | Client | Capacité générique séparée des expériences ; TAG, résolution, extraction locale | [Client](../logiciels/client/README.md) |
 | ULISTAG | Matchers candidats et référence visuelle GED-02 conservée avec empreintes | [ULISTAG](../logiciels/ULISTAG/README.md) |
-| Profile Builder | 0.1.2, sélection des matchers intégrée ; planification seule | [Version courante](../logiciels/profile-builder/RELEASE_0_1_2.md) |
+| Profile Builder | 0.1.3, lanceur autonome corrigé ; sélection des matchers intégrée, planification seule | [Version courante](../logiciels/profile-builder/RELEASE_0_1_3.md) |
 | GED-01 | Spécimens publics validés par le fondateur ; candidat, stabilité intra-modèle à approfondir | [Expérience](../experiences/factures/GED-01/README.md) |
 | GED-02 | Reconnaissance/extraction expérimentales ; robustesse sémantique partielle, dont ligne 420 | [Dette](../experiences/impots-finances/GED-02/profils/DEBT-GED02-PROFILE-SEMANTIC-ROBUSTNESS-001.md) |
 | GED-03 | Six positifs et trois négatifs/limites synthétiques ; parseur et validation éprouvés | [Résultats](../experiences/administration-droits/GED-03/RESULTS_V0_1.md) |
@@ -25,7 +25,9 @@ Les candidats conservés dans les expériences restent distincts du catalogue ca
 3. Suivre [la vérification du dépôt](../logiciels/verification/VERIFIER_LE_DEPOT.md).
 4. Consulter les expériences et preuves uniquement lorsque le travail l’exige.
 
-Les versions ont des périmètres distincts : jalon du dépôt `0.1.0-alpha.1`, logiciel Builder `0.1.2`, versions propres à chaque profil. Une version de dépôt ne qualifie pas automatiquement ces objets.
+Les versions ont des périmètres distincts : jalon du dépôt `0.1.0-alpha.1`, logiciel Builder `0.1.3`, versions propres à chaque profil. Une version de dépôt ne qualifie pas automatiquement ces objets.
+
+L'audit de stabilité du 29 octobre a révélé trois défauts antérieurs au rangement. Le lanceur du Builder est corrigé en 0.1.3. Deux défauts de la chaîne invoice2data restent ouverts : dépendance `pkg_resources` absente d'une installation neuve et passage d'un nom de lecteur à une API qui attend un module. La stabilité globale du profil de déploiement complet reste donc non acquise.
 
 ## Suite
 
