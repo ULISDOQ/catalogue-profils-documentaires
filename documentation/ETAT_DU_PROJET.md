@@ -7,7 +7,7 @@ Jalon : **0.1.0-alpha.1 — consolidation du 25 octobre 2026**.
 | Surface | État courant | Référence |
 | --- | --- | --- |
 | Catalogue | Profil canonique candidat de bulletin de paie français, non sélectionnable automatiquement | [Index](../catalogue/index.json) |
-| Client | Commandes candidates séparées : TAG, résolution, EML, OCR ; facture encore bloquée par C | [Client](../logiciels/client/README.md) |
+| Client | Commandes candidates séparées : TAG, résolution, EML, OCR ; facture synthétique extraite après C | [Client](../logiciels/client/README.md) |
 | ULISTAG | Matchers candidats et référence visuelle GED-02 conservée avec empreintes | [ULISTAG](../logiciels/ULISTAG/README.md) |
 | Profile Builder | 0.1.3, lanceur autonome corrigé ; sélection des matchers intégrée, planification seule | [Version courante](../logiciels/profile-builder/RELEASE_0_1_3.md) |
 | GED-01 | Spécimens publics validés par le fondateur ; candidat, stabilité intra-modèle à approfondir | [Expérience](../experiences/factures/GED-01/README.md) |
@@ -27,11 +27,11 @@ Les candidats conservés dans les expériences restent distincts du catalogue ca
 
 Les versions ont des périmètres distincts : jalon du dépôt `0.1.0-alpha.1`, logiciel Builder `0.1.3`, versions propres à chaque profil. Une version de dépôt ne qualifie pas automatiquement ces objets.
 
-L'audit de stabilité du 29 octobre a révélé trois défauts antérieurs au rangement. Le lanceur du Builder est corrigé en 0.1.3. L'installation neuve d'invoice2data est corrigée par la dépendance de compatibilité `setuptools==80.9.0`, qui fournit `pkg_resources` ; déclarations et contrôle de déploiement sont alignés. L'adaptateur facture transmet encore un nom de lecteur à une API qui attend un module. La stabilité globale du profil de déploiement complet reste donc non acquise.
+L'audit de stabilité du 29 octobre a révélé trois défauts antérieurs au rangement. Le lanceur du Builder est corrigé en 0.1.3. L'installation neuve d'invoice2data est corrigée par la dépendance de compatibilité `setuptools==80.9.0`, qui fournit `pkg_resources` ; déclarations et contrôle de déploiement sont alignés. L'adaptateur facture 0.1.1-phase1 transmet désormais le module lecteur attendu (C) ; les épreuves synthétiques text/pdftotext passent. Cette correction ne qualifie pas les profils, tous les lecteurs ou l'installation sur un poste consommateur.
 
 ## Suite
 
-Prochaine reprise : examiner la [dette C du lecteur invoice2data](../logiciels/client/documentation/DETTE_INVOICE2DATA_LECTEUR.md), puis recevoir le socle logiciel et poursuivre selon la [feuille de route](FEUILLE_DE_ROUTE.md). La fiche de dette ne vaut pas autorisation d'exécuter sa correction. Les dettes de robustesse, performance et qualification approfondie GED-02/GED-04 restent réservées à la phase 2 ; la consolidation du logiciel existant ne les relance pas.
+La [dette C du lecteur invoice2data](../logiciels/client/documentation/DETTE_INVOICE2DATA_LECTEUR.md) est corrigée et conserve sa recette. Poursuivre la réception du socle logiciel et l'arbitrage des frontières selon la [feuille de route](FEUILLE_DE_ROUTE.md). Les dettes de robustesse, performance et qualification approfondie GED-02/GED-04 restent réservées à la phase 2 ; la consolidation du logiciel existant ne les relance pas.
 
 Le [registre](JOURNAL_DECISIONS.md) conserve les décisions datées ; cette page présente leur état courant. Les contrôles de confidentialité précèdent toute publication de nouveau spécimen. La validation déjà donnée pour GED-01 reste acquise.
 

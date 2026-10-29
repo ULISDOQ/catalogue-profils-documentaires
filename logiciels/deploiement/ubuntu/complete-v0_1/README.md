@@ -86,7 +86,7 @@ semantic_validation
 ## Limites actuelles de reproductibilité
 
 - invoice2data 0.4.5 utilise encore `pkg_resources` : l'environnement déclare `setuptools==80.9.0` comme dépendance de compatibilité, et la batterie contrôle les imports et les deux versions ; `pkg_resources` étant déprécié, cet épinglage devra être réexaminé lors d'une évolution du moteur ;
-- l'installation neuve et le chargement d'invoice2data sont corrigés ; l'adaptateur `extract.py` transmet encore un nom de lecteur au lieu du module attendu par l'API : l'extraction fonctionnelle et la batterie globale restent en échec jusqu'à cette correction distincte ;
+- l'installation neuve, le chargement et le passage du module lecteur invoice2data sont corrigés ; la recette synthétique vérifie text et pdftotext. Les autres lecteurs, l'installation sur un poste consommateur et le rollback restent à qualifier ;
 - le profil complet n'a pas encore été exécuté et qualifié sur PCIA ;
 - un environnement PCIA rattaché est une combinaison observée, pas automatiquement un lock canonique ;
 - son `pip freeze` est hashé comme preuve pendant la vérification ;

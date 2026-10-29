@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[2]
 SUITES = [
     ('Cohérence des verticales', ROOT, ['-m', 'unittest', 'discover', '-s', 'logiciels/verification/tests', '-v']),
     ('Client TAG', ROOT / 'logiciels/client', ['test_tag_candidate.py']),
+    ('Adaptateur facture', ROOT / 'logiciels/client', ['-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_invoice_adapter.py', '-v']),
     ('Profile Builder', ROOT / 'logiciels/profile-builder', ['-m', 'unittest', 'discover', '-s', 'tests', '-v']),
     ('Autocontrôle du Builder', ROOT / 'logiciels/profile-builder', ['-m', 'ulisdoq_profile_builder', 'selftest']),
     ('Escalade consommateur', ROOT, ['-m', 'unittest', 'discover', '-s', 'logiciels/escalade-consommateur/tests', '-v']),

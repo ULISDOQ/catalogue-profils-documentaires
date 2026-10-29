@@ -9,14 +9,14 @@ Cette page ordonne la reprise et les étapes ultérieures. L'[état du projet](E
 - Correction A intégrée : lanceur du Builder 0.1.3, distribution reconstruite et plan inchangé.
 - Correction B intégrée : dépendance de compatibilité invoice2data et manifestes alignés, installation neuve et imports vérifiés.
 - Client documenté : commandes réelles, limites, superpositions, cible phase 3 et travaux manquants. Cela ne tranche pas les futures frontières logicielles.
-- Dernière recette logicielle : **37 tests et selftest PASS** ; batterie complète **30/31**, extraction facture encore bloquée par C. Aucun profil n'est qualifié pour la production.
+- Correction C réalisée : module lecteur transmis à invoice2data ; 44 tests du dépôt, selftest et trois tests d'intégration synthétiques PASS. La recette complète sur le commit publié complète ces contrôles ; aucun profil n'est qualifié pour la production.
 - GED-05 en pause ; dettes de qualification GED-02/GED-04 différées. Aucun déploiement consommateur n'a été exécuté pendant ce chantier.
 
 ## Reprise et étapes ordonnées
 
 | Ordre | Étape | État / décision nécessaire | Résultat attendu pour passer à la suite |
 | --- | --- | --- | --- |
-| 1 | Corriger le lecteur invoice2data | [Dette C ouverte](../logiciels/client/documentation/DETTE_INVOICE2DATA_LECTEUR.md) ; correction à autoriser séparément | Appel API corrigé, tests de lecteur et extraction synthétique, manifeste et documentation alignés, commit vérifié. |
+| 1 | Corriger le lecteur invoice2data | [Dette C corrigée](../logiciels/client/documentation/DETTE_INVOICE2DATA_LECTEUR.md) ; code et tests réalisés à la demande de Jean | Appel API corrigé, tests de lecteur et extraction synthétique, manifeste et documentation alignés, commit vérifié. |
 | 2 | Recevoir le socle logiciel après A/B/C | Après C ; limites d'environnement à conserver explicitement | Recette reproductible par composant et batterie complète sur les versions retenues ; identifier les réserves restantes. Une réussite locale ne remplace pas la recette sur un environnement consommateur. |
 | 3 | Arbitrer les frontières logicielles | Discussion ouverte : client, outils de préparation, Builder et capacités partagées | Responsabilités et dépendances compréhensibles ; distinguer réemploi utile et duplication réelle avant tout rangement. Voir [les superpositions du client](../logiciels/client/README.md). |
 | 4 | Relire et simplifier les documents internes | Racine traitée ; sous-dossiers encore à examiner par périmètres validés | Re-parsage critique, fusions utiles, retrait motivé de l'inutile avec reconstructibilité conservée ; roadmaps des composants actualisées. |
@@ -25,7 +25,7 @@ Cette page ordonne la reprise et les étapes ultérieures. L'[état du projet](E
 | 7 | Qualifier profils et capacités en phase 2 | Chantier ultérieur à ouvrir explicitement | Variantes et négatifs indépendants, exactitude sémantique, robustesse, performances, décisions bornées de qualification ; reprise des dettes documentées. |
 | 8 | Éprouver puis livrer l'exploitation de phase 3 | Conditionnée par logiciel fiable et ressources qualifiées | Installation et recette indépendantes, traitement local de bout en bout, interfaces documentées, mises à jour et erreurs maîtrisées. |
 
-L'ordre n'empêche pas un arbitrage motivé si une dépendance apparaît ; il évite de relancer tous les chantiers à la reprise. La prochaine discussion porte sur C, sans la considérer déjà autorisée ou corrigée.
+L'ordre n'empêche pas un arbitrage motivé si une dépendance apparaît ; il évite de relancer tous les chantiers à la reprise. C est réalisée ; la reprise porte désormais sur la réception du socle et les frontières logicielles, sans élargissement automatique du développement.
 
 ## Où retrouver le détail
 

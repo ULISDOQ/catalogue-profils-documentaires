@@ -22,7 +22,7 @@ Le registre du Builder référence déjà les adaptateurs de ce dossier. Fabrica
 
 | Programme | Entrées à fournir | Sortie réelle | Limite actuelle |
 | --- | --- | --- | --- |
-| [Adaptateur invoice2data](extract.py) | Facture, répertoire de modèles YAML et lecteur | Contrat : JSON `EXTRACTED_UNVERIFIED`, `NO_MATCH` ou `ERROR`, données si extraction et empreinte source | Spécialisé dans les factures compatibles invoice2data. Chargement corrigé par B ; extraction encore bloquée par le défaut de lecteur réservé à C. |
+| [Adaptateur invoice2data](extract.py) | Facture, répertoire de modèles YAML et lecteur | Contrat : JSON `EXTRACTED_UNVERIFIED`, `NO_MATCH` ou `ERROR`, données si extraction et empreinte source | Spécialisé dans les factures compatibles invoice2data. Chargement et lecteur corrigés (B/C) ; extraction synthétique éprouvée avec les lecteurs text et pdftotext. Les autres lecteurs locaux restent à éprouver dans leur environnement. |
 | [Extraction de courriel](eml_extract_v0_1.py) | Fichier EML, profil et schéma | JSON : statut de lecture, en-têtes, adresses, texte, présence HTML, métadonnées des pièces jointes et traçabilité | Neuf cas synthétiques GED-03 éprouvés. Pas d'exécution ou d'interprétation sémantique générale des pièces jointes. |
 | [OCR piloté par profil](profile_ocr_extract_v0_1.py) | PDF, registre, TAG déjà choisi, profil/binding référencés et schéma | JSON de champs : valeurs ou statuts `UNREADABLE`/`AMBIGUOUS`, preuves et empreintes | Primitive éprouvée sur fixture synthétique. Le TAG est fourni, pas reconnu automatiquement ; la dette d'exactitude GED-02 reste ouverte. |
 | [Résolveur de profils](profile_resolver_v0_1.py) | Registre local, type MIME et extension déclarés | JSON `MATCH`, `UNKNOWN` ou `AMBIGUOUS`, nombre et références des candidats | Mode `CONTAINER_NATIVE` seulement. Ne lit pas le document et ne contrôle pas la qualification de production. |
@@ -54,13 +54,13 @@ L'exploitation visée est :
 
 Cette cible n'est pas livrée. Le contrat de sortie commun reste à définir. Les documents restent locaux ; aucun appel à ChatGPT n'est nécessaire au fonctionnement nominal. Le client fournit le traitement ; la GED ou l'application consommatrice conserve le classement, le stockage et l'usage métier. Une escalade peut utiliser le [contrat existant](../escalade-consommateur/README.md), sans transmission automatique de données privées.
 
-La [dette C du lecteur invoice2data](documentation/DETTE_INVOICE2DATA_LECTEUR.md) décrit le défaut bloquant et ses critères de clôture. La [feuille de route générale](../../documentation/FEUILLE_DE_ROUTE.md) ordonne les étapes du projet.
+La [dette C du lecteur invoice2data](documentation/DETTE_INVOICE2DATA_LECTEUR.md) conserve le défaut corrigé, sa recette et ses limites. La [feuille de route générale](../../documentation/FEUILLE_DE_ROUTE.md) ordonne les étapes du projet.
 
 ## Ce qu'il reste à développer ou qualifier
 
 | Chantier | Acquis disponibles | Écart à combler |
 | --- | --- | --- |
-| Adaptateurs fiables | Commandes EML/OCR candidates, chargement invoice2data corrigé | Corriger C ; éprouver chaque interface et ses erreurs. |
+| Adaptateurs fiables | Commandes EML/OCR candidates, chargement invoice2data corrigé | C corrigée ; poursuivre les épreuves de chaque interface, lecteur et erreur. |
 | Frontières logicielles lisibles | Capacités et références du registre Builder | Arbitrer la place des outils de préparation et du code partagé ; éviter les implémentations redondantes. |
 | Chaîne d'exploitation | Résolveur limité et adaptateurs appelables séparément | Définir l'entrée commune et relier caractérisation, sélection, exécution et contrôles. Éprouver les refus autant que les succès. |
 | Catalogue local maîtrisé | Git, index, registres et empreintes | Synchronisation/cache, compatibilité, version épinglée et politique de mise à jour/retrait, vérifiés hors du dépôt de développement. |
@@ -69,7 +69,7 @@ La [dette C du lecteur invoice2data](documentation/DETTE_INVOICE2DATA_LECTEUR.md
 | Ressources qualifiées | Candidats, oracles, preuves et dettes | Phase 2 : variantes indépendantes, négatifs, exactitude, performances et décision bornée. GED-04 reste différé et GED-05 en pause. |
 | Usage chez un consommateur | Primitives locales et contrat d'escalade candidat | Recette indépendante d'installation et de bout en bout, interface d'appel, journalisation, mises à jour et reprise sur erreur. Aucun connecteur GED général livré ici. |
 
-La phase 3 nécessite à la fois une chaîne logicielle fiable et des profils qualifiés. Cette liste rend le travail restant visible ; elle n'autorise pas automatiquement sa réalisation ni la reprise des expériences suspendues. La correction C reste à valider séparément.
+La phase 3 nécessite à la fois une chaîne logicielle fiable et des profils qualifiés. Cette liste rend le travail restant visible ; elle n'autorise pas automatiquement sa réalisation ni la reprise des expériences suspendues. La correction C est intégrée ; elle ne qualifie pas tous les lecteurs ni les profils.
 
 ## Installation, exemples et vérification
 
@@ -77,4 +77,4 @@ Le [profil complet Ubuntu](../deploiement/ubuntu/complete-v0_1/README.md) décri
 
 Pour un exemple d'extraction EML sur corpus public, voir [les résultats GED-03](../../experiences/administration-droits/GED-03/RESULTS_V0_1.md). Les commandes de [vérification du dépôt](../verification/VERIFIER_LE_DEPOT.md) contrôlent les vecteurs et contrats couverts ; elles ne valent pas qualification des moteurs ni recette terrain.
 
-L'installation neuve d'invoice2data et les imports passent avec `invoice2data==0.4.5` et `setuptools==80.9.0`. Son extraction fonctionnelle reste en échec tant que C n'est pas corrigée. Le profil complet n'est donc pas déclaré stable sans réserve.
+L'installation neuve d'invoice2data et les imports passent avec `invoice2data==0.4.5` et `setuptools==80.9.0`. L'adaptateur 0.1.1-phase1 transmet désormais un module lecteur à l'API. Les lecteurs locaux déclarés sont pdftotext, tesseract, pdfminer (module pdfminer_wrapper), pdfplumber, text et ocrmypdf ; leurs prérequis restent nécessaires. Le lecteur gvision est exclu du contrat local. Les recettes synthétiques text/pdftotext ne qualifient ni tous les lecteurs ni le déploiement consommateur.

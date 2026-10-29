@@ -8,7 +8,7 @@ Les logiciels servent le catalogue documentaire. Une brique technique exécute u
 | [Profile Builder](profile-builder/README.md) | Aider à fabriquer un profil candidat | 0.1.3 : sélection de capacités et planification, sans exécution des moteurs ni matérialisation de profil. |
 | [ULISTAG](ULISTAG/README.md) | Reconnaître une structure documentaire lorsque nécessaire | Matchers, protocoles et preuves candidats ; reconnaissance distincte de l'extraction et de la qualification. |
 | [Escalade consommateur](escalade-consommateur/README.md) | Instruire un manque rencontré par un consommateur | Contrat Git et cycle candidats ; pas de transfert automatique de documents privés. |
-| [Déploiement](deploiement/ubuntu/complete-v0_1/README.md) | Préparer et vérifier les environnements | Profil Ubuntu candidat ; chargement invoice2data corrigé, extraction encore bloquée par C. |
+| [Déploiement](deploiement/ubuntu/complete-v0_1/README.md) | Préparer et vérifier les environnements | Profil Ubuntu candidat ; adaptateur invoice2data corrigé et extraction synthétique éprouvée ; déploiement consommateur non qualifié. |
 | [Vérification](verification/VERIFIER_LE_DEPOT.md) | Contrôler cohérence et régressions couvertes | Contrats, empreintes, liens et vecteurs ; couverture distincte de la qualification des moteurs et du terrain. |
 
 Client et Builder doivent réemployer les mêmes adaptateurs et moteurs. Leur code ne doit pas être dupliqué. Le rangement actuel mélange encore préparation et exploitation ; les choix de séparation ou de fusion restent à arbitrer, sans déplacement décidé par cette description.

@@ -45,3 +45,9 @@ Date, identifiant, objet, statut, lien vers protocole ou preuve vérifiable, aut
 | Date | Référence | Objet | Statut | Preuve / limite |
 | --- | --- | --- | --- | --- |
 | 2026-10-29 | INVOICE2DATA-DEPENDANCE | Étape B autorisée par Jean : déclarer setuptools 80.9.0 pour pkg_resources requis par invoice2data 0.4.5 | TESTED_CANDIDATE | [Dépendances et limites](../logiciels/deploiement/ubuntu/complete-v0_1/README.md), installation neuve et imports contrôlés ; manifestes alignés. Adaptateur facture inchangé, défaut de lecteur réservé à C ; profil complet non qualifié. |
+
+## Correction du lecteur invoice2data — 29 octobre 2026
+
+| Date | Référence | Objet | Statut | Preuve / limite |
+| --- | --- | --- | --- | --- |
+| 2026-10-29 | INVOICE2DATA-LECTEUR-C | Autorisation de Jean ; résolution du module lecteur et correction de l'appel API, adaptateur 0.1.1-phase1 | TESTED_CANDIDATE | [Dette et recette](../logiciels/client/documentation/DETTE_INVOICE2DATA_LECTEUR.md), sept tests d'interface et trois tests moteur synthétiques. Pas de qualification générale des lecteurs ou des profils. |
