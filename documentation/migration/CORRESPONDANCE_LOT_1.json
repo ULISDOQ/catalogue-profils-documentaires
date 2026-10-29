@@ -1,0 +1,1477 @@
+{
+  "identifiant": "ULISDOQ_MIGRATION_ORGANISATION_LOT_1",
+  "statut": "LOT_1_APPLIQUE",
+  "base_commit": "6dbf01e97a14e943cee2ab53a2d9aab6991be296",
+  "date": "2026-10-29",
+  "portee": "208 fichiers conservés, 116 déplacés ; références et racines adaptées ; aucune fusion ni suppression de contenu.",
+  "fichiers_existants": 208,
+  "fichiers_deplaces": 116,
+  "destinations_par_espace": {
+    "(racine)": 6,
+    "catalogue": 7,
+    "documentation": 15,
+    "experiences": 84,
+    "logiciels": 96
+  },
+  "fichiers": [
+    {
+      "source": ".gitignore",
+      "destination": ".gitignore",
+      "source_sha256": "598fdc17c6be813a49831d85894fe995f1826d240ae73009a2bc010339ac6226",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "AGENTS.md",
+      "destination": "AGENTS.md",
+      "source_sha256": "1307ad65c3aa196b130cbc1b9bf41a30ee86cbcea49740dafba4f29d937e4bfd",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "CONTRIBUTING.md",
+      "destination": "CONTRIBUTING.md",
+      "source_sha256": "d8c6d128057a823fbba467cac9b077ad92e7b7341bdd30ddc6218357c66dc613",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "ETAT_DU_PROJET.md",
+      "destination": "documentation/ETAT_DU_PROJET.md",
+      "source_sha256": "6694ddee136043fcf52c5dbc59f0d2600e9b696a7adea6145136f14f70f6b54b",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "ORGANISATION_DU_DEPOT.md",
+      "destination": "documentation/architecture/ORGANISATION_DU_DEPOT.md",
+      "source_sha256": "26491aee0d41dd501623447dc8f701bd21c10a58ee99a38063b5cfefa6e81da2",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "PROLOGUE_FONDATEUR.md",
+      "destination": "PROLOGUE_FONDATEUR.md",
+      "source_sha256": "c800e12e5ee30bd202ddbdacf09766691a4f13a5149bc06c740b7be4416e8121",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "README.md",
+      "destination": "README.md",
+      "source_sha256": "dcbee6e323944ecd69d6ad46a839fd4f22c550f908e54e1c3853bea6390e9b97",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "ULISTAG/README.md",
+      "destination": "logiciels/ULISTAG/README.md",
+      "source_sha256": "7e196694b638050d1f4138f72fd42088cfd9ad575558c6816c46e4966edb8579",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "ULISTAG/ROADMAP.md",
+      "destination": "logiciels/ULISTAG/ROADMAP.md",
+      "source_sha256": "d9a236c34d4846ba7d8be0f153b97346c70123dd5fcb09727fefc534affc02de",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "ULISTAG/matchers/README.md",
+      "destination": "logiciels/ULISTAG/matchers/README.md",
+      "source_sha256": "ff6fbbbe8c119f036ce4b02293eb7d3baafe4df51aad9971b3ef8a6cdf27dc13",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "ULISTAG/matchers/anchor_graph/README.md",
+      "destination": "logiciels/ULISTAG/matchers/anchor_graph/README.md",
+      "source_sha256": "83f68df5dc5ae74d8b9073ffb94fd0190254df84fe24ec97750701e5c3649a86",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "ULISTAG/matchers/anchor_graph/deployment_manifest_v0_1.json",
+      "destination": "logiciels/ULISTAG/matchers/anchor_graph/deployment_manifest_v0_1.json",
+      "source_sha256": "44400e680ce29193e20500ab0dade344c68df64fb40cc44870f5b33b0937f02f",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "ULISTAG/matchers/anchor_graph/ulistag_v0.py",
+      "destination": "logiciels/ULISTAG/matchers/anchor_graph/ulistag_v0.py",
+      "source_sha256": "647e50b3211944d8722f1d2eeecb9c1aec5ed78019d6d35ce2d1c08eb4dad403",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "ULISTAG/matchers/visual_keypoints/README.md",
+      "destination": "logiciels/ULISTAG/matchers/visual_keypoints/README.md",
+      "source_sha256": "0110f9137cdd8fe3d93a03b0d8c4a89ad795d998f8d7b3a929bdc6495c526206",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "ULISTAG/matchers/visual_keypoints/requirements-linux-v0_1.txt",
+      "destination": "logiciels/ULISTAG/matchers/visual_keypoints/requirements-linux-v0_1.txt",
+      "source_sha256": "c864f1a0fc66e9677cef18154f8347d29b9cba2c6730987c6795b3ccc15f9c0c",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "ULISTAG/matchers/visual_keypoints/requirements-pcia-v0_1.txt",
+      "destination": "logiciels/ULISTAG/matchers/visual_keypoints/requirements-pcia-v0_1.txt",
+      "source_sha256": "c864f1a0fc66e9677cef18154f8347d29b9cba2c6730987c6795b3ccc15f9c0c",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "ULISTAG/matchers/visual_keypoints/ulistag_visual_keypoints_v0.py",
+      "destination": "logiciels/ULISTAG/matchers/visual_keypoints/ulistag_visual_keypoints_v0.py",
+      "source_sha256": "c78a630bb4e24e2a75638ce3e7638c10f90bec5a39f40d5e1d5ea418a393ab02",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "ULISTAG/matchers/visual_keypoints/verify_capability_v0_1.py",
+      "destination": "logiciels/ULISTAG/matchers/visual_keypoints/verify_capability_v0_1.py",
+      "source_sha256": "08c6fe23a05228bb35a53c774e181a570077deadfe6aa6725cda2c32123799cd",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "ULISTAG/protocols/PHASE1_GED_CASE_METHOD.md",
+      "destination": "documentation/METHODE_GED_PHASE_1.md",
+      "source_sha256": "a8065781488e19f86a0ec120eb3d6b4e5bb72c8a359ad69ba580c4cf44c9a6a5",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "ULISTAG/protocols/README.md",
+      "destination": "logiciels/ULISTAG/protocols/README.md",
+      "source_sha256": "440da151bec555875a9896be8b936c69441c489fe45f2160ea76ad2991f13ced",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "ULISTAG/research/STRUCTURAL_FINGERPRINT_RESEARCH.md",
+      "destination": "logiciels/ULISTAG/research/STRUCTURAL_FINGERPRINT_RESEARCH.md",
+      "source_sha256": "18e2f8b625d8770a60c66f6924f7f990aa2dab2d9febcaa048e59e2e86cc3a95",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "ULISTAG/schemas/README.md",
+      "destination": "logiciels/ULISTAG/schemas/README.md",
+      "source_sha256": "74d57c8cf537bb226e9a4b8b9d0f4958317cdb39b8c7379fd6505aa6823d0602",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "ULISTAG/tests/README.md",
+      "destination": "logiciels/ULISTAG/tests/README.md",
+      "source_sha256": "8e7a53b70a0aa959999ab815959aea4fd783bbcb3eb1765daac283ae86e23de6",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "VERSION",
+      "destination": "VERSION",
+      "source_sha256": "ed41d33f787456abe92ea03b820e4c832b1e2b9e6867242eaea03258bae8d119",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "catalogue/README.md",
+      "destination": "catalogue/README.md",
+      "source_sha256": "7d0b49900907124ceb9ec98f52bbf6016b50c726c2162307910a60c430a598e1",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "catalogue/index.json",
+      "destination": "catalogue/index.json",
+      "source_sha256": "9818c48a59ab668d39c7aee13b8cae2abb7dfab572c0ff6cca67062686a5c866",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "catalogue/profils/paye/fr/bulletin-de-paie-francais/ULISDOQ-PROFILE-FR-BULLETIN-DE-PAIE-CANDIDATE/0.1.0/PREUVES.md",
+      "destination": "catalogue/profils/paye/fr/bulletin-de-paie-francais/ULISDOQ-PROFILE-FR-BULLETIN-DE-PAIE-CANDIDATE/0.1.0/PREUVES.md",
+      "source_sha256": "0ebc8fe1e9ace3f979adf5c7485373624ea8cd93697a09657b0ecababc76f0f1",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "catalogue/profils/paye/fr/bulletin-de-paie-francais/ULISDOQ-PROFILE-FR-BULLETIN-DE-PAIE-CANDIDATE/0.1.0/QUALIFICATION.md",
+      "destination": "catalogue/profils/paye/fr/bulletin-de-paie-francais/ULISDOQ-PROFILE-FR-BULLETIN-DE-PAIE-CANDIDATE/0.1.0/QUALIFICATION.md",
+      "source_sha256": "baed79db50b37db9090fd156bd58609974a4d14c1af9fac3d95f4db9dd75e459",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "catalogue/profils/paye/fr/bulletin-de-paie-francais/ULISDOQ-PROFILE-FR-BULLETIN-DE-PAIE-CANDIDATE/0.1.0/grammaire.json",
+      "destination": "catalogue/profils/paye/fr/bulletin-de-paie-francais/ULISDOQ-PROFILE-FR-BULLETIN-DE-PAIE-CANDIDATE/0.1.0/grammaire.json",
+      "source_sha256": "0b3f9dd87d60e316d674a6d760f71d8369bfa6d346e8b5f6eece2c6100d18b1c",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "catalogue/profils/paye/fr/bulletin-de-paie-francais/ULISDOQ-PROFILE-FR-BULLETIN-DE-PAIE-CANDIDATE/0.1.0/profil.json",
+      "destination": "catalogue/profils/paye/fr/bulletin-de-paie-francais/ULISDOQ-PROFILE-FR-BULLETIN-DE-PAIE-CANDIDATE/0.1.0/profil.json",
+      "source_sha256": "a7780cc5cc4dfe9cd21982d5708e11f0f4f5a1c9bc8548f56ebfbc242488ae25",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "client/README.md",
+      "destination": "logiciels/client/README.md",
+      "source_sha256": "dbf14089ede7786739b54419d3872cc985b977f37b7c22031cd330322ab1aab2",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "client/deployment/invoice2data_manifest_v0_1.json",
+      "destination": "logiciels/client/deployment/invoice2data_manifest_v0_1.json",
+      "source_sha256": "2d7571821c44c5715c20145fb481fc6879bdfaa52b5863c9171ed22a0bc6d6da",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "client/deployment/profile_ocr_extract_manifest_v0_1.json",
+      "destination": "logiciels/client/deployment/profile_ocr_extract_manifest_v0_1.json",
+      "source_sha256": "0895f6dc1f21a68edc97eb468c51928db25686f911b6d1a6feef931dc016da2f",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "client/eml_extract_v0_1.py",
+      "destination": "logiciels/client/eml_extract_v0_1.py",
+      "source_sha256": "b40b76e37bc9f4412a5c90433664d9acbedc464fe751c4154e3370f9523ec53d",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "client/extract.py",
+      "destination": "logiciels/client/extract.py",
+      "source_sha256": "67afa6a3597d7febb19e7fb47e8adb31fd5d5068dbcb3cd3790a75f76c171859",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "client/profile_ocr_extract_v0_1.py",
+      "destination": "logiciels/client/profile_ocr_extract_v0_1.py",
+      "source_sha256": "7f856e1a6263402a4275a3ae3af773a0176555935672b2cc315d76a278466140",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "client/profile_resolver_v0_1.py",
+      "destination": "logiciels/client/profile_resolver_v0_1.py",
+      "source_sha256": "5791c2b439ffd60829294a26747ab52cb2d6aef2e40da581cf7f0308f5c80696",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "client/tag_candidate.py",
+      "destination": "logiciels/client/tag_candidate.py",
+      "source_sha256": "e398591a9597f30c603637aebdc0807e56f72c3db2a753240c9d03df2ffdb0c8",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "client/test_tag_candidate.py",
+      "destination": "logiciels/client/test_tag_candidate.py",
+      "source_sha256": "3a842d47a64ea01d6d7d31f4cd41889549f67e2ae3bf198407c5e1ae6a34dff6",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "deployment/linux/base_manifest_v0_1.json",
+      "destination": "logiciels/deploiement/linux/base_manifest_v0_1.json",
+      "source_sha256": "c9e2f05d743cb4cc2306c5b5a402329f4ba1075b441b39d9ad955636904003ac",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "deployment/linux/verify_host_v0_1.py",
+      "destination": "logiciels/deploiement/linux/verify_host_v0_1.py",
+      "source_sha256": "db2a8fb17b2484f7066f469b33d98c33546a2cbc4b9b3b06b3eacc33a4d79db2",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "deployment/readers/tesseract_manifest_v0_1.json",
+      "destination": "logiciels/deploiement/readers/tesseract_manifest_v0_1.json",
+      "source_sha256": "d2cfe9a0ae316c48f04f40073bc34ee4065ec75ef95aa04295c0ebbbfd339f99",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "deployment/ubuntu/complete-v0_1/COMPATIBILITY.md",
+      "destination": "logiciels/deploiement/ubuntu/complete-v0_1/COMPATIBILITY.md",
+      "source_sha256": "67d5ae13f5a071a8efdc385ac992eccadc874186589759e94696442ac8e28c03",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "deployment/ubuntu/complete-v0_1/FUNCTIONAL_ANCHOR_PROBE_FIX_001.md",
+      "destination": "logiciels/deploiement/ubuntu/complete-v0_1/FUNCTIONAL_ANCHOR_PROBE_FIX_001.md",
+      "source_sha256": "71cec409c7a5bc33e1f279ade57f749e20c84016b2e20780f82eb95c29a1fe0a",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "deployment/ubuntu/complete-v0_1/LOCAL_STATIC_CHECKS.md",
+      "destination": "logiciels/deploiement/ubuntu/complete-v0_1/LOCAL_STATIC_CHECKS.md",
+      "source_sha256": "567f5b2094d7b287c969139135cb3aec1dfab14e7a9bc299466936110ecf7f99",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "deployment/ubuntu/complete-v0_1/README.md",
+      "destination": "logiciels/deploiement/ubuntu/complete-v0_1/README.md",
+      "source_sha256": "a0419701a746753aaecc36464f395cfe009493c13dab0bc8d6d812c6089381ce",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "deployment/ubuntu/complete-v0_1/apt-packages.txt",
+      "destination": "logiciels/deploiement/ubuntu/complete-v0_1/apt-packages.txt",
+      "source_sha256": "c838a499e570ede34111e839715be20efd214ba5159aa554a4048158b0b3857b",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "deployment/ubuntu/complete-v0_1/capability_inventory.json",
+      "destination": "logiciels/deploiement/ubuntu/complete-v0_1/capability_inventory.json",
+      "source_sha256": "0cfe4e71a7d18f262d1c673d910b2e885d7a11bbc7128645fdb926ee4e144e45",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "deployment/ubuntu/complete-v0_1/profile_manifest.json",
+      "destination": "logiciels/deploiement/ubuntu/complete-v0_1/profile_manifest.json",
+      "source_sha256": "2f9b62c0d1f5bee14d3d10ae1ae112ba7b25f23b78f3e5c16f5099f2537d30f5",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "deployment/ubuntu/complete-v0_1/requirements-anchor_graph.txt",
+      "destination": "logiciels/deploiement/ubuntu/complete-v0_1/requirements-anchor_graph.txt",
+      "source_sha256": "69505ca0d154285d3931f8005a96c4e45a631cd9a344fa6a9304c711e6c41323",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "deployment/ubuntu/complete-v0_1/requirements-invoice2data.txt",
+      "destination": "logiciels/deploiement/ubuntu/complete-v0_1/requirements-invoice2data.txt",
+      "source_sha256": "cede597acd316843fb858f9c178190fc0d93bce40fdd21657232d78270ebd67f",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "deployment/ubuntu/complete-v0_1/requirements-profile_extraction.txt",
+      "destination": "logiciels/deploiement/ubuntu/complete-v0_1/requirements-profile_extraction.txt",
+      "source_sha256": "5bb92b3193b9d88e6d600abacd7ca0c4183faeee52893cf0327c7411666b8b4c",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "deployment/ubuntu/complete-v0_1/requirements-semantic_validation.txt",
+      "destination": "logiciels/deploiement/ubuntu/complete-v0_1/requirements-semantic_validation.txt",
+      "source_sha256": "44ff0dc2f1e40311b8239e83146749ab9d9cee2a650e699f5464755d552ee20d",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "deployment/ubuntu/complete-v0_1/requirements-visual_keypoints.txt",
+      "destination": "logiciels/deploiement/ubuntu/complete-v0_1/requirements-visual_keypoints.txt",
+      "source_sha256": "c864f1a0fc66e9677cef18154f8347d29b9cba2c6730987c6795b3ccc15f9c0c",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "deployment/ubuntu/complete-v0_1/ulisdoq-deploy.sh",
+      "destination": "logiciels/deploiement/ubuntu/complete-v0_1/ulisdoq-deploy.sh",
+      "source_sha256": "2fb430f4d083bb0b70f1e0d098b2838ccbfb86e2df39a6910cb55563f55379c0",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "deployment/ubuntu/complete-v0_1/verify_complete.py",
+      "destination": "logiciels/deploiement/ubuntu/complete-v0_1/verify_complete.py",
+      "source_sha256": "fe2b1c4aa775dca730b97e81d32c3799c12437d79db5dd1ba966c0f2c187b804",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "deployment/ubuntu/full/apt-packages-v0_1.txt",
+      "destination": "logiciels/deploiement/ubuntu/full/apt-packages-v0_1.txt",
+      "source_sha256": "b81234b21a98e13770d515688cf06f95a4e540b793377540c096725437cda8ae",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "deployment/ubuntu/full/full_manifest_v0_1.json",
+      "destination": "logiciels/deploiement/ubuntu/full/full_manifest_v0_1.json",
+      "source_sha256": "edbc12d7aceeccc8b4641cb33fc5097e29e32f72adf2ea00187a848881fabf94",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "deployment/ubuntu/full/install_full_v0_1.sh",
+      "destination": "logiciels/deploiement/ubuntu/full/install_full_v0_1.sh",
+      "source_sha256": "827950e8fc873acd5d2203e88508d918901e7a0aa65c7bde01fdb1115ec050b2",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "deployment/ubuntu/full/requirements-full-v0_1.in",
+      "destination": "logiciels/deploiement/ubuntu/full/requirements-full-v0_1.in",
+      "source_sha256": "f9ac585d3cf56c43d1f9e183fc94915b2d4d79dd14840573cedf4478ff8e4fce",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "deployment/ubuntu/full/verify_full_v0_1.py",
+      "destination": "logiciels/deploiement/ubuntu/full/verify_full_v0_1.py",
+      "source_sha256": "7325fe43766e83b8be34cbe5b646427c7494dc22a6f63c048482b3e09ee4f963",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "docs/operations/DEPLOYMENT_CONTRACT.md",
+      "destination": "logiciels/deploiement/documentation/CONTRAT_DEPLOIEMENT.md",
+      "source_sha256": "4b09048587c9b66dfacc69b093594243b8c95d3fd348567b9492018c849542b2",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "docs/operations/FULL_UBUNTU_PREREQUISITES.md",
+      "destination": "logiciels/deploiement/documentation/PREREQUIS_UBUNTU_HISTORIQUES.md",
+      "source_sha256": "456f681b88558d73c1d3ff99a6d6522babc42d90951efb1190dc93c843ff18a0",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "docs/operations/LINUX_DEPLOYMENT_CONTRACT.md",
+      "destination": "logiciels/deploiement/documentation/CONTRAT_DEPLOIEMENT_LINUX.md",
+      "source_sha256": "222a9a6034ba7037cff9eacfc3bb10341707efd3069b244fa16238482522e852",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "docs/operations/PCIA_DEPLOYMENT_GED02_VISUAL_KEYPOINTS.md",
+      "destination": "logiciels/deploiement/documentation/DEPLOIEMENT_GED02_VISUEL_PCIA.md",
+      "source_sha256": "aa14d2d448b2f2cbca7037a00d6f905dbc0d24b1af74edd90933f3472f0c9d3d",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "docs/operations/SOFTWARE_DEPENDENCY_NOTICE.md",
+      "destination": "logiciels/deploiement/documentation/GESTION_DEPENDANCES.md",
+      "source_sha256": "04133e4bd878df0b079862399200fd20d6d1ac3957782a4f3adc1d16dadc5c1c",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "docs/testing/COHERENCE_VERTICALES_2026-10-25.md",
+      "destination": "documentation/preuves/COHERENCE_VERTICALES_2026-10-25.md",
+      "source_sha256": "c102ae25160f20eade75678a9545c0fd97c25f58dc8772bb6a505874cb547245",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "docs/testing/CONSOLIDATION_2026-10-25.md",
+      "destination": "documentation/preuves/CONSOLIDATION_2026-10-25.md",
+      "source_sha256": "c12f2bdfcb840251f57177680c695ccd26699766e602c764c7377a16acb2b75b",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "docs/testing/DEPLOYMENT_GED02_VISUAL_KEYPOINTS.md",
+      "destination": "logiciels/deploiement/documentation/DEPLOIEMENT_GED02_VISUEL.md",
+      "source_sha256": "c521f884d477ba6f8c1d22ba7c5d36c7be9e0da90889620c99bce263e8f20c75",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "docs/testing/REFERENCE_TEST_ENVIRONMENT.md",
+      "destination": "logiciels/verification/ENVIRONNEMENT_REFERENCE.md",
+      "source_sha256": "24df971a17b7c8752f5a6165a98191d55f3267a4b7622922c07704e8c0e58c00",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "docs/testing/VERIFIER_LE_DEPOT.md",
+      "destination": "logiciels/verification/VERIFIER_LE_DEPOT.md",
+      "source_sha256": "f6de88720270ee324602772ca5284044d555d75a5e713fd7d7b760de86ac3586",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "escalade-consommateur/README.md",
+      "destination": "logiciels/escalade-consommateur/README.md",
+      "source_sha256": "4d7ff1061aa171a69b16b0014e4c54d0a569952bab9527fcc0db0af39c76fb2d",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "escalade-consommateur/accuses/ULISDOQ-REQ-GEDREAL-20261024T213000Z-001/receipt.json",
+      "destination": "experiences/assurances/GED-04/preuves/escalade-consommateur/accuses/ULISDOQ-REQ-GEDREAL-20261024T213000Z-001/receipt.json",
+      "source_sha256": "b4fef2fed32d90e0953bfe47168937c26c3e0a6839f76ab43bbac83e6e83c0c9",
+      "deplacement": true,
+      "octets_figes": true
+    },
+    {
+      "source": "escalade-consommateur/bin/ulisdoq-escalation",
+      "destination": "logiciels/escalade-consommateur/bin/ulisdoq-escalation",
+      "source_sha256": "4ac84fea17030d2114f117f854ed9941bc821a2c8fb0bfdb2911874d7ebc54ab",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "escalade-consommateur/demandes/ULISDOQ-REQ-GEDREAL-20261024T213000Z-001/request.json",
+      "destination": "experiences/assurances/GED-04/preuves/escalade-consommateur/demandes/ULISDOQ-REQ-GEDREAL-20261024T213000Z-001/request.json",
+      "source_sha256": "42b36eb283591111bd59ad6b23f95dd3dcd912bb1b1136207dc7863cd95e4622",
+      "deplacement": true,
+      "octets_figes": true
+    },
+    {
+      "source": "escalade-consommateur/resultats/ULISDOQ-REQ-GEDREAL-20261024T213000Z-001/result.json",
+      "destination": "experiences/assurances/GED-04/preuves/escalade-consommateur/resultats/ULISDOQ-REQ-GEDREAL-20261024T213000Z-001/result.json",
+      "source_sha256": "b5b4c115082b19b9e5b5801114dd0655b6e5cf6cc5e64ea3529ae82d35ac135f",
+      "deplacement": true,
+      "octets_figes": true
+    },
+    {
+      "source": "escalade-consommateur/schemas/consumer-receipt-v1.schema.json",
+      "destination": "logiciels/escalade-consommateur/schemas/consumer-receipt-v1.schema.json",
+      "source_sha256": "2e64c9726ba7130bbce484cb9e119cd63cf399510b0d8bf780b4326d998c31c8",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "escalade-consommateur/schemas/consumer-request-v1.schema.json",
+      "destination": "logiciels/escalade-consommateur/schemas/consumer-request-v1.schema.json",
+      "source_sha256": "87435c09e5b4ef40e8d20667f2ac9acff4fc09d0337e31068a9a1553a5893bbf",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "escalade-consommateur/schemas/documentary-instruction-v1.schema.json",
+      "destination": "logiciels/escalade-consommateur/schemas/documentary-instruction-v1.schema.json",
+      "source_sha256": "845589b04e3c7127f2a7a5f09414e770e57ba64425119e493c68c30a51115b31",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "escalade-consommateur/tests/test_contract_v1.py",
+      "destination": "logiciels/escalade-consommateur/tests/test_contract_v1.py",
+      "source_sha256": "3584e4ad60eddf9f6443cd28035bfcae8a24f971f1fca013aff9cda7ff98a1f8",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/DEBT-GED03-STRUCTURAL-VALIDATION-DIVERSITY-001.md",
+      "destination": "experiences/administration-droits/GED-03/DEBT-GED03-STRUCTURAL-VALIDATION-DIVERSITY-001.md",
+      "source_sha256": "a494d7290b5ba83e9b95a088708bdadabc4aef9000f54049ae368cbae8829116",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/EXECUTION_AUTHORIZATION_REQUEST_001.txt",
+      "destination": "experiences/administration-droits/GED-03/EXECUTION_AUTHORIZATION_REQUEST_001.txt",
+      "source_sha256": "3fd3d3aa62c8f280584195c51192bd902b51237f03224a80e5f44de03a41b245",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/MEASURES_V0_1.json",
+      "destination": "experiences/administration-droits/GED-03/MEASURES_V0_1.json",
+      "source_sha256": "018d85332725ce6f0816afc7d61f76d114acfeeadcb50cb33eeeb974f1105880",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/PHASE1_PROTOCOL_V0_1.md",
+      "destination": "experiences/administration-droits/GED-03/PHASE1_PROTOCOL_V0_1.md",
+      "source_sha256": "5298f3c414be4135f3ed16ab6e9959c03e0e644b9642220a14e71061957f1d71",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/PROPOSAL.md",
+      "destination": "experiences/administration-droits/GED-03/PROPOSAL.md",
+      "source_sha256": "2a494639f20a90b0cad04619e0f07f4bcbeb65367963b6a417f3cf8c6bb48cb8",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/README.md",
+      "destination": "experiences/administration-droits/GED-03/README.md",
+      "source_sha256": "ddd77460440460666662f5fa567aeaf9dfaf521deff7fde7edbdd86af9a9f576",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/RESULTS_V0_1.md",
+      "destination": "experiences/administration-droits/GED-03/RESULTS_V0_1.md",
+      "source_sha256": "828e89ddfceb33d47cc0826aa4278c21d76d822ed638682d5c4a6909ba8af4ed",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/REUSE_MATRIX_V0_1.md",
+      "destination": "experiences/administration-droits/GED-03/REUSE_MATRIX_V0_1.md",
+      "source_sha256": "ab5b65f6c345e16ac3555c5c45a3099ed4c2ce8069c6281a3fde18e455a6362d",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/TECHNICAL_DELTAS_V0_1.md",
+      "destination": "experiences/administration-droits/GED-03/TECHNICAL_DELTAS_V0_1.md",
+      "source_sha256": "6f9ea1045cc6fda7a64e810ab7e3953bfb761846f63e75c54a445e2dec4bcdef",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/contrats/normalized_eml_schema_v0_1.json",
+      "destination": "experiences/administration-droits/GED-03/contrats/normalized_eml_schema_v0_1.json",
+      "source_sha256": "21afde4262f4641b4b260125e29864d8025ae786b0a6872c7b77909be034ade3",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/corpus/GROUND_TRUTH_V0_1.json",
+      "destination": "experiences/administration-droits/GED-03/corpus/GROUND_TRUTH_V0_1.json",
+      "source_sha256": "ff77ec8a08dd040c0a4b74e86003291e151d04e3f934a846162dd3579575c07e",
+      "deplacement": false,
+      "octets_figes": true
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/corpus/N01_RENAMED_TEXT.eml",
+      "destination": "experiences/administration-droits/GED-03/corpus/N01_RENAMED_TEXT.eml",
+      "source_sha256": "339ebc29bd64552dd8961bae6e94e6b071b65149ca3331434eabbba7b03c17a5",
+      "deplacement": false,
+      "octets_figes": true
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/corpus/N02_MALFORMED_MIME.eml",
+      "destination": "experiences/administration-droits/GED-03/corpus/N02_MALFORMED_MIME.eml",
+      "source_sha256": "0ef299766b6e1e1a0b30a16d94b0f1dff3a5233b5a7edacef27310a59f54c028",
+      "deplacement": false,
+      "octets_figes": true
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/corpus/N03_TRUNCATED.eml",
+      "destination": "experiences/administration-droits/GED-03/corpus/N03_TRUNCATED.eml",
+      "source_sha256": "ac49c7c921e7dfc4af72915c500a7b904874a05c04decb82582e81dcd7215c82",
+      "deplacement": false,
+      "octets_figes": true
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/corpus/S01_SIMPLE_TEXT.eml",
+      "destination": "experiences/administration-droits/GED-03/corpus/S01_SIMPLE_TEXT.eml",
+      "source_sha256": "74b7b2bab4d41c661f3e80f9a2e642cb08a70d09f44fa287be4ac0de29ff1ecf",
+      "deplacement": false,
+      "octets_figes": true
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/corpus/S02_MULTIPART_ALT.eml",
+      "destination": "experiences/administration-droits/GED-03/corpus/S02_MULTIPART_ALT.eml",
+      "source_sha256": "9ccca862d9760e3665de14afd8b6d4a5aa38990514e242b0f1910556b40fbd9f",
+      "deplacement": false,
+      "octets_figes": true
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/corpus/S03_ATTACHMENT_PDF.eml",
+      "destination": "experiences/administration-droits/GED-03/corpus/S03_ATTACHMENT_PDF.eml",
+      "source_sha256": "c275f072db3ef31aec3a50aed2b295587224c6e15dd4a952a67da34a11b249d1",
+      "deplacement": false,
+      "octets_figes": true
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/corpus/S04_MULTI_RECIPIENTS.eml",
+      "destination": "experiences/administration-droits/GED-03/corpus/S04_MULTI_RECIPIENTS.eml",
+      "source_sha256": "66ca1456b833e9c6688f54af70f8b27133df29d764f7b5ee76ca81f887fef07e",
+      "deplacement": false,
+      "octets_figes": true
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/corpus/S05_ENCODED_FOLDED_HEADERS.eml",
+      "destination": "experiences/administration-droits/GED-03/corpus/S05_ENCODED_FOLDED_HEADERS.eml",
+      "source_sha256": "7abae30ec354cc120286fdaf09c47ba74b6b946b8c795b8b031f9f18bd1f0da7",
+      "deplacement": false,
+      "octets_figes": true
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/corpus/S06_UNICODE_ATTACHMENT.eml",
+      "destination": "experiences/administration-droits/GED-03/corpus/S06_UNICODE_ATTACHMENT.eml",
+      "source_sha256": "8b7097e8654d4277a1d2f3eeb47fd50fb1f0c1c91d5232d9affd7df5cb560b1d",
+      "deplacement": false,
+      "octets_figes": true
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/preuves/CORRESPONDANCE_CHEMINS_HISTORIQUES.json",
+      "destination": "experiences/administration-droits/GED-03/preuves/CORRESPONDANCE_CHEMINS_HISTORIQUES.json",
+      "source_sha256": "6db11663a256acf7c1ff3d97e05a4a8d0830fe4f89925774e6a9ef91510d428e",
+      "deplacement": false,
+      "octets_figes": true
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/preuves/FROZEN_RESULTS_BUNDLE_001.json",
+      "destination": "experiences/administration-droits/GED-03/preuves/FROZEN_RESULTS_BUNDLE_001.json",
+      "source_sha256": "415cbd825b565baaa6636a3f7bd60a651499427e1d0c203d0378181546717de2",
+      "deplacement": false,
+      "octets_figes": true
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/preuves/GED_CORE_MEASURES_RESULT_001.json",
+      "destination": "experiences/administration-droits/GED-03/preuves/GED_CORE_MEASURES_RESULT_001.json",
+      "source_sha256": "c08908bd880bdde268002329a238279fecffa860f8c68da1592279891d5c12da",
+      "deplacement": false,
+      "octets_figes": true
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/preuves/GROUND_TRUTH_COMPARISON_001.json",
+      "destination": "experiences/administration-droits/GED-03/preuves/GROUND_TRUTH_COMPARISON_001.json",
+      "source_sha256": "c0e4a0ff3d74097183981af2dce173eeacfdf2173f83ac21946ef6d1fd091d50",
+      "deplacement": false,
+      "octets_figes": true
+    },
+    {
+      "source": "experiences/administration-droits/GED-03/profils/eml_candidate.json",
+      "destination": "experiences/administration-droits/GED-03/profils/eml_candidate.json",
+      "source_sha256": "cc74a08c89550cda7cd937785f0043a50aab0f8b9e3d738644d474d9b42e5e99",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/administration-droits/README.md",
+      "destination": "experiences/administration-droits/README.md",
+      "source_sha256": "9b517875a0b55e767ea2b91e6203188be2b8563b0ae794275b8f59a9a1ccebb6",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/assurances/GED-04/DETTE_PHASE_2.md",
+      "destination": "experiences/assurances/GED-04/DETTE_PHASE_2.md",
+      "source_sha256": "08949571d5ba3c7267ef2c9bef431c057aac526bd503dcd1692dff1ae559b0f5",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/assurances/GED-04/REUSE_MATRIX_GED01_TO_GED04_V0_1.md",
+      "destination": "experiences/assurances/GED-04/REUSE_MATRIX_GED01_TO_GED04_V0_1.md",
+      "source_sha256": "215c87c52445e67441759787c40a8f18c9fe7abe95d42c7dd39bc684a88baf29",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/assurances/GED-04/decouverte/README.md",
+      "destination": "experiences/assurances/GED-04/decouverte/README.md",
+      "source_sha256": "95f01c9eb4d5e5cdabd27757ae5eae4079aee20ef6795df0608284cf049e42e0",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/assurances/GED-04/decouverte/metadata_only_inventory.py",
+      "destination": "experiences/assurances/GED-04/decouverte/metadata_only_inventory.py",
+      "source_sha256": "ff764fa67520f1598b80506ff0b13f0d6966941742dc7d13b7eb29e0e2436d02",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/assurances/GED-04/profils/candidate_profile_package_v0_1.json",
+      "destination": "experiences/assurances/GED-04/profils/candidate_profile_package_v0_1.json",
+      "source_sha256": "4c5702d36e895970707bfaf9913fecfae4bdc2b010f38ef696e31927fe30c4ef",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/assurances/GED-04/profils/motorcycle_insurance_special_terms_candidate.json",
+      "destination": "experiences/assurances/GED-04/profils/motorcycle_insurance_special_terms_candidate.json",
+      "source_sha256": "936279631844ad59eccd4efc755c7d8b4cbfc83159e84276937258cbe766838a",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/assurances/README.md",
+      "destination": "experiences/assurances/README.md",
+      "source_sha256": "bfeec01d900ee69811290482d75bb25a3eb0a6e393c53d9cda87fe53ec713954",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/factures/GED-01/README.md",
+      "destination": "experiences/factures/GED-01/README.md",
+      "source_sha256": "d6cf2a51b52fa859cf271918535a0d2ddf25b9b978a12a0606368b671c95bdb2",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/factures/GED-01/documentation/PROTOCOLE.md",
+      "destination": "experiences/factures/GED-01/documentation/PROTOCOLE.md",
+      "source_sha256": "c3cefb92b73e281269caee9ce28d53486b2eab042b5646ea8502720a81f36d59",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/factures/GED-01/documentation/RETEX_ULISTAG_V0_1_INDEPENDENT_ENV_EXECUTION_001.md",
+      "destination": "experiences/factures/GED-01/documentation/RETEX_ULISTAG_V0_1_INDEPENDENT_ENV_EXECUTION_001.md",
+      "source_sha256": "09e78c864a1b327fc2ac1a92778040e8dfc467c3b5a401b95daf4261ea3400c7",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/factures/GED-01/documentation/RETEX_ULISTAG_V0_1_PCIA_EXECUTION_001.md",
+      "destination": "experiences/factures/GED-01/documentation/RETEX_ULISTAG_V0_1_PCIA_EXECUTION_001.md",
+      "source_sha256": "ad07e60bda2c63aacbfb4081b3979f80399bf3c943d8711479e6a517a785132d",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/factures/GED-01/modeles/fournisseur_exp_01.yml",
+      "destination": "experiences/factures/GED-01/modeles/fournisseur_exp_01.yml",
+      "source_sha256": "c0f302e543c41feda31d5eb42e013fb7786ea90d31df0212a297cbd209b14e18",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/factures/GED-01/profils/profil_facture_fictive_001.json",
+      "destination": "experiences/factures/GED-01/profils/profil_facture_fictive_001.json",
+      "source_sha256": "3e3aa6c7aa6d8691be3ec544c65c6ec30d7477d9567ecb7f97e4469a504e5b0d",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/factures/GED-01/profils/sfr_structural_v0_1.json",
+      "destination": "experiences/factures/GED-01/profils/sfr_structural_v0_1.json",
+      "source_sha256": "d18e126ce54f1066b02f049e29a4480039f6aa1ddc74e1dd8579322e5e8eb546",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/factures/GED-01/specimens/Fournisseur-EXP-01_document_experimental.pdf",
+      "destination": "experiences/factures/GED-01/specimens/Fournisseur-EXP-01_document_experimental.pdf",
+      "source_sha256": "3478a22f533a11034fbe29bc8509d587e5af934cb5cdf5c19554730189d7727f",
+      "deplacement": false,
+      "octets_figes": true
+    },
+    {
+      "source": "experiences/factures/GED-01/specimens/Fournisseur-EXP-01_page_1.png",
+      "destination": "experiences/factures/GED-01/specimens/Fournisseur-EXP-01_page_1.png",
+      "source_sha256": "110d251334d2d09b3f493720ff4dfcfaabd8f9703a195e3125f782ea9c09dd73",
+      "deplacement": false,
+      "octets_figes": true
+    },
+    {
+      "source": "experiences/factures/GED-01/specimens/Fournisseur-EXP-01_page_2.png",
+      "destination": "experiences/factures/GED-01/specimens/Fournisseur-EXP-01_page_2.png",
+      "source_sha256": "4738d622c6536f407909af7fac8b65bac8589bdf82f46c5391c001293ca25ed4",
+      "deplacement": false,
+      "octets_figes": true
+    },
+    {
+      "source": "experiences/factures/GED-01/specimens/LISEZ_MOI.txt",
+      "destination": "experiences/factures/GED-01/specimens/LISEZ_MOI.txt",
+      "source_sha256": "4d83c87e851c49ac88a935344d50d2b51567ad63b58251e1d8158d751b72ea9c",
+      "deplacement": false,
+      "octets_figes": true
+    },
+    {
+      "source": "experiences/factures/GED-01/specimens/MANIFESTE_PUBLIC.json",
+      "destination": "experiences/factures/GED-01/specimens/MANIFESTE_PUBLIC.json",
+      "source_sha256": "bfe6e6dd1695cdec62b635e34dbbbb532744e84246eacc5dfe0d041ef5d09e26",
+      "deplacement": false,
+      "octets_figes": true
+    },
+    {
+      "source": "experiences/factures/GED-01/specimens/attendu_001.json",
+      "destination": "experiences/factures/GED-01/specimens/attendu_001.json",
+      "source_sha256": "dd6b489c84620c4cd16942d235a2c301d1d1e23ccdbdc7b1e90af4ba1fe93fb3",
+      "deplacement": false,
+      "octets_figes": true
+    },
+    {
+      "source": "experiences/factures/GED-01/specimens/facture_fictive_001.txt",
+      "destination": "experiences/factures/GED-01/specimens/facture_fictive_001.txt",
+      "source_sha256": "8b3bd1ff1005d151cfa8ddce06b715f32ee6d10df333b14f8209221b7d5b0b4b",
+      "deplacement": false,
+      "octets_figes": true
+    },
+    {
+      "source": "experiences/factures/GED-01/tests/cas_ged01.json",
+      "destination": "experiences/factures/GED-01/tests/cas_ged01.json",
+      "source_sha256": "d624ed274439aa07f264c0b496a96dab2a4992e0259e18b61c525b6e556be457",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/factures/GED-01/ulistag/ANCHOR_GRAPH_V0_1.md",
+      "destination": "experiences/factures/GED-01/ulistag/ANCHOR_GRAPH_V0_1.md",
+      "source_sha256": "e344c518fe61daf068cd382c8620ddae0308c117df50de19998d6199518bc3b5",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/factures/GED-01/ulistag/DEBT_SAME_SUPPLIER_VALIDATION.md",
+      "destination": "experiences/factures/GED-01/ulistag/DEBT_SAME_SUPPLIER_VALIDATION.md",
+      "source_sha256": "12baa9be82366a7e119c062b869f48bdd538766615face71e5fc1ad523b6d89b",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/factures/GED-01/ulistag/reference_v0_1.json",
+      "destination": "experiences/factures/GED-01/ulistag/reference_v0_1.json",
+      "source_sha256": "7681cc3ab9c92ec6112d36a55720845c93f1d1eec5735810947660a9bc54a9a7",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/factures/README.md",
+      "destination": "experiences/factures/README.md",
+      "source_sha256": "7e89ddf1d1aa52b581387cccc15cb9536b86f7ed0a754dd1aa857bada99e8871",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/formulaires/GED-02/README.md",
+      "destination": "experiences/formulaires/GED-02/README.md",
+      "source_sha256": "c3945acb2aab47d706f5ff3a9c36a26d3dda51193a455074b8fa777f8b5c8d24",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/impots-finances/GED-02/README.md",
+      "destination": "experiences/impots-finances/GED-02/README.md",
+      "source_sha256": "0f4a0e642513e37ba34b866e75aa45258b630f9a89f672785d3d0113524b682e",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/impots-finances/GED-02/extraction/PROFILE_DRIVEN_EXTRACTION_IMPLEMENTATION_001.md",
+      "destination": "experiences/impots-finances/GED-02/extraction/PROFILE_DRIVEN_EXTRACTION_IMPLEMENTATION_001.md",
+      "source_sha256": "233ada7ea2d557a07ed76ad935257267e4898f8c55f4154ffaf952c3e93b9609",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/impots-finances/GED-02/extraction/SEMANTIC_EXTRACTION_S11_PROTOCOL_V0_1.md",
+      "destination": "experiences/impots-finances/GED-02/extraction/SEMANTIC_EXTRACTION_S11_PROTOCOL_V0_1.md",
+      "source_sha256": "83b44c09a38d48f0d79053d69f04fbfd0fb0b62fdce0b69d0f5dfd90cb5d962f",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/impots-finances/GED-02/extraction/fr_2044_2025_property1_binding_v0_1.json",
+      "destination": "experiences/impots-finances/GED-02/extraction/fr_2044_2025_property1_binding_v0_1.json",
+      "source_sha256": "140bfd3833df368fa9b6d52a54c51c1b0303eac46d824e18fd4192e2be14a8fa",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/impots-finances/GED-02/extraction/semantic_extraction_schema_v0_1.json",
+      "destination": "experiences/impots-finances/GED-02/extraction/semantic_extraction_schema_v0_1.json",
+      "source_sha256": "2dea907e10a885f0da41ff23fd20acaeccb42a8874309b125a542bef21278108",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/impots-finances/GED-02/phase2-reentree/README.md",
+      "destination": "experiences/impots-finances/GED-02/phase2-reentree/README.md",
+      "source_sha256": "b87360ee6131906164c2d81c75f46182856b1d5af0f4ddf0d4d7eff7b56c3b88",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/impots-finances/GED-02/phase2-reentree/SOURCE_MANIFEST_V0_1.json",
+      "destination": "experiences/impots-finances/GED-02/phase2-reentree/SOURCE_MANIFEST_V0_1.json",
+      "source_sha256": "d48798ff134fd1cfda56328d1a6444a0d11bd01dce13420b1099c781eb735483",
+      "deplacement": false,
+      "octets_figes": true
+    },
+    {
+      "source": "experiences/impots-finances/GED-02/phase2-reentree/preuves/S11_DGFIP_SYNTHETIC_GROUND_TRUTH.json",
+      "destination": "experiences/impots-finances/GED-02/phase2-reentree/preuves/S11_DGFIP_SYNTHETIC_GROUND_TRUTH.json",
+      "source_sha256": "6d8d5bd123496eadf1cb8df35e9cefb70dc593f589e0850f791f15cf44e3d9ad",
+      "deplacement": false,
+      "octets_figes": true
+    },
+    {
+      "source": "experiences/impots-finances/GED-02/phase2-reentree/preuves/S11_PROFILE_DRIVEN_EXTRACTED_FROZEN.json",
+      "destination": "experiences/impots-finances/GED-02/phase2-reentree/preuves/S11_PROFILE_DRIVEN_EXTRACTED_FROZEN.json",
+      "source_sha256": "08ec6117d5f842b3f4d7671cc40c026492f5e81a8f78ca5fbd3639423167e87c",
+      "deplacement": false,
+      "octets_figes": true
+    },
+    {
+      "source": "experiences/impots-finances/GED-02/profils/DEBT-GED02-PROFILE-SEMANTIC-ROBUSTNESS-001.md",
+      "destination": "experiences/impots-finances/GED-02/profils/DEBT-GED02-PROFILE-SEMANTIC-ROBUSTNESS-001.md",
+      "source_sha256": "161b451f3e935fcf01b9405903a7779d1376df2dc36b8a3cbbda3c579e693bc5",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/impots-finances/GED-02/profils/fr_formulaire_2044_candidate.json",
+      "destination": "experiences/impots-finances/GED-02/profils/fr_formulaire_2044_candidate.json",
+      "source_sha256": "d87080270d8eff93823decff2b1dbdf5e3c8fbd3646a957bc3385aac2106c4c0",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/impots-finances/GED-02/ulistag/LAYOUT_DENSITY_V0_1.md",
+      "destination": "experiences/impots-finances/GED-02/ulistag/LAYOUT_DENSITY_V0_1.md",
+      "source_sha256": "df3d7aca39844755b047c8fd05b89bca1e2278e6c8ed5743084516f9b1dff077",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/impots-finances/GED-02/ulistag/PHASE1_2044_VISUAL_KEYPOINTS_V0_1.md",
+      "destination": "experiences/impots-finances/GED-02/ulistag/PHASE1_2044_VISUAL_KEYPOINTS_V0_1.md",
+      "source_sha256": "668cc6e4de1dadb4cbe0b57d82ef37e90e2f3a5986e9d808cc8209afc8bf90a7",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/impots-finances/GED-02/ulistag/RESULTS_V0_1.md",
+      "destination": "experiences/impots-finances/GED-02/ulistag/RESULTS_V0_1.md",
+      "source_sha256": "b2c5a2e57ef754477c5da78f17e36566babb6a0c875dd70b69b9eb033bbb8069",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/impots-finances/GED-02/ulistag/layout_density_v0_1.py",
+      "destination": "experiences/impots-finances/GED-02/ulistag/layout_density_v0_1.py",
+      "source_sha256": "a3911a4d8e2e2851311a0799d0e1d8bc328fc00482b823c18af9f3e0c7f8dd7a",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/impots-finances/GED-02/ulistag/reference_layout_density_v0_1.json",
+      "destination": "experiences/impots-finances/GED-02/ulistag/reference_layout_density_v0_1.json",
+      "source_sha256": "f3af69d0c28e0619b89e1dee76029a93aaae506840fa34c378a87b6d156ae8f6",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/impots-finances/GED-02/ulistag/reference_visual_v0_1.zlib.b64.part01",
+      "destination": "experiences/impots-finances/GED-02/ulistag/reference_visual_v0_1.zlib.b64.part01",
+      "source_sha256": "21b16b8c92b321319564423915f8240bda13c93a87c1f56f0db2de5fb859daf8",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/impots-finances/GED-02/ulistag/reference_visual_v0_1.zlib.b64.part02",
+      "destination": "experiences/impots-finances/GED-02/ulistag/reference_visual_v0_1.zlib.b64.part02",
+      "source_sha256": "4f7db766ca34d6169ead8ecc41b8fa8524d97a58ba91a2104064cf8ea5726ea7",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/impots-finances/GED-02/ulistag/reference_visual_v0_1.zlib.b64.part03",
+      "destination": "experiences/impots-finances/GED-02/ulistag/reference_visual_v0_1.zlib.b64.part03",
+      "source_sha256": "1977b9187593be6dbf766ec61f7e8ca846f49921ef151cd6cf753554a426d219",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/impots-finances/GED-02/ulistag/reference_visual_v0_1.zlib.b64.part04",
+      "destination": "experiences/impots-finances/GED-02/ulistag/reference_visual_v0_1.zlib.b64.part04",
+      "source_sha256": "0db3aff37d6bb2ac6c1ef95d66a5120bd447b841f2309d93218959c730f503fc",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/impots-finances/GED-02/ulistag/reference_visual_v0_1_manifest.json",
+      "destination": "experiences/impots-finances/GED-02/ulistag/reference_visual_v0_1_manifest.json",
+      "source_sha256": "f7e56328ae0874494ad88b470eab87acb5d89ad78a912596ee97ea991ce8dbde",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/impots-finances/GED-02/ulistag/restore_reference_visual_v0_1.py",
+      "destination": "experiences/impots-finances/GED-02/ulistag/restore_reference_visual_v0_1.py",
+      "source_sha256": "80f4c890aa067f4c81e3ecb6dda8d74ddeae1e452a4d1308d0aa927f77076787",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/impots-finances/README.md",
+      "destination": "experiences/impots-finances/README.md",
+      "source_sha256": "a8aa6656eb716464f01bab945046499e7e1fb7b122509473278d75cd7ce6c0ad",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/logement-vehicules-services/README.md",
+      "destination": "experiences/logement-vehicules-services/README.md",
+      "source_sha256": "ae12d475c4c2de280c91cf9cb0b334518eb49fe65300f25897b337f9b1439cca",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/paye/GED-05/MANIFEST.json",
+      "destination": "experiences/paye/GED-05/MANIFEST.json",
+      "source_sha256": "a9934aed1690febefc53b8c0f667c8c1bae681b00056525ad9e57c9acab8de55",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/paye/GED-05/README.md",
+      "destination": "experiences/paye/GED-05/README.md",
+      "source_sha256": "165b36387db740993542324727a7c97a999e0876eef83d66751f1bba3c216018",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "experiences/sante-protection-sociale/README.md",
+      "destination": "experiences/sante-protection-sociale/README.md",
+      "source_sha256": "859a4e0d16a822f79240781350c6b487d1de9bf8a79fbde0f449138d71219c38",
+      "deplacement": false,
+      "octets_figes": false
+    },
+    {
+      "source": "outils/verifier_depot.py",
+      "destination": "logiciels/verification/verifier_depot.py",
+      "source_sha256": "ca353b27e8ec6e61c8ca98b11f2b13bc7abd87062ab24a99f735c9df087e71ce",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/DISTRIBUTION_MANIFEST_0_1_1.json",
+      "destination": "logiciels/profile-builder/DISTRIBUTION_MANIFEST_0_1_1.json",
+      "source_sha256": "2bf023a490a9994b329993b03d1a4f345a58682979b86bfaaab80c6397a44486",
+      "deplacement": true,
+      "octets_figes": true
+    },
+    {
+      "source": "profile-builder/DISTRIBUTION_MANIFEST_0_1_2.json",
+      "destination": "logiciels/profile-builder/DISTRIBUTION_MANIFEST_0_1_2.json",
+      "source_sha256": "b65f4acf9d5d59d2ee9fa4e64425e1a6ad2fa88e5979966bbccf19a647aa7d83",
+      "deplacement": true,
+      "octets_figes": true
+    },
+    {
+      "source": "profile-builder/INDEPENDENT_TEST_ENVIRONMENT_ACCEPTANCE_V0_1.md",
+      "destination": "logiciels/profile-builder/INDEPENDENT_TEST_ENVIRONMENT_ACCEPTANCE_V0_1.md",
+      "source_sha256": "9bb2e15e6064a835781f011c18d0f3afdff2900e62fd375be7d9a6347f6653a0",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/README.md",
+      "destination": "logiciels/profile-builder/README.md",
+      "source_sha256": "c4fcb70dd2bb2ea28f21ec49219d3b5feff155de935000345e7718b33ddeca27",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/RELEASE_0_1_0.md",
+      "destination": "logiciels/profile-builder/RELEASE_0_1_0.md",
+      "source_sha256": "357e9bd6c8a890f48779ab1e1061010db09392eb17d4ca82aafe9838899a9127",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/RELEASE_0_1_1.md",
+      "destination": "logiciels/profile-builder/RELEASE_0_1_1.md",
+      "source_sha256": "966b5262a2e0455ffd54917088fa78a64a79610d967555a912effaccfe35d4c6",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/RELEASE_0_1_2.md",
+      "destination": "logiciels/profile-builder/RELEASE_0_1_2.md",
+      "source_sha256": "b653185378199f8a4e03ae5b72a1fe8b7f16b6b588ba6cd4cd4dec30e18fd336",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/ROADMAP.md",
+      "destination": "logiciels/profile-builder/ROADMAP.md",
+      "source_sha256": "25e871cdf62e3e2b35983cf0d058d90b7bb05b77272e4551d4c7a94648f06905",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/bin/profile-builder",
+      "destination": "logiciels/profile-builder/bin/profile-builder",
+      "source_sha256": "5bee8dfb666182f1c2e8f152eaf01d7ee3e8159801a6521ee2d4dca5802031f6",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/docs/CANDIDATE_LIFECYCLE.md",
+      "destination": "logiciels/profile-builder/docs/CANDIDATE_LIFECYCLE.md",
+      "source_sha256": "b5d3aae4c135004a3a89f8df44007aef091913c61749e009b820a228b9c0418c",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/docs/CANDIDATE_REVIEW.md",
+      "destination": "logiciels/profile-builder/docs/CANDIDATE_REVIEW.md",
+      "source_sha256": "faed3589cfc395bb622fd0ebbfbabea28d7fb7819933cdffe9717ffba228b515",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/docs/DOCTRINE_CHANGELOG.md",
+      "destination": "logiciels/profile-builder/docs/DOCTRINE_CHANGELOG.md",
+      "source_sha256": "e14f11501442804869730dbba20f46226bfda53458c6033d05c39b06c21ba90f",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/docs/DOCTRINE_V0_1.md",
+      "destination": "logiciels/profile-builder/docs/DOCTRINE_V0_1.md",
+      "source_sha256": "bd8be9f49e004f3861f76573b791adcfa1f94a585208dd836295b8a15af3cc91",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/evidence/PROFILE_BUILDER_0_1_0_INDEPENDENT_ENV_ACCEPTANCE_001.md",
+      "destination": "logiciels/profile-builder/evidence/PROFILE_BUILDER_0_1_0_INDEPENDENT_ENV_ACCEPTANCE_001.md",
+      "source_sha256": "d8b4923752826c889211b5100d77b9f40886d1e14d4898bc65414e5eb7869cc3",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/examples/ged03/characterization.json",
+      "destination": "logiciels/profile-builder/examples/ged03/characterization.json",
+      "source_sha256": "dcaae7ae30df4af75df9e0e92af8211fa3af0087364dc2aba2afe4b216f21ef8",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/examples/ged03/expected_processing_plan.json",
+      "destination": "logiciels/profile-builder/examples/ged03/expected_processing_plan.json",
+      "source_sha256": "cfd033936d60011f9d77ec4378eca314acd035a08099b9d45bb1f0e148fea670",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/examples/ged03/requested_need.json",
+      "destination": "logiciels/profile-builder/examples/ged03/requested_need.json",
+      "source_sha256": "2228e6fb8d5b5ee9a98e64d27527489b5d65753d9a34a9b970a456e857fe629c",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/registry/CAPABILITY_REGISTRY_V0_1.json",
+      "destination": "logiciels/profile-builder/registry/CAPABILITY_REGISTRY_V0_1.json",
+      "source_sha256": "b804d0fb9d651a46565fc8f4a77090fa641e0c6acf8ddbcb3d83fc9df0127350",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/schemas/candidate_profile_package_v0_1.schema.json",
+      "destination": "logiciels/profile-builder/schemas/candidate_profile_package_v0_1.schema.json",
+      "source_sha256": "a2054b429d57b9170c0ec7b978ac5319a92c487134228bba40bf10ee4557aaaa",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/schemas/candidate_review_finding_v0_1.schema.json",
+      "destination": "logiciels/profile-builder/schemas/candidate_review_finding_v0_1.schema.json",
+      "source_sha256": "57d7c544501ae8236e6fe25730a42147b056490cea85cf94121bc979adf58de0",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/schemas/capability_registry_v0_1.schema.json",
+      "destination": "logiciels/profile-builder/schemas/capability_registry_v0_1.schema.json",
+      "source_sha256": "2900559ee340a4da0138030b666e39fdb6a225fd1f363ae651a25a4ea1e08243",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/schemas/characterization_v0_1.schema.json",
+      "destination": "logiciels/profile-builder/schemas/characterization_v0_1.schema.json",
+      "source_sha256": "a238b4f501510f29a76dddffc0f611450b13b8838facd0abda85d951674aedf7",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/schemas/processing_plan_v0_1.schema.json",
+      "destination": "logiciels/profile-builder/schemas/processing_plan_v0_1.schema.json",
+      "source_sha256": "657d320af7c4f776196159dc35291170d18cc0e1a23cc36ffc1bb889d57621a3",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/schemas/requested_need_v0_1.schema.json",
+      "destination": "logiciels/profile-builder/schemas/requested_need_v0_1.schema.json",
+      "source_sha256": "e21dd98c173d24e63e28cc02c8d51ccdc7b6f5c5c8b1d84ac50c482c354b7e7a",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/specs/GED_CORE_MACHINE_CONTRACT_V0_1.md",
+      "destination": "logiciels/profile-builder/specs/GED_CORE_MACHINE_CONTRACT_V0_1.md",
+      "source_sha256": "598d68debab44bb93aa0aef106983bb1caaf433061ce36ec9db47f312c160db3",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/specs/PUBLICATION_BOUNDARY_V0_1.md",
+      "destination": "logiciels/profile-builder/specs/PUBLICATION_BOUNDARY_V0_1.md",
+      "source_sha256": "3a29c16f013e1f5a1b1d5972258e7b43022e93ffb7340aa666dd20cfe70bf973",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/tests/test_matcher_selection_v0_1_1.py",
+      "destination": "logiciels/profile-builder/tests/test_matcher_selection_v0_1_1.py",
+      "source_sha256": "37858ce6376b636830062aebf40a4f27e6d481a04882a5efbd7225f460dbb8f4",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/tests/test_planner_v0_1.py",
+      "destination": "logiciels/profile-builder/tests/test_planner_v0_1.py",
+      "source_sha256": "44d00bbdaf2c4b5a1c026dbffbabbc47c1cb518562c2fb843ddb93a7eea248e3",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/ulisdoq_profile_builder/__init__.py",
+      "destination": "logiciels/profile-builder/ulisdoq_profile_builder/__init__.py",
+      "source_sha256": "62fb98cd69cab6a05bf88a86f0702efa7848600b208fd56673f6fda3bbcefa3b",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/ulisdoq_profile_builder/__main__.py",
+      "destination": "logiciels/profile-builder/ulisdoq_profile_builder/__main__.py",
+      "source_sha256": "79ee6f134c5c5193377cf9b189cbdcc3e2095e49ba9cec310114441c15a917c4",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/ulisdoq_profile_builder/cli.py",
+      "destination": "logiciels/profile-builder/ulisdoq_profile_builder/cli.py",
+      "source_sha256": "a1c991b71cd7f87e886d03cdf7709951d65da57814ff889555735a13698858e1",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "profile-builder/ulisdoq_profile_builder/planner.py",
+      "destination": "logiciels/profile-builder/ulisdoq_profile_builder/planner.py",
+      "source_sha256": "53d58faa14c3bd7642e9ed57560bed90ca51b777484ea74c775bcad7a6e6b92e",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "project/ETUDE_FAISABILITE_COUVERTURE_PROFILS_1000_ORGANISATIONS.md",
+      "destination": "documentation/etudes/ETUDE_FAISABILITE_COUVERTURE_PROFILS_1000_ORGANISATIONS.md",
+      "source_sha256": "30719c18c82fd58f8fa43d33637e28a2ef52b084c4f2b01af12e10823d326840",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "project/GED01_SFR_PROFIL_DOCUMENTAIRE_EXPLOITABLE.md",
+      "destination": "experiences/factures/GED-01/documentation/PROFIL_DOCUMENTAIRE_EXPLOITABLE.md",
+      "source_sha256": "d9d2747824d47bae845768e33c6902aed2d241370340b715dcd9a08421791263",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "project/GED_CORE_ARCHITECTURE_CANDIDATE_V0_1.md",
+      "destination": "documentation/architecture/GED_CORE_ARCHITECTURE_CANDIDATE_V0_1.md",
+      "source_sha256": "0a348bd34de59de4f7b32ab559b7bf5b683d924790c1d51c3a5bcbf9ac0e02b9",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "project/GED_CORE_MACHINE_PROFILE_BUILDER_ARCHITECTURE_CANDIDATE_V0_1.md",
+      "destination": "documentation/architecture/GED_CORE_MACHINE_PROFILE_BUILDER_ARCHITECTURE_CANDIDATE_V0_1.md",
+      "source_sha256": "a1be6d2ababa0159fba534788772a16ce6daafa113f6530fcfca240daee6d49f",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "project/GED_REAL_EXPERIMENT_INVARIANTS.md",
+      "destination": "documentation/METHODE_EXPERIENCES.md",
+      "source_sha256": "c7fa1f7a5f86fa2894f90a99ff70248ed2a26bbc4e41255f1272a3dce055ef7d",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "project/HORIZON_FORMAT_MATCHER.md",
+      "destination": "documentation/architecture/HORIZON_RECONNAISSANCE_FORMATS.md",
+      "source_sha256": "f5ef6da62034fac8f0ac1d4c3e5421560ac5e950439737eec5bb05ec49fb5674",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "project/HORIZON_FORMAT_STATE_OF_ART.md",
+      "destination": "documentation/etudes/ETAT_ART_RECONNAISSANCE_FORMATS.md",
+      "source_sha256": "ea6122e881a75c4b0d6842b85fb3f043bafc77cbbb581a555cb2c42b760ab7d0",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "project/HORIZON_IDENTITY_MAPPING.md",
+      "destination": "documentation/architecture/IDENTITES_CORRESPONDANCES.md",
+      "source_sha256": "9b3bf6c05138abcd3be1de8991423b66795aaf6a89c7036d3adad6a77ee8ce6b",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "project/LEDGER.md",
+      "destination": "documentation/JOURNAL_DECISIONS.md",
+      "source_sha256": "609aa0da9fcb03dab7bdba25f2566c0258fa99e372f6d8ddadf1932b457f2b93",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "project/PROFILE_REGISTRY_V0_1.json",
+      "destination": "catalogue/registre-profils.json",
+      "source_sha256": "a929d45f47b1cc84517b6de861db966edd454dd2aae203643d4e66aa46a1afc3",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "project/PROJECT_OPERATING_MODEL.md",
+      "destination": "documentation/MODELE_OPERATOIRE_PROJET.md",
+      "source_sha256": "0edd041c2c035ac9b369b3a6e3e2ec13853f13f9c531cc0f569477a7165731f2",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "project/TAG_CANDIDATE_PROTOCOL.md",
+      "destination": "logiciels/client/documentation/PROTOCOLE_TAG_CANDIDAT.md",
+      "source_sha256": "d05968c2b834fefb5e1745f75230cb12b5abee2aebd18510ab85cf7fe633edce",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "project/UNIFICATION_TECHNICAL_COMPONENTS.md",
+      "destination": "documentation/architecture/UNIFICATION_COMPOSANTS_TECHNIQUES.md",
+      "source_sha256": "0ccdf3989a1e42dfcecc64ccaf6b1b7b67f784ee322e9aa0b4f383deb6a9ef16",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "tests/requirements.txt",
+      "destination": "logiciels/verification/requirements.txt",
+      "source_sha256": "44ff0dc2f1e40311b8239e83146749ab9d9cee2a650e699f5464755d552ee20d",
+      "deplacement": true,
+      "octets_figes": false
+    },
+    {
+      "source": "tests/test_coherence_verticales.py",
+      "destination": "logiciels/verification/tests/test_coherence_verticales.py",
+      "source_sha256": "0e4f0f865a414ec8516e509bf6eb4529ea76860cdb8143bdf04298df231d6e9a",
+      "deplacement": true,
+      "octets_figes": false
+    }
+  ],
+  "autorisation": "Jean, validation explicite du lot 1 le 29 octobre 2026",
+  "distribution_courante": "logiciels/profile-builder/DISTRIBUTION_MANIFEST_ORGANISATION_2.json",
+  "controle_octets_figes": "29 fichiers dont les SHA-256 de départ restent inchangés."
+}

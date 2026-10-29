@@ -11,7 +11,7 @@
 ## Invariants du projet
 
 - Le catalogue documentaire est l’actif principal ; les outils servent sa construction.
-- Projet francophone : privilégier le français pour les surfaces documentaires et métier ; conserver l’anglais technique pertinent. `profile-builder/` est une exception logicielle explicitement retenue.
+- Projet francophone : privilégier le français pour les surfaces documentaires et métier ; conserver l’anglais technique pertinent. `logiciels/profile-builder/` est une exception logicielle explicitement retenue.
 - Originaux et valeurs personnelles privés restent hors du dépôt public. Les spécimens doivent être synthétiques ou avoir une anonymisation vérifiée. La validation du spécimen public GED-01 par Jean est acquise et ne doit pas être rouverte sans nouvel élément.
 - Les dettes GED-04 et de qualification approfondie restent réservées à la phase 2. Ne pas les relancer à l’occasion du rangement du dépôt.
-- Lire [l’état courant](ETAT_DU_PROJET.md) et [l’organisation du dépôt](ORGANISATION_DU_DEPOT.md) avant de reprendre un chantier.
+- Lire [l’état courant](documentation/ETAT_DU_PROJET.md) et [l’organisation du dépôt](documentation/architecture/ORGANISATION_DU_DEPOT.md) avant de reprendre un chantier.

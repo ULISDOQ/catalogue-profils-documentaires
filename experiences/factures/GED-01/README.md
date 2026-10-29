@@ -8,18 +8,18 @@ Cette expérience appartient à la famille [Factures & achats](../README.md).
 
 1. **Voir le document source expérimental :** [facture Fournisseur-EXP-01 modifiée (PDF image)](specimens/Fournisseur-EXP-01_document_experimental.pdf), ou [page 1](specimens/Fournisseur-EXP-01_page_1.png) et [page 2](specimens/Fournisseur-EXP-01_page_2.png).
 2. **Voir le profil candidat :** [fournisseur_exp_01.yml](modeles/fournisseur_exp_01.yml), au format d'[invoice2data](https://github.com/invoice-x/invoice2data).
-3. **Voir le client ULISDOQ :** [mode d'emploi et commande](../../../client/README.md) ; [script Python](../../../client/extract.py).
+3. **Voir le client ULISDOQ :** [mode d'emploi et commande](../../../logiciels/client/README.md) ; [script Python](../../../logiciels/client/extract.py).
 4. **Voir comment juger le résultat :** [protocole](documentation/PROTOCOLE.md).
 
 **État actuel :** le candidat ULISTAG v0.1 a passé une première exécution réelle sur un environnement Linux indépendant : `MATCH_CANDIDATE`, `node_ratio=1.0`, `edge_ratio=1.0`, puis extraction technique des trois champs attendus avec `EXTRACTED_UNVERIFIED`. Aucune valeur privée n'a été retournée. Ce résultat porte sur la source ayant servi à la conception et reste **non qualifié**. Voir le [RETEX environnement indépendant](documentation/RETEX_ULISTAG_V0_1_INDEPENDENT_ENV_EXECUTION_001.md).
 
-Voir la [conception spécialisée GED-01](ulistag/ANCHOR_GRAPH_V0_1.md). Le matcher générique candidat correspondant vit désormais dans le cœur [ULISTAG/](../../../ULISTAG/README.md).
+Voir la [conception spécialisée GED-01](ulistag/ANCHOR_GRAPH_V0_1.md). Le matcher générique candidat correspondant vit désormais dans le cœur [ULISTAG/](../../../logiciels/ULISTAG/README.md).
 
-Pour préparer un descripteur local, voir [l'éditeur de TAG candidat](../../../client/tag_candidate.py) et son [protocole](../../../project/TAG_CANDIDATE_PROTOCOL.md). La consultation du catalogue reste à implémenter.
+Pour préparer un descripteur local, voir [l'éditeur de TAG candidat](../../../logiciels/client/tag_candidate.py) et son [protocole](../../../logiciels/client/documentation/PROTOCOLE_TAG_CANDIDAT.md). La consultation du catalogue reste à implémenter.
 
 ## Séparation des identités
 
-Le nom **Fournisseur-EXP-01** est un alias limité à cette expérience. Le profil technique utilise une référence opaque, sans prétendre identifier l'émetteur. L'architecture cible sépare [entité canonique, TAG de format, profil et correspondances](../../../project/HORIZON_IDENTITY_MAPPING.md). La reconnaissance du format doit être qualifiée indépendamment de l'identité commerciale.
+Le nom **Fournisseur-EXP-01** est un alias limité à cette expérience. Le profil technique utilise une référence opaque, sans prétendre identifier l'émetteur. L'architecture cible sépare [entité canonique, TAG de format, profil et correspondances](../../../documentation/architecture/IDENTITES_CORRESPONDANCES.md). La reconnaissance du format doit être qualifiée indépendamment de l'identité commerciale.
 
 ## Ce que doit apporter ULISDOQ
 
@@ -47,4 +47,4 @@ Une fois un profil **qualifié**, un consommateur (GED, script ou autre) récup�
 - **Sécurité :** ne pas charger automatiquement une nouvelle version non qualifiée ; figer le commit ou l'empreinte approuvée.
 - **Évolution :** si signature de facture inconnue, extraction ambiguë ou contrôles en échec, renvoyer un état explicite et ouvrir un travail de qualification ; ne pas inventer de valeurs.
 
-**État actuel : architecture cible documentée, pas encore réalisée de bout en bout.** Le client ULISDOQ présent dans `client/extract.py` ne télécharge pas encore les profils depuis l'API GitHub et le profil Fournisseur-EXP-01 n'est pas qualifié.
+**État actuel : architecture cible documentée, pas encore réalisée de bout en bout.** Le client ULISDOQ présent dans `logiciels/client/extract.py` ne télécharge pas encore les profils depuis l'API GitHub et le profil Fournisseur-EXP-01 n'est pas qualifié.

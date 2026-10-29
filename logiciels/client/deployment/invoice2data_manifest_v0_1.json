@@ -1,0 +1,20 @@
+{
+  "schema_version": "ulisdoq-client-capability-deployment/0.1",
+  "capability_id": "CLIENT-INVOICE2DATA-EXTRACTION",
+  "capability_version": "0.1.0-phase1",
+  "maturity": "PHASE1_CANDIDATE",
+  "source": {
+    "implementation_path": "logiciels/client/extract.py",
+    "implementation_blob_sha": "861a12ae96dfddde4b60f437d5dfeaeee47832e3"
+  },
+  "environment": "invoice2data",
+  "python_dependencies": [
+    {"distribution": "invoice2data", "version": "0.4.5", "status": "CANDIDATE_PIN"}
+  ],
+  "system_dependencies": [
+    {"capability": "ocr_tesseract", "when_reader": "tesseract"},
+    {"capability": "poppler", "when_required_by_reader": true}
+  ],
+  "verification": "complete profile global battery + case-level extraction evidence",
+  "production_qualified": false
+}

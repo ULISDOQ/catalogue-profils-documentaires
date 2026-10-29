@@ -30,7 +30,7 @@ Une organisation, un modèle de facture et un profil d'extraction sont des objet
 
 Le nom commercial d'un émetteur ne constitue ni l'identité canonique d'un profil ni une preuve suffisante de reconnaissance. Un même émetteur peut produire plusieurs modèles ; plusieurs émetteurs peuvent partager un modèle proche ; un même modèle peut disposer de plusieurs profils selon les moteurs compatibles.
 
-L'architecture canonique est décrite dans [HORIZON_IDENTITY_MAPPING.md](../../project/HORIZON_IDENTITY_MAPPING.md).
+L'architecture canonique est décrite dans [HORIZON_IDENTITY_MAPPING.md](../../documentation/architecture/IDENTITES_CORRESPONDANCES.md).
 
 ## Ce que doit apporter ULISDOQ
 
@@ -80,7 +80,7 @@ Pour contribuer : proposer un profil, une fixture autorisée, un TAG candidat, u
 
 Chaque sous-dossier `GED-NN/` est une expérience bornée portant sur un cas particulier. Il contient ses propres fixtures, profils ou templates, tests et preuves.
 
-Le client générique ULISDOQ reste dans [`/client`](../../client/README.md) : une expérience utilise le client mais n'en est pas propriétaire.
+Le client générique ULISDOQ reste dans [`/client`](../../logiciels/client/README.md) : une expérience utilise le client mais n'en est pas propriétaire.
 
 ## Expériences
 

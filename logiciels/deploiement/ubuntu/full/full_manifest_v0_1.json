@@ -1,0 +1,48 @@
+{
+  "schema_version": "ulisdoq-full-linux-stack/0.1",
+  "stack_id": "ULISDOQ-FULL-UBUNTU-PHASE1-V0.1",
+  "status": "SUPERSEDED",
+  "scope": "Complete reusable baseline for ULISDOQ phase-1 experimentation, not limited to one GED-N case",
+  "target": {
+    "os_family": "ubuntu",
+    "minimum_os": "22.04",
+    "architecture": "x86_64",
+    "minimum_python": "3.12.3",
+    "gpu": {
+      "vendor": "NVIDIA",
+      "minimum_gpu_class": "RTX 4060 8GB or compatible CUDA-capable GPU",
+      "minimum_cuda_baseline": "PCIA_OBSERVED_BASELINE_REQUIRED_BEFORE_QUALIFICATION"
+    }
+  },
+  "capability_bundles": [
+    "base_runtime",
+    "pdf_io",
+    "document_parsing",
+    "image_processing",
+    "ocr",
+    "layout_and_matching",
+    "tables_and_structured_data",
+    "office_formats",
+    "barcode_and_qr",
+    "semantic_validation",
+    "http_and_catalogue_sync",
+    "testing_and_evidence",
+    "gpu_ml"
+  ],
+  "system_packages_file": "logiciels/deploiement/ubuntu/full/apt-packages-v0_1.txt",
+  "python_requirements_input": "logiciels/deploiement/ubuntu/full/requirements-full-v0_1.in",
+  "install_script": "logiciels/deploiement/ubuntu/full/install_full_v0_1.sh",
+  "verification_script": "logiciels/deploiement/ubuntu/full/verify_full_v0_1.py",
+  "lock_policy": "Resolve inside isolated target venv, then freeze exact installed set and record SHA-256 as deployment evidence. Promote a canonical lock only after successful PCIA qualification.",
+  "environment_policy": {
+    "install_mode": "dedicated isolated venv",
+    "global_pip": "FORBIDDEN",
+    "pip_user": "FORBIDDEN",
+    "existing_environment_mutation": "FORBIDDEN",
+    "system_packages": "explicitly authorized apt install only",
+    "cuda_driver_or_toolkit_installation": "NOT_IMPLICIT_VERIFY_FIRST"
+  },
+  "production_qualified": false,
+  "superseded_by": "logiciels/deploiement/ubuntu/complete-v0_1/profile_manifest.json",
+  "reason": "Replaced by inventory-driven complete profile containing only declared ULISDOQ v0.1 capabilities; GPU/CUDA removed until a declared capability requires them."
+}

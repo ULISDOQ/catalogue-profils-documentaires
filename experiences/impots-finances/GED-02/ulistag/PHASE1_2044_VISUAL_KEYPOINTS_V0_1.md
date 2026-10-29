@@ -18,7 +18,7 @@ GED-01 a établi l'intérêt de :
 
 GED-02 conserve ces principes mais rencontre une nouvelle contrainte : la source officielle contient une couche texte exploitable alors que les représentations synthétiques sont image-only.
 
-La brique généralisée choisie est donc un matcher de **points visuels locaux + cohérence géométrique**, capitalisé dans `ULISTAG/matchers/visual_keypoints/`.
+La brique généralisée choisie est donc un matcher de **points visuels locaux + cohérence géométrique**, capitalisé dans `logiciels/ULISTAG/matchers/visual_keypoints/`.
 
 ## Construction initiale
 

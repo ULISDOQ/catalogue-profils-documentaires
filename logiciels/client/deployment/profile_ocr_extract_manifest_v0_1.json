@@ -1,0 +1,46 @@
+{
+  "schema_version": "ulisdoq-client-capability-deployment/0.1",
+  "capability_id": "PROFILE_DRIVEN_OCR_GEOMETRIC_EXTRACTION_V0.1",
+  "capability_version": "0.1.0-phase1",
+  "maturity": "PHASE1_CANDIDATE",
+  "source": {
+    "implementation_path": "logiciels/client/profile_ocr_extract_v0_1.py",
+    "profile_registry": "catalogue/registre-profils.json"
+  },
+  "environment": "profile_extraction",
+  "python_dependencies": [
+    {
+      "distribution": "PyMuPDF",
+      "version": "1.26.7"
+    },
+    {
+      "distribution": "jsonschema",
+      "version": "4.25.1"
+    }
+  ],
+  "system_dependencies": [
+    {
+      "name": "tesseract-ocr",
+      "tested_version": "5.3.4",
+      "policy": "existing capability may be reused if verified"
+    },
+    {
+      "name": "tesseract-ocr-fra",
+      "policy": "language data required"
+    },
+    {
+      "name": "tesseract-ocr-eng",
+      "policy": "language data required"
+    }
+  ],
+  "verification": [
+    "profile discovery by format_tag_id",
+    "profile version identity",
+    "binding load and identity",
+    "ROI OCR on synthetic fixture",
+    "semantic schema validation",
+    "traceability hashes",
+    "ground_truth_access=NONE"
+  ],
+  "production_qualified": false
+}

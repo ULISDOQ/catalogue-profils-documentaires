@@ -2,7 +2,7 @@
 
 **Statut : expérience phase 1 — PASS_CANDIDATE technique, non qualifiée.**
 
-GED-02 suit la [méthode GED-N phase 1](../../../ULISTAG/protocols/PHASE1_GED_CASE_METHOD.md). Le corpus synthétique comporte huit variantes positives du formulaire 2044 étudié et un témoin négatif fiscal ressemblant. Une première méthode ULISTAG spécialisée, fondée sur la densité de mise en page multi-pages, sépare les huit positifs du négatif sur ce corpus.
+GED-02 suit la [méthode GED-N phase 1](../../../documentation/METHODE_GED_PHASE_1.md). Le corpus synthétique comporte huit variantes positives du formulaire 2044 étudié et un témoin négatif fiscal ressemblant. Une première méthode ULISTAG spécialisée, fondée sur la densité de mise en page multi-pages, sépare les huit positifs du négatif sur ce corpus.
 
 Voir :
 - [méthode ULISTAG GED-02](ulistag/LAYOUT_DENSITY_V0_1.md) ;
@@ -58,7 +58,7 @@ Légifrance peut compléter la qualification lorsqu'un texte réglementaire ou l
 
 ## ULISTAG phase 1
 
-GED-02 dispose désormais d'un candidat de reconnaissance structurelle de phase 1 fondé sur le matcher réutilisable [visual_keypoints](../../../ULISTAG/matchers/visual_keypoints/README.md).
+GED-02 dispose désormais d'un candidat de reconnaissance structurelle de phase 1 fondé sur le matcher réutilisable [visual_keypoints](../../../logiciels/ULISTAG/matchers/visual_keypoints/README.md).
 
 La référence est construite à partir du PDF officiel `2044_5132.pdf` puis stabilisée avec une première représentation synthétique S01. Le même TAG candidat est ensuite éprouvé successivement sur S02 à S08, puis sur un témoin négatif fiscal ressemblant.
 
@@ -117,7 +117,7 @@ GED-02 doit montrer qu'ULISDOQ sait :
 5. conserver les distinctions entre document, source de connaissance, TAG, profil et moteur ;
 6. signaler `UNKNOWN` ou `AMBIGUOUS` lorsque la correspondance n'est pas suffisamment établie.
 
-Le TAG peut être préparé localement avec l'[éditeur ULISDOQ](../../../client/tag_candidate.py), mais **l'extraction vient après la qualification documentaire**.
+Le TAG peut être préparé localement avec l'[éditeur ULISDOQ](../../../logiciels/client/tag_candidate.py), mais **l'extraction vient après la qualification documentaire**.
 
 Aucun document fiscal personnel réel n'est requis dans le dépôt pour conduire cette expérimentation.
 

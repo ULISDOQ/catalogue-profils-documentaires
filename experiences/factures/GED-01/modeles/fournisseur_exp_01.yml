@@ -1,6 +1,6 @@
 # Adaptateur invoice2data candidat ; identifiant technique opaque, pas nom commercial.
 # Sélection explicite du profil requise ; mot-cle FACTURE non discriminant.
-# Voir project/HORIZON_IDENTITY_MAPPING.md ; non qualifié.
+# Voir documentation/architecture/IDENTITES_CORRESPONDANCES.md ; non qualifié.
 issuer: ULISDOQ-ENTITY-EXP-0001
 keywords:
   - '(?i)FACTURE'

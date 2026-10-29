@@ -19,7 +19,7 @@
   },
   "extraction": {
     "capability_id": "NATIVE_MIME_EMAIL_EXTRACTION_V0.1",
-    "engine": "client/eml_extract_v0_1.py",
+    "engine": "logiciels/client/eml_extract_v0_1.py",
     "semantic_schema": "../contrats/normalized_eml_schema_v0_1.json",
     "status": "PHASE1_CANDIDATE_UNQUALIFIED"
   },

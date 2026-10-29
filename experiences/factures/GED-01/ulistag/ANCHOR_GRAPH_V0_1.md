@@ -129,7 +129,7 @@ Les coordonnées de référence ont été initialisées à partir de la source p
 
 Implémentation :
 
-`ULISTAG/matchers/anchor_graph/ulistag_v0.py match`
+`logiciels/ULISTAG/matchers/anchor_graph/ulistag_v0.py match`
 
 Le résultat est :
 

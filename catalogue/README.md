@@ -4,9 +4,9 @@ Ce répertoire constitue la surface canonique de connaissance documentaire réut
 
 Il est distinct de :
 - `experiences/` : cas réels, preuves, essais et dettes de recherche ;
-- `profile-builder/` : sous-projet logiciel de construction et de planification de profils ;
-- `ULISTAG/` : capacités de reconnaissance documentaire ;
-- `client/` : adaptateurs et outils exécutables.
+- `logiciels/profile-builder/` : sous-projet logiciel de construction et de planification de profils ;
+- `logiciels/ULISTAG/` : capacités de reconnaissance documentaire ;
+- `logiciels/client/` : adaptateurs et outils exécutables.
 
 ## Principe de classement
 

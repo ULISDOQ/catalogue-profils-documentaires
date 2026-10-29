@@ -1,0 +1,47 @@
+{
+  "schema_version": "ulisdoq-complete-ubuntu-profile/0.1",
+  "profile_id": "ULISDOQ-COMPLETE-UBUNTU-V0.1",
+  "status": "CANDIDATE_NOT_YET_FULLY_QUALIFIED",
+  "control_baseline_read_by_lifecycle": "e51ab7f40a9a4c42ee3039cf78633c2629e4a2ff",
+  "canonical_inventory": "logiciels/deploiement/ubuntu/complete-v0_1/capability_inventory.json",
+  "compatibility_matrix": "logiciels/deploiement/ubuntu/complete-v0_1/COMPATIBILITY.md",
+  "system_packages": "logiciels/deploiement/ubuntu/complete-v0_1/apt-packages.txt",
+  "entrypoint": "logiciels/deploiement/ubuntu/complete-v0_1/ulisdoq-deploy.sh",
+  "verification": "logiciels/deploiement/ubuntu/complete-v0_1/verify_complete.py",
+  "environments": {
+    "core": null,
+    "anchor_graph": "logiciels/deploiement/ubuntu/complete-v0_1/requirements-anchor_graph.txt",
+    "visual_keypoints": "logiciels/deploiement/ubuntu/complete-v0_1/requirements-visual_keypoints.txt",
+    "invoice2data": "logiciels/deploiement/ubuntu/complete-v0_1/requirements-invoice2data.txt",
+    "semantic_validation": "logiciels/deploiement/ubuntu/complete-v0_1/requirements-semantic_validation.txt",
+    "profile_extraction": "logiciels/deploiement/ubuntu/complete-v0_1/requirements-profile_extraction.txt"
+  },
+  "gpu": {
+    "declared_function_requires_gpu": false,
+    "cuda_dependency": false
+  },
+  "rollback": "entrypoint rollback removes only profile-owned venvs and evidence; system packages are never auto-removed",
+  "installation_policy": {
+    "mode": "DELTA_ONLY",
+    "attach_existing_compatible_environments": true,
+    "attach_syntax": "--attach NAME=/absolute/path/to/venv",
+    "attached_environment_acceptance": "GLOBAL_VERIFICATION_REQUIRED",
+    "existing_unowned_environment_policy": "FAIL_CLOSED_UNLESS_EXPLICITLY_ATTACHED",
+    "system_packages": "INSTALL_MISSING_ONLY_WITH_EXPLICIT_--install-system"
+  },
+  "ownership": {
+    "profile_marker": ".ulisdoq-profile-owner",
+    "environment_marker": ".ulisdoq-owned",
+    "state_file": "environments.tsv",
+    "rollback": "DELETE_ONLY_OWNED_MARKED_ENVIRONMENTS_UNDER_PROFILE_ROOT",
+    "attached_environments": "NEVER_DELETE"
+  },
+  "reproducibility_limits": [
+    "Complete profile has not yet been runtime-qualified on PCIA.",
+    "Attached PCIA environments are compatible only after the global battery passes against their exact live state.",
+    "Exact locks for attached environments are evidence until explicitly promoted as canonical locks.",
+    "APT repository contents can change; resolved system package versions must be captured during qualification.",
+    "Newer Ubuntu or Python versions are not assumed compatible.",
+    "No CUDA/GPU dependency is declared by v0.1."
+  ]
+}

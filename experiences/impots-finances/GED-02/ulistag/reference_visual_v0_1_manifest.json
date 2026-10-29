@@ -2,7 +2,7 @@
   "schema_version": "ulistag-visual-keypoints-reference-manifest/0.1",
   "ulistag_id": "ULISTAG-GED02-2044-VISUAL-KEYPOINTS-V0.1",
   "status": "CANDIDATE_UNQUALIFIED",
-  "method_ref": "ULISTAG/matchers/visual_keypoints/ulistag_visual_keypoints_v0.py",
+  "method_ref": "logiciels/ULISTAG/matchers/visual_keypoints/ulistag_visual_keypoints_v0.py",
   "reference_source": {
     "filename": "2044_5132.pdf",
     "sha256": "6c9798559408deef0646cf93cbf9f933c7da1cbd404ac2129e54d52fc3369e9b"

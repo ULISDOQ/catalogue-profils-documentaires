@@ -12,7 +12,7 @@
     "method_id": "ULISTAG-VISUAL-KEYPOINTS-ORB-HAMMING-RANSAC",
     "method_version": "0.1.0-phase1",
     "reference": "../ulistag/reference_visual_v0_1_manifest.json",
-    "matcher": "../../../../ULISTAG/matchers/visual_keypoints/ulistag_visual_keypoints_v0.py",
+    "matcher": "../../../../logiciels/ULISTAG/matchers/visual_keypoints/ulistag_visual_keypoints_v0.py",
     "corpus_result": "PASS_CANDIDATE",
     "positive_count": 8,
     "negative_count": 1,
@@ -43,7 +43,7 @@
   },
   "extraction": {
     "capability_id": "PROFILE_DRIVEN_OCR_GEOMETRIC_EXTRACTION_V0.1",
-    "engine": "client/profile_ocr_extract_v0_1.py",
+    "engine": "logiciels/client/profile_ocr_extract_v0_1.py",
     "binding": "../extraction/fr_2044_2025_property1_binding_v0_1.json",
     "semantic_schema": "../extraction/semantic_extraction_schema_v0_1.json",
     "target_fields": 25,
