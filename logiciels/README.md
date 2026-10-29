@@ -14,3 +14,5 @@ Les logiciels servent le catalogue documentaire. Une brique technique exécute u
 Client et Builder doivent réemployer les mêmes adaptateurs et moteurs. Leur code ne doit pas être dupliqué. Le rangement actuel mélange encore préparation et exploitation ; les choix de séparation ou de fusion restent à arbitrer, sans déplacement décidé par cette description.
 
 Les cas et preuves restent dans les expériences ; les connaissances réutilisables appartiennent au catalogue. L'[état du projet](../documentation/ETAT_DU_PROJET.md) conserve les limites et décisions courantes.
+
+Pour les entrées consommateur, architecte et développeur de brique, lire [la critique des cinq ensembles](../documentation/architecture/ANALYSE_ENSEMBLES_LOGICIELS.md) : acquis, superpositions, contrats manquants et propositions à arbitrer.

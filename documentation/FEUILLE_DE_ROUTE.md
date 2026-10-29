@@ -1,6 +1,6 @@
 # Feuille de route ULISDOQ
 
-Mise à jour : **29 octobre 2026 — clôture de séance**.  
+Mise à jour : **29 octobre 2026 — reprise et correction C**.
 Cette page ordonne la reprise et les étapes ultérieures. L'[état du projet](ETAT_DU_PROJET.md) décrit les acquis et limites ; Git conserve leurs versions. Une étape prévue n'est pas une autorisation générale de l'exécuter : Jean valide les périmètres au fur et à mesure.
 
 ## Point d'arrêt
@@ -9,7 +9,7 @@ Cette page ordonne la reprise et les étapes ultérieures. L'[état du projet](E
 - Correction A intégrée : lanceur du Builder 0.1.3, distribution reconstruite et plan inchangé.
 - Correction B intégrée : dépendance de compatibilité invoice2data et manifestes alignés, installation neuve et imports vérifiés.
 - Client documenté : commandes réelles, limites, superpositions, cible phase 3 et travaux manquants. Cela ne tranche pas les futures frontières logicielles.
-- Correction C réalisée : module lecteur transmis à invoice2data ; 44 tests du dépôt, selftest et trois tests d'intégration synthétiques PASS. La recette complète sur le commit publié complète ces contrôles ; aucun profil n'est qualifié pour la production.
+- Correction C réalisée : module lecteur transmis à invoice2data ; 44 tests du dépôt, selftest et trois tests d'intégration synthétiques PASS. Batterie complète 31/31 PASS au commit publié 33e4316e851011333b04b44ed409b17cdef9250f ; aucun profil n'est qualifié pour la production.
 - GED-05 en pause ; dettes de qualification GED-02/GED-04 différées. Aucun déploiement consommateur n'a été exécuté pendant ce chantier.
 
 ## Reprise et étapes ordonnées
@@ -17,8 +17,8 @@ Cette page ordonne la reprise et les étapes ultérieures. L'[état du projet](E
 | Ordre | Étape | État / décision nécessaire | Résultat attendu pour passer à la suite |
 | --- | --- | --- | --- |
 | 1 | Corriger le lecteur invoice2data | [Dette C corrigée](../logiciels/client/documentation/DETTE_INVOICE2DATA_LECTEUR.md) ; code et tests réalisés à la demande de Jean | Appel API corrigé, tests de lecteur et extraction synthétique, manifeste et documentation alignés, commit vérifié. |
-| 2 | Recevoir le socle logiciel après A/B/C | Après C ; limites d'environnement à conserver explicitement | Recette reproductible par composant et batterie complète sur les versions retenues ; identifier les réserves restantes. Une réussite locale ne remplace pas la recette sur un environnement consommateur. |
-| 3 | Arbitrer les frontières logicielles | Discussion ouverte : client, outils de préparation, Builder et capacités partagées | Responsabilités et dépendances compréhensibles ; distinguer réemploi utile et duplication réelle avant tout rangement. Voir [les superpositions du client](../logiciels/client/README.md). |
+| 2 | Recevoir le socle logiciel après A/B/C | Recette après C PASS ; réception et limites d'environnement à examiner | Recette reproductible par composant et batterie complète sur les versions retenues ; identifier les réserves restantes. Une réussite locale ne remplace pas la recette sur un environnement consommateur. |
+| 3 | Arbitrer les frontières logicielles | [Critique préparée](architecture/ANALYSE_ENSEMBLES_LOGICIELS.md) ; frontières à arbitrer | Responsabilités et dépendances compréhensibles ; distinguer réemploi utile et duplication réelle avant tout rangement. Voir [les superpositions du client](../logiciels/client/README.md). |
 | 4 | Relire et simplifier les documents internes | Racine traitée ; sous-dossiers encore à examiner par périmètres validés | Re-parsage critique, fusions utiles, retrait motivé de l'inutile avec reconstructibilité conservée ; roadmaps des composants actualisées. |
 | 5 | Aligner POM, architecture et dépôt | Après les décisions retenues aux étapes précédentes | [POM](MODELE_OPERATOIRE_PROJET.md), interfaces, manifestes et organisation concordants ; distinguer cible, implémentation et qualification. |
 | 6 | Poursuivre la phase 1 documentaire et les outils utiles | Selon priorités validées ; GED-05 ne reprend pas automatiquement | Nouveaux cas autorisés, connaissances réutilisables, preuves et dettes explicites ; progrès du Builder et du client proportionnés aux besoins observés. |
@@ -30,6 +30,7 @@ L'ordre n'empêche pas un arbitrage motivé si une dépendance apparaît ; il é
 ## Où retrouver le détail
 
 - [Dette C](../logiciels/client/documentation/DETTE_INVOICE2DATA_LECTEUR.md) : défaut, proposition et critères de clôture.
+- [Critique des cinq ensembles logiciels](architecture/ANALYSE_ENSEMBLES_LOGICIELS.md) : entrées consommateur, architecte et développeur ; propositions sans rangement imposé.
 - [Client](../logiciels/client/README.md) : capacités présentes et écarts avant une chaîne d'exploitation complète.
 - [Logiciels](../logiciels/README.md) : responsabilités et limites de chaque ensemble.
 - [Roadmap Builder](../logiciels/profile-builder/ROADMAP.md) et [roadmap ULISTAG](../logiciels/ULISTAG/ROADMAP.md) : chantiers spécialisés, à relire avec leurs états d'implémentation actuels ; ce ne sont pas deux roadmaps générales concurrentes.

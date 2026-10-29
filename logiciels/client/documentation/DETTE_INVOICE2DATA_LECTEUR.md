@@ -1,7 +1,7 @@
 # Dette C — lecteur de l'adaptateur invoice2data
 
 Identifiant : **DETTE-CLIENT-INVOICE2DATA-LECTEUR-001**  
-Statut : **CORRIGÉE — CODE ET TESTS ; RECETTE DE PUBLICATION CONSIGNÉE À LA REPRISE**
+Statut : **CLOSE — CORRECTION ET RECETTE DU COMMIT PUBLIÉ VÉRIFIÉES**
 Constat et mise en attente : 29 octobre 2026.  
 Périmètre : [adaptateur facture](../extract.py), pas le profil GED-01 ni le catalogue.
 
@@ -52,3 +52,5 @@ python -m unittest discover -s logiciels/client/tests -p test_invoice2data_integ
 ```
 
 La recette complète et son commit sont consignés dans l'état de reprise et l'analyse architecturale associée. Les limites historiques ci-dessus décrivent la base avant C ; elles ne doivent pas être présentées comme des résultats après correction. Aucun profil, lecteur non éprouvé ou poste consommateur n'est qualifié par ces tests.
+
+Recette de publication : commit `33e4316e851011333b04b44ed409b17cdef9250f`, copie propre ; 44 tests, selftest, trois tests moteur et batterie complète 31/31 PASS. Voir les limites dans [l’analyse des ensembles logiciels](../../../documentation/architecture/ANALYSE_ENSEMBLES_LOGICIELS.md).

@@ -31,7 +31,7 @@ L'audit de stabilité du 29 octobre a révélé trois défauts antérieurs au ra
 
 ## Suite
 
-La [dette C du lecteur invoice2data](../logiciels/client/documentation/DETTE_INVOICE2DATA_LECTEUR.md) est corrigée et conserve sa recette. Poursuivre la réception du socle logiciel et l'arbitrage des frontières selon la [feuille de route](FEUILLE_DE_ROUTE.md). Les dettes de robustesse, performance et qualification approfondie GED-02/GED-04 restent réservées à la phase 2 ; la consolidation du logiciel existant ne les relance pas.
+La [dette C du lecteur invoice2data](../logiciels/client/documentation/DETTE_INVOICE2DATA_LECTEUR.md) est corrigée et conserve sa recette. La recette sur le commit 33e4316e851011333b04b44ed409b17cdef9250f donne 44 tests, selftest, trois tests moteur et batterie complète 31/31 PASS ; le déploiement consommateur reste non qualifié. Poursuivre la réception et les frontières selon la [critique des cinq ensembles](architecture/ANALYSE_ENSEMBLES_LOGICIELS.md) et la [feuille de route](FEUILLE_DE_ROUTE.md). Les dettes de robustesse, performance et qualification approfondie GED-02/GED-04 restent réservées à la phase 2 ; la consolidation du logiciel existant ne les relance pas.
 
 Le [registre](JOURNAL_DECISIONS.md) conserve les décisions datées ; cette page présente leur état courant. Les contrôles de confidentialité précèdent toute publication de nouveau spécimen. La validation déjà donnée pour GED-01 reste acquise.
 
