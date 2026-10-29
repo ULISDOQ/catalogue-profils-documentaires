@@ -260,5 +260,22 @@ class CoherenceVerticales(unittest.TestCase):
                     self.assertTrue((ROOT / target).is_file(), target)
 
 
+    def test_15_invoice_dependencies_are_consistent(self):
+        base = ROOT / 'logiciels/deploiement/ubuntu/complete-v0_1'
+        requirements = {}
+        for line in (base / 'requirements-invoice2data.txt').read_text().splitlines():
+            line = line.split('#', 1)[0].strip()
+            if line:
+                name, version = line.split('==')
+                self.assertNotIn(name, requirements)
+                requirements[name] = version
+        self.assertEqual(requirements, {'invoice2data': '0.4.5', 'setuptools': '80.9.0'})
+        manifest = load('logiciels/client/deployment/invoice2data_manifest_v0_1.json')
+        self.assertEqual({d['distribution']: d['version'] for d in manifest['python_dependencies']}, requirements)
+        inventory = json.loads((base / 'capability_inventory.json').read_text())
+        capability = next(c for c in inventory['capabilities'] if c['id'] == 'client.invoice2data_extraction')
+        self.assertEqual({d['name']: d['version'] for d in capability['python_dependencies']}, requirements)
+
+
 if __name__ == '__main__':
     unittest.main()

@@ -39,3 +39,9 @@ Date, identifiant, objet, statut, lien vers protocole ou preuve vérifiable, aut
 | Date | Référence | Objet | Statut | Preuve / limite |
 | --- | --- | --- | --- | --- |
 | 2026-10-29 | BUILDER-LANCEUR | Autorisation de Jean après clarification : paquet présent, chemin d’import du lanceur défectueux ; correction 0.1.3 | TESTED_CANDIDATE | [Version et recette](../logiciels/profile-builder/RELEASE_0_1_3.md), tests extérieurs et archive reconstruite ; plan inchangé. Ni déploiement consommateur ni correction invoice2data. |
+
+## Dépendance de compatibilité invoice2data — 29 octobre 2026
+
+| Date | Référence | Objet | Statut | Preuve / limite |
+| --- | --- | --- | --- | --- |
+| 2026-10-29 | INVOICE2DATA-DEPENDANCE | Étape B autorisée par Jean : déclarer setuptools 80.9.0 pour pkg_resources requis par invoice2data 0.4.5 | TESTED_CANDIDATE | [Dépendances et limites](../logiciels/deploiement/ubuntu/complete-v0_1/README.md), installation neuve et imports contrôlés ; manifestes alignés. Adaptateur facture inchangé, défaut de lecteur réservé à C ; profil complet non qualifié. |

@@ -179,15 +179,23 @@ rc, out, err = run(
     [
         py("invoice2data"),
         "-c",
-        "from importlib.metadata import version; import invoice2data; print(version('invoice2data'))",
+        "import json; from importlib.metadata import version; "
+        "import invoice2data, pkg_resources; "
+        "from invoice2data.extract.loader import read_templates; "
+        "print(json.dumps({name: version(name) for name in ('invoice2data', 'setuptools')}))",
     ]
 )
-invoice_ver = out.strip()
+try:
+    invoice_versions = json.loads(out.strip()) if rc == 0 else {}
+except ValueError:
+    invoice_versions = {}
+invoice_expected = {"invoice2data": "0.4.5", "setuptools": "80.9.0"}
 overall &= check(
     "invoice2data_import",
-    rc == 0 and invoice_ver == "0.4.5",
-    observed=invoice_ver,
-    expected="0.4.5",
+    rc == 0 and invoice_versions == invoice_expected,
+    observed=invoice_versions,
+    expected=invoice_expected,
+    stderr=err[-1000:],
 )
 
 # System OCR presence + language data.

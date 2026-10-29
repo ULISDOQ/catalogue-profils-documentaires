@@ -27,7 +27,7 @@ Les candidats conservés dans les expériences restent distincts du catalogue ca
 
 Les versions ont des périmètres distincts : jalon du dépôt `0.1.0-alpha.1`, logiciel Builder `0.1.3`, versions propres à chaque profil. Une version de dépôt ne qualifie pas automatiquement ces objets.
 
-L'audit de stabilité du 29 octobre a révélé trois défauts antérieurs au rangement. Le lanceur du Builder est corrigé en 0.1.3. Deux défauts de la chaîne invoice2data restent ouverts : dépendance `pkg_resources` absente d'une installation neuve et passage d'un nom de lecteur à une API qui attend un module. La stabilité globale du profil de déploiement complet reste donc non acquise.
+L'audit de stabilité du 29 octobre a révélé trois défauts antérieurs au rangement. Le lanceur du Builder est corrigé en 0.1.3. L'installation neuve d'invoice2data est corrigée par la dépendance de compatibilité `setuptools==80.9.0`, qui fournit `pkg_resources` ; déclarations et contrôle de déploiement sont alignés. L'adaptateur facture transmet encore un nom de lecteur à une API qui attend un module. La stabilité globale du profil de déploiement complet reste donc non acquise.
 
 ## Suite
 

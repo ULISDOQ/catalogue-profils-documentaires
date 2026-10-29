@@ -9,7 +9,8 @@
   },
   "environment": "invoice2data",
   "python_dependencies": [
-    {"distribution": "invoice2data", "version": "0.4.5", "status": "CANDIDATE_PIN"}
+    {"distribution": "invoice2data", "version": "0.4.5", "status": "CANDIDATE_PIN"},
+    {"distribution": "setuptools", "version": "80.9.0", "status": "CANDIDATE_PIN"}
   ],
   "system_dependencies": [
     {"capability": "ocr_tesseract", "when_reader": "tesseract"},
