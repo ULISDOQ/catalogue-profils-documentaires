@@ -1,17 +1,18 @@
 # Consignes de travail — ULISDOQ
 
-## Branche de travail et autorité
+## Reprendre et intervenir
 
-- Travailler dans `main`, avec des commits ciblés, documentés et vérifiés.
-- Toute création d’une nouvelle branche exige une décision ou une confirmation explicite de Jean avant sa création. Ne jamais créer automatiquement une branche, y compris pour un travail logiciel risqué, une refonte ou une expérimentation.
-- Le statut testing ne justifie pas une branche distincte : le projet est actuellement en évaluation. Conserver les travaux retenus et les tests dans main, avec leurs limites explicites.
-- Si une branche paraît nécessaire, soumettre son objectif à Jean et attendre sa décision. Une autorisation générale de développement ne vaut pas autorisation de créer une branche.
-- Après intégration et vérification des travaux, supprimer les branches secondaires dont la fermeture est autorisée, en conservant l’historique utile. Ne pas annoncer une suppression qui n’a pas été vérifiée.
+Lire l'[état courant](documentation/ETAT_DU_PROJET.md) et l'[organisation du dépôt](documentation/architecture/ORGANISATION_DU_DEPOT.md). La documentation doit permettre à tout contributeur ou consommateur de comprendre ULISDOQ sans connaissance préalable des outils personnels du fondateur.
 
-## Invariants du projet
+Travailler dans `main`, y compris en évaluation, avec des commits ciblés, documentés et vérifiés. **Toute nouvelle branche exige une décision ou confirmation explicite préalable de Jean**, quel que soit le motif. Une branche autorisée rejoint `main` ou est abandonnée après conservation des résultats utiles ; sa suppression nécessite l'autorisation correspondante et une vérification.
 
-- Le catalogue documentaire est l’actif principal ; les outils servent sa construction.
-- Projet francophone : privilégier le français pour les surfaces documentaires et métier ; conserver l’anglais technique pertinent. `logiciels/profile-builder/` est une exception logicielle explicitement retenue.
-- Originaux et valeurs personnelles privés restent hors du dépôt public. Les spécimens doivent être synthétiques ou avoir une anonymisation vérifiée. La validation du spécimen public GED-01 par Jean est acquise et ne doit pas être rouverte sans nouvel élément.
-- Les dettes GED-04 et de qualification approfondie restent réservées à la phase 2. Ne pas les relancer à l’occasion du rangement du dépôt.
-- Lire [l’état courant](documentation/ETAT_DU_PROJET.md) et [l’organisation du dépôt](documentation/architecture/ORGANISATION_DU_DEPOT.md) avant de reprendre un chantier.
+## Préserver les invariants
+
+- Le catalogue est l'actif principal ; les logiciels le servent. Séparer connaissance réutilisable, logiciel générique et preuves d'expérience.
+- Privilégier le français pour le métier, la documentation humaine et la gouvernance. Conserver l'anglais technique pertinent, notamment `logiciels/profile-builder/`.
+- Appliquer les règles de [contribution et de confidentialité](CONTRIBUTING.md). La validation du spécimen public GED-01 par Jean reste acquise, sauf nouvel élément.
+- GED-05 reste en pause. Les dettes GED-04 et de qualification approfondie restent réservées à la phase 2.
+
+## Chantier de simplification en cours
+
+Présenter chaque lot à Jean avant son application, puis rendre compte des changements et contrôles pour réception. Préserver les connaissances utiles, les preuves figées et l'historique. Signaler les contradictions de définition pour arbitrage ; ne pas étendre un lot validé à d'autres travaux.

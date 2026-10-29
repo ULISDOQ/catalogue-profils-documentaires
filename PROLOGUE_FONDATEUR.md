@@ -2,56 +2,24 @@
 
 **Unificateur Libre Interprofessionnel de Sources Documentaires Qualifiées**
 
-## L'esprit d'exploration
+## Explorer et transmettre
 
-Le nom **ULISDOQ** est né d'une expérience de pensée : rapprocher la mise en commun des connaissances documentaires de la figure d'**Ulysse, explorateur d'Ithaque**.
-
-Cette image n'est ni une revendication de filiation institutionnelle, ni une promesse d'infaillibilité. Elle exprime une manière d'avancer : partir à la rencontre de territoires documentaires encore mal connus, apprendre des savoirs déjà constitués, reconnaître les repères fiables, puis rapporter ce qui peut être utile à d'autres.
-
-Ulysse ne représente pas ici la conquête d'un territoire, mais **l'intelligence de l'orientation** : savoir distinguer une piste d'une preuve, une ressemblance d'une identité, une découverte d'une connaissance établie. Et surtout, savoir revenir avec quelque chose qui puisse être transmis.
-
-## Lignage du nom
-
-Le nom **ULISDOQ** porte trois évocations complémentaires :
-
-- **ULIS** renvoie à Ulysse : exploration, orientation et transmission des connaissances acquises.
-- **DOCQ** rapproche le document de sa qualification : provenance, fiabilité, limites et réutilisabilité.
-- **DOCK** évoque le port documentaire : un lieu d'accueil, de rencontre et d'échange où documents et profils peuvent être identifiés, contrôlés et orientés.
-
-Ce lignage est **sémantique** : il ne crée ni trois entités distinctes, ni trois marques, ni trois composants logiciels. **ULISDOQ reste le nom unique du projet.** La proximité sonore avec « Docker » n'implique aucune affiliation avec cette technologie.
-
-## Notre principe fondateur
+Le nom ULISDOQ évoque **Ulysse**, l'exploration et l'intelligence de l'orientation : découvrir des territoires documentaires, reconnaître les repères fiables et rapporter des connaissances utiles à d'autres. Il rapproche aussi le document de sa qualification et de l'image d'un port où les ressources se rencontrent, sont identifiées et orientées.
 
 **Une connaissance documentaire découverte n'acquiert sa pleine valeur commune que lorsqu'elle est située, vérifiable, qualifiée et transmissible.**
 
-ULISDOQ a pour vocation d'unifier librement des connaissances et capacités documentaires issues de plusieurs métiers : sources, formats, profils, moteurs techniques et contrôles. Il facilite leur découverte, leur mise en correspondance et leur qualification, tout en rendant explicites leurs limites de fiabilité.
+## Construire un bien commun documentaire
 
-Nous ne prétendons ni recenser toute la toile, ni remplacer les outils et communautés existants. Nous cherchons à **relier sélectivement des sources et capacités pertinentes**, à reconnaître les acquis, à réemployer les briques techniques disponibles sans en privilégier une comme fondement obligatoire et à documenter ce qui manque. Les domaines administratifs, officiels, sanitaires et professionnels pourront être explorés progressivement, au rythme de besoins et de contributions qualifiables.
+ULISDOQ rassemble des connaissances et capacités issues de plusieurs métiers pour mieux reconnaître, classer, extraire et vérifier l'information documentaire. Son catalogue constitue le patrimoine commun ; les logiciels et méthodes en permettent l'usage et l'enrichissement.
+
+Le projet s'appuie sur les sources et outils pertinents, reconnaît leur provenance et documente leurs possibilités comme leurs limites. La confiance se construit par des preuves partageables : reconnaître un document, proposer un profil et vérifier une extraction sont des étapes distinctes.
 
 ## Une identité francophone
 
-ULISDOQ est un projet **francophone**.
+ULISDOQ est un **projet francophone**, d'abord ancré dans la **paperasserie française** et les besoins concrets de ses utilisateurs.
 
-Lorsque nous nommons ce qui appartient en propre à son objet — domaines documentaires, catégories de documents, profils, usages, notions métier, arborescence du catalogue, documentation destinée aux contributeurs et expressions de gouvernance — nous privilégions le **français**, dès lors qu'un terme clair, naturel et suffisamment précis existe.
+Le français guide les noms métier, le catalogue, la documentation humaine et la gouvernance. Les langages, API, formats, bibliothèques et concepts techniques conservent l'anglais lorsqu'il est plus précis ou constitue l'usage établi.
 
-Cette orientation n'est ni un refus de l'anglais ni une règle de traduction systématique. Les langages de programmation, outils informatiques, formats, API, bibliothèques, schémas techniques, identifiants, standards et concepts couramment employés dans le développement peuvent conserver leur terminologie anglaise lorsqu'elle est plus exacte, plus lisible ou constitue l'usage établi.
-
-Le principe recherché est donc simple :
-
-**francophone dans ce qui exprime l'identité documentaire et métier d'ULISDOQ ; pragmatique dans ce qui relève de l'ingénierie et de l'écosystème technique.**
-
-Dans sa première ambition, cette identité s'incarne dans un terrain concret : la **paperasserie française**. ULISDOQ cherche d'abord à accumuler, structurer et qualifier une connaissance documentaire riche des documents réellement rencontrés en France. Une extension à d'autres langues ou contextes pourra venir ensuite sans diluer ce socle initial.
-
-## De l'exploration à la confiance
-
-Un document reconnu n'est pas nécessairement un document compris. Une source réputée n'est pas automatiquement adaptée à chaque usage. Une extraction réussie une fois n'est pas une garantie générale.
-
-Nous distinguons donc : **source identifiée**, **profil proposé**, **profil qualifié pour un périmètre déclaré** et **résultat d'extraction effectivement vérifié**. Chaque contribution doit pouvoir porter sa provenance, ses droits, sa version, ses contrôles, ses limites et, si nécessaire, sa contestation ou son retrait.
-
-L'ouverture n'efface pas la responsabilité : elle impose une méthode de partage. Le catalogue a été conçu pour commencer dans un cercle privé de contributeurs invités. Au 25 octobre 2026, le dépôt est public. Cette visibilité impose de ne publier que des connaissances réutilisables et des spécimens synthétiques ou dont l'anonymisation a été vérifiée, avec l'ambition de construire une gouvernance communautaire durable, sans préjuger d'une forme juridique future.
-
-## Notre horizon
+Chaque contribution doit aider d'autres personnes à comprendre et réutiliser ce qui a été appris, en respectant les droits et la confidentialité. Cette construction communautaire peut progressivement accueillir d'autres contextes documentaires et linguistiques.
 
 **Explorer les documents. Partager les connaissances. Qualifier l'information.**
-
-Ce prologue exprime l'intention fondatrice d'ULISDOQ. Il ne constitue ni une licence, ni une certification, ni une validation juridique ou technique des profils référencés.

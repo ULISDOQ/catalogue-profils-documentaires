@@ -4,92 +4,34 @@
 
 *Explorer les documents. Partager les connaissances. Qualifier l'information.*
 
-ULISDOQ est un **unificateur libre de ressources et de capacités documentaires** : il référence, relie, versionne et qualifie les sources, formats, profils, moteurs et contrôles nécessaires au traitement informationnel local. Il ne se substitue pas aux moteurs techniques.
+ULISDOQ construit un **catalogue communautaire de connaissances documentaires réutilisables**, d'abord consacré à la paperasserie française : sources, catégories, formats, profils, règles d'extraction et contrôles. Les logiciels de reconnaissance et de traitement servent ce catalogue.
 
-[Lire le prologue fondateur](PROLOGUE_FONDATEUR.md). Voir aussi [l'organisation du dépôt](documentation/architecture/ORGANISATION_DU_DEPOT.md).
+Chaque connaissance doit pouvoir être située, versionnée, vérifiée et partagée avec ses limites. Le projet relie les ressources et moteurs pertinents, en documente les compatibilités et permet leur réemploi pour des traitements locaux.
 
-**Point de reprise : [état courant du projet](documentation/ETAT_DU_PROJET.md).** Jalon d’évaluation `0.1.0-alpha.1` ; branche de travail normale : `main`. [Vérifier le dépôt depuis une copie propre](logiciels/verification/VERIFIER_LE_DEPOT.md).
+Lire le [prologue fondateur](PROLOGUE_FONDATEUR.md) pour découvrir l'intention et l'identité francophone du projet.
 
-Le Profile Builder courant est en **0.1.2** : sélection déterministe des matchers, planification seule, sans matérialisation ni qualification automatique de profil. [Version et limites](logiciels/profile-builder/RELEASE_0_1_2.md).
+## Une ambition concrète
 
-## Périmètre
+Nous retenons comme hypothèse qu'un catalogue d'environ **10 000 profils documentaires** permettrait à ULISDOQ de soutenir des usages en production et d'apporter des gains tangibles dans la reconnaissance, le classement et l'extraction des documents.
 
-Le référentiel relie sélectivement des profils, sources, méthodes et briques techniques utiles à la reconnaissance, la classification, l'extraction et la validation des documents : factures, documents administratifs et officiels, documents de santé et autres familles pertinentes. Il ne prétend pas référencer tout Internet.
+Cette hypothèse exprime une ambition de développement. Le projet est actuellement en évaluation : les profils publiés restent candidats et aucun n'est déclaré qualifié pour la production. L'[état courant](documentation/ETAT_DU_PROJET.md) précise les acquis, les limites et les travaux en pause.
 
-Les briques techniques sont des ressources parmi N, caractérisées par leurs capacités, interfaces, versions, licences, compatibilités, limites et preuves. Les noms d'outils particuliers sont réservés à leurs fiches techniques ou aux expériences unitaires. Voir [l'architecture d'unification](documentation/architecture/UNIFICATION_COMPOSANTS_TECHNIQUES.md).
+## Parcourir le dépôt
 
-## Horizontalité et identités canoniques
+| Espace | Ce qu'on y trouve |
+| --- | --- |
+| [catalogue/](catalogue/README.md) | Connaissance réutilisable, profils versionnés et statuts explicites. |
+| [logiciels/](logiciels/) | ULISTAG pour la reconnaissance, client, Profile Builder, escalade consommateur, déploiement et vérification. |
+| [experiences/](experiences/) | Cas d'épreuve, corpus autorisés, protocoles, résultats, preuves et retours d'expérience. |
+| [documentation/](documentation/) | Architecture, fonctionnement du projet, décisions et études. |
 
-**[HORIZON-IDENTITY-001 — Référentiel canonique et correspondances](documentation/architecture/IDENTITES_CORRESPONDANCES.md)** : dissocier entités, formats et profils ; concevoir un référentiel extensible d'entités sans fixer de nombre cible. Les noms commerciaux n'appartiennent pas aux identifiants de profils.
+Un candidat conservé dans une expérience n'est pas automatiquement promu dans le catalogue ni qualifié pour un usage. Les versions du dépôt, des logiciels et des profils ont des périmètres distincts.
 
-## Faisabilité de couverture documentaire
+## Utiliser et contribuer
 
-Une première [étude de dimensionnement](documentation/etudes/ETUDE_FAISABILITE_COUVERTURE_PROFILS_1000_ORGANISATIONS.md) examine l'ordre de grandeur du nombre de profils qualifiés nécessaire pour viser environ 80 % de la paperasserie courante de 1 000 organisations. L'hypothèse centrale est d'environ 1 000 profils, à vérifier sur un corpus représentatif ; l'indicateur principal est le **taux de documents couverts**, non le nombre brut de profils.
+- [Comprendre l'organisation et l'architecture](documentation/architecture/ORGANISATION_DU_DEPOT.md).
+- [Vérifier le dépôt depuis une copie propre](logiciels/verification/VERIFIER_LE_DEPOT.md).
+- [Consulter les procédures de déploiement Ubuntu](logiciels/deploiement/ubuntu/complete-v0_1/README.md) et leurs limites de qualification.
+- [Proposer une contribution](CONTRIBUTING.md).
 
-## Priorité documentaire française
-
-ULISDOQ se construit d'abord autour de la **paperasserie française** : documents administratifs, fiscaux, sociaux, professionnels, assurantiels, de santé, de logement, de véhicule et de vie courante rencontrés en France.
-
-Cette priorité n'interdit aucune extension future. Elle donne au projet un terrain documentaire concret, une langue commune et une communauté naturelle de contributeurs. L'ambition initiale est donc de produire un catalogue particulièrement riche et utile pour les usages documentaires français, avant d'élargir progressivement son périmètre.
-
-## Qualification
-
-Une source identifiée n'est pas nécessairement un profil d'extraction qualifié. Un profil qualifié sur un périmètre donné ne garantit pas tous les résultats d'extraction. Chaque proposition devra préciser provenance, droits, version, critères de reconnaissance, contrôles et limites.
-
-## Horizon déclaré : reconnaître automatiquement les formats
-
-**[HORIZON-FORMAT-001 — Reconnaissance et qualification des formats documentaires](documentation/architecture/HORIZON_RECONNAISSANCE_FORMATS.md)** : établir, sur des corpus indépendants, des TAGs de formats qualifiés permettant aux clients de retrouver le profil d'extraction adapté. Horizon de recherche et de qualification, **non une fonctionnalité déjà opérationnelle**. Priorité au réemploi des mécanismes existants.
-
-## ULISTAG — reconnaissance documentaire
-
-[ULISTAG](logiciels/ULISTAG/README.md) est le sous-système cœur d'ULISDOQ consacré à la description, l'indexation et la reconnaissance structurelle des modèles documentaires.
-
-Son cycle de conception est séparé pour préserver la lisibilité d'ULISDOQ. Les méthodes génériques vivent dans `logiciels/ULISTAG/` ; leur élaboration et leurs preuves spécifiques restent dans les répertoires `experiences/.../GED-N/ulistag/`.
-
-La [roadmap ULISTAG](logiciels/ULISTAG/ROADMAP.md) vise une première phase d'environ 70 types, formats et fournisseurs différents afin de faire émerger empiriquement les primitives, regroupements et matchers réellement réutilisables.
-
-## Expériences par familles documentaires
-
-Pour rendre le catalogue immédiatement lisible, les premières expériences sont rangées dans six familles documentaires courantes :
-
-- [Factures & achats](experiences/factures/README.md)
-- [Impôts & finances](experiences/impots-finances/README.md)
-- [Santé & protection sociale](experiences/sante-protection-sociale/README.md)
-- [Assurances & sinistres](experiences/assurances/README.md)
-- [Administration & droits](experiences/administration-droits/README.md)
-- [Logement, véhicules & services courants](experiences/logement-vehicules-services/README.md)
-
-Ces familles constituent un classement humain de haut niveau ; elles ne remplacent ni les TAGs de format, ni les profils techniques.
-
-[GED-01](experiences/factures/GED-01/README.md) est le premier cas borné de la famille Factures. [GED-02 — formulaire 2044](experiences/impots-finances/GED-02/README.md) éprouve surtout le lien entre un document administratif et la connaissance officielle publiée qui lui est associée.
-
-## Démonstration de classification locale
-
-Le [protocole TAG candidat](logiciels/client/documentation/PROTOCOLE_TAG_CANDIDAT.md) fournit un éditeur local minimal et expose la prochaine fonction manquante : la consultation du catalogue.
-
-## Installation ULISDOQ sur Ubuntu
-
-Le profil complet versionné est [ULISDOQ-COMPLETE-UBUNTU-V0.1](logiciels/deploiement/ubuntu/complete-v0_1/README.md). Il installe le client, les matchers ULISTAG, les lecteurs/OCR et les capacités sémantiques actuellement déclarées, dans des environnements isolés.
-
-```bash
-bash logiciels/deploiement/ubuntu/complete-v0_1/ulisdoq-deploy.sh install --install-system
-bash logiciels/deploiement/ubuntu/complete-v0_1/ulisdoq-deploy.sh verify
-```
-
-La [notice des dépendances](logiciels/deploiement/documentation/GESTION_DEPENDANCES.md) explique comment les nouvelles dépendances découvertes pendant les GED-N sont capitalisées pour les futurs consommateurs. La compatibilité est fondée sur des combinaisons testées, jamais sur l'hypothèse qu'une version plus récente est automatiquement compatible.
-
-## Participer
-
-Consulter [CONTRIBUTING.md](CONTRIBUTING.md). Les contributions sont soumises à revue avant intégration. **Aucun document personnel réel, donnée médicale identifiable, secret ou document confidentiel ne doit être déposé ici.**
-
-## Statut
-
-**Amorçage public.** Les profils candidats, licences de contenu et règles définitives de gouvernance restent en qualification. Aucun profil d'extraction n'est annoncé comme validé à ce stade.
-
-## Profile Builder — fabrication distribuable de profils candidats
-
-Le projet [ULISDOQ Profile Builder](logiciels/profile-builder/README.md) vise à fournir un outil distribuable permettant de fabriquer localement de nouveaux profils documentaires candidats à partir de la boîte à outils versionnée de GED-core Machine.
-
-Architecture candidate : [GED-core Machine & Profile Builder](documentation/architecture/GED_CORE_MACHINE_PROFILE_BUILDER_ARCHITECTURE_CANDIDATE_V0_1.md).
-
-Le Builder devra rester plafonné par les capacités connues de la version installée, produire des décisions explicites lorsqu'une capacité manque, et ne jamais confondre production d'un candidat et qualification de production.
+Les documents sources privés et les valeurs personnelles restent hors du dépôt public. Les contributions publient des connaissances génériques et des spécimens synthétiques ou dont l'anonymisation a été vérifiée.
