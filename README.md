@@ -20,7 +20,7 @@ Les briques techniques sont des ressources parmi N, caractérisées par leurs ca
 
 ## Horizontalité et identités canoniques
 
-**[HORIZON-IDENTITY-001 — Référentiel canonique et correspondances](documentation/architecture/IDENTITES_CORRESPONDANCES.md)** : dissocier entités, formats et profils ; concevoir un référentiel extensible d'entités sans fixer de nombre cible ; « 88 821 » n'est qu'un exemple arbitraire, équivalent à « des milliers de fournisseurs référencés ». Les noms commerciaux n'appartiennent pas aux identifiants de profils.
+**[HORIZON-IDENTITY-001 — Référentiel canonique et correspondances](documentation/architecture/IDENTITES_CORRESPONDANCES.md)** : dissocier entités, formats et profils ; concevoir un référentiel extensible d'entités sans fixer de nombre cible. Les noms commerciaux n'appartiennent pas aux identifiants de profils.
 
 ## Faisabilité de couverture documentaire
 
