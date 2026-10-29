@@ -4,7 +4,13 @@
 
 ## Explorer et transmettre
 
-Le nom ULISDOQ évoque **Ulysse**, l'exploration et l'intelligence de l'orientation : découvrir des territoires documentaires, reconnaître les repères fiables et rapporter des connaissances utiles à d'autres. Il rapproche aussi le document de sa qualification et de l'image d'un port où les ressources se rencontrent, sont identifiées et orientées.
+Le nom **ULISDOQ** porte trois évocations qui se répondent :
+
+- **ULIS** renvoie à **Ulysse**, à l'exploration et à l'intelligence de l'orientation : découvrir des territoires documentaires, reconnaître les repères fiables et transmettre ce qui a été appris.
+- **DOQ** rapproche le **document** de sa **qualification** : situer sa provenance, éprouver sa fiabilité et rendre explicites ses possibilités de réemploi comme ses limites.
+- **DOCK** évoque le **port documentaire**, un lieu commun d'accueil et d'échange où les ressources sont identifiées, reliées et orientées vers leurs usages, et où chacun peut apporter ce qui sera utile à d'autres.
+
+Ce **lignage sémantique** invite à explorer avec curiosité, à qualifier avec exigence et à partager pour que d'autres puissent avancer à leur tour.
 
 **Une connaissance documentaire découverte n'acquiert sa pleine valeur commune que lorsqu'elle est située, vérifiable, qualifiée et transmissible.**
 
